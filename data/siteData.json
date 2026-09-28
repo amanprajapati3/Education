@@ -1,0 +1,1693 @@
+{
+  "EducationIndustries": {
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "Topbar": "EducationTopbar1",
+          "Header": "EducationHeader1",
+          "Footer": "EducationFooter1",
+          "CtaBanner": "EducationCtaBanner1"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              { "key": "Banner", "component": "EducationBanner1" },
+              { "key": "About", "component": "EducationAbout1" },
+              { "key": "Courses", "component": "EducationCourses1" },
+              { "key": "Stats", "component": "EducationStats1" },
+              { "key": "Choose", "component": "EducationChoose1" },
+              { "key": "Testimonial", "component": "EducationTestimonial1" },
+              { "key": "CtaBanner", "component": "EducationCtaBanner1" },
+              { "key": "Blog", "component": "EducationBlog1" }
+            ]
+          },
+          "about": {
+            "components": [
+              { "key": "PageBanner", "component": "BannerPage" },
+              { "key": "About", "component": "EducationAbout1" }
+            ]
+          },
+          "testimonial": {
+            "components": [
+              { "key": "PageBanner", "component": "BannerPage" },
+              { "key": "Testimonial", "component": "EducationTestimonial1" }
+            ]
+          },
+          "blog": {
+            "components": [
+              { "key": "PageBanner", "component": "BannerPage" },
+              { "key": "Blog", "component": "EducationBlog1" }
+            ]
+          },
+          "thank": {
+            "components": [
+              { "key": "ThankYou", "component": "EducationThankYou1" }
+            ]
+          },
+          "terms": {
+            "components": [
+              { "key": "PageBanner", "component": "BannerPage" },
+              { "key": "Legal", "component": "EducationTerms1" }
+            ]
+          },
+          "privacy": {
+            "components": [
+              { "key": "PageBanner", "component": "BannerPage" },
+              { "key": "Legal", "component": "EducationPrivacy1" }
+            ]
+          },
+          "refund-policy": {
+            "components": [
+              { "key": "PageBanner", "component": "BannerPage" },
+              { "key": "Legal", "component": "EducationRefund1" }
+            ]
+          },
+          "courses": {
+            "components": [
+              { "key": "PageBanner", "component": "BannerPage" },
+              { "key": "Courses", "component": "EducationCourses1" }
+            ]
+          },
+          "gallery": {
+            "components": [
+              { "key": "PageBanner", "component": "BannerPage" },
+              { "key": "Gallery", "component": "EducationGallery1" }
+            ]
+          }
+        }
+      }
+    },
+    "sections": {
+      "Topbar": {
+        "variants": {
+          "EducationTopbar1": {
+            "address": "25/B Milford Road, New York",
+            "email": "info@example.com",
+            "phone": "+91 00000 00000",
+            "socialLinks": [
+              { "label": "facebook", "href": "https://www.facebook.com/" },
+              { "label": "instagram", "href": "https://www.instagram.com/" },
+              { "label": "youtube", "href": "https://www.youtube.com/" },
+              { "label": "whatsapp", "href": "https://www.whatsapp.com/" }
+            ]
+          }
+        }
+      },
+      "Header": {
+        "variants": {
+          "EducationHeader1": {
+            "site": {
+              "siteName": "Edusity",
+              "tagline": "LEARN TODAY BUILD TOMORROW",
+              "logo": {
+                "light": "/logo.png",
+                "normal": "/logo.png"
+              }
+            },
+            "meta": {
+              "siteTitle": "Edusity | Learn Today Build Tomorrow",
+              "siteDescription": "Edusity helps students grow with industry-focused programs, expert faculty and a supportive learning environment for a brighter tomorrow.",
+              "keywords": [
+                "online courses",
+                "education platform",
+                "web development bootcamp",
+                "data science course",
+                "ui ux design course",
+                "digital marketing course",
+                "student enrollment",
+                "expert faculty",
+                "career success",
+                "learning platform"
+              ]
+            },
+            "nav": [
+              { "label": "Home", "href": "/" },
+              {
+                "label": "About",
+                "href": "/#",
+                "children": [
+                  { "label": "About Us", "href": "/about" },
+                  { "label": "Why Choose Us", "href": "/choose" },
+                  { "label": "Mission & Vision", "href": "/mission" }
+                ]
+              },
+              { "label": "Courses", "href": "/courses" },
+              { "label": "Faculty", "href": "/faculty" },
+              { "label": "Admission Process", "href": "/admission-process" },
+              { "label": "Gallery", "href": "/gallery" },
+              { "label": "Blog", "href": "/blog" }
+            ],
+            "buttons": [
+              {
+                "label": "Contact Us",
+                "href": "/contact",
+                "icon": "send",
+                "variant": "outline"
+              },
+              {
+                "label": "Apply Now",
+                "href": "/apply",
+                "icon": "file-text",
+                "variant": "primary"
+              }
+            ]
+          }
+        }
+      },
+      "Banner": {
+        "variants": {
+          "EducationBanner1": {
+            "badge": "YOUR FUTURE STARTS HERE",
+            "title": {
+              "normal": "Learn Today",
+              "highlighted": "Build a Brighter",
+              "postTitle": "Tomorrow"
+            },
+            "desc": {
+              "plain": "Discover industry-focused programs, learn from expert faculty, and take the next step towards a successful future.",
+              "parts": [
+                { "text": "Discover industry-focused", "highlight": true },
+                {
+                  "text": " programs, learn from expert faculty, and take the "
+                },
+                { "text": "next step", "highlight": true },
+                { "text": " towards a successful future." }
+              ]
+            },
+            "buttons": [
+              {
+                "label": "Explore Programs",
+                "href": "/programs",
+                "variant": "primary"
+              },
+              {
+                "label": "Watch Video",
+                "href": "#",
+                "icon": "play",
+                "variant": "outline"
+              }
+            ],
+            "stats": [
+              {
+                "id": 1,
+                "number": 10,
+                "suffix": "K+",
+                "label": "Students Enrolled"
+              },
+              {
+                "id": 2,
+                "number": 200,
+                "suffix": "+",
+                "label": "Expert Faculty"
+              },
+              {
+                "id": 3,
+                "number": 95,
+                "suffix": "%",
+                "label": "Career Success Rate"
+              }
+            ],
+            "image": {
+              "src": "/education/10.png",
+              "alt": "Group of students collaborating together on campus steps"
+            },
+            "overlayText": "LEARN GROW BELONG SUCCEED",
+            "videoUrl": "https://www.youtube.com/embed/h4Ue98USW2U?si=hpNWWBB460ONkhQ0"
+          }
+        }
+      },
+      "About": {
+        "variants": {
+          "EducationAbout1": {
+            "badge": "About Us",
+            "title": {
+              "normal": "Empowering Learners",
+              "highlighted": "for a Brighter Tomorrow"
+            },
+            "paragraphs": [
+              "We are committed to providing high-quality education, industry-relevant programs, and a supportive learning environment that helps students grow, gain confidence, and achieve their goals.",
+              "Our story began with a simple idea: every student deserves access to practical, career-ready learning. What started as a single classroom has grown into a thriving community of learners, mentors and alumni who keep shaping each other's success, from the first day of class to the first day at work.",
+              "We bring together expert faculty, hands-on projects and personalised guidance so that every learner leaves with real skills, real confidence and a clear direction forward. Whether you are just starting your journey or advancing an existing career, there is a program, a mentor and a community ready to walk the road with you."
+            ],
+            "banner": {
+              "title": "About Us",
+              "home": "Home",
+              "current": "About Us",
+              "bgImage": "/education/3.png"
+            },
+            "imageBadge": {
+              "icon": "graduation-cap",
+              "label": "Education"
+            },
+            "image": {
+              "src": "/education/1.png",
+              "alt": "Group of students walking together on campus"
+            },
+            "secondaryImage": {
+              "src": "/education/2.png",
+              "alt": "Student sitting outdoors working on a laptop"
+            },
+            "caption": "25+ Years of Academic Excellence",
+            "features": [
+              {
+                "id": 1,
+                "icon": "target",
+                "title": "Student-Centric Approach",
+                "description": "We focus on your goals and future."
+              },
+              {
+                "id": 2,
+                "icon": "users",
+                "title": "Expert Guidance",
+                "description": "Learn from experienced faculty."
+              },
+              {
+                "id": 3,
+                "icon": "briefcase",
+                "title": "Real Opportunities",
+                "description": "Gain skills for a successful career."
+              }
+            ],
+            "button": {
+              "label": "Learn More",
+              "href": "/about"
+            },
+            "phoneBlock": {
+              "label": "Have Questions?",
+              "phone": "+91 00000 00000",
+              "phoneHref": "tel:+91 00000 00000"
+            }
+          }
+        }
+      },
+      "Courses": {
+        "variants": {
+          "EducationCourses1": {
+            "badge": "Popular Courses",
+            "title": {
+              "normal": "Upgrade Your Skills With",
+              "highlighted": "Popular Courses"
+            },
+            "desc": "Explore our most in-demand programs and take the next step toward a brighter future.",
+            "courses": [
+              {
+                "id": 1,
+                "slug": "complete-web-development-bootcamp",
+                "category": "Web Development",
+                "categoryIcon": "code",
+                "duration": "8 Weeks",
+                "image": "/education/1.png",
+                "title": "Complete Web Development Bootcamp",
+                "rating": 4.8,
+                "studentsLabel": "1.2K Students",
+                "description": "Learn HTML, CSS, JavaScript and modern frameworks to build real-world websites.",
+                "price": "$15",
+                "oldPrice": "$30",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/complete-web-development-bootcamp"
+                }
+              },
+              {
+                "id": 2,
+                "slug": "data-science-for-beginners",
+                "category": "Data Science",
+                "categoryIcon": "bar-chart",
+                "duration": "10 Weeks",
+                "image": "/education/2.png",
+                "title": "Data Science for Beginners",
+                "rating": 4.7,
+                "studentsLabel": "980 Students",
+                "description": "Understand key data concepts, analysis techniques and machine learning.",
+                "price": "$14",
+                "oldPrice": "$25",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/data-science-for-beginners"
+                }
+              },
+              {
+                "id": 3,
+                "slug": "ui-ux-design-masterclass",
+                "category": "UI/UX Design",
+                "categoryIcon": "pen-tool",
+                "duration": "6 Weeks",
+                "image": "/education/3.png",
+                "title": "UI/UX Design Masterclass",
+                "rating": 4.9,
+                "studentsLabel": "1.5K Students",
+                "description": "Learn user research, wireframing, prototyping and create stunning designs.",
+                "price": "$50",
+                "oldPrice": "$80",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/ui-ux-design-masterclass"
+                }
+              },
+              {
+                "id": 4,
+                "slug": "digital-marketing-essentials",
+                "category": "Digital Marketing",
+                "categoryIcon": "megaphone",
+                "duration": "4 Weeks",
+                "image": "/education/4.png",
+                "title": "Digital Marketing Essentials",
+                "rating": 4.6,
+                "studentsLabel": "870 Students",
+                "description": "Learn SEO, social media, content marketing and grow your online presence.",
+                "price": "$99",
+                "oldPrice": "$149",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/digital-marketing-essentials"
+                }
+              },
+              {
+                "id": 5,
+                "slug": "artificial-intelligence-fundamentals",
+                "category": "AI & Machine Learning",
+                "categoryIcon": "cpu",
+                "duration": "12 Weeks",
+                "image": "/education/5.jpg",
+                "title": "Artificial Intelligence Fundamentals",
+                "rating": 4.9,
+                "studentsLabel": "2.1K Students",
+                "description": "Explore neural networks, deep learning, and practical AI model implementation.",
+                "price": "$29",
+                "oldPrice": "$59",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/artificial-intelligence-fundamentals"
+                }
+              },
+              {
+                "id": 6,
+                "slug": "cybersecurity-expert-program",
+                "category": "Cybersecurity",
+                "categoryIcon": "shield",
+                "duration": "10 Weeks",
+                "image": "/education/7.jpg",
+                "title": "Cybersecurity Expert Program",
+                "rating": 4.8,
+                "studentsLabel": "1.1K Students",
+                "description": "Master ethical hacking, network security, and vulnerability assessment protocols.",
+                "price": "$39",
+                "oldPrice": "$79",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/cybersecurity-expert-program"
+                }
+              },
+              {
+                "id": 7,
+                "slug": "cloud-computing-architecture",
+                "category": "Cloud Computing",
+                "categoryIcon": "globe",
+                "duration": "8 Weeks",
+                "image": "/education/1.png",
+                "title": "Cloud Computing Architecture",
+                "rating": 4.7,
+                "studentsLabel": "840 Students",
+                "description": "Build scalable and secure cloud infrastructure using AWS, Azure, and Google Cloud.",
+                "price": "$45",
+                "oldPrice": "$90",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/cloud-computing-architecture"
+                }
+              },
+              {
+                "id": 8,
+                "slug": "advanced-database-management",
+                "category": "Database",
+                "categoryIcon": "database",
+                "duration": "6 Weeks",
+                "image": "/education/2.png",
+                "title": "Advanced Database Management",
+                "rating": 4.6,
+                "studentsLabel": "720 Students",
+                "description": "Learn SQL, NoSQL, data modeling, and performance tuning for large datasets.",
+                "price": "$25",
+                "oldPrice": "$50",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/advanced-database-management"
+                }
+              },
+              {
+                "id": 9,
+                "slug": "mobile-app-development",
+                "category": "Mobile Dev",
+                "categoryIcon": "smartphone",
+                "duration": "10 Weeks",
+                "image": "/education/4.png",
+                "title": "Mobile App Development with Flutter",
+                "rating": 4.9,
+                "studentsLabel": "1.8K Students",
+                "description": "Create cross-platform iOS and Android applications with a single codebase.",
+                "price": "$35",
+                "oldPrice": "$70",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/mobile-app-development"
+                }
+              },
+              {
+                "id": 10,
+                "slug": "financial-modeling-analysis",
+                "category": "Finance",
+                "categoryIcon": "bar-chart",
+                "duration": "6 Weeks",
+                "image": "/education/5.jpg",
+                "title": "Financial Modeling & Analysis",
+                "rating": 4.8,
+                "studentsLabel": "950 Students",
+                "description": "Master Excel, valuation techniques, and corporate finance forecasting.",
+                "price": "$40",
+                "oldPrice": "$80",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/financial-modeling-analysis"
+                }
+              },
+              {
+                "id": 11,
+                "slug": "product-management-essentials",
+                "category": "Management",
+                "categoryIcon": "code",
+                "duration": "5 Weeks",
+                "image": "/education/7.jpg",
+                "title": "Product Management Essentials",
+                "rating": 4.7,
+                "studentsLabel": "1.3K Students",
+                "description": "Drive product lifecycle from ideation, user research, to agile execution.",
+                "price": "$30",
+                "oldPrice": "$60",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/product-management-essentials"
+                }
+              },
+              {
+                "id": 12,
+                "slug": "business-analytics-strategy",
+                "category": "Business",
+                "categoryIcon": "bar-chart",
+                "duration": "7 Weeks",
+                "image": "/education/7.jpg",
+                "title": "Business Analytics Strategy",
+                "rating": 4.8,
+                "studentsLabel": "1.1K Students",
+                "description": "Leverage data visualization tools like Tableau and PowerBI for business growth.",
+                "price": "$28",
+                "oldPrice": "$55",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/business-analytics-strategy"
+                }
+              },
+              {
+                "id": 13,
+                "slug": "frontend-development-with-react",
+                "category": "Web Development",
+                "categoryIcon": "code",
+                "duration": "6 Weeks",
+                "image": "/education/8.jpg",
+                "title": "Frontend Development With React",
+                "rating": 4.9,
+                "studentsLabel": "1.4K Students",
+                "description": "Build fast, component-driven interfaces with hooks, state management and testing.",
+                "price": "$32",
+                "oldPrice": "$65",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/frontend-development-with-react"
+                }
+              },
+              {
+                "id": 14,
+                "slug": "python-programming-from-scratch",
+                "category": "Data Science",
+                "categoryIcon": "code",
+                "duration": "6 Weeks",
+                "image": "/education/9.jpg",
+                "title": "Python Programming From Scratch",
+                "rating": 4.7,
+                "studentsLabel": "1.2K Students",
+                "description": "Start from variables and finish with automation scripts and clean, tested code.",
+                "price": "$26",
+                "oldPrice": "$52",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/python-programming-from-scratch"
+                }
+              },
+              {
+                "id": 15,
+                "slug": "graphic-design-professional",
+                "category": "UI/UX Design",
+                "categoryIcon": "pen-tool",
+                "duration": "5 Weeks",
+                "image": "/education/10.png",
+                "title": "Graphic Design Professional",
+                "rating": 4.6,
+                "studentsLabel": "920 Students",
+                "description": "Master layout, colour and typography while building a portfolio-ready brand kit.",
+                "price": "$24",
+                "oldPrice": "$48",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/graphic-design-professional"
+                }
+              },
+              {
+                "id": 16,
+                "slug": "social-media-marketing",
+                "category": "Digital Marketing",
+                "categoryIcon": "megaphone",
+                "duration": "4 Weeks",
+                "image": "/education/3.png",
+                "title": "Social Media Marketing",
+                "rating": 4.5,
+                "studentsLabel": "1.1K Students",
+                "description": "Plan content calendars, run paid campaigns and grow communities that convert.",
+                "price": "$22",
+                "oldPrice": "$45",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/social-media-marketing"
+                }
+              },
+              {
+                "id": 17,
+                "slug": "generative-ai-prompt-engineering",
+                "category": "AI & Machine Learning",
+                "categoryIcon": "cpu",
+                "duration": "5 Weeks",
+                "image": "/education/4.png",
+                "title": "Generative AI & Prompt Engineering",
+                "rating": 4.9,
+                "studentsLabel": "1.6K Students",
+                "description": "Design reliable prompts, build AI workflows and ship products with LLM APIs.",
+                "price": "$35",
+                "oldPrice": "$70",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/generative-ai-prompt-engineering"
+                }
+              },
+              {
+                "id": 18,
+                "slug": "ethical-hacking-penetration-testing",
+                "category": "Cybersecurity",
+                "categoryIcon": "shield",
+                "duration": "8 Weeks",
+                "image": "/education/5.jpg",
+                "title": "Ethical Hacking & Penetration Testing",
+                "rating": 4.8,
+                "studentsLabel": "1K Students",
+                "description": "Practice real-world attacks in guided labs and learn to report them responsibly.",
+                "price": "$38",
+                "oldPrice": "$75",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/ethical-hacking-penetration-testing"
+                }
+              },
+              {
+                "id": 19,
+                "slug": "devops-and-ci-cd-pipeline",
+                "category": "Cloud Computing",
+                "categoryIcon": "globe",
+                "duration": "7 Weeks",
+                "image": "/education/1.png",
+                "title": "DevOps & CI/CD Pipeline",
+                "rating": 4.7,
+                "studentsLabel": "860 Students",
+                "description": "Automate builds, testing and deployments with Docker, Kubernetes and GitHub Actions.",
+                "price": "$33",
+                "oldPrice": "$68",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/devops-and-ci-cd-pipeline"
+                }
+              },
+              {
+                "id": 20,
+                "slug": "sql-and-data-warehousing",
+                "category": "Database",
+                "categoryIcon": "database",
+                "duration": "5 Weeks",
+                "image": "/education/2.png",
+                "title": "SQL & Data Warehousing",
+                "rating": 4.6,
+                "studentsLabel": "1.3K Students",
+                "description": "Write confident queries and model reporting-ready datasets in modern warehouses.",
+                "price": "$27",
+                "oldPrice": "$54",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/sql-and-data-warehousing"
+                }
+              },
+              {
+                "id": 21,
+                "slug": "react-native-mobile-mastery",
+                "category": "Mobile Dev",
+                "categoryIcon": "smartphone",
+                "duration": "6 Weeks",
+                "image": "/education/7.jpg",
+                "title": "React Native Mobile Mastery",
+                "rating": 4.7,
+                "studentsLabel": "740 Students",
+                "description": "Ship cross-platform apps for Android and iOS from a single shared codebase.",
+                "price": "$29",
+                "oldPrice": "$58",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/react-native-mobile-mastery"
+                }
+              },
+              {
+                "id": 22,
+                "slug": "stock-market-and-trading-basics",
+                "category": "Finance",
+                "categoryIcon": "bar-chart",
+                "duration": "4 Weeks",
+                "image": "/education/8.jpg",
+                "title": "Stock Market & Trading Basics",
+                "rating": 4.5,
+                "studentsLabel": "950 Students",
+                "description": "Read charts, manage risk and build a disciplined approach to investing.",
+                "price": "$21",
+                "oldPrice": "$42",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/stock-market-and-trading-basics"
+                }
+              },
+              {
+                "id": 23,
+                "slug": "human-resource-management",
+                "category": "Management",
+                "categoryIcon": "code",
+                "duration": "6 Weeks",
+                "image": "/education/9.jpg",
+                "title": "Human Resource Management",
+                "rating": 4.6,
+                "studentsLabel": "890 Students",
+                "description": "Hire, onboard and grow teams with practical frameworks for people leaders.",
+                "price": "$25",
+                "oldPrice": "$50",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/human-resource-management"
+                }
+              },
+              {
+                "id": 24,
+                "slug": "entrepreneurship-startup-essentials",
+                "category": "Business",
+                "categoryIcon": "globe",
+                "duration": "6 Weeks",
+                "image": "/education/10.png",
+                "title": "Entrepreneurship & Startup Essentials",
+                "rating": 4.8,
+                "studentsLabel": "1.2K Students",
+                "description": "Validate ideas, build a business model and raise your first round of funding.",
+                "price": "$31",
+                "oldPrice": "$62",
+                "button": {
+                  "label": "Learn More",
+                  "href": "/courses/entrepreneurship-startup-essentials"
+                }
+              }
+            ],
+            "banner": {
+              "title": "Our Courses",
+              "home": "Home",
+              "current": "Courses",
+              "bgImage": "/education/3.png"
+            },
+            "carousel": {
+              "slidesPerView": 4,
+              "hasArrows": true,
+              "hasDots": true,
+              "activeDot": 0,
+              "totalDots": 4
+            }
+          }
+        }
+      },
+      "Stats": {
+        "variants": {
+          "EducationStats1": {
+            "badge": "Our Impact In Numbers",
+            "title": {
+              "normal": "Creating",
+              "highlighted": "Brighter Futures"
+            },
+            "desc": "Our numbers reflect the trust of students, the dedication of our faculty, and the success we build together.",
+            "bgImage": "/education/3.png",
+            "overlayText": "LEARN GROW BELONG SUCCEED",
+            "stats": [
+              {
+                "id": 1,
+                "icon": "users",
+                "number": 10,
+                "suffix": "K+",
+                "label": "Students Enrolled"
+              },
+              {
+                "id": 2,
+                "icon": "graduation-cap",
+                "number": 200,
+                "suffix": "+",
+                "label": "Expert Faculty"
+              },
+              {
+                "id": 3,
+                "icon": "book-open",
+                "number": 50,
+                "suffix": "+",
+                "label": "Programs Offered"
+              },
+              {
+                "id": 4,
+                "icon": "trophy",
+                "number": 95,
+                "suffix": "%",
+                "label": "Student Satisfaction"
+              }
+            ]
+          }
+        }
+      },
+      "Choose": {
+        "variants": {
+          "EducationChoose1": {
+            "badge": "Why Choose Us?",
+            "title": {
+              "normal": "Your Learning Partner",
+              "highlighted": "for a Brighter Tomorrow"
+            },
+            "desc": "We empower learners with innovative, flexible, and career-focused education. Our goal is to make quality education accessible to everyone and help you achieve your dreams.",
+            "features": [
+              {
+                "id": 1,
+                "icon": "book-open",
+                "title": "Wide Range of Courses",
+                "description": "Explore industry-relevant courses designed for real-world success."
+              },
+              {
+                "id": 2,
+                "icon": "bar-chart",
+                "title": "Track Your Progress",
+                "description": "Monitor your learning journey with real-time insights and reports."
+              },
+              {
+                "id": 3,
+                "icon": "clock",
+                "title": "Learn Anytime Anywhere",
+                "description": "Access high-quality content on any device, at your convenience."
+              },
+              {
+                "id": 4,
+                "icon": "user-check",
+                "title": "Expert Instructors",
+                "description": "Learn from experienced professionals passionate about teaching."
+              },
+              {
+                "id": 5,
+                "icon": "clipboard-check",
+                "title": "Quizzes & Assignments",
+                "description": "Reinforce your knowledge with interactive quizzes and hands-on assignments."
+              },
+              {
+                "id": 6,
+                "icon": "globe",
+                "title": "Global Accessibility",
+                "description": "Quality education for everyone, everywhere without boundaries."
+              }
+            ],
+
+            "banner": {
+              "title": "Why Choose Us",
+              "home": "Home",
+              "current": "Why Choose Us",
+              "bgImage": "/education/3.png"
+            },
+            "sideImage": {
+              "src": "/education/2.png",
+              "alt": "Student smiling while sitting with a laptop and books"
+            },
+            "sideImage2": {
+              "src": "/education/4.png",
+              "alt": "Student smiling while sitting with a laptop and books"
+            },
+            "highlightCard": {
+              "icon": "users",
+              "value": "25K+",
+              "label": "Students Learning"
+            },
+            "floatingBadge": {
+              "icon": "award",
+              "highlight": "26+",
+              "title": "Years of Excellence"
+            },
+            "handwrittenNote": "Learn Grow Succeed"
+          }
+        }
+      },
+      "Testimonial": {
+        "variants": {
+          "EducationTestimonial1": {
+            "badge": "Testimonials",
+            "title": {
+              "normal": "What Our Students",
+              "highlighted": "Have To Say"
+            },
+            "desc": "Real stories from learners who have gained new skills, advanced their careers, and achieved their goals with us.",
+            "button": {
+              "label": "View All Testimonials",
+              "href": "/testimonial"
+            },
+            "banner": {
+              "title": "Testimonials",
+              "home": "Home",
+              "current": "Testimonials",
+              "bgImage": "/education/3.png"
+            },
+            "testimonialItems": [
+              {
+                "id": 1,
+                "name": "Priya Sharma",
+                "designation": "Web Development Student",
+                "image": "/people/women1.png",
+                "rating": 5,
+                "quote": "The courses are well-structured and easy to follow. The instructors are very supportive and always available to help. This platform has truly helped me build my confidence and advance my career."
+              },
+              {
+                "id": 2,
+                "name": "Rahul Mehta",
+                "designation": "Digital Marketing Student",
+                "image": "/people/man1.png",
+                "rating": 5,
+                "quote": "A fantastic learning experience! The content is practical, up-to-date, and industry-relevant. I was able to apply what I learned directly in my job. Highly recommended for anyone looking to grow their skills."
+              },
+              {
+                "id": 3,
+                "name": "Ananya Verma",
+                "designation": "UI/UX Design Student",
+                "image": "/people/women2.png",
+                "rating": 5,
+                "quote": "The design masterclass completely shifted my perspective on user-centric design. The portfolio projects gave me the exact edge I needed to land my dream role."
+              },
+              {
+                "id": 4,
+                "name": "Vikram Singh",
+                "designation": "Data Science Student",
+                "image": "/people/men2.png",
+                "rating": 5,
+                "quote": "Amazing explanations of complex algorithms and machine learning concepts. The hands-on datasets made all the difference in my learning curve."
+              },
+              {
+                "id": 5,
+                "name": "Sneha Patel",
+                "designation": "Cybersecurity Student",
+                "image": "/people/women3.png",
+                "rating": 5,
+                "quote": "Ethical hacking modules and network security labs were extremely realistic. I feel fully equipped to handle modern security challenges now."
+              },
+              {
+                "id": 6,
+                "name": "Amit Kumar",
+                "designation": "Cloud Computing Student",
+                "image": "/people/men3.png",
+                "rating": 5,
+                "quote": "AWS and Azure architectures were broken down so simply. The practical labs saved me hours of trial and error in deployment."
+              },
+              {
+                "id": 7,
+                "name": "Meera Iyer",
+                "designation": "Full Stack Development Student",
+                "image": "/people/women4.png",
+                "rating": 5,
+                "quote": "From the very first module I felt the difference in how concepts were taught. Every task connected back to a real project, so I never felt like I was just memorising code."
+              },
+              {
+                "id": 8,
+                "name": "Karan Malhotra",
+                "designation": "Business Analytics Student",
+                "image": "/people/men4.png",
+                "rating": 5,
+                "quote": "The mentorship went beyond classes. Career guidance, resume reviews and mock interviews helped me prepare for interviews I once found intimidating."
+              }
+            ],
+            "carousel": {
+              "hasArrows": true,
+              "hasDots": true,
+              "activeDot": 0,
+              "totalDots": 3
+            }
+          }
+        }
+      },
+      "CtaBanner": {
+        "variants": {
+          "EducationCtaBanner1": {
+            "badge": "Start Your Journey Today",
+            "title": {
+              "normal": "Build New Skills",
+              "highlighted": "For a Brighter Tomorrow"
+            },
+            "desc": "Join thousands of learners who are gaining in-demand skills, learning from expert educators, and achieving their career goals with our flexible and affordable courses.",
+            "buttons": [
+              {
+                "label": "Get Started Now",
+                "href": "/apply",
+                "variant": "primary"
+              },
+              {
+                "label": "Watch Our Video",
+                "href": "#",
+                "icon": "play",
+                "variant": "outline"
+              }
+            ],
+            "image": {
+              "src": "/education/9.jpg",
+              "alt": "Group of students smiling together while working on a laptop"
+            },
+            "handwrittenNote": "Learn Grow Succeed",
+            "floatingBadge": {
+              "icon": "rocket",
+              "label": "Your Future Starts Here"
+            },
+            "videoUrl": "https://www.youtube.com/embed/h4Ue98USW2U?si=hpNWWBB460ONkhQ0"
+          }
+        }
+      },
+      "Blog": {
+        "variants": {
+          "EducationBlog1": {
+            "badge": "Our Blogs",
+            "title": {
+              "normal": "Latest News &",
+              "highlighted": "Insights"
+            },
+            "desc": "Stay updated with the latest trends, insights, and stories from the world of education and career development.",
+            "posts": [
+              {
+                "id": 1,
+                "slug": "creating-classrooms-where-everyone-belongs",
+                "image": "/education/7.jpg",
+                "category": "Education",
+                "date": "August 6, 2026",
+                "title": "Creating Classrooms Where Everyone Belongs",
+                "description": "Discover how inclusive learning environments help students feel valued, supported, and inspired to reach their full potential.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 2,
+                "slug": "learning-together-growing-stronger",
+                "image": "/education/8.jpg",
+                "category": "Tips & Guides",
+                "date": "August 6, 2026",
+                "title": "Learning Together, Growing Stronger",
+                "description": "Explore the power of collaboration and how peer learning can boost confidence, creativity, and success.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 3,
+                "slug": "where-curiosity-becomes-confidence-every-day",
+                "image": "/education/9.jpg",
+                "category": "Career Growth",
+                "date": "August 6, 2026",
+                "title": "Where Curiosity Becomes Confidence Every Day",
+                "description": "Learn how a growth mindset and continuous learning can help you unlock new opportunities in your career.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 4,
+                "slug": "building-a-portfolio-that-gets-you-hired",
+                "image": "/education/1.png",
+                "category": "Career Growth",
+                "date": "July 28, 2026",
+                "title": "Building a Portfolio That Actually Gets You Hired",
+                "description": "Recruiters scan for proof of work, not promises. Here is how to pick projects and present them so your skills stand out instantly.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 5,
+                "slug": "practical-projects-beat-long-lectures",
+                "image": "/education/2.png",
+                "category": "Tips & Guides",
+                "date": "July 21, 2026",
+                "title": "Why Practical Projects Beat Long Lectures",
+                "description": "Sitting through slides fades fast, but a real brief does not. See how hands-on work locks concepts into memory for the long run.",
+                "readMoreText": "Read More"
+              },
+              {
+                "id": 6,
+                "slug": "the-mentor-effect-learning-with-guidance",
+                "image": "/education/10.png",
+                "category": "Education",
+                "date": "July 14, 2026",
+                "title": "The Mentor Effect: Learning Better With Guidance",
+                "description": "A great mentor shortens years of trial and error. Discover what a supportive mentor changes about the way you learn and grow.",
+                "readMoreText": "Read More"
+              }
+            ],
+            "banner": {
+              "title": "Blog",
+              "home": "Home",
+              "current": "Blog",
+              "bgImage": "/education/3.png"
+            }
+          }
+        }
+      },
+      "Gallery": {
+        "variants": {
+          "EducationGallery1": {
+            "banner": {
+              "title": "Gallery",
+              "home": "Home",
+              "current": "Gallery",
+              "bgImage": "/education/3.png"
+            },
+            "imageGallery": {
+              "badge": "Photo Gallery",
+              "title": {
+                "normal": "Campus",
+                "highlighted": "Moments"
+              },
+              "desc": "Take a walk through the classrooms, labs and gathering spots where our students spend every day learning, building and having fun.",
+              "visibleCount": 8,
+              "loadMoreLabel": "Load More Photos",
+              "loadLessLabel": "Load Less",
+              "emptyText": "No photos found for this category.",
+              "filters": [
+                { "id": "all", "label": "All Photos" },
+                { "id": "campus-life", "label": "Campus Life" },
+                { "id": "events", "label": "Events" },
+                { "id": "classrooms", "label": "Classrooms" },
+                { "id": "student-activities", "label": "Student Activities" },
+                { "id": "facilities", "label": "Facilities" }
+              ]
+            },
+            "videoGallery": {
+              "badge": "Video Gallery",
+              "title": {
+                "normal": "Watch Our",
+                "highlighted": "Story"
+              },
+              "desc": "Watch faculty walkthroughs, event highlights and day-in-the-life clips filmed across our campus and classrooms.",
+              "visibleCount": 8,
+              "loadMoreLabel": "Load More Videos",
+              "loadLessLabel": "Load Less",
+              "emptyText": "No videos found yet.",
+              "sortLabel": "Sort",
+              "sortOptions": [
+                { "id": "desc", "label": "Newest First" },
+                { "id": "asc", "label": "Oldest First" }
+              ]
+            },
+            "controls": {
+              "prevLabel": "Previous",
+              "nextLabel": "Next",
+              "closeLabel": "Close",
+              "imageAlt": "Gallery photo",
+              "counterTemplate": "{current} of {total}"
+            },
+            "images": [
+              {
+                "id": 1,
+                "title": "Main Campus Courtyard",
+                "category": "campus-life",
+                "image": "/education/1.png",
+                "description": "The open courtyard where students catch up between classes and run club activities after hours."
+              },
+              {
+                "id": 2,
+                "title": "Design Studio Workshop",
+                "category": "classrooms",
+                "image": "/education/2.png",
+                "description": "A hands-on session where design students turn early sketches into working interfaces."
+              },
+              {
+                "id": 3,
+                "title": "Robotics Club Meetup",
+                "category": "student-activities",
+                "image": "/education/3.png",
+                "description": "Weekly club meetups where engineering students prototype, test and iterate together."
+              },
+              {
+                "id": 4,
+                "title": "Annual Convocation Ceremony",
+                "category": "events",
+                "image": "/education/4.png",
+                "description": "Graduation day, families, faculty and alumni gathering to celebrate a new batch."
+              },
+              {
+                "id": 5,
+                "title": "Library And Study Pods",
+                "category": "facilities",
+                "image": "/education/5.jpg",
+                "description": "Quiet study pods, shared reference shelves and 24x7 access for the whole batch."
+              },
+              {
+                "id": 6,
+                "title": "Campus Green Walkway",
+                "category": "campus-life",
+                "image": "/education/7.jpg",
+                "description": "Tree-lined walkways connecting academic blocks, hostels and the sports ground."
+              },
+              {
+                "id": 7,
+                "title": "Hackathon Weekend",
+                "category": "events",
+                "image": "/education/8.jpg",
+                "description": "Forty-eight hours, sixty participants and a lot of demos built from scratch."
+              },
+              {
+                "id": 8,
+                "title": "Smart Classroom Session",
+                "category": "classrooms",
+                "image": "/education/9.jpg",
+                "description": "Interactive whiteboards and live problem solving keep every batch engaged."
+              },
+              {
+                "id": 9,
+                "title": "Sports Day Finals",
+                "category": "student-activities",
+                "image": "/education/10.png",
+                "description": "The annual sports day, with relay finals and a full turn-out from every house."
+              },
+              {
+                "id": 10,
+                "title": "Student Common Lounge",
+                "category": "campus-life",
+                "image": "/people/women1.png",
+                "description": "An informal space for group discussions over coffee between the morning sessions."
+              },
+              {
+                "id": 11,
+                "title": "Mentorship Circle",
+                "category": "student-activities",
+                "image": "/people/man1.png",
+                "description": "Small group mentoring sessions focused on portfolios, interviews and career direction."
+              },
+              {
+                "id": 12,
+                "title": "Advanced Computing Lab",
+                "category": "facilities",
+                "image": "/people/men2.png",
+                "description": "High-performance workstations, dual screens and GPU nodes available to every learner."
+              }
+            ],
+            "videos": [
+              {
+                "id": 1,
+                "title": "A Day In The Life Of A Data Science Student",
+                "thumbnail": "/education/1.png",
+                "videoUrl": "https://www.youtube.com/embed/h4Ue98USW2U",
+                "duration": "10:32",
+                "publishedAt": "2026-08-24",
+                "description": "Follow a learner from the morning lecture to the evening lab session."
+              },
+              {
+                "id": 2,
+                "title": "Inside Our Smart Classrooms",
+                "thumbnail": "/education/2.png",
+                "videoUrl": "https://www.youtube.com/embed/8aGhZQkoFbQ",
+                "duration": "26:12",
+                "publishedAt": "2026-08-18",
+                "description": "How faculty use interactive sessions to keep every learner in the loop."
+              },
+              {
+                "id": 3,
+                "title": "Campus Walkthrough: Buildings & Blocks",
+                "thumbnail": "/education/3.png",
+                "videoUrl": "https://www.youtube.com/embed/LXb3EKWsInQ",
+                "duration": "04:48",
+                "publishedAt": "2026-08-11",
+                "description": "A guided tour of the academic blocks, labs and common areas."
+              },
+              {
+                "id": 4,
+                "title": "Hackathon 2026 Highlights",
+                "thumbnail": "/education/4.png",
+                "videoUrl": "https://www.youtube.com/embed/M7lc1UVf-VE",
+                "duration": "06:20",
+                "publishedAt": "2026-08-05",
+                "description": "Judging rounds, demo day and the winning pitch from the finale."
+              },
+              {
+                "id": 5,
+                "title": "Library Tour And Study Tips",
+                "thumbnail": "/education/5.jpg",
+                "videoUrl": "https://www.youtube.com/embed/1La4QzGeaaQ",
+                "duration": "05:56",
+                "publishedAt": "2026-07-29",
+                "description": "Where to find reference material, and how to plan a focused study week."
+              },
+              {
+                "id": 6,
+                "title": "Robotics Lab: Projects In Motion",
+                "thumbnail": "/education/7.jpg",
+                "videoUrl": "https://www.youtube.com/embed/R6MlUcmOul8",
+                "duration": "14:05",
+                "publishedAt": "2026-07-22",
+                "description": "Student teams explain the robots they built this semester."
+              },
+              {
+                "id": 7,
+                "title": "Convocation Ceremony Full Recording",
+                "thumbnail": "/education/8.jpg",
+                "videoUrl": "https://www.youtube.com/embed/eRsGyueVLvQ",
+                "duration": "14:58",
+                "publishedAt": "2026-07-15",
+                "description": "The full graduation ceremony, including the principal address."
+              },
+              {
+                "id": 8,
+                "title": "UI/UX Masterclass Recording",
+                "thumbnail": "/education/9.jpg",
+                "videoUrl": "https://www.youtube.com/embed/aqz-KE-bpKQ",
+                "duration": "10:00",
+                "publishedAt": "2026-07-08",
+                "description": "A recorded masterclass on research, wireframing and prototyping."
+              },
+              {
+                "id": 9,
+                "title": "Sports Day Event Reel",
+                "thumbnail": "/education/10.png",
+                "videoUrl": "https://www.youtube.com/embed/y6120QOlsfU",
+                "duration": "03:44",
+                "publishedAt": "2026-07-01",
+                "description": "Highlights from the annual inter-house sports day finals."
+              },
+              {
+                "id": 10,
+                "title": "Student Project Showcase",
+                "thumbnail": "/people/women1.png",
+                "videoUrl": "https://www.youtube.com/embed/Z4C82eyhwgU",
+                "duration": "02:29",
+                "publishedAt": "2026-06-24",
+                "description": "Short demos from the final-year project showcase."
+              },
+              {
+                "id": 11,
+                "title": "Career Counselling Session",
+                "thumbnail": "/people/man1.png",
+                "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                "duration": "03:33",
+                "publishedAt": "2026-06-17",
+                "description": "Recorded mentoring session on resumes, interviews and salary talks."
+              },
+              {
+                "id": 12,
+                "title": "Campus Fest Welcome Film",
+                "thumbnail": "/people/men2.png",
+                "videoUrl": "https://www.youtube.com/embed/_cMxraX_5RE",
+                "duration": "08:15",
+                "publishedAt": "2026-06-10",
+                "description": "The opening film we played to welcome the incoming batch."
+              }
+            ]
+          }
+        }
+      },
+      "ThankYou": {
+        "variants": {
+          "EducationThankYou1": {
+            "badge": "Form Submitted",
+            "title": {
+              "normal": "Thank You",
+              "highlighted": "For Reaching Out"
+            },
+            "messages": [
+              "Your details have been submitted successfully and our team has received them.",
+              "We will review your request and get back to you within 24 hours.",
+              "Please keep an eye on your inbox for a confirmation email."
+            ]
+          }
+        }
+      },
+      "Legal": {
+        "variants": {
+          "EducationTerms1": {
+            "banner": {
+              "title": "Terms & Conditions",
+              "home": "Home",
+              "current": "Terms & Conditions",
+              "bgImage": "/education/3.png"
+            },
+            "badge": "Terms & Condition",
+            "title": {
+              "normal": "Terms &",
+              "highlighted": "Conditions"
+            },
+            "desc": "These terms explain the rules that apply when you browse our website, enrol in a program, or attend any of our programs. Please read them carefully before you register with us.",
+            "points": [
+              {
+                "id": 1,
+                "title": "Acceptance Of These Terms",
+                "description": "By accessing our website or enrolling in a program, you agree to these terms in full. If you do not agree with any part of them, you must stop using our services and inform us before continuing."
+              },
+              {
+                "id": 2,
+                "title": "Eligibility & Enrollment",
+                "description": "You must provide accurate registration details and meet the minimum eligibility criteria for the program you choose. We reserve the right to refuse or cancel an enrollment if the information provided proves to be false or misleading."
+              },
+              {
+                "id": 3,
+                "title": "Course Content & Delivery",
+                "description": "Course material, live sessions, recordings and assessments belong to Edusity and are provided for your personal, non-commercial learning use. Classes are scheduled as published, and any rescheduling is notified in advance."
+              },
+              {
+                "id": 4,
+                "title": "Fees, Payments & Invoices",
+                "description": "All fees must be paid by the dates stated on your invoice. Late payments may pause your access to classes and recordings until the outstanding amount is cleared. Prices listed on our website exclude applicable taxes unless mentioned."
+              },
+              {
+                "id": 5,
+                "title": "Attendance & Progress",
+                "description": "Regular attendance and timely submissions are expected. Progress is tracked through attendance records, assignments and assessments, and certificates are issued only after the required completion criteria are met."
+              },
+              {
+                "id": 6,
+                "title": "Intellectual Property",
+                "description": "All designs, text, code, recordings and teaching material are owned by Edusity. You may not reproduce, sell, share or publish them without written permission, and any attempt to do so may lead to legal action."
+              },
+              {
+                "id": 7,
+                "title": "Code Of Conduct",
+                "description": "We expect every learner to keep our classrooms respectful and harassment free. Rude, disruptive or unlawful behaviour can result in a warning, removal from a batch, or a permanent block from our platform."
+              },
+              {
+                "id": 8,
+                "title": "Limitation Of Liability",
+                "description": "Edusity is not liable for indirect or consequential losses, including lost job opportunities or income, that may arise from your enrollment. Our total liability is limited to the amount you paid for the program."
+              },
+              {
+                "id": 9,
+                "title": "Changes To These Terms",
+                "description": "We may update these terms whenever our services, products or legal requirements change. The revised version takes effect immediately on this page, and continuing to use our services means you accept it."
+              }
+            ],
+            "contact": {
+              "title": "Contact Us",
+              "description": "Questions about a program, these terms or an existing enrollment? Write to our admissions team and we will get back to you within one business day.",
+              "email": "info@example.com",
+              "phone": "+91 00000 00000"
+            }
+          },
+          "EducationPrivacy1": {
+            "banner": {
+              "title": "Privacy Policy",
+              "home": "Home",
+              "current": "Privacy Policy",
+              "bgImage": "/education/3.png"
+            },
+            "badge": "Privacy Policy",
+            "title": {
+              "normal": "Privacy",
+              "highlighted": "Policy"
+            },
+            "desc": "We only collect what we need to teach you well and to keep our platform secure. This policy explains what we gather, why we gather it, and the choices you have.",
+            "points": [
+              {
+                "id": 1,
+                "title": "Information We Collect",
+                "description": "We collect details you give us such as your name, email address, phone number and enrollment choices, along with technical data like device type, browser and pages you visit while using our website."
+              },
+              {
+                "id": 2,
+                "title": "How We Use Your Information",
+                "description": "Your data is used to run your enrollment, deliver classes, share study material, issue certificates and answer your questions. We also use aggregated trends to improve our programs and support experience."
+              },
+              {
+                "id": 3,
+                "title": "Cookies & Tracking",
+                "description": "We use cookies and similar technologies to keep you signed in, remember your preferences and understand how the site is used. You can disable cookies in your browser, though some features may stop working."
+              },
+              {
+                "id": 4,
+                "title": "Sharing Your Information",
+                "description": "We never sell your personal data. We share it only with trusted service providers who host our platform, deliver emails or process payments, and only to the extent needed to operate our services."
+              },
+              {
+                "id": 5,
+                "title": "Data Security",
+                "description": "Your information is stored on secured servers with restricted access and encrypted transfers. We continuously review our systems and processes so that your data stays protected."
+              },
+              {
+                "id": 6,
+                "title": "Data Retention",
+                "description": "We keep your records for as long as you are enrolled and for the period required by law afterwards. Once retention periods end, your data is deleted or safely anonymised."
+              },
+              {
+                "id": 7,
+                "title": "Your Rights & Choices",
+                "description": "You can request a copy of the data we hold, ask us to correct it, or ask us to delete it. You can also withdraw marketing communication at any time using the unsubscribe link in any email."
+              },
+              {
+                "id": 8,
+                "title": "Children's Privacy",
+                "description": "Our programs are intended for learners who can consent to this policy. We do not knowingly collect personal information from children, and any such case is reviewed and removed immediately."
+              },
+              {
+                "id": 9,
+                "title": "Updates To This Policy",
+                "description": "We may update this policy as our services or regulations change. The latest version is always published on this page, and any significant change is communicated to registered learners by email."
+              }
+            ],
+            "contact": {
+              "title": "Contact Us",
+              "description": "To access, correct or delete your personal data, or to raise a privacy concern, reach our privacy team and we will respond within one business day.",
+              "email": "info@example.com",
+              "phone": "+91 00000 00000"
+            }
+          },
+          "EducationRefund1": {
+            "banner": {
+              "title": "Refund Policy",
+              "home": "Home",
+              "current": "Refund Policy",
+              "bgImage": "/education/3.png"
+            },
+            "badge": "Refund Policy",
+            "title": {
+              "normal": "Refund",
+              "highlighted": "Policy"
+            },
+            "desc": "We want you to enrol with confidence. This policy explains when a refund can be requested, how much you get back, and the exact steps to follow so the process stays quick and fair.",
+            "points": [
+              {
+                "id": 1,
+                "title": "Requesting A Refund",
+                "description": "Write to our support team from the email address used at enrollment with your registration number, the reason for your request, and the date of the transaction. Verbal requests cannot be processed."
+              },
+              {
+                "id": 2,
+                "title": "Refund Eligibility Window",
+                "description": "Refunds can be requested within 7 days of the fee being paid, provided fewer than 20% of the program content has been watched and no live session has been attended."
+              },
+              {
+                "id": 3,
+                "title": "Non-Refundable Cases",
+                "description": "No refund is given once attendance crosses the threshold above, after certificates have been issued, or for services such as one-to-one mentorship that have already been delivered."
+              },
+              {
+                "id": 4,
+                "title": "Partial Refunds",
+                "description": "If a batch is cancelled or rescheduled by us, you are automatically offered a full refund, a free transfer to another batch, or continued access to the recorded version of the program."
+              },
+              {
+                "id": 5,
+                "title": "How Refunds Are Processed",
+                "description": "Approved refunds are returned to the original payment method within 7 to 10 working days. Bank or gateway processing times may add a few extra days depending on your provider."
+              },
+              {
+                "id": 6,
+                "title": "Failed Or Interrupted Courses",
+                "description": "If a course stops being delivered because of a technical fault on our side, the affected sessions are rescheduled at no cost, or a proportionate refund is issued if rescheduling is not possible."
+              },
+              {
+                "id": 7,
+                "title": "Duplicate Payments",
+                "description": "If a payment is charged twice by mistake, inform us immediately with the transaction reference. The duplicate amount is reversed in full and confirmed to you in writing."
+              },
+              {
+                "id": 8,
+                "title": "Chargebacks & Disputes",
+                "description": "Raising a chargeback with your bank before contacting us can delay the process. Please give us a chance to resolve the issue first, and we will share every record needed for your bank."
+              },
+              {
+                "id": 9,
+                "title": "Refund Timeline",
+                "description": "Once your request is approved, a confirmation email with the amount and expected date is sent to you. The timeline runs from the approval date, not from the date the request was raised."
+              }
+            ],
+            "contact": {
+              "title": "Contact Us",
+              "description": "To raise a refund request or ask about an existing one, write to our support team with your registration number and we will respond within one business day.",
+              "email": "info@example.com",
+              "phone": "+91 00000 00000"
+            }
+          }
+        }
+      },
+      "Footer": {
+        "variants": {
+          "EducationFooter1": {
+            "logoImage": "/logo.png",
+            "siteName": "Edusity",
+            "tagline": "LEARN TODAY BUILD TOMORROW",
+            "desc": "At Edusity, we believe education has the power to transform lives. Our mission is to make quality learning accessible to everyone, anywhere in the world.",
+            "columns": [
+              {
+                "title": "Quick Links",
+                "links": [
+                  { "label": "Home", "href": "/" },
+                  { "label": "Testimonial", "href": "/testimonial" },
+                  { "label": "Gallery", "href": "/gallery" },
+                  { "label": "Our Courses", "href": "/courses" },
+                  { "label": "Our Instructors", "href": "/faculty" },
+                  { "label": "Blog", "href": "/blog" },
+                  { "label": "FAQs", "href": "/faq" },
+                  { "label": "Contact Us", "href": "/contact" }
+                ]
+              },
+              {
+                "title": "Popular Courses",
+                "links": [
+                  {
+                    "label": "Web Development",
+                    "href": "/courses/complete-web-development-bootcamp"
+                  },
+                  {
+                    "label": "Data Science",
+                    "href": "/courses/data-science-for-beginners"
+                  },
+                  {
+                    "label": "Digital Marketing",
+                    "href": "/courses/digital-marketing-essentials"
+                  },
+                  { "label": "Graphic Design", "href": "/courses" },
+                  { "label": "Business Management", "href": "/courses" },
+                  { "label": "Personal Development", "href": "/courses" },
+                  { "label": "View All Courses", "href": "/courses" }
+                ]
+              },
+              {
+                "title": "Support",
+                "links": [
+                  { "label": "Help Center", "href": "/help-center" },
+                  { "label": "Terms & Conditions", "href": "/terms" },
+                  { "label": "Privacy Policy", "href": "/privacy" },
+                  { "label": "Refund Policy", "href": "/refund-policy" },
+                  { "label": "Thank You", "href": "/thank" },
+                  { "label": "Careers", "href": "/career" },
+                  { "label": "Contact Support", "href": "/contact" }
+                ]
+              }
+            ],
+            "footerContact": {
+              "title": "Contact Us",
+              "addressLabel": "Our Office",
+              "address": "123 Learning Street, New Delhi, India 110001",
+              "callLabel": "Call Us",
+              "phone": "+91 98765 43210",
+              "phoneHref": "tel:+919876543210",
+              "emailLabel": "Email Us",
+              "email": "info@edusity.com",
+              "emailHref": "mailto:info@edusity.com",
+              "hoursLabel": "Working Hours",
+              "hours": ["Mon - Fri: 9:00 AM - 6:00 PM", "(Closed on Weekends)"]
+            },
+            "socialLinks": [
+              { "label": "facebook", "href": "https://www.facebook.com/" },
+              { "label": "instagram", "href": "https://www.instagram.com/" },
+              { "label": "linkedin", "href": "https://www.linkedin.com/" },
+              { "label": "youtube", "href": "https://www.youtube.com/" }
+            ],
+            "copyright": "© 2026 Edusity. All rights reserved.",
+            "legalLinks": [
+              { "label": "Privacy Policy", "href": "/privacy" },
+              { "label": "Terms & Conditions", "href": "/terms" },
+              { "label": "Refund Policy", "href": "/refund-policy" }
+            ],
+            "backToTop": true
+          }
+        }
+      },
+      "NotFound": {
+        "variants": {
+          "EducationNotFound1": {
+            "badge": "O O P S !",
+            "errorCode": "404",
+            "title": {
+              "normal": "Page Not",
+              "highlighted": "Found"
+            },
+            "desc": "The page you are looking for might have been removed, renamed, or is temporarily unavailable.",
+            "bgImage": "/education/error.png",
+            "buttons": [
+              {
+                "label": "Back to Home",
+                "href": "/",
+                "variant": "primary"
+              },
+              {
+                "label": "Browse Courses",
+                "href": "/courses",
+                "variant": "outline"
+              }
+            ],
+            "helpText": "Need help?",
+            "helpLink": {
+              "label": "Contact Us",
+              "href": "/contact"
+            }
+          }
+        }
+      },
+      "Mission": {
+        "variants": {
+          "EducationMission1": {
+            "banner": {
+              "title": "Vision & Mission",
+              "home": "Home",
+              "current": "Vision & Mission",
+              "bgImage": "/education/3.png"
+            },
+            "vision": {
+              "badge": "OUR VISION",
+              "title": {
+                "normal": "A Brighter Tomorrow Through",
+                "highlighted": "Education"
+              },
+              "desc": "To be a trusted global learning platform that empowers every learner to reach their full potential and create a better, smarter, and more inclusive tomorrow.",
+              "image": "/education/4.png",
+              "quote": "An educated world is a brighter tomorrow."
+            },
+            "mission": {
+              "badge": "OUR MISSION",
+              "title": {
+                "normal": "Empowering Learners For A",
+                "highlighted": "Better Tomorrow"
+              },
+              "desc": "Our mission is to make high-quality education accessible to everyone by providing innovative learning solutions, expert guidance, and a supportive community that helps individuals grow, achieve, and succeed in their personal and professional lives.",
+              "image": "/education/7.jpg",
+              "quote": "Empowering learners, building brighter futures."
+            }
+          }
+        }
+      }
+    }
+  }
+}
