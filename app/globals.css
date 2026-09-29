@@ -1,4 +1,11 @@
 @import "tailwindcss";
 @import "lenis/dist/lenis.css";
 
-
+/*
+ * Allura is loaded with next/font/local in app/layout.tsx and exposed there as
+ * --font-allura. Aliased under a different theme key (rather than reusing the
+ * name) so the utility does not reference itself.
+ */
+@theme inline {
+  --font-handwritten: var(--font-allura);
+}

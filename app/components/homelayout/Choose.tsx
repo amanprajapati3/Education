@@ -121,10 +121,7 @@ export default function Choose({
           {/* Right Side: Image Composition & Floating Badges */}
           <div className="lg:col-span-5 relative sm:mt-6 lg:mt-0">
             {/* Handwritten Note Accent */}
-            <div
-              className="absolute -top-1  max-w-[80px] -right-4 z-25 text-slate-700 font-semibold text-2xl md:text-3xl tracking-wide rotate-[-8deg] pointer-events-none hidden sm:block"
-              style={{ fontFamily: "var(--font-allura)" }}
-            >
+            <div className="absolute -top-1  max-w-[80px] -right-4 z-25 text-slate-700 font-handwritten text-2xl md:text-3xl tracking-wide rotate-[-8deg] pointer-events-none hidden sm:block">
               {data?.handwrittenNote || "Learn Grow Succeed"}
               <div className="w-16 h-1 bg-emerald-500/60 rounded-full mt-1 ml-2 rotate-[-2deg]" />
             </div>

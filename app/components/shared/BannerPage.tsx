@@ -1,12 +1,18 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
+
+export interface BannerCrumb {
+  label: string;
+  href?: string;
+}
 
 interface BannerPageProps {
   title: string;
   home: string;
   current: string;
   bgImage?: string;
+  crumbs?: BannerCrumb[];
   className?: string;
 }
 
@@ -17,6 +23,7 @@ export default function BannerPage({
   home,
   current,
   bgImage,
+  crumbs = [],
   className = "",
 }: BannerPageProps) {
   return (
@@ -29,6 +36,7 @@ export default function BannerPage({
             alt={title}
             fill
             priority
+            sizes="100vw"
             className="object-cover"
           />
         )}
@@ -43,16 +51,31 @@ export default function BannerPage({
         >
           {title}
         </h1>
-        
-        <div className="flex items-center justify-center gap-2 text-sm sm:text-base font-medium text-white/90">
-          <Link href="/" className="hover:opacity-80 transition-opacity">
+
+        <nav
+          aria-label="Breadcrumb"
+          className="flex flex-wrap items-center justify-center gap-2 text-sm font-medium text-white/90 sm:text-base"
+        >
+          <Link href="/" className="transition-colors hover:text-[#19C2A1]">
             {home}
           </Link>
-          <span className="text-white/60">/</span>
+          {crumbs.map((crumb, index) => (
+            <Fragment key={`${crumb.label}-${index}`}>
+              <span className="text-white/50">/</span>
+              {crumb.href ? (
+                <Link href={crumb.href} className="transition-colors hover:text-[#19C2A1]">
+                  {crumb.label}
+                </Link>
+              ) : (
+                <span>{crumb.label}</span>
+              )}
+            </Fragment>
+          ))}
+          <span className="text-white/50">/</span>
           <span className="font-semibold" style={{ color: AQUA }}>
             {current}
           </span>
-        </div>
+        </nav>
       </div>
     </section>
   );

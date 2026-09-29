@@ -133,7 +133,7 @@
               },
               { "label": "Courses", "href": "/courses" },
               { "label": "Faculty", "href": "/faculty" },
-              { "label": "Admission Process", "href": "/admission-process" },
+              { "label": "Admission Process", "href": "/process" },
               { "label": "Gallery", "href": "/gallery" },
               { "label": "Blog", "href": "/blog" }
             ],
@@ -177,7 +177,7 @@
             "buttons": [
               {
                 "label": "Explore Programs",
-                "href": "/programs",
+                "href": "/courses",
                 "variant": "primary"
               },
               {
@@ -723,6 +723,284 @@
                 }
               }
             ],
+            "detailPage": {
+              "banner": {
+                "title": "Courses Detail",
+                "home": "Home",
+                "current": "Courses Detail",
+                "bgImage": "/education/3.png"
+              },
+              "instructor": {
+                "name": "Rahul Mehta",
+                "role": "Lead Instructor",
+                "title": "Full Stack Developer & Tech Educator",
+                "image": "/people/man1.png",
+                "experience": "8+",
+                "students": "50K+",
+                "bio": "A practical educator focused on clear explanations, guided projects, and skills learners can use at work."
+              },
+              "includes": [
+                "On-demand video lessons",
+                "Hands-on projects",
+                "Downloadable resources",
+                "Certificate of completion",
+                "Lifetime access",
+                "Access on all devices"
+              ],
+              "help": {
+                "title": "Need Help?",
+                "description": "Have questions about this course? Our team is here to help.",
+                "button": "Contact Us",
+                "href": "/contact"
+              },
+              "promo": {
+                "title": "Upgrade Your Skills",
+                "highlight": "Build Your Future",
+                "description": "Join thousands of learners and take the next step towards a successful career."
+              },
+              "courses": [
+                {
+                  "slug": "complete-web-development-bootcamp",
+                  "level": "Beginner",
+                  "lessons": 45,
+                  "language": "English",
+                  "updated": "Mar 2025",
+                  "about": "Build a strong web development foundation, then bring it together in responsive projects that mirror the work of a modern development team.",
+                  "outcomes": ["HTML, CSS, and JavaScript fundamentals", "Responsive layouts for every screen", "Build and deploy complete websites", "Git workflows and portfolio projects"],
+                  "modules": [{"title":"Web Development Foundations","lessons":10,"duration":"1 hr 20 min"},{"title":"HTML & CSS Essentials","lessons":12,"duration":"1 hr 45 min"},{"title":"JavaScript in the Browser","lessons":12,"duration":"2 hr 10 min"},{"title":"Build and Deploy a Portfolio","lessons":11,"duration":"2 hr 15 min"}]
+                },
+                {
+                  "slug": "data-science-for-beginners",
+                  "level": "Beginner",
+                  "lessons": 52,
+                  "language": "English",
+                  "updated": "Feb 2025",
+                  "about": "Turn raw data into useful answers with a guided introduction to Python, exploratory analysis, statistics, and practical machine learning.",
+                  "outcomes": ["Prepare datasets with Python and pandas", "Explore patterns with statistics", "Create clear charts and reports", "Train and evaluate a first ML model"],
+                  "modules": [{"title":"Python for Data Work","lessons":12,"duration":"1 hr 35 min"},{"title":"Data Cleaning & Exploration","lessons":13,"duration":"2 hr 05 min"},{"title":"Statistics and Visualization","lessons":13,"duration":"2 hr 10 min"},{"title":"Your First Machine Learning Model","lessons":14,"duration":"2 hr 30 min"}]
+                },
+                {
+                  "slug": "ui-ux-design-masterclass",
+                  "level": "Beginner",
+                  "lessons": 38,
+                  "language": "English",
+                  "updated": "Jan 2025",
+                  "about": "Learn a complete user-centered design process, from understanding people and mapping flows to polished, testable interface prototypes.",
+                  "outcomes": ["Plan useful user research", "Map journeys and interface flows", "Create wireframes and visual systems", "Prototype and test a product concept"],
+                  "modules": [{"title":"Principles of User-Centered Design","lessons":9,"duration":"1 hr 10 min"},{"title":"Research, Personas & User Flows","lessons":10,"duration":"1 hr 35 min"},{"title":"Wireframes and Visual Systems","lessons":10,"duration":"1 hr 45 min"},{"title":"Interactive Prototyping & Testing","lessons":9,"duration":"1 hr 30 min"}]
+                },
+                {
+                  "slug": "digital-marketing-essentials",
+                  "level": "Beginner",
+                  "lessons": 30,
+                  "language": "English",
+                  "updated": "Mar 2025",
+                  "about": "Plan measurable digital campaigns by connecting audience research, search, content, social channels, and performance reporting.",
+                  "outcomes": ["Build a practical channel strategy", "Improve content for search", "Plan social and paid campaigns", "Measure results with useful metrics"],
+                  "modules": [{"title":"Digital Strategy & Audience Research","lessons":7,"duration":"55 min"},{"title":"SEO and Content Marketing","lessons":8,"duration":"1 hr 10 min"},{"title":"Social and Paid Campaigns","lessons":8,"duration":"1 hr 15 min"},{"title":"Analytics and Optimization","lessons":7,"duration":"1 hr 05 min"}]
+                },
+                {
+                  "slug": "artificial-intelligence-fundamentals",
+                  "level": "Intermediate",
+                  "lessons": 60,
+                  "language": "English",
+                  "updated": "Apr 2025",
+                  "about": "Understand the ideas behind modern AI and build a practical foundation in machine learning, neural networks, and responsible deployment.",
+                  "outcomes": ["Explain core machine-learning concepts", "Prepare data for model training", "Build neural-network experiments", "Evaluate model quality and limitations"],
+                  "modules": [{"title":"AI and Machine Learning Foundations","lessons":14,"duration":"1 hr 50 min"},{"title":"Data Preparation & Model Training","lessons":15,"duration":"2 hr 20 min"},{"title":"Neural Networks and Deep Learning","lessons":16,"duration":"2 hr 35 min"},{"title":"Responsible AI Project","lessons":15,"duration":"2 hr 30 min"}]
+                },
+                {
+                  "slug": "cybersecurity-expert-program",
+                  "level": "Intermediate",
+                  "lessons": 50,
+                  "language": "English",
+                  "updated": "Feb 2025",
+                  "about": "Build defensive security skills through network fundamentals, threat analysis, secure configuration, and authorized assessment labs.",
+                  "outcomes": ["Identify common security risks", "Harden systems and networks", "Assess vulnerabilities in lab environments", "Document findings responsibly"],
+                  "modules": [{"title":"Security Principles & Threats","lessons":12,"duration":"1 hr 35 min"},{"title":"Network and System Defense","lessons":13,"duration":"2 hr 00 min"},{"title":"Vulnerability Assessment Labs","lessons":13,"duration":"2 hr 20 min"},{"title":"Incident Response & Reporting","lessons":12,"duration":"1 hr 55 min"}]
+                },
+                {
+                  "slug": "cloud-computing-architecture",
+                  "level": "Intermediate",
+                  "lessons": 42,
+                  "language": "English",
+                  "updated": "Mar 2025",
+                  "about": "Design reliable cloud systems by learning core infrastructure concepts, deployment patterns, security controls, and cost-aware operations.",
+                  "outcomes": ["Choose appropriate cloud services", "Design resilient system architectures", "Apply identity and security controls", "Estimate and optimize cloud costs"],
+                  "modules": [{"title":"Cloud Foundations & Core Services","lessons":10,"duration":"1 hr 25 min"},{"title":"Networking and Architecture","lessons":11,"duration":"1 hr 50 min"},{"title":"Security, Reliability & Scaling","lessons":11,"duration":"2 hr 00 min"},{"title":"Deploy a Cloud Solution","lessons":10,"duration":"1 hr 45 min"}]
+                },
+                {
+                  "slug": "advanced-database-management",
+                  "level": "Intermediate",
+                  "lessons": 36,
+                  "language": "English",
+                  "updated": "Jan 2025",
+                  "about": "Move beyond basic queries to design, tune, and operate dependable relational and document databases for growing applications.",
+                  "outcomes": ["Design normalized data models", "Write efficient SQL queries", "Compare relational and NoSQL systems", "Diagnose performance bottlenecks"],
+                  "modules": [{"title":"Data Modeling & Database Design","lessons":9,"duration":"1 hr 15 min"},{"title":"Advanced SQL and Indexing","lessons":9,"duration":"1 hr 35 min"},{"title":"NoSQL and Distributed Data","lessons":9,"duration":"1 hr 30 min"},{"title":"Performance and Reliability","lessons":9,"duration":"1 hr 40 min"}]
+                },
+                {
+                  "slug": "mobile-app-development",
+                  "level": "Beginner",
+                  "lessons": 48,
+                  "language": "English",
+                  "updated": "Apr 2025",
+                  "about": "Create a polished cross-platform mobile app with Flutter, covering layouts, navigation, state, data, and release preparation.",
+                  "outcomes": ["Build reusable Flutter interfaces", "Manage app navigation and state", "Connect to remote data", "Prepare an app for release"],
+                  "modules": [{"title":"Dart and Flutter Foundations","lessons":12,"duration":"1 hr 40 min"},{"title":"Layouts, Navigation & State","lessons":12,"duration":"2 hr 00 min"},{"title":"APIs and Persistent Data","lessons":12,"duration":"2 hr 05 min"},{"title":"Build and Release a Mobile App","lessons":12,"duration":"2 hr 15 min"}]
+                },
+                {
+                  "slug": "financial-modeling-analysis",
+                  "level": "Intermediate",
+                  "lessons": 34,
+                  "language": "English",
+                  "updated": "Feb 2025",
+                  "about": "Build transparent financial models that connect business assumptions to forecasts, valuation, and clear decision-making.",
+                  "outcomes": ["Structure clean spreadsheet models", "Forecast financial statements", "Apply valuation methods", "Present assumptions and sensitivities"],
+                  "modules": [{"title":"Modeling Standards & Excel","lessons":8,"duration":"1 hr 10 min"},{"title":"Forecasting Financial Statements","lessons":9,"duration":"1 hr 35 min"},{"title":"Valuation and Scenario Analysis","lessons":9,"duration":"1 hr 40 min"},{"title":"Investment Case Study","lessons":8,"duration":"1 hr 25 min"}]
+                },
+                {
+                  "slug": "product-management-essentials",
+                  "level": "Beginner",
+                  "lessons": 32,
+                  "language": "English",
+                  "updated": "Mar 2025",
+                  "about": "Learn to connect customer needs and business goals while guiding a product from discovery through delivery and iteration.",
+                  "outcomes": ["Frame customer problems clearly", "Prioritize opportunities and roadmaps", "Work effectively with delivery teams", "Define outcomes and product metrics"],
+                  "modules": [{"title":"Product Thinking & Discovery","lessons":8,"duration":"1 hr 05 min"},{"title":"Research, Prioritization & Roadmaps","lessons":8,"duration":"1 hr 20 min"},{"title":"Agile Delivery & Collaboration","lessons":8,"duration":"1 hr 25 min"},{"title":"Launch, Measure & Improve","lessons":8,"duration":"1 hr 20 min"}]
+                },
+                {
+                  "slug": "business-analytics-strategy",
+                  "level": "Intermediate",
+                  "lessons": 40,
+                  "language": "English",
+                  "updated": "Jan 2025",
+                  "about": "Use structured analysis and thoughtful visualization to answer business questions and communicate recommendations with confidence.",
+                  "outcomes": ["Translate goals into analytical questions", "Prepare and explore business data", "Build clear dashboards and reports", "Present evidence-based recommendations"],
+                  "modules": [{"title":"Business Questions & Data Basics","lessons":10,"duration":"1 hr 20 min"},{"title":"Analysis with Spreadsheets and SQL","lessons":10,"duration":"1 hr 40 min"},{"title":"Dashboards with Tableau and Power BI","lessons":10,"duration":"1 hr 50 min"},{"title":"Insight Presentation Project","lessons":10,"duration":"1 hr 35 min"}]
+                },
+                {
+                  "slug": "frontend-development-with-react",
+                  "level": "Intermediate",
+                  "lessons": 39,
+                  "language": "English",
+                  "updated": "Apr 2025",
+                  "about": "Build maintainable React interfaces with component architecture, modern state patterns, accessible interactions, and focused testing.",
+                  "outcomes": ["Compose reusable React components", "Manage state and data flows", "Build accessible responsive interfaces", "Test and ship a frontend project"],
+                  "modules": [{"title":"React and Component Thinking","lessons":9,"duration":"1 hr 20 min"},{"title":"State, Events & Data Fetching","lessons":10,"duration":"1 hr 45 min"},{"title":"Routing, Forms & Accessibility","lessons":10,"duration":"1 hr 50 min"},{"title":"Testing and Capstone Interface","lessons":10,"duration":"1 hr 55 min"}]
+                },
+                {
+                  "slug": "python-programming-from-scratch",
+                  "level": "Beginner",
+                  "lessons": 36,
+                  "language": "English",
+                  "updated": "Feb 2025",
+                  "about": "Start writing Python with confidence, then use functions, files, and libraries to solve everyday programming problems.",
+                  "outcomes": ["Use Python variables and collections", "Write functions and control flow", "Work with files and useful libraries", "Create tested automation scripts"],
+                  "modules": [{"title":"Python Setup and Fundamentals","lessons":9,"duration":"1 hr 15 min"},{"title":"Control Flow, Functions & Collections","lessons":9,"duration":"1 hr 30 min"},{"title":"Files, Modules & Error Handling","lessons":9,"duration":"1 hr 25 min"},{"title":"Automation Project and Testing","lessons":9,"duration":"1 hr 35 min"}]
+                },
+                {
+                  "slug": "graphic-design-professional",
+                  "level": "Beginner",
+                  "lessons": 30,
+                  "language": "English",
+                  "updated": "Mar 2025",
+                  "about": "Develop a confident visual-design practice through composition, type, color, and a portfolio-ready identity project.",
+                  "outcomes": ["Use hierarchy and composition effectively", "Pair type and color with intent", "Create consistent visual assets", "Present a polished brand identity"],
+                  "modules": [{"title":"Visual Principles & Composition","lessons":7,"duration":"55 min"},{"title":"Typography, Color & Image","lessons":8,"duration":"1 hr 15 min"},{"title":"Design Systems and Brand Assets","lessons":8,"duration":"1 hr 20 min"},{"title":"Portfolio Identity Project","lessons":7,"duration":"1 hr 15 min"}]
+                },
+                {
+                  "slug": "social-media-marketing",
+                  "level": "Beginner",
+                  "lessons": 28,
+                  "language": "English",
+                  "updated": "Jan 2025",
+                  "about": "Create a sustainable social media plan that earns attention, builds community, and uses campaign data to improve results.",
+                  "outcomes": ["Choose channels for an audience", "Plan a useful content calendar", "Set up and measure paid campaigns", "Turn community insights into action"],
+                  "modules": [{"title":"Audience, Channels & Goals","lessons":7,"duration":"55 min"},{"title":"Content Planning and Creation","lessons":7,"duration":"1 hr 10 min"},{"title":"Community and Paid Campaigns","lessons":7,"duration":"1 hr 15 min"},{"title":"Reporting and Campaign Improvement","lessons":7,"duration":"1 hr 05 min"}]
+                },
+                {
+                  "slug": "generative-ai-prompt-engineering",
+                  "level": "Beginner",
+                  "lessons": 34,
+                  "language": "English",
+                  "updated": "Apr 2025",
+                  "about": "Use generative AI thoughtfully by designing better prompts, evaluating outputs, and combining model APIs into reliable workflows.",
+                  "outcomes": ["Write clear task-focused prompts", "Evaluate and refine AI outputs", "Design repeatable AI workflows", "Connect an LLM API to a small app"],
+                  "modules": [{"title":"How Generative AI Works","lessons":8,"duration":"1 hr 00 min"},{"title":"Prompt Patterns and Evaluation","lessons":9,"duration":"1 hr 20 min"},{"title":"Structured Outputs & AI Workflows","lessons":9,"duration":"1 hr 30 min"},{"title":"Build with an LLM API","lessons":8,"duration":"1 hr 25 min"}]
+                },
+                {
+                  "slug": "ethical-hacking-penetration-testing",
+                  "level": "Intermediate",
+                  "lessons": 44,
+                  "language": "English",
+                  "updated": "Mar 2025",
+                  "about": "Practice the authorized penetration-testing workflow in controlled labs, from scoping and discovery through verification and clear reporting.",
+                  "outcomes": ["Set scope and rules of engagement", "Recognize common web and network weaknesses", "Validate findings in safe lab targets", "Write remediation-focused reports"],
+                  "modules": [{"title":"Ethics, Scope & Assessment Process","lessons":10,"duration":"1 hr 20 min"},{"title":"Reconnaissance and Enumeration","lessons":11,"duration":"1 hr 45 min"},{"title":"Web Security Testing Labs","lessons":12,"duration":"2 hr 10 min"},{"title":"Validation, Reporting & Remediation","lessons":11,"duration":"1 hr 55 min"}]
+                },
+                {
+                  "slug": "devops-and-ci-cd-pipeline",
+                  "level": "Intermediate",
+                  "lessons": 42,
+                  "language": "English",
+                  "updated": "Feb 2025",
+                  "about": "Automate the path from code change to dependable release with containers, continuous integration, deployment workflows, and observability.",
+                  "outcomes": ["Package services with Docker", "Automate tests and builds", "Deploy with repeatable pipelines", "Monitor releases and recover safely"],
+                  "modules": [{"title":"DevOps Principles and Git Workflows","lessons":10,"duration":"1 hr 20 min"},{"title":"Containers with Docker","lessons":10,"duration":"1 hr 40 min"},{"title":"CI/CD with GitHub Actions","lessons":11,"duration":"1 hr 55 min"},{"title":"Kubernetes, Monitoring & Release","lessons":11,"duration":"2 hr 00 min"}]
+                },
+                {
+                  "slug": "sql-and-data-warehousing",
+                  "level": "Beginner",
+                  "lessons": 30,
+                  "language": "English",
+                  "updated": "Jan 2025",
+                  "about": "Write reliable SQL and learn how modern warehouses organize, transform, and serve data for consistent reporting.",
+                  "outcomes": ["Query and join relational data", "Model clean reporting datasets", "Understand warehouse architecture", "Validate a reusable analytics dataset"],
+                  "modules": [{"title":"SQL Querying Essentials","lessons":8,"duration":"1 hr 05 min"},{"title":"Joins, Aggregations & Window Functions","lessons":8,"duration":"1 hr 20 min"},{"title":"Warehouse Modeling and ELT","lessons":7,"duration":"1 hr 15 min"},{"title":"Build a Reporting Dataset","lessons":7,"duration":"1 hr 10 min"}]
+                },
+                {
+                  "slug": "react-native-mobile-mastery",
+                  "level": "Intermediate",
+                  "lessons": 36,
+                  "language": "English",
+                  "updated": "Apr 2025",
+                  "about": "Ship a cross-platform app with React Native by combining native-friendly components, navigation, data, and release-ready quality practices.",
+                  "outcomes": ["Build shared Android and iOS screens", "Structure navigation and app state", "Connect mobile apps to APIs", "Test and prepare store builds"],
+                  "modules": [{"title":"React Native Foundations","lessons":9,"duration":"1 hr 15 min"},{"title":"Navigation, Layout & Platform Patterns","lessons":9,"duration":"1 hr 30 min"},{"title":"APIs, State & Device Features","lessons":9,"duration":"1 hr 35 min"},{"title":"Testing and Release Preparation","lessons":9,"duration":"1 hr 40 min"}]
+                },
+                {
+                  "slug": "stock-market-and-trading-basics",
+                  "level": "Beginner",
+                  "lessons": 24,
+                  "language": "English",
+                  "updated": "Mar 2025",
+                  "about": "Understand how markets work, read foundational chart information, and develop a disciplined approach to risk and long-term decisions.",
+                  "outcomes": ["Explain core market terminology", "Read basic price and volume charts", "Compare investing and trading approaches", "Build a personal risk checklist"],
+                  "modules": [{"title":"Markets, Exchanges & Key Terms","lessons":6,"duration":"45 min"},{"title":"Orders, Charts & Market Data","lessons":6,"duration":"1 hr 00 min"},{"title":"Risk, Diversification & Behavior","lessons":6,"duration":"1 hr 05 min"},{"title":"Build a Disciplined Plan","lessons":6,"duration":"55 min"}]
+                },
+                {
+                  "slug": "human-resource-management",
+                  "level": "Beginner",
+                  "lessons": 32,
+                  "language": "English",
+                  "updated": "Feb 2025",
+                  "about": "Explore practical people-management frameworks for hiring, onboarding, performance, and building a fair, supportive employee experience.",
+                  "outcomes": ["Plan structured hiring processes", "Create thoughtful onboarding", "Support performance and feedback", "Understand people operations basics"],
+                  "modules": [{"title":"People Operations Foundations","lessons":8,"duration":"1 hr 05 min"},{"title":"Hiring, Selection & Onboarding","lessons":8,"duration":"1 hr 20 min"},{"title":"Performance, Learning & Engagement","lessons":8,"duration":"1 hr 25 min"},{"title":"Policies, Culture & People Planning","lessons":8,"duration":"1 hr 20 min"}]
+                },
+                {
+                  "slug": "entrepreneurship-startup-essentials",
+                  "level": "Beginner",
+                  "lessons": 34,
+                  "language": "English",
+                  "updated": "Apr 2025",
+                  "about": "Move an early idea toward a validated business by understanding customers, shaping a business model, and planning a focused launch.",
+                  "outcomes": ["Test customer problems and assumptions", "Shape a practical business model", "Estimate costs and early revenue", "Plan a focused launch and funding story"],
+                  "modules": [{"title":"Opportunity and Customer Discovery","lessons":8,"duration":"1 hr 05 min"},{"title":"Business Models and Validation","lessons":9,"duration":"1 hr 25 min"},{"title":"Startup Finance and Go-to-Market","lessons":9,"duration":"1 hr 35 min"},{"title":"Pitch and Launch Roadmap","lessons":8,"duration":"1 hr 20 min"}]
+                }
+              ]
+            },
             "banner": {
               "title": "Our Courses",
               "home": "Home",
@@ -1555,11 +1833,11 @@
                   { "label": "Home", "href": "/" },
                   { "label": "Testimonial", "href": "/testimonial" },
                   { "label": "Gallery", "href": "/gallery" },
-                  { "label": "Our Courses", "href": "/courses" },
-                  { "label": "Our Instructors", "href": "/faculty" },
-                  { "label": "Blog", "href": "/blog" },
+                  { "label": "Our Events", "href": "/events" },
+                  { "label": "News", "href": "/news" },
+                  { "label": "Facilities", "href": "/facility" },
                   { "label": "FAQs", "href": "/faq" },
-                  { "label": "Contact Us", "href": "/contact" }
+                  { "label": "Our Achievements", "href": "/achievement" }
                 ]
               },
               {
@@ -1586,7 +1864,7 @@
               {
                 "title": "Support",
                 "links": [
-                  { "label": "Help Center", "href": "/help-center" },
+                  { "label": "Help Center", "href": "/enquiry" },
                   { "label": "Terms & Conditions", "href": "/terms" },
                   { "label": "Privacy Policy", "href": "/privacy" },
                   { "label": "Refund Policy", "href": "/refund-policy" },
@@ -1684,6 +1962,1390 @@
               "desc": "Our mission is to make high-quality education accessible to everyone by providing innovative learning solutions, expert guidance, and a supportive community that helps individuals grow, achieve, and succeed in their personal and professional lives.",
               "image": "/education/7.jpg",
               "quote": "Empowering learners, building brighter futures."
+            }
+          }
+        }
+      },
+      "Faculty": {
+        "variants": {
+          "EducationFaculty1": {
+            "banner": {
+              "title": "Our Faculty",
+              "home": "Home",
+              "current": "Our Faculty",
+              "bgImage": "/education/3.png"
+            },
+            "badge": "OUR FACULTY",
+            "title": {
+              "normal": "Meet Our",
+              "highlighted": "Expert Faculty"
+            },
+            "desc": "Learn from experienced educators who are passionate about teaching and committed to your success.",
+            "facultyItems": [
+              {
+                "id": 1,
+                "slug": "angela-t-vigil",
+                "name": "Angela T. Vigil",
+                "designation": "ASSOCIATE PROFESSOR",
+                "image": "/people/women1.png",
+                "quote": "Specializes in modern teaching methods and student development to create engaging learning experiences."
+              },
+              {
+                "id": 2,
+                "slug": "frank-a-mitchell",
+                "name": "Frank A. Mitchell",
+                "designation": "ASSOCIATE PROFESSOR",
+                "image": "/people/man1.png",
+                "quote": "Focused on practical learning and helping students build real-world skills for a successful career."
+              },
+              {
+                "id": 3,
+                "slug": "susan-d-lunsford",
+                "name": "Susan D. Lunsford",
+                "designation": "CEO & FOUNDER",
+                "image": "/people/men2.png",
+                "quote": "Brings years of industry experience and a vision to make quality education accessible to all."
+              },
+              {
+                "id": 4,
+                "slug": "dennis-a-pruitt",
+                "name": "Dennis A. Pruitt",
+                "designation": "ASSOCIATE PROFESSOR",
+                "image": "/people/women2.png",
+                "quote": "Passionate about research, innovation, and mentoring the next generation of learners."
+              },
+              {
+                "id": 5,
+                "slug": "angela-t-vigil-2",
+                "name": "Angela T. Vigil",
+                "designation": "ASSOCIATE PROFESSOR",
+                "image": "/people/women5.png",
+                "quote": "Specializes in modern teaching methods and student development to create engaging learning experiences."
+              },
+              {
+                "id": 6,
+                "slug": "frank-a-mitchell-2",
+                "name": "Frank A. Mitchell",
+                "designation": "ASSOCIATE PROFESSOR",
+                "image": "/people/men2.png",
+                "quote": "Focused on practical learning and helping students build real-world skills for a successful career."
+              },
+              {
+                "id": 7,
+                "slug": "susan-d-lunsford-2",
+                "name": "Susan D. Lunsford",
+                "designation": "CEO & FOUNDER",
+                "image": "/people/men3.png",
+                "quote": "Brings years of industry experience and a vision to make quality education accessible to all."
+              },
+              {
+                "id": 8,
+                "slug": "dennis-a-pruitt-2",
+                "name": "Dennis A. Pruitt",
+                "designation": "ASSOCIATE PROFESSOR",
+                "image": "/people/women4.png",
+                "quote": "Passionate about research, innovation, and mentoring the next generation of learners."
+              }
+            ],
+            "detailPage": {
+              "banner": {
+                "title": "Faculty Details",
+                "home": "Home",
+                "current": "Faculty Details",
+                "bgImage": "/education/3.png"
+              },
+              "cta": {
+                "eyebrow": "LEARN WITH EXPERT EDUCATORS",
+                "title": "Start Your Learning Journey",
+                "highlight": "With Edusity",
+                "description": "Gain in-demand skills, learn from experienced educators, and build a brighter future with Edusity.",
+                "button": "Explore Our Courses",
+                "href": "/courses",
+                "image": "/education/7.jpg"
+              },
+              "profiles": [
+                {
+                  "slug": "angela-t-vigil",
+                  "yearsExperience": "12+",
+                  "email": "angela.vigil@edusity.com",
+                  "phone": "+1 123 456 7890",
+                  "location": "New York, United States",
+                  "qualification": "Ph.D. in Education",
+                  "department": "Department of Education",
+                  "specialty": "Teaching & Student Development",
+                  "about": ["Angela T. Vigil is an associate professor who brings a thoughtful, student-first approach to every classroom. She makes complex ideas approachable through clear explanations, active discussion, and relevant examples.", "Her work focuses on helping learners build confidence, curiosity, and the habits they need to keep growing beyond the classroom."],
+                  "quote": "Great teaching begins when every learner feels encouraged to ask a better question.",
+                  "values": [{"icon":"users","label":"Student Focused"},{"icon":"lightbulb","label":"Innovative Teaching"},{"icon":"book","label":"Practical Learning"},{"icon":"target","label":"Academic Excellence"}],
+                  "philosophy": "I believe learning is strongest when students feel supported, take an active role, and can connect new ideas to the world around them.",
+                  "interests": ["Inclusive learning design", "Student mentorship", "Curriculum development", "Applied education research"]
+                },
+                {
+                  "slug": "frank-a-mitchell",
+                  "yearsExperience": "10+",
+                  "email": "frank.mitchell@edusity.com",
+                  "phone": "+1 123 456 7891",
+                  "location": "New York, United States",
+                  "qualification": "M.S. in Applied Technology",
+                  "department": "Department of Professional Studies",
+                  "specialty": "Applied Learning & Career Skills",
+                  "about": ["Frank A. Mitchell is an associate professor dedicated to connecting classroom learning with the work students hope to do. His lessons use practical exercises, collaborative problem-solving, and clear feedback.", "He mentors learners as they turn foundational knowledge into durable skills and prepares them to approach new professional challenges with confidence."],
+                  "quote": "Knowledge becomes powerful when you can put it to work on a real problem.",
+                  "values": [{"icon":"users","label":"Career Focused"},{"icon":"lightbulb","label":"Hands-on Teaching"},{"icon":"book","label":"Real-world Projects"},{"icon":"target","label":"Lifelong Growth"}],
+                  "philosophy": "My classroom is a place to try, reflect, and improve. Practical work helps students see how each concept can make a difference.",
+                  "interests": ["Work-based learning", "Career readiness", "Project-based teaching", "Professional mentorship"]
+                },
+                {
+                  "slug": "susan-d-lunsford",
+                  "yearsExperience": "18+",
+                  "email": "susan.lunsford@edusity.com",
+                  "phone": "+1 123 456 7892",
+                  "location": "New York, United States",
+                  "qualification": "M.B.A. in Education Leadership",
+                  "department": "Executive Leadership",
+                  "specialty": "Education Leadership & Access",
+                  "about": ["Susan D. Lunsford is the CEO and founder of Edusity. She leads the organization with a clear purpose: make high-quality learning accessible, useful, and supportive for people at every stage of their journey.", "Her work brings educators, learners, and industry partners together to shape programs that respond to real goals and changing opportunities."],
+                  "quote": "Education changes lives when opportunity is open to everyone.",
+                  "values": [{"icon":"users","label":"Learner First"},{"icon":"lightbulb","label":"Bold Ideas"},{"icon":"book","label":"Accessible Learning"},{"icon":"target","label":"Shared Progress"}],
+                  "philosophy": "I believe education should open doors. We build better learning experiences by listening closely to students and making room for every voice.",
+                  "interests": ["Education access", "Learning innovation", "Community partnerships", "Leadership development"]
+                },
+                {
+                  "slug": "dennis-a-pruitt",
+                  "yearsExperience": "14+",
+                  "email": "dennis.pruitt@edusity.com",
+                  "phone": "+1 123 456 7893",
+                  "location": "New York, United States",
+                  "qualification": "Ph.D. in Research & Innovation",
+                  "department": "Department of Research",
+                  "specialty": "Research, Innovation & Mentoring",
+                  "about": ["Dennis A. Pruitt is an associate professor whose teaching encourages students to investigate, question, and test ideas. He brings research methods into the classroom through guided inquiry and collaborative projects.", "As a mentor, he helps emerging scholars develop sound questions, communicate findings, and see how careful research can contribute to their communities."],
+                  "quote": "Curiosity is the first step toward discoveries that matter.",
+                  "values": [{"icon":"users","label":"Mentor Mindset"},{"icon":"lightbulb","label":"Curious Thinking"},{"icon":"book","label":"Research Led"},{"icon":"target","label":"Meaningful Impact"}],
+                  "philosophy": "I encourage students to stay curious, work carefully, and treat each challenge as an opportunity to learn something new.",
+                  "interests": ["Applied research", "Innovation methods", "Student research projects", "Scientific communication"]
+                },
+                {
+                  "slug": "angela-t-vigil-2",
+                  "yearsExperience": "9+",
+                  "email": "angela.vigil@edusity.com",
+                  "phone": "+1 123 456 7890",
+                  "location": "New York, United States",
+                  "qualification": "M.Ed. in Learning Design",
+                  "department": "Department of Education",
+                  "specialty": "Modern Teaching & Learning Design",
+                  "about": ["Angela T. Vigil designs engaging learning experiences that help students connect new concepts with their own goals. Her teaching blends discussion, guided practice, and supportive feedback.", "She is especially interested in the small changes to a learning environment that help more students participate and make steady progress."],
+                  "quote": "A welcoming classroom gives every student room to find their voice.",
+                  "values": [{"icon":"users","label":"Student Belonging"},{"icon":"lightbulb","label":"Creative Methods"},{"icon":"book","label":"Active Learning"},{"icon":"target","label":"Personal Growth"}],
+                  "philosophy": "I want every learner to feel seen and supported. When lessons invite participation, students become partners in their own progress.",
+                  "interests": ["Learning experience design", "Classroom engagement", "Student development", "Accessible instruction"]
+                },
+                {
+                  "slug": "frank-a-mitchell-2",
+                  "yearsExperience": "11+",
+                  "email": "frank.mitchell@edusity.com",
+                  "phone": "+1 123 456 7891",
+                  "location": "New York, United States",
+                  "qualification": "M.S. in Professional Education",
+                  "department": "Department of Professional Studies",
+                  "specialty": "Practical Skills & Professional Growth",
+                  "about": ["Frank A. Mitchell helps students move from understanding a concept to using it with confidence. His courses are grounded in realistic scenarios, structured practice, and feedback students can act on.", "He works with learners to identify their strengths, set clear goals, and build a portfolio of skills they can carry into their careers."],
+                  "quote": "Progress comes from practice that is purposeful, supported, and repeated.",
+                  "values": [{"icon":"users","label":"Learner Support"},{"icon":"lightbulb","label":"Useful Practice"},{"icon":"book","label":"Applied Skills"},{"icon":"target","label":"Career Growth"}],
+                  "philosophy": "I teach through doing. Students should leave each lesson with a clearer understanding and a useful next step to try.",
+                  "interests": ["Practical instruction", "Skills assessment", "Career development", "Collaborative learning"]
+                },
+                {
+                  "slug": "susan-d-lunsford-2",
+                  "yearsExperience": "16+",
+                  "email": "susan.lunsford@edusity.com",
+                  "phone": "+1 123 456 7892",
+                  "location": "New York, United States",
+                  "qualification": "M.A. in Education Policy",
+                  "department": "Executive Leadership",
+                  "specialty": "Education Strategy & Community",
+                  "about": ["As CEO and founder, Susan D. Lunsford works to make learning more responsive to students and their communities. She guides Edusity's strategy and supports partnerships that expand access to meaningful education.", "Her leadership centers on listening, continuous improvement, and creating pathways that help learners translate ambition into opportunity."],
+                  "quote": "When learners thrive, the whole community moves forward.",
+                  "values": [{"icon":"users","label":"Community Led"},{"icon":"lightbulb","label":"Future Thinking"},{"icon":"book","label":"Open Opportunity"},{"icon":"target","label":"Lasting Change"}],
+                  "philosophy": "Education works best when it reflects the needs of real people. We keep improving by learning from students and working together.",
+                  "interests": ["Education strategy", "Community impact", "Learning partnerships", "Equitable opportunity"]
+                },
+                {
+                  "slug": "dennis-a-pruitt-2",
+                  "yearsExperience": "13+",
+                  "email": "dennis.pruitt@edusity.com",
+                  "phone": "+1 123 456 7893",
+                  "location": "New York, United States",
+                  "qualification": "M.S. in Research Methods",
+                  "department": "Department of Research",
+                  "specialty": "Student Research & Academic Mentoring",
+                  "about": ["Dennis A. Pruitt supports students as they develop the confidence and methods to explore challenging questions. His classes emphasize thoughtful discussion, reliable evidence, and clear communication.", "He takes particular joy in mentoring students through early research projects and helping them share their ideas with wider audiences."],
+                  "quote": "The best questions keep opening new paths to learn.",
+                  "values": [{"icon":"users","label":"Personal Mentoring"},{"icon":"lightbulb","label":"Open Inquiry"},{"icon":"book","label":"Evidence Based"},{"icon":"target","label":"Student Discovery"}],
+                  "philosophy": "I help students find the confidence to investigate ideas carefully and the clarity to explain what they discover.",
+                  "interests": ["Research mentorship", "Critical thinking", "Academic writing", "Collaborative inquiry"]
+                }
+              ]
+            },
+            "carousel": {
+              "hasArrows": true,
+              "hasDots": true,
+              "activeDot": 0,
+              "totalDots": 3
+            }
+          }
+        }
+      },
+      "Event": {
+        "variants": {
+          "EducationEvent1": {
+            "banner": {
+              "title": "Events",
+              "home": "Home",
+              "current": "Events",
+              "bgImage": "/education/3.png"
+            },
+            "badge": "UPCOMING EVENTS",
+            "title": {
+              "normal": "Our",
+              "highlighted": "Events"
+            },
+            "desc": "Be a part of our exciting events, workshops, seminars and campus activities designed to inspire, learn and grow together.",
+            "categories": [
+              "All Events",
+              "Seminars",
+              "Workshops",
+              "Webinars",
+              "Guest Lectures",
+              "Campus Activities",
+              "Cultural Events"
+            ],
+            "eventItems": [
+              {
+                "id": 1,
+                "slug": "future-skills-for-a-changing-world",
+                "title": "Future Skills for a Changing World",
+                "category": "Seminars",
+                "date": { "day": "15", "month": "MAR", "year": "2026" },
+                "time": "10:00 AM - 12:00 PM",
+                "location": "Main Auditorium",
+                "image": "/education/3.png",
+                "desc": "Join industry experts as they discuss the skills that will shape your future career."
+              },
+              {
+                "id": 2,
+                "slug": "resume-building-workshop",
+                "title": "Resume Building Workshop",
+                "category": "Workshops",
+                "date": { "day": "22", "month": "MAR", "year": "2026" },
+                "time": "02:00 PM - 04:00 PM",
+                "location": "Computer Lab 1",
+                "image": "/education/10.png",
+                "desc": "Learn how to create a standout resume and impress potential employers."
+              },
+              {
+                "id": 3,
+                "slug": "career-opportunities-in-tech",
+                "title": "Career Opportunities in Tech",
+                "category": "Guest Lectures",
+                "date": { "day": "05", "month": "APR", "year": "2026" },
+                "time": "11:00 AM - 01:00 PM",
+                "location": "Main Auditorium",
+                "image": "/education/9.jpg",
+                "desc": "An insightful session with industry leaders on emerging career opportunities."
+              },
+              {
+                "id": 4,
+                "slug": "entrepreneurship-bootcamp",
+                "title": "Entrepreneurship Bootcamp",
+                "category": "Campus Activities",
+                "date": { "day": "12", "month": "APR", "year": "2026" },
+                "time": "10:00 AM - 03:00 PM",
+                "location": "Innovation Hub",
+                "image": "/education/1.png",
+                "desc": "Turn your ideas into impactful ventures with guidance from successful entrepreneurs."
+              },
+              {
+                "id": 5,
+                "slug": "annual-cultural-fest-2026",
+                "title": "Annual Cultural Fest 2026",
+                "category": "Cultural Events",
+                "date": { "day": "20", "month": "APR", "year": "2026" },
+                "time": "05:00 PM - 10:00 PM",
+                "location": "Open Air Theatre",
+                "image": "/education/7.jpg",
+                "desc": "A celebration of talent, creativity and diversity by our amazing students."
+              },
+              {
+                "id": 6,
+                "slug": "study-abroad-guidance-session",
+                "title": "Study Abroad Guidance Session",
+                "category": "Webinars",
+                "date": { "day": "28", "month": "APR", "year": "2026" },
+                "time": "03:00 PM - 05:00 PM",
+                "location": "Online (Zoom)",
+                "image": "/education/9.jpg",
+                "desc": "Get expert advice on global education opportunities and application process."
+              },
+              {
+                "id": 7,
+                "slug": "blood-donation-drive",
+                "title": "Blood Donation Drive",
+                "category": "Campus Activities",
+                "date": { "day": "03", "month": "MAI", "year": "2026" },
+                "time": "09:00 AM - 02:00 PM",
+                "location": "Campus Health Center",
+                "image": "/education/3.png",
+                "desc": "Join us in making a difference. Donate blood and help save lives."
+              },
+              {
+                "id": 8,
+                "slug": "personality-development-session",
+                "title": "Personality Development Session",
+                "category": "Seminars",
+                "date": { "day": "10", "month": "MAI", "year": "2026" },
+                "time": "11:00 AM - 01:00 PM",
+                "location": "Seminar Hall",
+                "image": "/education/5.jpg",
+                "desc": "Enhance your communication skills and build confidence for a brighter future."
+              },
+              {
+                "id": 9,
+                "slug": "placement-readiness-fair",
+                "title": "Placement Readiness Fair",
+                "category": "Campus Activities",
+                "date": { "day": "18", "month": "MAI", "year": "2026" },
+                "time": "10:00 AM - 04:00 PM",
+                "location": "Campus Ground",
+                "image": "/education/7.jpg",
+                "desc": "Meet top recruiters and explore placement opportunities."
+              },
+              {
+                "id": 10,
+                "slug": "ai-and-machine-learning-summit",
+                "title": "AI & Machine Learning Summit",
+                "category": "Seminars",
+                "date": { "day": "02", "month": "JUN", "year": "2026" },
+                "time": "09:30 AM - 04:30 PM",
+                "location": "Tech Auditorium",
+                "image": "/education/4.png",
+                "desc": "Explore cutting-edge advancements in artificial intelligence and deep learning."
+              },
+              {
+                "id": 11,
+                "slug": "ui-ux-masterclass",
+                "title": "UI/UX Design Masterclass",
+                "category": "Workshops",
+                "date": { "day": "08", "month": "JUN", "year": "2026" },
+                "time": "01:00 PM - 05:00 PM",
+                "location": "Design Studio B",
+                "image": "/education/8.jpg",
+                "desc": "Hands-on wireframing and prototyping session using modern design systems."
+              },
+              {
+                "id": 12,
+                "slug": "cloud-architecture-webinar",
+                "title": "Cloud Architecture & DevOps",
+                "category": "Webinars",
+                "date": { "day": "15", "month": "JUN", "year": "2026" },
+                "time": "04:00 PM - 06:00 PM",
+                "location": "Online (Teams)",
+                "image": "/education/10.png",
+                "desc": "Best practices for scalable cloud deployments and container orchestration."
+              },
+              {
+                "id": 13,
+                "slug": "cyber-security-guest-lecture",
+                "title": "Cyber Security in Modern Era",
+                "category": "Guest Lectures",
+                "date": { "day": "22", "month": "JUN", "year": "2026" },
+                "time": "10:00 AM - 12:00 PM",
+                "location": "Auditorium 2",
+                "image": "/education/1.png",
+                "desc": "Understanding threat vectors and proactive defense mechanisms."
+              },
+              {
+                "id": 14,
+                "slug": "annual-sports-meet",
+                "title": "Annual Inter-College Sports Meet",
+                "category": "Campus Activities",
+                "date": { "day": "29", "month": "JUN", "year": "2026" },
+                "time": "08:00 AM - 06:00 PM",
+                "location": "Sports Complex",
+                "image": "/education/4.png",
+                "desc": "Showcase your athletic prowess across multiple track and field events."
+              },
+              {
+                "id": 15,
+                "slug": "classical-dance-night",
+                "title": "Classical & Folk Dance Night",
+                "category": "Cultural Events",
+                "date": { "day": "05", "month": "JUL", "year": "2026" },
+                "time": "06:00 PM - 09:00 PM",
+                "location": "Main Amphitheatre",
+                "image": "/education/7.jpg",
+                "desc": "An evening of vibrant cultural performances celebrating heritage."
+              },
+              {
+                "id": 16,
+                "slug": "financial-literacy-workshop",
+                "title": "Financial Literacy for Students",
+                "category": "Workshops",
+                "date": { "day": "12", "month": "JUL", "year": "2026" },
+                "time": "11:00 AM - 01:00 PM",
+                "location": "Management Block",
+                "image": "/education/10.png",
+                "desc": "Master budgeting, personal investments, and smart financial planning."
+              },
+              {
+                "id": 17,
+                "slug": "blockchain-tech-seminar",
+                "title": "Blockchain Technology & Web3",
+                "category": "Seminars",
+                "date": { "day": "19", "month": "JUL", "year": "2026" },
+                "time": "02:00 PM - 05:00 PM",
+                "location": "Seminar Hall A",
+                "image": "/education/9.jpg",
+                "desc": "Demystifying decentralized apps, smart contracts, and crypto economics."
+              },
+              {
+                "id": 18,
+                "slug": "global-alumni-meetup",
+                "title": "Global Alumni Networking Meet",
+                "category": "Campus Activities",
+                "date": { "day": "26", "month": "JUL", "year": "2026" },
+                "time": "04:00 PM - 08:00 PM",
+                "location": "Grand Banquet Hall",
+                "image": "/education/8.jpg",
+                "desc": "Connect with successful alumni across industries for mentorship."
+              },
+              {
+                "id": 19,
+                "slug": "python-for-data-science",
+                "title": "Python for Data Science Bootcamp",
+                "category": "Workshops",
+                "date": { "day": "02", "month": "AUG", "year": "2026" },
+                "time": "10:00 AM - 03:00 PM",
+                "location": "Computer Lab 3",
+                "image": "/education/2.png",
+                "desc": "Hands-on data manipulation and visualization with Pandas and NumPy."
+              },
+              {
+                "id": 20,
+                "slug": "startup-pitch-day",
+                "title": "Annual Startup Pitch Day",
+                "category": "Campus Activities",
+                "date": { "day": "09", "month": "AUG", "year": "2026" },
+                "time": "10:00 AM - 05:00 PM",
+                "location": "Incubation Center",
+                "image": "/education/7.jpg",
+                "desc": "Pitch your student startup ideas to angel investors and venture capitalists."
+              },
+              {
+                "id": 21,
+                "slug": "digital-marketing-webinar",
+                "title": "Growth Hacking & Digital Marketing",
+                "category": "Webinars",
+                "date": { "day": "16", "month": "AUG", "year": "2026" },
+                "time": "03:00 PM - 05:00 PM",
+                "location": "Online (Zoom)",
+                "image": "/education/4.png",
+                "desc": "Learn SEO strategies, social media algorithms, and performance marketing."
+              },
+              {
+                "id": 22,
+                "slug": "expert-talk-quantum-computing",
+                "title": "Introduction to Quantum Computing",
+                "category": "Guest Lectures",
+                "date": { "day": "23", "month": "AUG", "year": "2026" },
+                "time": "11:00 AM - 01:00 PM",
+                "location": "Science Auditorium",
+                "image": "/education/1.png",
+                "desc": "Guest lecture by leading physicist on quantum qubits and algorithms."
+              },
+              {
+                "id": 23,
+                "slug": "photography-and-film-fest",
+                "title": "Campus Photography & Short Film Fest",
+                "category": "Cultural Events",
+                "date": { "day": "30", "month": "AUG", "year": "2026" },
+                "time": "01:00 PM - 07:00 PM",
+                "location": "Media Arts Block",
+                "image": "/education/3.png",
+                "desc": "Exhibition and screening of exceptional student cinematography and imagery."
+              },
+              {
+                "id": 24,
+                "slug": "iot-and-embedded-systems",
+                "title": "IoT & Embedded Systems Workshop",
+                "category": "Workshops",
+                "date": { "day": "06", "month": "SEP", "year": "2026" },
+                "time": "10:00 AM - 04:00 PM",
+                "location": "Electronics Lab",
+                "image": "/education/5.jpg",
+                "desc": "Build smart connected devices using Arduino and Raspberry Pi sensors."
+              },
+              {
+                "id": 25,
+                "slug": "environmental-sustainability-summit",
+                "title": "Green Campus Sustainability Summit",
+                "category": "Seminars",
+                "date": { "day": "13", "month": "SEP", "year": "2026" },
+                "time": "09:30 AM - 01:30 PM",
+                "location": "Conference Hall",
+                "image": "/education/3.png",
+                "desc": "Discussions on eco-friendly campus initiatives and climate action."
+              },
+              {
+                "id": 26,
+                "slug": "literature-and-poetry-slam",
+                "title": "Annual Literature & Poetry Slam",
+                "category": "Cultural Events",
+                "date": { "day": "20", "month": "SEP", "year": "2026" },
+                "time": "04:00 PM - 07:00 PM",
+                "location": "Open Lawn",
+                "image": "/education/8.jpg",
+                "desc": "An evening of spoken word poetry, storytelling, and literary debates."
+              },
+              {
+                "id": 27,
+                "slug": "career-counseling-masterclass",
+                "title": "Advanced Career Counseling Masterclass",
+                "category": "Webinars",
+                "date": { "day": "27", "month": "SEP", "year": "2026" },
+                "time": "05:00 PM - 07:00 PM",
+                "location": "Online (Teams)",
+                "image": "/education/7.jpg",
+                "desc": "Direct Q&A session with professional career coaches on job market trends."
+              }
+            ]
+          }
+        }
+      },
+      "News": {
+        "variants": {
+          "EducationNews1": {
+            "banner": {
+              "title": "News & Notices",
+              "home": "Home",
+              "current": "News & Notices",
+              "bgImage": "/education/3.png"
+            },
+            "badge": "LATEST UPDATES",
+            "title": {
+              "normal": "News &",
+              "highlighted": "Notices"
+            },
+            "desc": "Stay informed with the latest announcements, examination schedules, admission updates, and campus events.",
+            "newsItems": [
+              {
+                "id": 1,
+                "slug": "admission-open-2026-2027",
+                "category": "Admission",
+                "date": { "day": "15", "month": "MAR 2026" },
+                "title": "Admission Open for 2026 – 2027",
+                "desc": "We are pleased to announce that admissions for the 2026 – 2027 academic session are now open. Apply now and start your journey with Edusity."
+              },
+              {
+                "id": 2,
+                "slug": "mid-term-examination-schedule",
+                "category": "Examination",
+                "date": { "day": "10", "month": "MAR 2026" },
+                "title": "Mid-Term Examination Schedule",
+                "desc": "The mid-term examinations for all undergraduate and postgraduate programs will commence from 20th March 2026. Students are advised to check the detailed schedule."
+              },
+              {
+                "id": 3,
+                "slug": "library-timings-updated",
+                "category": "Notice",
+                "date": { "day": "05", "month": "MAR 2026" },
+                "title": "Library Timings Updated",
+                "desc": "Please note the revised library timings. The library will now remain open from 8:00 AM to 8:00 PM, Monday to Saturday."
+              },
+              {
+                "id": 4,
+                "slug": "annual-cultural-fest-2026",
+                "category": "Event",
+                "date": { "day": "28", "month": "FEB 2026" },
+                "title": "Annual Cultural Fest 2026",
+                "desc": "We are excited to announce our Annual Cultural Fest 2026. Students are invited to participate in various events and showcase their talent."
+              },
+              {
+                "id": 5,
+                "slug": "scholarship-applications-now-open",
+                "category": "Notice",
+                "date": { "day": "20", "month": "FEB 2026" },
+                "title": "Scholarship Applications Now Open",
+                "desc": "Applications for merit-based scholarships are now open. Eligible students can apply online before the last date."
+              },
+              {
+                "id": 6,
+                "slug": "campus-placement-drive",
+                "category": "Placement",
+                "date": { "day": "12", "month": "FEB 2026" },
+                "title": "Campus Placement Drive",
+                "desc": "A campus placement drive will be conducted in April 2026. Final year students are requested to register and prepare for the recruitment process."
+              },
+              {
+                "id": 7,
+                "slug": "sports-meet-registrations",
+                "category": "Event",
+                "date": { "day": "04", "month": "FEB 2026" },
+                "title": "Inter-College Sports Meet Registrations",
+                "desc": "Registrations for track, field, and team sports are now open at the sports complex office. Join and display your athletic talents."
+              },
+              {
+                "id": 8,
+                "slug": "semester-fee-submission-deadline",
+                "category": "Notice",
+                "date": { "day": "28", "month": "JAN 2026" },
+                "title": "Semester Fee Submission Deadline",
+                "desc": "All students must clear their due semester fees by 15th February 2026 to avoid late charges and ensure smooth course registration."
+              },
+              {
+                "id": 9,
+                "slug": "guest-lecture-ai-ethics",
+                "category": "Seminar",
+                "date": { "day": "20", "month": "JAN 2026" },
+                "title": "Guest Lecture on AI Ethics & Future",
+                "desc": "Join our special weekend guest lecture featuring prominent AI researchers discussing ethical frameworks in modern computing."
+              },
+              {
+                "id": 10,
+                "slug": "winter-break-conclusion",
+                "category": "Notice",
+                "date": { "day": "10", "month": "JAN 2026" },
+                "title": "Resumption of Classes Post Winter Break",
+                "desc": "Regular classes for all departments will resume from Monday following the winter recess. Timetables remain unchanged."
+              },
+              {
+                "id": 11,
+                "slug": "annual-science-exhibition-2026",
+                "category": "Exhibition",
+                "date": { "day": "15", "month": "DEC 2025" },
+                "title": "Annual Science & Tech Exhibition",
+                "desc": "Showcasing innovative student projects and working models across robotics, IoT, and clean energy solutions."
+              },
+              {
+                "id": 12,
+                "slug": "national-debate-championship",
+                "category": "Competition",
+                "date": { "day": "05", "month": "DEC 2025" },
+                "title": "National Inter-Varsity Debate Championship",
+                "desc": "Edusity hosts top debaters from across the nation for three days of rigorous intellectual discourse."
+              },
+              {
+                "id": 13,
+                "slug": "alumni-donation-drive-success",
+                "category": "Notice",
+                "date": { "day": "18", "month": "NOV 2025" },
+                "title": "Alumni Endowment Scholarship Fund Update",
+                "desc": "Thank you to our generous alumni for contributing to the 2025 endowment fund, supporting 50+ students."
+              },
+              {
+                "id": 14,
+                "slug": "campus-health-and-wellness-camp",
+                "category": "Notice",
+                "date": { "day": "30", "month": "OCT 2025" },
+                "title": "Annual Campus Health & Wellness Checkup",
+                "desc": "Free medical health screening for all students and faculty members at the campus health center next week."
+              },
+              {
+                "id": 15,
+                "slug": "international-research-symposium",
+                "category": "Seminar",
+                "date": { "day": "14", "month": "OCT 2025" },
+                "title": "International Symposium on Sustainable Tech",
+                "desc": "Global researchers and keynote speakers converge to discuss breakthroughs in environmental engineering."
+              },
+              {
+                "id": 16,
+                "slug": "odd-semester-exam-results",
+                "category": "Examination",
+                "date": { "day": "25", "month": "SEP 2025" },
+                "title": "Odd Semester Examination Results Declared",
+                "desc": "Students can now view their grade sheets and semester performance summaries on the student portal."
+              },
+              {
+                "id": 17,
+                "slug": "cultural-club-auditions",
+                "category": "Event",
+                "date": { "day": "10", "month": "SEP 2025" },
+                "title": "Cultural Club Auditions Open for Freshers",
+                "desc": "Join the music, dance, dramatics, or fine arts clubs. Auditions will be held at the student activity center."
+              },
+              {
+                "id": 18,
+                "slug": "orientation-program-2025",
+                "category": "Admission",
+                "date": { "day": "01", "month": "SEP 2025" },
+                "title": "Freshers Orientation Program Schedule",
+                "desc": "Welcome ceremony and campus tours for newly enrolled students entering undergraduate and graduate tracks."
+              }
+            ]
+          }
+        }
+      },
+      "Facility": {
+        "variants": {
+          "EducationFacility1": {
+            "banner": {
+              "title": "Facilities",
+              "home": "Home",
+              "current": "Facilities",
+              "bgImage": "/education/3.png"
+            },
+            "badge": "OUR FACILITIES",
+            "title": {
+              "normal": "World-Class",
+              "highlighted": "Infrastructure"
+            },
+            "desc": "A modern learning environment with state-of-the-art facilities to help students learn, grow and achieve their dreams.",
+            "facilityItems": [
+              {
+                "id": 1,
+                "slug": "spacious-classrooms",
+                "title": "Spacious Classrooms",
+                "desc": "Well-designed, air-conditioned classrooms equipped with modern teaching aids for an interactive learning experience.",
+                "image": "/education/1.png",
+                "icon": "Users"
+              },
+              {
+                "id": 2,
+                "slug": "computer-labs",
+                "title": "Computer Labs",
+                "desc": "Advanced computer labs with high-speed internet and the latest software to enhance practical skills.",
+                "image": "/education/5.jpg",
+                "icon": "Monitor"
+              },
+              {
+                "id": 3,
+                "slug": "library",
+                "title": "Library",
+                "desc": "A rich collection of books, journals and digital resources to support academic and research needs.",
+                "image": "/education/9.jpg",
+                "icon": "BookOpen"
+              },
+              {
+                "id": 4,
+                "slug": "science-research-labs",
+                "title": "Science & Research Labs",
+                "desc": "Fully equipped laboratories to encourage hands-on learning and innovation.",
+                "image": "/education/3.png",
+                "icon": "FlaskConical"
+              },
+              {
+                "id": 5,
+                "slug": "auditorium",
+                "title": "Auditorium",
+                "desc": "A modern auditorium for seminars, workshops, cultural events and guest lectures.",
+                "image": "/education/4.png",
+                "icon": "Users"
+              },
+              {
+                "id": 6,
+                "slug": "sports-facilities",
+                "title": "Sports Facilities",
+                "desc": "Indoor and outdoor sports facilities to promote a healthy and active lifestyle among students.",
+                "image": "/education/7.jpg",
+                "icon": "Activity"
+              },
+              {
+                "id": 7,
+                "slug": "cafeteria",
+                "title": "Cafeteria",
+                "desc": "Hygienic and spacious cafeteria offering nutritious and delicious food options.",
+                "image": "/education/3.png",
+                "icon": "Utensils"
+              },
+              {
+                "id": 8,
+                "slug": "hostel-accommodation",
+                "title": "Hostel Accommodation",
+                "desc": "Safe, comfortable and well-furnished hostel facilities with all essential amenities.",
+                "image": "/education/8.jpg",
+                "icon": "Home"
+              },
+              {
+                "id": 9,
+                "slug": "transportation",
+                "title": "Transportation",
+                "desc": "Reliable transport facilities with well-maintained buses for a safe and convenient commute.",
+                "image": "/education/9.jpg",
+                "icon": "Bus"
+              }
+            ]
+          }
+        }
+      },
+      "Faq": {
+        "variants": {
+          "EducationFaq1": {
+            "banner": {
+              "title": "FAQS",
+              "home": "Home",
+              "current": "FAQS",
+              "bgImage": "/education/3.png"
+            },
+            "badge": "FAQS",
+            "title": {
+              "normal": "Frequently Asked",
+              "highlighted": "Questions"
+            },
+            "desc": "Find answers to some of the most common questions about our admissions process, courses, campus facilities and more.",
+            "faqs": [
+              {
+                "id": 1,
+                "number": "01",
+                "question": "How can I apply for admission?",
+                "answer": "You can apply for admission by filling out the online application form available on our website. Alternatively, you can visit our campus and get assistance from our admission team."
+              },
+              {
+                "id": 2,
+                "number": "02",
+                "question": "What are the eligibility criteria for admission?",
+                "answer": "Eligibility criteria vary depending on the program you are applying for. Generally, undergraduate programs require high school completion, while postgraduate programs require a relevant bachelor's degree with minimum passing grades."
+              },
+              {
+                "id": 3,
+                "number": "03",
+                "question": "What documents are required during the admission process?",
+                "answer": "Required documents typically include academic transcripts, proof of identity, passport-sized photographs, transfer certificates, and scorecards of relevant entrance examinations if applicable."
+              },
+              {
+                "id": 4,
+                "number": "04",
+                "question": "Is there an entrance test for all courses?",
+                "answer": "Not all courses require an entrance test. Some undergraduate admissions are merit-based, whereas specific professional or postgraduate programs require department-specific entrance exams or interviews."
+              },
+              {
+                "id": 5,
+                "number": "05",
+                "question": "When will I receive the confirmation after applying?",
+                "answer": "Application confirmation and review status are typically communicated via email within 3 to 5 working days after successful submission of all required documents."
+              },
+              {
+                "id": 6,
+                "number": "06",
+                "question": "What courses do you offer?",
+                "answer": "We offer a wide range of undergraduate, postgraduate, diploma, and certification courses across Engineering, Management, Computer Science, Data Science, Arts, and Sciences."
+              },
+              {
+                "id": 7,
+                "number": "07",
+                "question": "Can I switch to a different course after admission?",
+                "answer": "Course switching is permissible within the first two weeks of the academic session, subject to seat availability and meeting the eligibility requirements of the desired course."
+              },
+              {
+                "id": 8,
+                "number": "08",
+                "question": "Are the courses affiliated and recognized?",
+                "answer": "Yes, all our degree and diploma programs are fully recognized by national accreditation bodies and affiliated with top-tier educational boards and universities."
+              },
+              {
+                "id": 9,
+                "number": "09",
+                "question": "Do you provide online or hybrid learning options?",
+                "answer": "Yes, we offer flexible online and hybrid learning options for select professional diploma and certification courses to accommodate working professionals."
+              },
+              {
+                "id": 10,
+                "number": "10",
+                "question": "What facilities are available on campus?",
+                "answer": "Our campus features state-of-the-art computer labs, science research labs, a massive library, spacious air-conditioned classrooms, sports complexes, and a modern auditorium."
+              },
+              {
+                "id": 11,
+                "number": "11",
+                "question": "Is hostel accommodation available?",
+                "answer": "Yes, we provide secure and well-furnished separate hostel accommodation for both male and female students with 24/7 Wi-Fi, mess facilities, and security."
+              },
+              {
+                "id": 12,
+                "number": "12",
+                "question": "Do you provide transportation facilities?",
+                "answer": "Yes, our fleet of college buses covers major routes across the city, ensuring a safe and comfortable commute for day-scholar students and staff."
+              },
+              {
+                "id": 13,
+                "number": "13",
+                "question": "Is there a cafeteria on campus?",
+                "answer": "Our spacious multi-cuisine cafeteria offers hygienic, nutritious, and delicious food options in a vibrant student-friendly environment."
+              },
+              {
+                "id": 14,
+                "number": "14",
+                "question": "How can I contact the administration?",
+                "answer": "You can reach the administration office via phone at +91 98765 43210, email us at info@edusity.com, or visit our front desk during working hours (Mon-Sat, 9 AM - 6 PM)."
+              },
+              {
+                "id": 15,
+                "number": "15",
+                "question": "Where can I find the latest updates and announcements?",
+                "answer": "All official announcements, exam schedules, and circulars are regularly updated on the News & Notices section of our website and the student portal."
+              }
+            ],
+            "sidebar": {
+              "promoCard": {
+                "image": "/education/10.png",
+                "tag": "Learn Grow Succeed",
+                "title": "Have More Questions?",
+                "desc": "Our team is here to help you. Get in touch for personalized assistance.",
+                "buttonText": "Contact Us",
+                "buttonLink": "/contact"
+              },
+              "contactBox": {
+                "title": "Get in Touch",
+                "contacts": [
+                  {
+                    "icon": "Phone",
+                    "label": "Call Us",
+                    "value": "+91 00000 00000",
+                    "sub": "Mon - Sat, 9:00 AM - 6:00 PM"
+                  },
+                  {
+                    "icon": "Mail",
+                    "label": "Email Us",
+                    "value": "info@example.com",
+                    "sub": "We reply within 24 hours"
+                  },
+                  {
+                    "icon": "MapPin",
+                    "label": "Visit Our Campus",
+                    "value": "123 Education Lane,",
+                    "sub": "New Delhi - 110001"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Achievement": {
+        "variants": {
+          "EducationAchievement1": {
+            "banner": {
+              "title": "Achievements",
+              "home": "Home",
+              "current": "Achievements",
+              "bgImage": "/education/3.png"
+            },
+            "stats": [
+              {
+                "id": 1,
+                "number": "12,500+",
+                "label": "Students Enrolled",
+                "icon": "GraduationCap"
+              },
+              {
+                "id": 2,
+                "number": "8,000+",
+                "label": "Successful Graduates",
+                "icon": "Users"
+              },
+              {
+                "id": 3,
+                "number": "95%",
+                "label": "Student Satisfaction",
+                "icon": "Award"
+              },
+              {
+                "id": 4,
+                "number": "25+",
+                "label": "Industry Partnerships",
+                "icon": "Globe"
+              }
+            ],
+            "awardsSection": {
+              "badge": "AWARDS & RECOGNITIONS",
+              "title": {
+                "normal": "Honoured for Our",
+                "highlighted": "Commitment"
+              },
+              "desc": "Our efforts in delivering quality education have been recognized by leading organizations.",
+              "awards": [
+                {
+                  "id": 1,
+                  "title": "Excellence in Education Award",
+                  "year": "2024",
+                  "desc": "Recognized for outstanding contribution to academic innovation.",
+                  "icon": "Trophy"
+                },
+                {
+                  "id": 2,
+                  "title": "Best Learning Institution",
+                  "year": "2023",
+                  "desc": "Awarded for excellence in student learning and development.",
+                  "icon": "GraduationCap"
+                },
+                {
+                  "id": 3,
+                  "title": "Community Impact Award",
+                  "year": "2023",
+                  "desc": "For empowering communities through education.",
+                  "icon": "Users"
+                },
+                {
+                  "id": 4,
+                  "title": "Industry Collaboration Award",
+                  "year": "2022",
+                  "desc": "Honoured for strong industry partnerships and career opportunities.",
+                  "icon": "Globe"
+                }
+              ]
+            },
+            "journeySection": {
+              "badge": "OUR JOURNEY",
+              "title": {
+                "normal": "Key",
+                "highlighted": "Milestones"
+              },
+              "desc": "A timeline of our growth, achievements, and continuous pursuit of excellence.",
+              "milestones": [
+                {
+                  "year": "2018",
+                  "desc": "Established with a vision to transform education"
+                },
+                {
+                  "year": "2019",
+                  "desc": "Reached 1,000+ students"
+                },
+                {
+                  "year": "2020",
+                  "desc": "Launched online learning platform"
+                },
+                {
+                  "year": "2022",
+                  "desc": "Recognized with national education award"
+                },
+                {
+                  "year": "2023",
+                  "desc": "Expanded to new cities"
+                },
+                {
+                  "year": "2024",
+                  "desc": "12,500+ students and counting"
+                }
+              ]
+            },
+            "differenceSection": {
+              "badge": "MAKING A DIFFERENCE",
+              "title": {
+                "normal": "Building Brighter Futures",
+                "highlighted": "Together"
+              },
+              "desc": "Our achievements are not just numbers or awards, but the lives we've touched. Every milestone motivates us to do more and create greater opportunities for future generations.",
+              "quote": "Every Achievement Starts with a Belief.",
+              "image": "/education/8.jpg"
+            }
+          }
+        }
+      },
+      "Process": {
+        "variants": {
+          "EducationProcess1": {
+            "banner": {
+              "title": "Admission Process",
+              "home": "Home",
+              "current": "Admission Process",
+              "bgImage": "/education/3.png"
+            },
+            "badge": "ADMISSION PROCESS",
+            "title": {
+              "normal": "From Application to a",
+              "highlighted": "Brighter Tomorrow"
+            },
+            "desc": "Follow these simple steps to complete your admission and begin your academic journey with us.",
+            "steps": [
+              {
+                "id": 1,
+                "number": "01",
+                "title": "Explore Programs",
+                "desc": "Discover our wide range of undergraduate and postgraduate programs. Choose the course that matches your interests, goals, and career aspirations.",
+                "linkText": "View Courses",
+                "linkUrl": "/courses",
+                "icon": "BookOpen",
+                "image": "/education/10.png"
+              },
+              {
+                "id": 2,
+                "number": "02",
+                "title": "Fill Application Form",
+                "desc": "Complete the online application form with accurate personal, academic, and contact details. It only takes a few minutes.",
+                "linkText": "Apply Now",
+                "linkUrl": "/apply",
+                "icon": "FileEdit",
+                "image": "/education/7.jpg"
+              },
+              {
+                "id": 3,
+                "number": "03",
+                "title": "Submit Required Documents",
+                "desc": "Upload the necessary documents as per the guidelines, including academic records, ID proof, photograph, and other relevant certificates.",
+                "linkText": "View Document List",
+                "linkUrl": "/documents",
+                "icon": "FileText",
+                "image": "/education/1.png"
+              },
+              {
+                "id": 4,
+                "number": "04",
+                "title": "Application Review",
+                "desc": "Our admission team will review your application and verify the submitted documents. You may be contacted for further clarification if required.",
+                "linkText": "",
+                "linkUrl": "",
+                "icon": "Users",
+                "image": "/education/9.jpg"
+              },
+              {
+                "id": 5,
+                "number": "05",
+                "title": "Receive Admission Offer",
+                "desc": "Once your application is approved, you will receive your admission offer via email. The offer will include course details, fee information, and next steps.",
+                "linkText": "",
+                "linkUrl": "",
+                "icon": "Mail",
+                "image": "/education/8.jpg"
+              },
+              {
+                "id": 6,
+                "number": "06",
+                "title": "Confirm Admission",
+                "desc": "Pay the admission fee within the given timeline to confirm your seat. After confirmation, you will receive a welcome email with further details to begin your learning journey with us.",
+                "linkText": "",
+                "linkUrl": "",
+                "icon": "CreditCard",
+                "image": "/education/3.png"
+              }
+            ]
+          }
+        }
+      },
+      "Contact": {
+        "variants": {
+          "EducationContact1": {
+            "banner": {
+              "title": "Contact Us",
+              "home": "Home",
+              "current": "Contact Us",
+              "bgImage": "/education/3.png"
+            },
+            "getInTouch": {
+              "badge": "GET IN TOUCH",
+              "title": {
+                "normal": "We'd Love to",
+                "highlighted": "Hear from You"
+              },
+              "desc": "Have questions about admissions, courses, or campus facilities? Our team is here to help. Reach out to us through the form or using the contact details below.",
+              "cards": [
+                {
+                  "id": 1,
+                  "title": "Call Us",
+                  "info": "+91 00000 00000",
+                  "subInfo": "Mon - Sat, 9:00 AM - 6:00 PM",
+                  "icon": "Phone"
+                },
+                {
+                  "id": 2,
+                  "title": "Email Us",
+                  "info": "info@example.com",
+                  "subInfo": "We reply within 24 hours",
+                  "icon": "Mail"
+                },
+                {
+                  "id": 3,
+                  "title": "Visit Our Campus",
+                  "info": "123 Education Lane,",
+                  "subInfo": "New Delhi - 110001",
+                  "icon": "MapPin"
+                },
+                {
+                  "id": 4,
+                  "title": "Office Hours",
+                  "info": "Monday - Saturday",
+                  "subInfo": "9:00 AM - 6:00 PM",
+                  "icon": "Clock"
+                }
+              ]
+            },
+            "form": {
+              "title": "Send Us a Message",
+              "requiredText": "*Fields marked with * are required",
+              "buttonText": "Send Message"
+            },
+            "location": {
+              "badge": "OUR LOCATION",
+              "title": {
+                "normal": "Find Us",
+                "highlighted": "Here"
+              },
+              "desc": "Visit our campus for a personalized tour and experience our learning environment firsthand.",
+              "image": "/education/8.jpg",
+              "mapInfo": {
+                "name": "Edusity",
+                "address": "123 Education Lane, New Delhi 110001",
+                "rating": "4.8",
+                "reviews": "123 reviews",
+                "iframeUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.996160161474!2d77.2090212754999!3d28.6280155756667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f1!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+                "directionsUrl": "https://maps.google.com"
+              }
+            }
+          }
+        }
+      },
+      "Enquiry": {
+        "variants": {
+          "EducationEnquiry1": {
+            "banner": {
+              "title": "Enquiry",
+              "home": "Home",
+              "current": "Enquiry",
+              "bgImage": "/education/3.png"
+            },
+            "getInTouch": {
+              "badge": "GET IN TOUCH",
+              "title": {
+                "normal": "Make an",
+                "highlighted": "Enquiry"
+              },
+              "desc": "Have questions about our courses, admissions, or campus facilities? We're here to help. Fill out the form and our team will get back to you shortly.",
+              "features": [
+                {
+                  "id": 1,
+                  "title": "Get Expert Guidance",
+                  "desc": "Talk to our admission experts.",
+                  "icon": "GraduationCap"
+                },
+                {
+                  "id": 2,
+                  "title": "Personalized Support",
+                  "desc": "Find the right course for your goals.",
+                  "icon": "FileText"
+                },
+                {
+                  "id": 3,
+                  "title": "Quick Response",
+                  "desc": "We'll get back to you as soon as possible.",
+                  "icon": "Users"
+                }
+              ]
+            },
+            "form": {
+              "title": "Enquiry Form",
+              "requiredText": "*Fields marked with * are required",
+              "fields": {
+                "fullName": "Full Name *",
+                "email": "Email Address *",
+                "phone": "Phone Number *",
+                "enquiryFor": "Enquiry For *",
+                "course": "Course / Program of Interest",
+                "location": "Preferred Location",
+                "message": "Your Message *"
+              },
+              "checkboxText": "I agree to be contacted by Edusity for further information.",
+              "buttonText": "Submit Enquiry"
+            },
+            "bottomContactCards": [
+              {
+                "id": 1,
+                "title": "Call Us",
+                "info": "+91 00000 00000",
+                "subInfo": "Mon - Sat, 9:00 AM - 6:00 PM",
+                "icon": "Phone"
+              },
+              {
+                "id": 2,
+                "title": "Email Us",
+                "info": "info@example.com",
+                "subInfo": "We reply within 24 hours",
+                "icon": "Mail"
+              },
+              {
+                "id": 3,
+                "title": "Visit Our Campus",
+                "info": "123 Education Lane,",
+                "subInfo": "New Delhi - 110001",
+                "icon": "MapPin"
+              }
+            ]
+          }
+        }
+      },
+      "Apply": {
+        "variants": {
+          "EducationApply1": {
+            "banner": {
+              "title": "Apply",
+              "home": "Home",
+              "current": "Apply",
+              "bgImage": "/education/3.png"
+            },
+            "admissionFormIntro": {
+              "badge": "ADMISSION FORM",
+              "title": {
+                "normal": "Apply Online for",
+                "highlighted": "Admission"
+              },
+              "desc": "Take the first step towards a brighter future. Fill out the online admission form and become a part of our learning community.",
+              "features": [
+                {
+                  "id": 1,
+                  "title": "Easy Application",
+                  "desc": "Simple and quick process",
+                  "icon": "GraduationCap"
+                },
+                {
+                  "id": 2,
+                  "title": "Secure & Safe",
+                  "desc": "Your data is protected",
+                  "icon": "ShieldCheck"
+                },
+                {
+                  "id": 3,
+                  "title": "Quick Response",
+                  "desc": "Get updates on time",
+                  "icon": "Clock"
+                },
+                {
+                  "id": 4,
+                  "title": "Join Our Community",
+                  "desc": "Be a part of your bright future",
+                  "icon": "Users"
+                }
+              ],
+              "studentImage": "/enquiry.png",
+              "quote": "Education Today for a Better Tomorrow"
+            },
+            "needHelp": {
+              "title": "Need Help?",
+              "desc": "Our admission team is here to assist you at every step.",
+              "contacts": [
+                {
+                  "icon": "Phone",
+                  "info": "+91 98765 43210",
+                  "sub": "Mon - Sat, 9:00 AM - 6:00 PM"
+                },
+                {
+                  "icon": "Mail",
+                  "info": "admissions@edusity.com",
+                  "sub": "We reply within 24 hours"
+                },
+                {
+                  "icon": "MapPin",
+                  "info": "123 Education Lane, New Delhi, India",
+                  "sub": ""
+                }
+              ],
+              "actionText": "Let's Build Your Future Together"
+            },
+            "form": {
+              "title": "Online Admission Form",
+              "subtitle": "Fill in your details below to apply for admission. Our team will get back to you shortly.",
+              "sections": {
+                "personal": "Personal Information",
+                "academic": "Academic Information",
+                "additional": "Additional Information"
+              },
+              "buttonText": "Submit Application"
             }
           }
         }

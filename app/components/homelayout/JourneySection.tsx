@@ -165,10 +165,7 @@ export default function JourneySection({
               </div>
 
               {/* Top Right Handwritten Note */}
-              <div
-                className="absolute max-w-[80px] top-6 right-6 z-30 text-white font-caveat font-bold text-2xl sm:text-3xl tracking-wide rotate-[-6deg] drop-shadow-lg"
-                style={{ fontFamily: "var(--font-allura)" }}
-              >
+              <div className="absolute max-w-[80px] top-6 right-6 z-30 text-white font-handwritten text-2xl sm:text-3xl tracking-wide rotate-[-6deg] drop-shadow-lg">
                 {handwrittenNote}
                 <div className="w-24 h-1 bg-emerald-400 rounded-full mt-1 rotate-[-2deg]" />
               </div>
