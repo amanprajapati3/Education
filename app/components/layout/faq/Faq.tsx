@@ -6,6 +6,7 @@ import Link from "next/link";
 import BannerPage from "../../shared/BannerPage";
 import { site, EducationFaqContactIcon } from "@/data";
 import { Plus, Minus, ArrowRight, Phone, Mail, MapPin } from "lucide-react";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 const AQUA = "#19C2A1";
 
@@ -38,7 +39,13 @@ export default function Faq() {
 
       <section className="py-8 md:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className=" max-w-3xl flex flex-col mb-8 space-y-0">
+        <ScrollReveal
+          as="div"
+          className=" max-w-3xl flex flex-col mb-8 space-y-0"
+          direction="up"
+          distance={40}
+          duration={0.7}
+        >
           <div className="inline-flex items-center  gap-3">
             <span className="w-8 h-0.5 bg-blue-500 inline-block"></span>
             <span className="text-blue-600 font-bold text-sm tracking-widest uppercase">
@@ -55,22 +62,36 @@ export default function Faq() {
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
             {desc}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Main Content Layout: 2 Columns on Desktop, Stacked on Mobile/Tablet */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 items-start">
           {/* Left Column: FAQ Accordion (Span 2) */}
-          <div className="lg:col-span-2 space-y-2">
-            {faqs.map((item) => {
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-2 space-y-2"
+            direction="left"
+            mobileDirection="up"
+            distance={60}
+            duration={0.8}
+          >
+            {faqs.map((item, itemIndex) => {
               const isOpen = openId === item.id;
               return (
-                <div
+                <ScrollReveal
                   key={item.id}
+                  as="div"
                   className={`rounded-2xl transition-all duration-300 border ${
                     isOpen
                       ? "bg-sky-50/70 border-sky-200/80 shadow-sm"
                       : "bg-white border-slate-100 hover:border-slate-200 shadow-sm"
                   }`}
+                  direction="up"
+                  distance={28}
+                  duration={0.55}
+                  delay={0.04}
+                  staggerChildren={0.06}
+                  index={itemIndex}
                 >
                   <button
                     onClick={() => toggleFaq(item.id)}
@@ -109,13 +130,21 @@ export default function Faq() {
                       )}
                     </div>
                   </button>
-                </div>
+                </ScrollReveal>
               );
             })}
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: Sidebar (Promo Card & Contact Box) */}
-          <div className="lg:col-span-1 space-y-4">
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-1 space-y-4"
+            direction="right"
+            mobileDirection="up"
+            distance={60}
+            duration={0.8}
+            delay={0.1}
+          >
             {/* Top Promo Card */}
             <div className="relative rounded-3xl overflow-hidden shadow-md h-[440px] sm:h-[580px] flex flex-col justify-end p-6 sm:p-8">
               {/* Background Image */}
@@ -123,6 +152,7 @@ export default function Faq() {
                 src={sidebar.promoCard.image}
                 alt={sidebar.promoCard.title}
                 fill
+                sizes="(min-width: 1280px) 365px, (min-width: 1024px) 33vw, 100vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -181,7 +211,7 @@ export default function Faq() {
                 ))}
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </main>

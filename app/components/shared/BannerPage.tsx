@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ScrollReveal from "./ScrollReveal";
 
 export interface BannerCrumb {
   label: string;
@@ -44,7 +45,13 @@ export default function BannerPage({
       </div>
 
       {/* Centered Content driven entirely by props */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-3">
+      <ScrollReveal
+        as="div"
+        className="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-3"
+        direction="up"
+        distance={40}
+        duration={0.8}
+      >
         <h1 
           className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight"
           style={{ color: AQUA }}
@@ -76,7 +83,7 @@ export default function BannerPage({
             {current}
           </span>
         </nav>
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

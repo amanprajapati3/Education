@@ -3,6 +3,7 @@ import BannerPage from "@/app/components/shared/BannerPage";
 import { site } from "@/data";
 import { Eye } from "lucide-react";
 import { PiMountainsLight } from "react-icons/pi";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 
 const AQUA = "#19C2A1";
@@ -26,7 +27,14 @@ export default function Mission() {
         <div className="flex flex-col md:flex-row gap-5">
           
           {/* Content Column */}
-          <div className="w-full md:w-1/2 space-y-0">
+          <ScrollReveal
+            as="div"
+            className="w-full md:w-1/2 space-y-0"
+            direction="left"
+            mobileDirection="up"
+            distance={60}
+            duration={0.8}
+          >
             <div className="inline-flex items-center gap-3">
               <span className="w-8 h-0.5 bg-emerald-500 inline-block"></span>
               <span className="text-emerald-600 font-bold text-sm tracking-widest uppercase">
@@ -42,15 +50,24 @@ export default function Mission() {
             <p className="text-slate-600 text-base max-w-[400px] ">
               {vision.desc}
             </p>
-          </div>
+          </ScrollReveal>
 
           {/* Image Column with Floating Card */}
-          <div className="w-full md:w-1/2 relative pb-10 sm:pb-8 lg:pb-0">
+          <ScrollReveal
+            as="div"
+            className="w-full md:w-1/2 relative pb-10 sm:pb-8 lg:pb-0"
+            direction="right"
+            mobileDirection="up"
+            distance={60}
+            duration={0.8}
+            delay={0.1}
+          >
             <div className="relative lg:right-20 sm:right-10 rounded-3xl overflow-hidden shadow-lg h-[240px] w-full bg-slate-100">
               <Image
                 src={vision.image}
                 alt="Our Vision"
                 fill
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"
               />
             </div>
@@ -64,7 +81,7 @@ export default function Mission() {
                 &ldquo;{vision.quote}&rdquo;
               </p>
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
       </section>
@@ -74,7 +91,14 @@ export default function Mission() {
         <div className="flex flex-col md:flex-row-reverse gap-12 ">
           
           {/* Content Column */}
-          <div className="w-full  md:w-1/2 space-y-0">
+          <ScrollReveal
+            as="div"
+            className="w-full  md:w-1/2 space-y-0"
+            direction="right"
+            mobileDirection="up"
+            distance={60}
+            duration={0.8}
+          >
             <div className="inline-flex items-center gap-3">
               <span className="w-8 h-0.5 bg-emerald-500 inline-block"></span>
               <span className="text-emerald-600 font-bold text-sm tracking-widest uppercase">
@@ -90,15 +114,24 @@ export default function Mission() {
             <p className="text-slate-600 max-w-[400px] text-base">
               {mission.desc}
             </p>
-          </div>
+          </ScrollReveal>
 
           {/* Image Column with Floating Card */}
-          <div className="w-full md:w-1/2 relative pb-10 sm:pb-8 lg:pb-0">
+          <ScrollReveal
+            as="div"
+            className="w-full md:w-1/2 relative pb-10 sm:pb-8 lg:pb-0"
+            direction="left"
+            mobileDirection="up"
+            distance={60}
+            duration={0.8}
+            delay={0.1}
+          >
             <div className="relative lg:ml-10 rounded-3xl overflow-hidden shadow-lg h-[240px] w-full lg:w-[90%] bg-slate-100">
               <Image
                 src={mission.image}
                 alt="Our Mission"
                 fill
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"
               />
             </div>
@@ -112,7 +145,7 @@ export default function Mission() {
                 &ldquo;{mission.quote}&rdquo;
               </p>
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
       </section>

@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { site, SectionProps, EducationBlogData, EducationBlogPost } from "@/data";
 import { Calendar, ArrowRight } from "lucide-react";
+import ScrollReveal from "../shared/ScrollReveal";
 
 type BlogSectionProps = SectionProps<EducationBlogData> & {
   /** How many posts to render. Defaults to 3, pass no limit to render all. */
@@ -98,7 +100,13 @@ export default function BlogSection({
       <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 ${contentClassName}`}>
         
         {/* Header Section */}
-        <div className="text-center max-w-2xl mx-auto mb-5 space-y-0">
+        <ScrollReveal
+          as="div"
+          className="text-center max-w-2xl mx-auto mb-5 space-y-0"
+          direction="up"
+          distance={40}
+          duration={0.7}
+        >
           <div className="inline-flex items-center gap-3">
             <span className="w-8 h-0.5 bg-emerald-500 inline-block"></span>
             <span className="text-emerald-600 font-bold text-sm tracking-widest uppercase">
@@ -115,7 +123,7 @@ export default function BlogSection({
           <p className="text-slate-600 mt-3 text-base leading-relaxed">
             {desc}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Mobile/Tablet: Swipeable scroll container | Desktop: 3-column grid */}
         <div
@@ -124,17 +132,26 @@ export default function BlogSection({
           className="flex lg:grid lg:grid-cols-3 gap-5 overflow-x-auto lg:overflow-visible snap-x snap-mandatory scrollbar-none pb-4 pt-2 px-1 focus:outline-none"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {visiblePosts.map((post) => (
-            <article
+          {visiblePosts.map((post, postIndex) => (
+            <ScrollReveal
               key={post.id}
+              as="article"
               className="flex-shrink-0 w-[85vw] sm:w-[calc(50%-12px)] lg:w-full snap-start bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 flex flex-col justify-between group"
+              direction="up"
+              distance={40}
+              duration={0.65}
+              delay={0.05}
+              staggerChildren={0.08}
+              index={postIndex}
             >
               {/* Image & Date Badge */}
               <div className="relative h-60 sm:h-64 w-full overflow-hidden bg-slate-100">
-                <img
+                <Image
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(min-width: 1280px) 392px, (min-width: 1024px) calc((100vw - 104px) / 3), (min-width: 640px) calc(50vw - 36px), 85vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-2 text-xs font-semibold text-slate-800 border border-slate-100">
                   <Calendar className="w-3.5 h-3.5 text-emerald-600" />
@@ -172,7 +189,7 @@ export default function BlogSection({
                   </a>
                 </div>
               </div>
-            </article>
+            </ScrollReveal>
           ))}
         </div>
 

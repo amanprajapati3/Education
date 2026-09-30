@@ -12,6 +12,7 @@ import {
   MapPin, 
   ArrowRight 
 } from "lucide-react";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 const AQUA = "#19C2A1";
 
@@ -68,7 +69,14 @@ export default function Enquiry() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left Column: Get In Touch & 3 Feature Rows */}
-          <div className="lg:col-span-6 space-y-4">
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-6 space-y-4"
+            direction="left"
+            mobileDirection="up"
+            distance={70}
+            duration={0.8}
+          >
             <div className="space-y-2">
               <div className="inline-flex items-center gap-3">
                 <span className="w-8 h-0.5 bg-emerald-500 inline-block"></span>
@@ -89,8 +97,18 @@ export default function Enquiry() {
 
             {/* 3 Feature Rows */}
             <div className="space-y-6 pt-2">
-              {getInTouch.features.map((feature) => (
-                <div key={feature.id} className="flex items-start gap-4">
+              {getInTouch.features.map((feature, featureIndex) => (
+                <ScrollReveal
+                  key={feature.id}
+                  as="div"
+                  className="flex items-start gap-4"
+                  direction="up"
+                  distance={32}
+                  duration={0.6}
+                  delay={0.05}
+                  staggerChildren={0.08}
+                  index={featureIndex}
+                >
                   <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0 shadow-sm border border-emerald-100/50">
                     {featureIconMap[feature.icon as EducationEnquiryFeatureIcon]}
                   </div>
@@ -102,13 +120,21 @@ export default function Enquiry() {
                       {feature.desc}
                     </p>
                   </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: Enquiry Form Card */}
-          <div className="lg:col-span-6 bg-white rounded-3xl p-4 shadow-sm  relative">
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-6 bg-white rounded-3xl p-4 shadow-sm  relative"
+            direction="right"
+            mobileDirection="up"
+            distance={70}
+            duration={0.8}
+            delay={0.1}
+          >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-2">
               <h3 className="text-2xl font-bold text-slate-900">
                 {form.title}
@@ -178,11 +204,12 @@ export default function Enquiry() {
                     onChange={(e) => setFormData({ ...formData, enquiryFor: e.target.value })}
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#19C2A1]/30 focus:border-[#19C2A1] transition-all"
                   >
-                    <option value="">Select Option</option>
-                    <option value="admission">Admission</option>
-                    <option value="courses">Courses</option>
-                    <option value="facilities">Campus Facilities</option>
-                    <option value="other">Other</option>
+                    <option value="">{form.selects.enquiryFor.placeholder}</option>
+                    {form.selects.enquiryFor.options.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
                   </select>
                 </div>
               </div>
@@ -198,10 +225,12 @@ export default function Enquiry() {
                     onChange={(e) => setFormData({ ...formData, course: e.target.value })}
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#19C2A1]/30 focus:border-[#19C2A1] transition-all"
                   >
-                    <option value="">Select Course</option>
-                    <option value="ug">Undergraduate Programs</option>
-                    <option value="pg">Postgraduate Programs</option>
-                    <option value="diploma">Diploma Courses</option>
+                    <option value="">{form.selects.course.placeholder}</option>
+                    {form.selects.course.options.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
                   </select>
                 </div>
 
@@ -214,10 +243,12 @@ export default function Enquiry() {
                     onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#19C2A1]/30 focus:border-[#19C2A1] transition-all"
                   >
-                    <option value="">Select Location</option>
-                    <option value="delhi">New Delhi Campus</option>
-                    <option value="noida">Noida Campus</option>
-                    <option value="mumbai">Mumbai Campus</option>
+                    <option value="">{form.selects.location.placeholder}</option>
+                    {form.selects.location.options.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
                   </select>
                 </div>
               </div>
@@ -262,14 +293,30 @@ export default function Enquiry() {
                 <ArrowRight className="w-5 h-5" />
               </button>
             </form>
-          </div>
+          </ScrollReveal>
 
         </div>
 
         {/* BOTTOM SECTION: 3-Column Contact Info Banner Card */}
-        <div className="bg-blue-50 rounded-3xl  py-5 px-10 shadow-sm  border-slate-100  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
+        <ScrollReveal
+          as="div"
+          className="bg-blue-50 rounded-3xl  py-5 px-10 shadow-sm  border-slate-100  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 "
+          direction="up"
+          distance={50}
+          duration={0.8}
+        >
           {bottomContactCards.map((card, idx) => (
-            <div key={card.id} className={`flex border-r-2 last:border-r-0 border-gray-300 gap-5 ${idx !== 0 ? 'pt-6 md:pt-0' : ''}`}>
+            <ScrollReveal
+              key={card.id}
+              as="div"
+              className={`flex border-r-2 last:border-r-0 border-gray-300 gap-5 ${idx !== 0 ? 'pt-6 md:pt-0' : ''}`}
+              direction="up"
+              distance={30}
+              duration={0.6}
+              delay={0.05}
+              staggerChildren={0.08}
+              index={idx}
+            >
               <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r from-blue-500 via-emerald-500 to-emerald-600 flex items-center justify-center shrink-0 shadow-sm border border-emerald-100/50">
                 {contactIconMap[card.icon as EducationEnquiryContactIcon]}
               </div>
@@ -284,9 +331,9 @@ export default function Enquiry() {
                   {card.subInfo}
                 </p>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
-        </div>
+        </ScrollReveal>
 
       </section>
     </main>

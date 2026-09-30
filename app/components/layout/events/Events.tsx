@@ -6,6 +6,7 @@ import Link from "next/link";
 import BannerPage from "../../shared/BannerPage";
 import { site } from "@/data";
 import { Clock, MapPin, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 const AQUA = "#19C2A1";
 
@@ -50,7 +51,13 @@ export default function Event() {
 
       <section className="py-8 md:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-5 ">
+        <ScrollReveal
+          as="div"
+          className="text-center max-w-3xl mx-auto mb-5 "
+          direction="up"
+          distance={40}
+          duration={0.7}
+        >
           <div className="inline-flex items-center justify-center gap-3">
             <span className="w-8 h-0.5 bg-emerald-500 inline-block"></span>
             <span className="text-emerald-600 font-bold text-sm tracking-widest uppercase">
@@ -67,10 +74,17 @@ export default function Event() {
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
             {desc}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Filter Section */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8">
+        <ScrollReveal
+          as="div"
+          className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8"
+          direction="up"
+          distance={30}
+          duration={0.6}
+          delay={0.1}
+        >
           {categories.map((category) => {
             const isActive = activeCategory === category;
             return (
@@ -88,15 +102,22 @@ export default function Event() {
               </button>
             );
           })}
-        </div>
+        </ScrollReveal>
 
         {/* Events Grid (3x3 on desktop, 2x2/responsive on tablet, 1 col on mobile) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
           {paginatedEvents.length > 0 ? (
-            paginatedEvents.map((item) => (
-              <article
+            paginatedEvents.map((item, itemIndex) => (
+              <ScrollReveal
                 key={item.id}
+                as="article"
                 className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 flex flex-col justify-between group"
+                direction="up"
+                distance={40}
+                duration={0.65}
+                delay={0.05}
+                staggerChildren={0.08}
+                index={itemIndex}
               >
                 <div>
                   {/* Image Container with Date Badge */}
@@ -105,6 +126,7 @@ export default function Event() {
                       src={item.image}
                       alt={item.title}
                       fill
+                      sizes="(min-width: 1280px) 395px, (min-width: 1024px) calc((100vw - 96px) / 3), (min-width: 640px) calc((100vw - 64px) / 2), calc(100vw - 32px)"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
 
@@ -166,7 +188,7 @@ export default function Event() {
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-              </article>
+              </ScrollReveal>
             ))
           ) : (
             <div className="col-span-full py-16 text-center text-slate-500 font-medium">

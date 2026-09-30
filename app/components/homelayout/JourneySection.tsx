@@ -1,8 +1,10 @@
 "use client"
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { site, SectionProps, EducationCtaBannerData } from "@/data";
 import { Play, ArrowRight, GraduationCap, X } from "lucide-react";
+import ScrollReveal from "../shared/ScrollReveal";
 
 export default function JourneySection({
   data = site.ctaBanner,
@@ -65,7 +67,14 @@ export default function JourneySection({
         <div className="bg-white rounded-[1rem] shadow-xl border border-slate-100 overflow-hidden relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 ">
             {/* Left Side Content */}
-            <div className="lg:col-span-6 sm:p-6 p-3">
+            <ScrollReveal
+              as="div"
+              className="lg:col-span-6 sm:p-6 p-3"
+              direction="left"
+              mobileDirection="up"
+              distance={60}
+              duration={0.8}
+            >
               {/* Badge */}
               <div className="inline-flex items-center gap-3">
                 <span className="w-8 h-0.5 hidden sm:inline-block bg-emerald-500 "></span>
@@ -130,10 +139,18 @@ export default function JourneySection({
                   />
                 ))}
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Right Side Image with Custom Curved Border & Overlays */}
-            <div className="lg:col-span-6 relative h-full min-h-[350px] flex items-center justify-end overflow-hidden bg-slate-900">
+            <ScrollReveal
+              as="div"
+              className="lg:col-span-6 relative h-full min-h-[350px] flex items-center justify-end overflow-hidden bg-slate-900"
+              direction="right"
+              mobileDirection="up"
+              distance={60}
+              duration={0.8}
+              delay={0.1}
+            >
               {/* Curved Teal Border Divider using SVG */}
               <div className="absolute inset-y-0 left-0 w-28 lg:w-36 z-20 pointer-events-none hidden lg:block overflow-hidden">
                 <svg
@@ -156,10 +173,12 @@ export default function JourneySection({
 
               {/* Main Image */}
               <div className="absolute inset-0 lg:left-12 overflow-hidden">
-                <img
+                <Image
                   src={imageSrc}
                   alt={imageAlt}
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(min-width: 1280px) 584px, (min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-transparent" />
               </div>
@@ -185,7 +204,7 @@ export default function JourneySection({
                   </span>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </div>

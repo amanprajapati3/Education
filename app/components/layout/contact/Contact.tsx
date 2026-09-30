@@ -14,10 +14,10 @@ import {
   Star,
   Navigation,
 } from "lucide-react";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 const AQUA = "#19C2A1";
 
-// Icon mapping helper. Keyed by EducationContactIcon so a new icon added to
 // that union has to be handled here.
 const iconMap: Record<EducationContactIcon, React.ReactNode> = {
   Phone: <Phone className="w-6 md:w-8 md:h-8 h-6 text-blue-900" />,
@@ -57,7 +57,14 @@ export default function Contact() {
         {/* TOP SECTION: Contact Info & Message Form */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Get In Touch & 2x2 Info Cards */}
-          <div className="lg:col-span-6 ">
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-6 "
+            direction="left"
+            mobileDirection="up"
+            distance={70}
+            duration={0.8}
+          >
             <div className="space-y-0">
               <div className="inline-flex items-center gap-3">
                 <span className="w-8 h-0.5 bg-emerald-500 inline-block"></span>
@@ -80,10 +87,17 @@ export default function Contact() {
 
             {/* 2x2 Info Cards Grid */}
             <div className="grid grid-cols-1 mt-5 sm:grid-cols-2 gap-4">
-              {getInTouch.cards.map((card) => (
-                <div
+              {getInTouch.cards.map((card, cardIndex) => (
+                <ScrollReveal
                   key={card.id}
+                  as="div"
                   className="bg-white rounded-2xl p-5 shadow-sm border border-blue-100 flex sm:justify-between gap-5 space-y-1 hover:shadow-md transition-all"
+                  direction="up"
+                  distance={34}
+                  duration={0.6}
+                  delay={0.05}
+                  staggerChildren={0.08}
+                  index={cardIndex}
                 >
                   <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0 shadow-sm">
                     {iconMap[card.icon as EducationContactIcon]}
@@ -99,13 +113,21 @@ export default function Contact() {
                       {card.subInfo}
                     </p>
                   </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: Send Us a Message Form Card */}
-          <div className="lg:col-span-6 bg-white rounded-3xl p-4 shadow-sm  relative">
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-6 bg-white rounded-3xl p-4 shadow-sm  relative"
+            direction="right"
+            mobileDirection="up"
+            distance={70}
+            duration={0.8}
+            delay={0.1}
+          >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6  gap-2">
               <h3 className="text-2xl font-bold text-slate-900">
                 {form.title}
@@ -184,11 +206,12 @@ export default function Contact() {
                     }
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#19C2A1]/30 focus:border-[#19C2A1] transition-all"
                   >
-                    <option value="">Select Subject</option>
-                    <option value="admission">Admission Inquiry</option>
-                    <option value="courses">Courses & Programs</option>
-                    <option value="facilities">Campus Facilities</option>
-                    <option value="other">Other Inquiry</option>
+                    <option value="">{form.subjectSelect.placeholder}</option>
+                    {form.subjectSelect.options.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
                   </select>
                 </div>
               </div>
@@ -220,13 +243,20 @@ export default function Contact() {
                 <ArrowRight className="w-5 h-5" />
               </button>
             </form>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* BOTTOM SECTION: Find Us Here & Interactive Real Map */}
         <div className="grid grid-cols-1 mt-10 lg:grid-cols-12 gap-10 items-start pt-8 border-t border-slate-200">
           {/* Left Column: Location Info & Campus Photo Card */}
-          <div className="lg:col-span-6 space-y-2">
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-6 space-y-2"
+            direction="left"
+            mobileDirection="up"
+            distance={70}
+            duration={0.8}
+          >
             <div className="space-y-2">
               <div className="inline-flex items-center gap-3">
                 <span className="w-8 h-0.5 bg-blue-500 inline-block"></span>
@@ -248,18 +278,33 @@ export default function Contact() {
             </div>
 
             {/* Campus Image Card */}
-            <div className="relative h-[280px] sm:h-[340px] rounded-3xl overflow-hidden shadow-md border border-slate-100 bg-white">
+            <ScrollReveal
+              as="div"
+              className="relative h-[280px] sm:h-[340px] rounded-3xl overflow-hidden shadow-md border border-slate-100 bg-white"
+              direction="up"
+              distance={40}
+              duration={0.7}
+            >
               <Image
                 src={location.image}
                 alt="Campus Location"
                 fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
               />
-            </div>
-          </div>
+            </ScrollReveal>
+          </ScrollReveal>
 
           {/* Right Column: Interactive Real Google Map Preview Card */}
-          <div className="lg:col-span-6 bg-white rounded-3xl shadow-sm  space-y-4">
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-6 bg-white rounded-3xl shadow-sm  space-y-4"
+            direction="right"
+            mobileDirection="up"
+            distance={70}
+            duration={0.8}
+            delay={0.1}
+          >
             
 
             {/* Real Google Map Embed View */}
@@ -276,7 +321,7 @@ export default function Contact() {
                 className="w-full h-full"
               ></iframe>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </main>

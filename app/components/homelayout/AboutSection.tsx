@@ -1,6 +1,8 @@
 import React from "react";
+import Image from "next/image";
 import { site, SectionProps, EducationAboutData } from "@/data";
 import { Target, Users, Briefcase, GraduationCap, Phone, ArrowRight } from "lucide-react";
+import ScrollReveal from "../shared/ScrollReveal";
 
 // Helper to map icon string from JSON to Lucide icons
 const getFeatureIcon = (iconName: string) => {
@@ -50,27 +52,38 @@ export default function AboutSection({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 ">
           
           {/* Left Side: Images & Floating Badge */}
-          <div className="lg:col-span-6 relative">
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-6 relative"
+            direction="left"
+            mobileDirection="up"
+            distance={70}
+            duration={0.8}
+          >
             {/* Background decorative soft glow */}
             <div className="absolute -top-6 -left-6 w-72 h-72 bg-emerald-50/80 rounded-full filter blur-2xl -z-10" />
             <div className="absolute top-1/2 right-0 w-64 h-64 bg-sky-50/60 rounded-full filter blur-3xl -z-10" />
 
             <div className="relative  space-y-6 sm:space-y-0">
               {/* Top Main Image */}
-              <div className="relative w-[75%]  rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                <img
+              <div className="relative w-[75%] h-[280px] sm:h-[340px] md:h-[370px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                <Image
                   src={data?.image?.src || "/education/1.png"}
                   alt={data?.image?.alt || "Group of students walking together on campus"}
-                  className="w-full h-[280px] sm:h-[340px] md:h-[370px] object-cover transform hover:scale-105 transition-transform duration-700"
+                  fill
+                  sizes="(min-width: 1280px) 438px, (min-width: 1024px) 33.5vw, (min-width: 640px) calc(75vw - 36px), calc(75vw - 24px)"
+                  className="object-cover transform hover:scale-105 transition-transform duration-700"
                 />
               </div>
 
               {/* Bottom Offset Image */}
-              <div className="absolute -bottom-24 right-0 w-[65%] rounded-3xl overflow-hidden shadow-2xl border-4 border-white z-10 mt-6 sm:mt-0">
-                <img
+              <div className="absolute -bottom-24 right-0 w-[65%] h-[240px] sm:h-[280px] md:h-[300px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white z-10 mt-6 sm:mt-0">
+                <Image
                   src={data?.secondaryImage?.src || "/education/2.png"}
                   alt={data?.secondaryImage?.alt || "Student sitting outdoors working on a laptop"}
-                  className="w-full h-[240px] sm:h-[280px] md:h-[300px] object-cover transform hover:scale-105 transition-transform duration-700"
+                  fill
+                  sizes="(min-width: 1280px) 380px, (min-width: 1024px) 29vw, (min-width: 640px) calc(65vw - 31px), calc(65vw - 21px)"
+                  className="object-cover transform hover:scale-105 transition-transform duration-700"
                 />
               </div>
 
@@ -91,10 +104,18 @@ export default function AboutSection({
                 ))}
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Side: Content & Features */}
-          <div className="lg:col-span-6 sm:mt-24 mt-0 lg:mt-0 space-y-0">
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-6 sm:mt-24 mt-0 lg:mt-0 space-y-0"
+            direction="right"
+            mobileDirection="up"
+            distance={70}
+            duration={0.8}
+            delay={0.1}
+          >
             {/* Subtitle Badge */}
             <div className="inline-flex items-center gap-3">
               <span className="w-8 h-0.5 bg-emerald-500 inline-block"></span>
@@ -132,7 +153,18 @@ export default function AboutSection({
                   ][index % 3];
 
                   return (
-                    <div key={feature.id || index} className="flex items-start gap-4 group">
+                    <ScrollReveal
+                      key={feature.id || index}
+                      as="div"
+                      className="flex items-start gap-4 group"
+                      direction="up"
+                      mobileDirection="up"
+                      distance={26}
+                      duration={0.6}
+                      delay={0.25}
+                      staggerChildren={0.1}
+                      index={index}
+                    >
                       <div className={`w-12 h-12 rounded-full ${colorTheme.bg} ${colorTheme.text} flex items-center justify-center flex-shrink-0 ${colorTheme.hoverBg} group-hover:text-white transition-colors duration-300 shadow-sm`}>
                         {getFeatureIcon(feature.icon)}
                       </div>
@@ -140,7 +172,7 @@ export default function AboutSection({
                         <h3 className="text-lg font-bold text-blue-800">{feature.title}</h3>
                         <p className="text-slate-500 text-sm mt-1">{feature.description}</p>
                       </div>
-                    </div>
+                    </ScrollReveal>
                   );
                 })}
               </div>
@@ -180,7 +212,7 @@ export default function AboutSection({
               </div>
             )}
 
-          </div>
+          </ScrollReveal>
 
         </div>
       </div>

@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import BannerPage from "@/app/components/shared/BannerPage";
 import SocialLinks from "@/app/components/shared/SocialLinks";
+import ScrollReveal from "@/app/components/shared/ScrollReveal";
 import type {
   EducationNewsArticleDetail,
   EducationNewsBannerData,
@@ -74,7 +75,14 @@ export default function NewsArticleDetail({
 
       <section className="mx-auto grid max-w-325 grid-cols-1 items-start gap-6 px-4 py-8 sm:px-6 md:gap-8 md:py-10 lg:grid-cols-[minmax(0,1fr)_340px] lg:px-7">
         <article className="min-w-0">
-          <div className="relative sm:aspect-[2.2/1] min-h-48 overflow-hidden rounded-md bg-[#e8eff4]">
+          <ScrollReveal
+            as="div"
+            className="relative sm:aspect-[2.2/1] min-h-48 overflow-hidden rounded-md bg-[#e8eff4]"
+            direction="left"
+            mobileDirection="up"
+            distance={50}
+            duration={0.75}
+          >
             <Image
               src={article.image}
               alt={news.title}
@@ -83,7 +91,7 @@ export default function NewsArticleDetail({
               sizes="(max-width: 1024px) 100vw, 850px"
               className="object-cover"
             />
-          </div>
+          </ScrollReveal>
 
           <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-slate-600">
             <span className="inline-flex items-center gap-2"><CalendarDays className="h-4 w-4 text-[#0b5e8e]" />{date}</span>
@@ -92,25 +100,47 @@ export default function NewsArticleDetail({
 
           <p className="mt-4 text-sm leading-6 text-slate-600 md:text-base">{article.intro}</p>
 
-          <section className="pt-5">
+          <ScrollReveal
+            as="section"
+            className="pt-5"
+            direction="up"
+            distance={40}
+            duration={0.7}
+          >
             <SectionHeading>{article.sectionTitle}</SectionHeading>
             <p className="mt-2 text-sm leading-6 text-slate-600 md:text-base">{article.sectionText}</p>
             <div className="mt-3 grid grid-cols-2 divide-x divide-y divide-slate-200 border-y border-slate-200 sm:grid-cols-4 sm:divide-y-0">
               {article.features.map((feature, index) => {
                 const Icon = FEATURE_ICONS[index % FEATURE_ICONS.length];
                 return (
-                  <div key={feature} className="flex min-h-28 flex-col items-center justify-center gap-2 px-2 py-3 text-center">
+                  <ScrollReveal
+                    key={feature}
+                    as="div"
+                    className="flex min-h-28 flex-col items-center justify-center gap-2 px-2 py-3 text-center"
+                    direction="up"
+                    distance={26}
+                    duration={0.55}
+                    delay={0.04}
+                    staggerChildren={0.05}
+                    index={index}
+                  >
                     <span className="flex h-12 md:h-16 md:w-16 w-12 items-center justify-center rounded-full bg-[#edf5fb] text-[#0b5e8e]">
                       <Icon className="h-6 md:w-9 md:h-9 w-6" />
                     </span>
                     <span className="text-base font-semibold min-h-10  leading-5 text-[#17395d]">{feature}</span>
-                  </div>
+                  </ScrollReveal>
                 );
               })}
             </div>
-          </section>
+          </ScrollReveal>
 
-          <section className="pt-5">
+          <ScrollReveal
+            as="section"
+            className="pt-5"
+            direction="up"
+            distance={40}
+            duration={0.7}
+          >
             <SectionHeading>{article.actionTitle}</SectionHeading>
             <ol className="mt-2 space-y-2">
               {article.steps.map((step, index) => (
@@ -120,25 +150,55 @@ export default function NewsArticleDetail({
                 </li>
               ))}
             </ol>
-          </section>
+          </ScrollReveal>
 
-          <section className="pt-5">
+          <ScrollReveal
+            as="section"
+            className="pt-5"
+            direction="up"
+            distance={40}
+            duration={0.7}
+          >
             <SectionHeading>Important Dates</SectionHeading>
             <dl className="mt-2 overflow-hidden rounded-md border border-[#dce8f1] text-sm">
               {article.importantDates.map((item, index) => (
-                <div key={item.label} className={`grid grid-cols-1 sm:grid-cols-2 ${index % 2 === 0 ? "bg-[#f0f6fb]" : "bg-white"}`}>
+                <ScrollReveal
+                  key={item.label}
+                  as="div"
+                  className={`grid grid-cols-1 sm:grid-cols-2 ${index % 2 === 0 ? "bg-[#f0f6fb]" : "bg-white"}`}
+                  direction="up"
+                  distance={22}
+                  duration={0.5}
+                  delay={0.03}
+                  staggerChildren={0.04}
+                  index={index}
+                >
                   <dt className="border-b border-[#dce8f1] px-3 py-2 font-semibold text-[#17395d] sm:border-r">{item.label}</dt>
                   <dd className="border-b border-[#dce8f1] px-3 py-2 text-slate-600">{item.value}</dd>
-                </div>
+                </ScrollReveal>
               ))}
             </dl>
-          </section>
+          </ScrollReveal>
 
           <p className="mt-5 text-sm leading-6 text-slate-600">For more information, contact the relevant Edusity team or check the latest campus announcements.</p>
         </article>
 
-        <aside className="min-w-0 space-y-3 lg:sticky lg:top-6">
-          <section className="rounded-md border border-[#e0eaf2] bg-[#f0f6fb] p-4">
+        <ScrollReveal
+          as="aside"
+          className="min-w-0 space-y-3 lg:sticky lg:top-6"
+          direction="right"
+          mobileDirection="up"
+          distance={60}
+          duration={0.8}
+          delay={0.1}
+        >
+          <ScrollReveal
+            as="section"
+            className="rounded-md border border-[#e0eaf2] bg-[#f0f6fb] p-4"
+            direction="up"
+            distance={36}
+            duration={0.65}
+          >
             <h2 className="text-lg md:text-xl font-bold text-[#036bd3]">{sidebar.quickInfoTitle}</h2>
             <dl className="mt-3 space-y-3">
               <InfoRow Icon={CalendarDays} label="Date" value={date} />
@@ -153,17 +213,31 @@ export default function NewsArticleDetail({
                 ariaPrefix="Share this news"
               />
             </div>
-          </section>
+          </ScrollReveal>
 
-          <section className="rounded-md bg-linear-to-br from-[#07518e] to-[#078c88] p-4 text-white">
+          <ScrollReveal
+            as="section"
+            className="rounded-md bg-linear-to-br from-[#07518e] to-[#078c88] p-4 text-white"
+            direction="up"
+            distance={36}
+            duration={0.65}
+            delay={0.06}
+          >
             <h2 className="text-lg md:text-xl font-bold">{sidebar.contactTitle}</h2>
             <p className="mt-2 text-base leading-5 text-white">{sidebar.contactText}</p>
             <Link href={sidebar.contactHref} className="mt-3 inline-flex min-h-10 items-center gap-2 rounded-md bg-white px-4 text-sm font-bold text-[#07518e] transition-colors hover:bg-[#e7f5f6]">
               {sidebar.contactButton}<ArrowRight className="h-4 w-4" />
             </Link>
-          </section>
+          </ScrollReveal>
 
-          <section className="overflow-hidden rounded-md border border-[#e0eaf2] bg-white">
+          <ScrollReveal
+            as="section"
+            className="overflow-hidden rounded-md border border-[#e0eaf2] bg-white"
+            direction="up"
+            distance={36}
+            duration={0.65}
+            delay={0.12}
+          >
             <h2 className="border-b border-[#e6edf3] px-4 py-3 text-lg md:text-xl font-bold text-[#0559ad]">{sidebar.latestTitle}</h2>
             <div className="divide-y divide-[#e6edf3] px-3">
               {latestNews.map((item) => (
@@ -181,8 +255,8 @@ export default function NewsArticleDetail({
             <Link href="/news" className="mx-3 mb-3 flex min-h-10 items-center justify-center gap-2 rounded bg-[#edf5fb] px-3 text-sm font-bold text-[#17395d] transition-colors hover:bg-[#dceefa]">
               {sidebar.viewAllLabel}<ArrowRight className="h-4 w-4" />
             </Link>
-          </section>
-        </aside>
+          </ScrollReveal>
+        </ScrollReveal>
       </section>
     </main>
   );

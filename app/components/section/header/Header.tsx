@@ -169,7 +169,8 @@ export default function Header() {
               alt={brand.siteName}
               width={160}
               height={48}
-              className="h-14 w-auto sm:h-16 md:h-24"
+              sizes="(min-width: 768px) 320px, (min-width: 640px) 213px, 187px"
+              className="h-16 w-auto md:h-24"
               priority
             />
           </Link>
@@ -310,6 +311,7 @@ export default function Header() {
               alt={brand.siteName}
               width={140}
               height={40}
+              sizes="126px"
               className="h-9 w-auto"
             />
             <button

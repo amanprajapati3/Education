@@ -1,7 +1,9 @@
 "use client"
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { site, SectionProps, EducationTestimonialData, EducationTestimonialItem } from "@/data";
 import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
+import ScrollReveal from "../shared/ScrollReveal";
 
 type TestimonialSectionProps = SectionProps<EducationTestimonialData> & {
   layout?: "split" | "centered";
@@ -136,20 +138,30 @@ export default function TestimonialSection({
       }
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
-      {cards.map((item) => (
-        <div
+      {cards.map((item, cardIndex) => (
+        <ScrollReveal
           key={item.id}
+          as="div"
           className={`bg-white rounded-3xl p-4 shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 flex flex-col justify-between relative group ${
             isCentered
               ? "w-full shrink-0 snap-start sm:w-auto sm:shrink sm:snap-none"
               : "flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(50%-12px)] snap-start"
           }`}
+          direction="up"
+          distance={40}
+          duration={0.65}
+          delay={0.05}
+          staggerChildren={0.08}
+          index={cardIndex}
         >
           {/* Top Row: Avatar and Quote Icon */}
           <div className="flex items-center justify-between mb-6">
-            <img
+            <Image
               src={item.image}
               alt={item.name}
+              width={64}
+              height={64}
+              sizes="64px"
               className="w-16 h-16 rounded-full object-cover shadow-md border-2 border-emerald-500/20"
             />
             <Quote className="w-12 h-12 text-emerald-500/20 group-hover:text-emerald-500/40 transition-colors" />
@@ -165,7 +177,7 @@ export default function TestimonialSection({
             <h3 className="text-base font-bold text-slate-900">{item.name}</h3>
             <p className="text-xs sm:text-sm text-slate-500 font-medium">{item.designation}</p>
           </div>
-        </div>
+        </ScrollReveal>
       ))}
     </div>
   );
@@ -192,7 +204,15 @@ export default function TestimonialSection({
       <section className={`py-8 md:py-12 bg-[#f8fafc] relative overflow-hidden ${className}`}>
         <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${contentClassName}`}>
           {/* Centered Heading */}
-          <div className="text-center pb-2">{heading}</div>
+          <ScrollReveal
+            as="div"
+            className="text-center pb-2"
+            direction="up"
+            distance={40}
+            duration={0.7}
+          >
+            {heading}
+          </ScrollReveal>
 
           {/* 4x2 grid on desktop, 2 column grid on tablet, swipeable cards on mobile */}
           <div className="relative">
@@ -213,13 +233,28 @@ export default function TestimonialSection({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 ">
           
           {/* Right Side: Scrollable Testimonial Cards (Appears first on mobile/tablet) */}
-          <div className="lg:col-span-7 order-2 relative">
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-7 order-2 relative"
+            direction="right"
+            mobileDirection="up"
+            distance={60}
+            duration={0.8}
+          >
             {scroller}
             {dots}
-          </div>
+          </ScrollReveal>
 
           {/* Left Side: Fixed Content & Slider Buttons (Appears below cards on mobile/tablet) */}
-          <div className="lg:col-span-5 order-1 space-y-0">
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-5 order-1 space-y-0"
+            direction="left"
+            mobileDirection="up"
+            distance={60}
+            duration={0.8}
+            delay={0.1}
+          >
             {heading}
 
             {/* Action Button & Carousel Slider Buttons */}
@@ -255,7 +290,7 @@ export default function TestimonialSection({
               )}
             </div>
 
-          </div>
+          </ScrollReveal>
 
         </div>
       </div>

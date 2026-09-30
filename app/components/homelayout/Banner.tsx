@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Play, X } from "lucide-react";
 import { site } from "@/data/index";
+import ScrollReveal from "../shared/ScrollReveal";
 
 const AQUA = "#19C2A1";
 
@@ -92,6 +93,7 @@ export default function Banner() {
           alt={image.alt}
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
 
@@ -104,20 +106,40 @@ export default function Banner() {
 
         <div className="relative z-10 mx-auto flex h-full max-w-[1320px] items-center px-4 sm:px-6 md:px-20">
           <div className="flex w-full flex-col items-center text-center sm:w-[560px] sm:items-start sm:text-left">
-            <div className="flex items-center gap-3 text-xs font-semibold tracking-[0.2em] text-white/90 sm:text-sm">
+            <ScrollReveal
+              as="div"
+              className="flex items-center gap-3 text-xs font-semibold tracking-[0.2em] text-white/90 sm:text-sm"
+              direction="up"
+              distance={28}
+              duration={0.6}
+            >
               {badge}
               <span className="hidden h-px w-10 bg-white/50 sm:inline-block" />
-            </div>
+            </ScrollReveal>
 
-            <h1 className="mt-4 text-4xl font-bold leading-[1.1] text-white sm:text-[44px] md:text-5xl lg:text-[54px]">
+            <ScrollReveal
+              as="h1"
+              className="mt-4 text-4xl font-bold leading-[1.1] text-white sm:text-[44px] md:text-5xl lg:text-[54px]"
+              direction="up"
+              distance={36}
+              duration={0.7}
+              delay={0.1}
+            >
               {title.normal}
               <br />
               <span style={{ color: AQUA }}>{title.highlighted}</span>
               <br />
               {title.postTitle}
-            </h1>
+            </ScrollReveal>
 
-            <p className="mt-5 max-w-md text-[15px] leading-relaxed text-white/85 sm:text-base">
+            <ScrollReveal
+              as="p"
+              className="mt-5 max-w-md text-[15px] leading-relaxed text-white/85 sm:text-base"
+              direction="up"
+              distance={30}
+              duration={0.7}
+              delay={0.2}
+            >
               {desc.parts.map((part, i) =>
                 part.highlight ? (
                   <span key={i} style={{ color: AQUA }}>
@@ -127,9 +149,16 @@ export default function Banner() {
                   <span key={i}>{part.text}</span>
                 ),
               )}
-            </p>
+            </ScrollReveal>
 
-            <div className="mt-7 flex flex-wrap items-center justify-center gap-4 sm:justify-start">
+            <ScrollReveal
+              as="div"
+              className="mt-7 flex flex-wrap items-center justify-center gap-4 sm:justify-start"
+              direction="up"
+              distance={30}
+              duration={0.7}
+              delay={0.3}
+            >
               {buttons.map((btn) => {
                 const isVideoBtn = btn.variant === "outline" || btn.icon === "play" || btn.label.toLowerCase().includes("video");
 
@@ -166,9 +195,16 @@ export default function Banner() {
                   </Link>
                 );
               })}
-            </div>
+            </ScrollReveal>
 
-            <div className="mt-9 flex items-start justify-center gap-0 sm:justify-start sm:gap-8">
+            <ScrollReveal
+              as="div"
+              className="mt-9 flex items-start justify-center gap-0 sm:justify-start sm:gap-8"
+              direction="up"
+              distance={30}
+              duration={0.7}
+              delay={0.4}
+            >
               {stats.map((stat, i) => (
                 <div key={stat.id} className="flex items-start gap-6 sm:gap-8">
                   {i > 0 && <span className="h-10 w-px bg-white/25" />}
@@ -185,7 +221,7 @@ export default function Banner() {
                   </div>
                 </div>
               ))}
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </div>

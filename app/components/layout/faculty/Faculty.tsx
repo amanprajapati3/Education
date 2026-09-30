@@ -12,6 +12,7 @@ import {
   FaInstagram,
   FaXTwitter,
 } from "react-icons/fa6";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 const AQUA = "#19C2A1";
 
@@ -126,7 +127,13 @@ export default function Faculty() {
 
       <section className="py-8 md:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="flex justify-center mb-8 gap-6 text-center ">
+        <ScrollReveal
+          as="div"
+          className="flex justify-center mb-8 gap-6 text-center "
+          direction="up"
+          distance={40}
+          duration={0.7}
+        >
           <div className="max-w-2xl mx-auto md:mx-0 ">
             <div className="inline-flex items-center justify-center gap-3 w-full">
               <span className="w-8 h-0.5 bg-emerald-500 inline-block"></span>
@@ -147,7 +154,7 @@ export default function Faculty() {
           </div>
 
 
-        </div>
+        </ScrollReveal>
 
         {/* Faculty Cards Container: Horizontal Scroll on Mobile, Grid on Desktop */}
         <div
@@ -156,10 +163,17 @@ export default function Faculty() {
           className="flex lg:grid lg:grid-cols-4 gap-4 overflow-x-auto lg:overflow-visible snap-x snap-mandatory scrollbar-none pb-6 pt-2  focus:outline-none"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {facultyItems.map((member) => (
-            <article
+          {facultyItems.map((member, memberIndex) => (
+            <ScrollReveal
               key={member.id}
+              as="article"
               className="flex-shrink-0 w-[82vw] sm:w-[calc(50%-12px)] lg:w-full snap-start bg-white rounded-xl p-3 shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 flex flex-col justify-between group"
+              direction="up"
+              distance={40}
+              duration={0.65}
+              delay={0.05}
+              staggerChildren={0.08}
+              index={memberIndex}
             >
               <div>
                 {/* Image and Share Button Overlay */}
@@ -168,6 +182,7 @@ export default function Faculty() {
                     src={member.image}
                     alt={member.name}
                     fill
+                    sizes="(min-width: 1280px) 292px, (min-width: 1024px) calc((100vw - 112px) / 4), (min-width: 640px) calc(50vw - 36px), 82vw"
                     className="object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Share button badge */}
@@ -200,7 +215,7 @@ export default function Faculty() {
                   </p>
                 </div>
               </div>
-            </article>
+            </ScrollReveal>
           ))}
         </div>
 

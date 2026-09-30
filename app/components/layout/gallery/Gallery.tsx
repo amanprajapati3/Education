@@ -25,7 +25,9 @@ import {
   Play,
   X,
 } from "lucide-react";
+import Image from "next/image";
 import BannerPage from "../../shared/BannerPage";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 type GalleryProps = SectionProps<EducationGalleryData>;
 
@@ -406,10 +408,27 @@ export default function Gallery({
           <div className="pt-10 md:pt-14">
             {/* Desktop: heading left, filters right. Mobile/tablet: heading centered, filters below. */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-end">
-              <div className="lg:col-span-5 text-center lg:text-left">
+              <ScrollReveal
+                as="div"
+                className="lg:col-span-5 text-center lg:text-left"
+                direction="left"
+                mobileDirection="up"
+                distance={40}
+                duration={0.7}
+              >
                 {imageHeading}
-              </div>
-              <div className="lg:col-span-7">{imageControls}</div>
+              </ScrollReveal>
+              <ScrollReveal
+                as="div"
+                className="lg:col-span-7"
+                direction="right"
+                mobileDirection="up"
+                distance={40}
+                duration={0.7}
+                delay={0.1}
+              >
+                {imageControls}
+              </ScrollReveal>
             </div>
 
             {visibleImages.length === 0 ? (
@@ -426,18 +445,27 @@ export default function Gallery({
                   style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                 >
                   {visibleImages.map((item, index) => (
-                    <button
+                    <ScrollReveal
                       key={item.id}
+                      as="button"
                       type="button"
                       onClick={() => setLightboxIndex(index)}
                       className="group relative shrink-0 w-[78vw] sm:w-[46vw] lg:w-full snap-start block text-left bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100"
+                      direction="up"
+                      distance={34}
+                      duration={0.6}
+                      delay={0.04}
+                      staggerChildren={0.06}
+                      index={index}
                     >
                       <div className="relative h-56 sm:h-60 lg:h-52 w-full overflow-hidden">
-                        <img
+                        <Image
                           src={item.image}
                           alt={item.title}
+                          fill
                           loading="lazy"
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          sizes="(min-width: 1280px) 295px, (min-width: 1024px) calc((100vw - 100px) / 4), (min-width: 640px) 46vw, 78vw"
+                          className="object-cover group-hover:scale-110 transition-transform duration-500"
                         />
 
                         {/* Hover overlay */}
@@ -456,7 +484,7 @@ export default function Gallery({
                             item.category}
                         </span> */}
                       </div>
-                    </button>
+                    </ScrollReveal>
                   ))}
                 </div>
 
@@ -491,12 +519,27 @@ export default function Gallery({
           <div className="pt-10  pb-12 md:pb-16">
             {/* Desktop: heading left, sort right. Mobile/tablet: heading centered, sort below. */}
             <div className="flex lg:justify-between justify-center flex-col lg:flex-row">
-              <div className="lg:col-span-5 text-center  lg:text-left">
+              <ScrollReveal
+                as="div"
+                className="lg:col-span-5 text-center  lg:text-left"
+                direction="left"
+                mobileDirection="up"
+                distance={40}
+                duration={0.7}
+              >
                 {videoHeading}
-              </div>
-              <p className="text-slate-600 text-base leading-relaxed text-center lg:text-start mt-3 max-w-[520px] mx-auto lg:mx-0">
+              </ScrollReveal>
+              <ScrollReveal
+                as="p"
+                className="text-slate-600 text-base leading-relaxed text-center lg:text-start mt-3 max-w-[520px] mx-auto lg:mx-0"
+                direction="right"
+                mobileDirection="up"
+                distance={40}
+                duration={0.7}
+                delay={0.1}
+              >
                 {data?.videoGallery?.desc}
-              </p>{" "}
+              </ScrollReveal>{" "}
             </div>
 
             {visibleVideos.length === 0 ? (
@@ -513,18 +556,27 @@ export default function Gallery({
                   style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                 >
                   {visibleVideos.map((item, index) => (
-                    <button
+                    <ScrollReveal
                       key={item.id}
+                      as="button"
                       type="button"
                       onClick={() => setVideoIndex(index)}
                       className="group relative shrink-0 w-[78vw] sm:w-[46vw] lg:w-full snap-start block text-left bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100"
+                      direction="up"
+                      distance={34}
+                      duration={0.6}
+                      delay={0.04}
+                      staggerChildren={0.06}
+                      index={index}
                     >
                       <div className="relative cursor-pointer h-56 sm:h-60 lg:h-52 w-full overflow-hidden">
-                        <img
+                        <Image
                           src={item.thumbnail}
                           alt={item.title}
+                          fill
                           loading="lazy"
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          sizes="(min-width: 1280px) 295px, (min-width: 1024px) calc((100vw - 100px) / 4), (min-width: 640px) 46vw, 78vw"
+                          className="object-cover group-hover:scale-110 transition-transform duration-500"
                         />
 
                         {/* Hover overlay with play button */}
@@ -557,7 +609,7 @@ export default function Gallery({
                           {/* {item.publishedAt} */} {item.description}
                         </p>
                       </div>
-                    </button>
+                    </ScrollReveal>
                   ))}
                 </div>
 
@@ -636,11 +688,15 @@ export default function Gallery({
             onClick={(event) => event.stopPropagation()}
             className="max-w-5xl w-full flex flex-col items-center gap-4"
           >
-            <img
-              src={activeImage.image}
-              alt={activeImage.title}
-              className="max-w-full max-h-[72vh] object-contain rounded-2xl shadow-2xl"
-            />
+            <div className="relative h-[72vh] w-full max-w-5xl">
+              <Image
+                src={activeImage.image}
+                alt={activeImage.title}
+                fill
+                sizes="(min-width: 1024px) 1024px, 100vw"
+                className="object-contain rounded-2xl shadow-2xl"
+              />
+            </div>
             <figcaption className="text-center text-white space-y-1">
               <p className="font-bold text-lg sm:text-xl">
                 {activeImage.title}

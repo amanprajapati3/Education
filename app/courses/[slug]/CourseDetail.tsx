@@ -26,6 +26,7 @@ import {
 } from "lucide-react";
 import BannerPage from "@/app/components/shared/BannerPage";
 import SocialLinks from "@/app/components/shared/SocialLinks";
+import ScrollReveal from "@/app/components/shared/ScrollReveal";
 import type {
   EducationCourseDetail,
   EducationCourseDetailPageData,
@@ -84,7 +85,13 @@ export default function CourseDetail({
       <section className="bg-white">
         <div className="mx-auto grid max-w-[1300px] grid-cols-1 items-start gap-8 px-4 py-8 md:py-12 sm:px-6 sm:py-11 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-9 lg:px-7">
           <main className="min-w-0 ">
-            <header className="border-b border-slate-200 pb-6">
+            <ScrollReveal
+              as="header"
+              className="border-b border-slate-200 pb-6"
+              direction="up"
+              distance={40}
+              duration={0.7}
+            >
               <span className="inline-flex rounded-md bg-[#d9f7f0] px-3 py-1 text-sm font-bold text-[#079b82]">
                 {course.category}
               </span>
@@ -99,24 +106,46 @@ export default function CourseDetail({
                 <span className="inline-flex items-center gap-2"><Clock3 className="h-6 w-6 text-[#0b3158]" />{course.duration}</span>
                 <span className="inline-flex items-center gap-2"><UsersRound className="h-6 w-6 text-[#0b3158]" />{course.studentsLabel}</span>
               </div>
-            </header>
+            </ScrollReveal>
 
-            <section className="pt-5">
+            <ScrollReveal
+              as="section"
+              className="pt-5"
+              direction="up"
+              distance={40}
+              duration={0.7}
+            >
               <h3 className="text-xl lg:text-2xl font-bold text-[#0b3158]">About This Course</h3>
               <p className="mt-1 text-sm md:text-base leading-6 text-slate-600">{detail.about}</p>
               <div className="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-4">
-                {benefitItems.map(({ label, Icon }) => (
-                  <div key={label} className="flex min-h-[68px] items-center gap-2 rounded-md bg-[#f2f7fc] px-3 py-3 text-sm font-semibold leading-5 text-[#040e1b]">
+                {benefitItems.map(({ label, Icon }, benefitIndex) => (
+                  <ScrollReveal
+                    key={label}
+                    as="div"
+                    className="flex min-h-[68px] items-center gap-2 rounded-md bg-[#f2f7fc] px-3 py-3 text-sm font-semibold leading-5 text-[#040e1b]"
+                    direction="up"
+                    distance={28}
+                    duration={0.55}
+                    delay={0.04}
+                    staggerChildren={0.06}
+                    index={benefitIndex}
+                  >
                     <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#d9f7f0] text-[#0bb99a]">
                       <Icon className="h-[28px] w-[28px]" />
                     </span>
                     {label}
-                  </div>
+                  </ScrollReveal>
                 ))}
               </div>
-            </section>
+            </ScrollReveal>
 
-            <section className="pt-5">
+            <ScrollReveal
+              as="section"
+              className="pt-5"
+              direction="up"
+              distance={40}
+              duration={0.7}
+            >
               <h3 className="text-lg lg:text-2xl font-bold text-[#0b3158]">What You’ll Learn</h3>
               <ul className="mt-2 grid gap-x-5 gap-y-2 sm:grid-cols-2">
                 {detail.outcomes.map((outcome) => (
@@ -126,9 +155,15 @@ export default function CourseDetail({
                   </li>
                 ))}
               </ul>
-            </section>
+            </ScrollReveal>
 
-            <section className="pt-6">
+            <ScrollReveal
+              as="section"
+              className="pt-6"
+              direction="up"
+              distance={40}
+              duration={0.7}
+            >
               <div className="mb-2 flex flex-wrap items-end justify-between gap-2">
                 <h3 className="text-lg lg:text-2xl font-bold text-[#0b3158]">Course Curriculum</h3>
                 <p className="text-sm font-medium text-slate-500">{detail.modules.length} Modules · {detail.lessons} Lessons · {course.duration}</p>
@@ -137,7 +172,17 @@ export default function CourseDetail({
                 {detail.modules.map((module, index) => {
                   const expanded = expandedModule === index;
                   return (
-                    <div key={module.title} className="overflow-hidden rounded-md border border-[#e6edf5] bg-[#f5f8fc]">
+                    <ScrollReveal
+                      key={module.title}
+                      as="div"
+                      className="overflow-hidden rounded-md border border-[#e6edf5] bg-[#f5f8fc]"
+                      direction="up"
+                      distance={26}
+                      duration={0.55}
+                      delay={0.03}
+                      staggerChildren={0.05}
+                      index={index}
+                    >
                       <button
                         type="button"
                         aria-expanded={expanded}
@@ -156,13 +201,19 @@ export default function CourseDetail({
                           <span className="hidden items-center gap-1 sm:flex"><MonitorPlay className="h-3.5 w-3.5 text-[#12ad92]" />On-demand lessons</span>
                         </div>
                       )}
-                    </div>
+                    </ScrollReveal>
                   );
                 })}
               </div>
-            </section>
+            </ScrollReveal>
 
-            <section className="pt-6">
+            <ScrollReveal
+              as="section"
+              className="pt-6"
+              direction="up"
+              distance={40}
+              duration={0.7}
+            >
               <h3 className="mb-2 text-lg lg:text-2xl font-bold text-[#0b3158]">About the Instructor</h3>
               <div className=" md:flex md:justify-between justify-center gap-5 rounded-md border border-slate-200 p-3 sm:p-4">
                 <div className="relative h-24 sm:w-36 sm:h-36 w-24 overflow-hidden rounded-md bg-[#eaf2f8]">
@@ -189,11 +240,25 @@ export default function CourseDetail({
                   <p className="text-[14px] text-slate-500">Students Trained</p>
                 </div>
               </div>
-            </section>
+            </ScrollReveal>
           </main>
 
-          <aside className="min-w-0 space-y-3 lg:sticky lg:top-28 ">
-            <div className="overflow-hidden rounded-md  border-slate-100 bg-white shadow-[0_8px_28px_rgba(15,46,74,0.08)]">
+          <ScrollReveal
+            as="aside"
+            className="min-w-0 space-y-3 lg:sticky lg:top-28 "
+            direction="right"
+            mobileDirection="up"
+            distance={60}
+            duration={0.8}
+            delay={0.1}
+          >
+            <ScrollReveal
+              as="div"
+              className="overflow-hidden rounded-md  border-slate-100 bg-white shadow-[0_8px_28px_rgba(15,46,74,0.08)]"
+              direction="up"
+              distance={40}
+              duration={0.7}
+            >
               <div className="group relative aspect-[16/9] overflow-hidden bg-[#e6eef4]">
                 <Image src={course.image} alt={`${course.title} course preview`} fill sizes="(max-width: 1024px) 100vw, 340px" className="object-cover rounded-xl transition-transform duration-500 group-hover:scale-[1.03]" />
                 <button type="button" onClick={() => setIsPreviewOpen(true)} className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-2 text-sm md:text-base font-semibold text-white transition-colors hover:bg-[#0a6ca7]">
@@ -225,30 +290,51 @@ export default function CourseDetail({
                   <DetailRow Icon={Clock3} label="Last Updated" value={detail.updated} />
                 </dl>
               </div>
-            </div>
+            </ScrollReveal>
 
-            <div className="rounded-md bg-[#f2f7fc] p-4">
+            <ScrollReveal
+              as="div"
+              className="rounded-md bg-[#f2f7fc] p-4"
+              direction="up"
+              distance={34}
+              duration={0.6}
+              delay={0.05}
+            >
               <h3 className="text-base font-bold text-[#15375b]">This Course Includes:</h3>
               <ul className="mt-2 space-y-1.5">
                 {includes.map((item) => <li key={item} className="flex items-start gap-2 text-sm md:text-base leading-5 text-slate-600"><Check className="mt-0.5 h-3.5 w-3.5 shrink-0 stroke-[3] text-[#12b99a]" />{item}</li>)}
               </ul>
-            </div>
+            </ScrollReveal>
 
-            <div className="flex items-start gap-3 rounded-md bg-[#f2f7fc] p-4">
+            <ScrollReveal
+              as="div"
+              className="flex items-start gap-3 rounded-md bg-[#f2f7fc] p-4"
+              direction="up"
+              distance={34}
+              duration={0.6}
+              delay={0.05}
+            >
               <span className="flex h-12 w-12 md:w-16 md:h-16 shrink-0 items-center justify-center rounded-full bg-[#168bd0] text-white"><CircleHelp className="h-7 w-7 md:w-9 md:h-9" /></span>
               <div className="min-w-0">
                 <h3 className="text-base md:text-lg font-bold text-[#15375b]">{help.title}</h3>
                 <p className="mt-1 text-sm leading-5 text-slate-600">{help.description}</p>
                 <Link href={help.href} className="mt-2 inline-flex min-h-9 items-center gap-2 rounded-md bg-[#073566] px-3 text-sm md:text-base font-bold text-white transition-colors hover:bg-[#0a6ca7]">{help.button}<ArrowRight className="h-3.5 w-3.5" /></Link>
               </div>
-            </div>
+            </ScrollReveal>
 
-            <div className="rounded-md bg-[#effaf8] px-5 py-5 text-center">
+            <ScrollReveal
+              as="div"
+              className="rounded-md bg-[#effaf8] px-5 py-5 text-center"
+              direction="up"
+              distance={34}
+              duration={0.6}
+              delay={0.05}
+            >
               <GraduationCap className="mx-auto h-12 w-12 md:w-16 md:h-16 text-[#13b99b]" />
               <h3 className="mt-2 text-xl md:text-2xl font-bold leading-tight text-[#10365b]">{promo.title}<br />{promo.highlight}</h3>
               <p className="mx-auto mt-2 max-w-[250px] text-base leading-5 text-slate-600">{promo.description}</p>
-            </div>
-          </aside>
+            </ScrollReveal>
+          </ScrollReveal>
         </div>
       </section>
 

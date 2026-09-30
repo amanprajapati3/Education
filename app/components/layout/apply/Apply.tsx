@@ -19,6 +19,7 @@ import {
   Quote 
 } from "lucide-react";
 import { IoIosSend } from "react-icons/io";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 
 const AQUA = "#19C2A1";
@@ -99,7 +100,14 @@ export default function Apply() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* LEFT COLUMN: Intro, 4 Feature Cards, Student Transparent Image, Need Help Box */}
-          <div className="lg:col-span-6 space-y-4">
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-6 space-y-4"
+            direction="left"
+            mobileDirection="up"
+            distance={70}
+            duration={0.8}
+          >
             
             {/* Header intro & features */}
             <div className="space-y-0">
@@ -121,8 +129,18 @@ export default function Apply() {
 
               {/* 4 Feature Cards Grid */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
-                {admissionFormIntro.features.map((feat) => (
-                  <div key={feat.id} className=" space-y-2 md:px-5 flex flex-col justify-center md:border-r-1 border-gray-200 mt-5 last:border-transparent">
+                {admissionFormIntro.features.map((feat, featIndex) => (
+                  <ScrollReveal
+                    key={feat.id}
+                    as="div"
+                    className=" space-y-2 md:px-5 flex flex-col justify-center md:border-r-1 border-gray-200 mt-5 last:border-transparent"
+                    direction="up"
+                    distance={30}
+                    duration={0.6}
+                    delay={0.05}
+                    staggerChildren={0.08}
+                    index={featIndex}
+                  >
                     <div className="flex w-12 h-12 md:w-20 md:h-20 bg-blue-50 rounded-full items-center justify-center">
                       {featureIconMap[feat.icon as EducationApplyFeatureIcon]}
                     </div>
@@ -132,18 +150,25 @@ export default function Apply() {
                     <p className="text-slate-800  min-h-14 text-center text-sm">
                       {feat.desc}
                     </p>
-                  </div>
+                  </ScrollReveal>
                 ))}
               </div>
             </div>
 
             {/* Student Transparent Image with Quote Overlay Card */}
-            <div className="relative flex justify-center">
+            <ScrollReveal
+              as="div"
+              className="relative flex justify-center"
+              direction="up"
+              distance={40}
+              duration={0.7}
+            >
               <div className="relative w-full h-[380px]">
                 <Image
                   src={admissionFormIntro.studentImage}
                   alt="Student"
                   fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-contain object-bottom"
                 />
                 
@@ -155,10 +180,16 @@ export default function Apply() {
                   </p>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Need Help? Section Card */}
-            <div className="bg-blue-50 flex p-6 sm:p-8 shadow-sm border border-slate-100 space-y-6">
+            <ScrollReveal
+              as="div"
+              className="bg-blue-50 flex p-6 sm:p-8 shadow-sm border border-slate-100 space-y-6"
+              direction="up"
+              distance={40}
+              duration={0.7}
+            >
               <div>
               <div className="space-y-1">
                 <h3 className="text-2xl font-bold text-blue-900">
@@ -199,12 +230,20 @@ export default function Apply() {
                 </span>
                 
               </div>
-            </div>
+            </ScrollReveal>
 
-          </div>
+          </ScrollReveal>
 
           {/* RIGHT COLUMN: Online Admission Form */}
-          <div className="lg:col-span-6 bg-white rounded-xl shadow-2xl border border-slate-100 overflow-hidden">
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-6 bg-white rounded-xl shadow-2xl border border-slate-100 overflow-hidden"
+            direction="right"
+            mobileDirection="up"
+            distance={70}
+            duration={0.8}
+            delay={0.1}
+          >
             
             {/* Form Top Dark Banner Header */}
             <div className="p-6 text-white flex items-center justify-between" style={{ backgroundColor: DARK_BLUE }}>
@@ -271,10 +310,12 @@ export default function Apply() {
                       onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#19C2A1]/30 focus:border-[#19C2A1]"
                     >
-                      <option value="">Select Gender</option>
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                      <option value="other">Other</option>
+                      <option value="">{form.selects.gender.placeholder}</option>
+                      {form.selects.gender.options.map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
 
@@ -288,9 +329,12 @@ export default function Apply() {
                       onChange={(e) => setFormData({ ...formData, nationality: e.target.value })}
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#19C2A1]/30 focus:border-[#19C2A1]"
                     >
-                      <option value="">Select Nationality</option>
-                      <option value="indian">Indian</option>
-                      <option value="other">Other</option>
+                      <option value="">{form.selects.nationality.placeholder}</option>
+                      {form.selects.nationality.options.map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>
@@ -376,10 +420,12 @@ export default function Apply() {
                       onChange={(e) => setFormData({ ...formData, course: e.target.value })}
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#19C2A1]/30 focus:border-[#19C2A1]"
                     >
-                      <option value="">Select Course</option>
-                      <option value="btech">B.Tech Computer Science</option>
-                      <option value="mba">MBA Business Analytics</option>
-                      <option value="bca">BCA Information Technology</option>
+                      <option value="">{form.selects.course.placeholder}</option>
+                      {form.selects.course.options.map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
 
@@ -393,9 +439,12 @@ export default function Apply() {
                       onChange={(e) => setFormData({ ...formData, program: e.target.value })}
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#19C2A1]/30 focus:border-[#19C2A1]"
                     >
-                      <option value="">Select Program</option>
-                      <option value="undergraduate">Undergraduate</option>
-                      <option value="postgraduate">Postgraduate</option>
+                      <option value="">{form.selects.program.placeholder}</option>
+                      {form.selects.program.options.map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>
@@ -411,9 +460,12 @@ export default function Apply() {
                       onChange={(e) => setFormData({ ...formData, year: e.target.value })}
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#19C2A1]/30 focus:border-[#19C2A1]"
                     >
-                      <option value="">Select Year</option>
-                      <option value="2026">2026</option>
-                      <option value="2027">2027</option>
+                      <option value="">{form.selects.year.placeholder}</option>
+                      {form.selects.year.options.map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
 
@@ -427,9 +479,12 @@ export default function Apply() {
                       onChange={(e) => setFormData({ ...formData, qualification: e.target.value })}
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#19C2A1]/30 focus:border-[#19C2A1]"
                     >
-                      <option value="">Select Qualification</option>
-                      <option value="12th">12th Grade</option>
-                      <option value="bachelor">Bachelor&apos;s Degree</option>
+                      <option value="">{form.selects.qualification.placeholder}</option>
+                      {form.selects.qualification.options.map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>
@@ -488,11 +543,12 @@ export default function Apply() {
                     onChange={(e) => setFormData({ ...formData, hearAbout: e.target.value })}
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#19C2A1]/30 focus:border-[#19C2A1]"
                   >
-                    <option value="">Select Option</option>
-                    <option value="social">Social Media</option>
-                    <option value="friend">Friend / Family</option>
-                    <option value="google">Google Search</option>
-                    <option value="other">Other</option>
+                    <option value="">{form.selects.hearAbout.placeholder}</option>
+                    {form.selects.hearAbout.options.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
                   </select>
                 </div>
 
@@ -536,7 +592,7 @@ export default function Apply() {
               </button>
             </form>
 
-          </div>
+          </ScrollReveal>
 
         </div>
 

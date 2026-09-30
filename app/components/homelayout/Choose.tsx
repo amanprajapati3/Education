@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { site, SectionProps, EducationChooseData } from "@/data";
 import {
   BookOpen,
@@ -10,6 +11,7 @@ import {
   Users,
   Award,
 } from "lucide-react";
+import ScrollReveal from "../shared/ScrollReveal";
 
 // Helper to map icon string from JSON to Lucide icons
 const getFeatureIcon = (iconName: string) => {
@@ -59,7 +61,14 @@ export default function Choose({
         {/* Main Grid Layout: Left Content & Features, Right Image Composition */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Side: Header & 3x2 Feature Cards Grid */}
-          <div className="lg:col-span-7  lg:max-w-[540px] xl:max-w-full space-y-0">
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-7  lg:max-w-[540px] xl:max-w-full space-y-0"
+            direction="left"
+            mobileDirection="up"
+            distance={70}
+            duration={0.8}
+          >
             {/* Header Badge */}
             <div className="inline-flex items-center gap-3">
               <span className="w-8 h-0.5 bg-emerald-500 inline-block"></span>
@@ -93,9 +102,16 @@ export default function Choose({
                 ][index % 6];
 
                 return (
-                  <div
+                  <ScrollReveal
                     key={feature.id || index}
+                    as="div"
                     className="bg-white p-3 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 flex flex-col justify-between group"
+                    direction="up"
+                    distance={28}
+                    duration={0.6}
+                    delay={0.25}
+                    staggerChildren={0.08}
+                    index={index}
                   >
                     <div>
                       <div className="flex justifty-between gap-3">
@@ -112,14 +128,22 @@ export default function Choose({
                         {feature.description}
                       </p>
                     </div>
-                  </div>
+                  </ScrollReveal>
                 );
               })}
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Side: Image Composition & Floating Badges */}
-          <div className="lg:col-span-5 relative sm:mt-6 lg:mt-0">
+          <ScrollReveal
+            as="div"
+            className="lg:col-span-5 relative sm:mt-6 lg:mt-0"
+            direction="right"
+            mobileDirection="up"
+            distance={70}
+            duration={0.8}
+            delay={0.1}
+          >
             {/* Handwritten Note Accent */}
             <div className="absolute -top-1  max-w-[80px] -right-4 z-25 text-slate-700 font-handwritten text-2xl md:text-3xl tracking-wide rotate-[-8deg] pointer-events-none hidden sm:block">
               {data?.handwrittenNote || "Learn Grow Succeed"}
@@ -143,27 +167,31 @@ export default function Choose({
               </div>
 
               {/* Main Side Image */}
-              <div className="relative rounded-[50px] overflow-hidden shadow-2xl md:right-20 sm:right-[20%] border-4 border-white sm:max-w-[420px] ml-auto">
-                <img
+              <div className="relative h-[320px] sm:h-[420px] rounded-[50px] overflow-hidden shadow-2xl md:right-20 sm:right-[20%] border-4 border-white sm:max-w-[420px] ml-auto">
+                <Image
                   src={data?.sideImage?.src || "/education/3.jpg"}
                   alt={
                     data?.sideImage?.alt ||
                     "Student smiling while sitting with a laptop and books"
                   }
-                  className="w-full h-[320px] sm:h-[420px] object-cover transform hover:scale-105 transition-transform duration-700"
+                  fill
+                  sizes="(min-width: 640px) 420px, calc(100vw - 32px)"
+                  className="object-cover transform hover:scale-105 transition-transform duration-700"
                 />
               </div>
 
               {/* Bottom Offset Secondary Image / Container with Floating Badge */}
-              <div className="absolute right-0 -bottom-20 rounded-3xl overflow-hidden  border-4 border-white max-w-[200px] ml-auto [clip-path:polygon(20%_0,100%_0,100%_100%,0_100%)]">
+              <div className="absolute right-0 -bottom-20 h-[360px] w-[200px] rounded-3xl overflow-hidden border-4 border-white max-w-[200px] ml-auto [clip-path:polygon(20%_0,100%_0,100%_100%,0_100%)]">
                 {" "}
-                <img
+                <Image
                   src={data?.sideImage2?.src || "/education/3.jpg"}
                   alt={
                     data?.sideImage2?.alt ||
                     "Student smiling while sitting with a laptop and books"
                   }
-                  className="w-full h-[360px] object-cover transform hover:scale-105 transition-transform duration-700"
+                  fill
+                  sizes="200px"
+                  className="object-cover transform hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="relative sm:absolute sm:-bottom-12 sm:right-12 w-fit rounded-3xl overflow-hidden shadow-2xl border-4 border-white z-20 mt-6 sm:mt-0 bg-white p-4 flex items-center gap-4">
@@ -199,7 +227,7 @@ export default function Choose({
                 ))}
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

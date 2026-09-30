@@ -100,8 +100,8 @@
               "siteName": "Edusity",
               "tagline": "LEARN TODAY BUILD TOMORROW",
               "logo": {
-                "light": "/logo.png",
-                "normal": "/logo.png"
+                "light": "/logo2.png",
+                "normal": "/logo2.png"
               }
             },
             "meta": {
@@ -1946,7 +1946,7 @@
       "Footer": {
         "variants": {
           "EducationFooter1": {
-            "logoImage": "/logo.png",
+            "logoImage": "/logo6.png",
             "siteName": "Edusity",
             "tagline": "LEARN TODAY BUILD TOMORROW",
             "desc": "At Edusity, we believe education has the power to transform lives. Our mission is to make quality learning accessible to everyone, anywhere in the world.",
@@ -2000,7 +2000,7 @@
             "footerContact": {
               "title": "Contact Us",
               "addressLabel": "Our Office",
-              "address": "123 Learning Street, New Delhi, India 110001",
+              "address": "25/B Milford Road, New York",
               "callLabel": "Call Us",
               "phone": "+91 00000 00000",
               "phoneHref": "tel:+91 00000 00000",
@@ -2653,7 +2653,308 @@
               "contact": {
                 "phone": { "value": "+91 00000 00000", "href": "tel:+910000000000", "note": "Mon - Fri, 9:00 AM - 6:00 PM" },
                 "email": { "value": "info@example@gmail.com", "href": "mailto:info@example@gmail.com", "note": "We reply within 24 hours" }
-              }
+              },
+              "content": {
+                "breadcrumbLabel": "Events",
+                "breadcrumbHref": "/events",
+                "aboutHeading": "About This Event",
+                "highlightsHeading": "Event Highlights",
+                "attendeesHeading": "Who Should Attend?",
+                "detailsHeading": "Event Details",
+                "detailLabels": {
+                  "date": "Date",
+                  "time": "Time",
+                  "venue": "Venue",
+                  "type": "Event Type",
+                  "seats": "Seats"
+                },
+                "seatAvailability": "Limited seats available",
+                "monthNames": {
+                  "JAN": "January",
+                  "FEB": "February",
+                  "MAR": "March",
+                  "APR": "April",
+                  "MAI": "May",
+                  "JUN": "June",
+                  "JUL": "July",
+                  "AUG": "August",
+                  "SEP": "September",
+                  "OCT": "October",
+                  "NOV": "November",
+                  "DEC": "December"
+                },
+                "enquiry": {
+                  "title": "Enquire About This Event",
+                  "description": "Send us your details and our team will be in touch.",
+                  "action": "/enquiry",
+                  "fields": [
+                    { "name": "name", "label": "Full Name", "placeholder": "Enter your full name", "type": "text" },
+                    { "name": "email", "label": "Email Address", "placeholder": "Enter your email address", "type": "email" },
+                    { "name": "phone", "label": "Phone Number", "placeholder": "Enter your phone number", "type": "tel" }
+                  ],
+                  "interestLabel": "Select Your Interest",
+                  "otherInterest": { "value": "other", "label": "Other Events" },
+                  "messageLabel": "Message",
+                  "optionalLabel": "(Optional)",
+                  "messagePlaceholder": "Write your message here...",
+                  "submitLabel": "Submit Enquiry"
+                },
+                "brochure": {
+                  "href": "/downloads/edusity-event-brochure.pdf",
+                  "filename": "edusity-event-brochure.pdf",
+                  "title": "Download Event Brochure",
+                  "description": "See the full events calendar"
+                },
+                "help": {
+                  "title": "Need Help?",
+                  "description": "Our team can help with event questions and registration."
+                }
+              },
+              "articles": [
+                {
+                  "slug": "future-skills-for-a-changing-world",
+                  "eventType": "seminar",
+                  "venue": "Main Auditorium, Edusity Campus",
+                  "overview": "Explore practical ways to build adaptable skills and prepare for the opportunities ahead.",
+                  "quote": "Learn from experts. Gain real-world insights. Prepare for tomorrow.",
+                  "highlights": ["Expert panel discussion", "Future skills insights", "Career guidance", "Live Q&A", "Industry networking"],
+                  "attendees": ["Students exploring future careers", "Recent graduates planning their next step", "Professionals building new skills", "Anyone interested in the changing workplace"]
+                },
+                {
+                  "slug": "resume-building-workshop",
+                  "eventType": "workshop",
+                  "venue": "Computer Lab 1, Edusity Campus",
+                  "overview": "Work through practical resume exercises and leave with a clearer way to present your experience to employers.",
+                  "quote": "Make your experience easy to see, understand, and remember.",
+                  "highlights": ["Resume structure walkthrough", "Achievement-focused writing", "Formatting and review tips", "Guided editing practice", "Questions for career advisers"],
+                  "attendees": ["Students preparing for internships", "Graduates entering the job market", "Job seekers refreshing their resume", "Anyone wanting clearer application materials"]
+                },
+                {
+                  "slug": "career-opportunities-in-tech",
+                  "eventType": "guest lecture",
+                  "venue": "Main Auditorium, Edusity Campus",
+                  "overview": "Hear how technology roles are changing and what skills can help learners prepare for emerging opportunities.",
+                  "quote": "A clearer view of the industry can help you choose your next learning step.",
+                  "highlights": ["Industry leader perspectives", "Emerging role overview", "Skills employers value", "Career path discussion", "Audience Q&A"],
+                  "attendees": ["Students considering technology careers", "Recent graduates exploring specializations", "Professionals planning a career change", "Anyone curious about the technology sector"]
+                },
+                {
+                  "slug": "entrepreneurship-bootcamp",
+                  "eventType": "campus activity",
+                  "venue": "Innovation Hub, Edusity Campus",
+                  "overview": "Develop an early idea through guided exercises in customer discovery, business planning, and pitching.",
+                  "quote": "Strong ventures begin by understanding the people they hope to serve.",
+                  "highlights": ["Idea validation exercises", "Customer discovery", "Business model basics", "Founder guidance", "Pitch practice"],
+                  "attendees": ["Students with an early venture idea", "Aspiring founders exploring entrepreneurship", "Teams developing a student project", "Learners interested in innovation"]
+                },
+                {
+                  "slug": "annual-cultural-fest-2026",
+                  "eventType": "cultural event",
+                  "venue": "Open Air Theatre, Edusity Campus",
+                  "overview": "Celebrate student creativity through performances, showcases, and shared campus experiences.",
+                  "quote": "Every performance adds a new voice to our campus story.",
+                  "highlights": ["Student performances", "Music and dance", "Creative showcases", "Campus celebration", "Community gathering"],
+                  "attendees": ["Students interested in performing", "Friends and families supporting participants", "Campus community members", "Anyone who enjoys arts and culture"]
+                },
+                {
+                  "slug": "study-abroad-guidance-session",
+                  "eventType": "webinar",
+                  "venue": "Online (Zoom)",
+                  "overview": "Get a practical introduction to researching international study options and preparing an application.",
+                  "quote": "A well-planned application starts with informed questions.",
+                  "highlights": ["Study destination research", "Application planning", "Document preparation", "Expert guidance", "Live online Q&A"],
+                  "attendees": ["Students considering overseas study", "Families supporting an applicant", "Graduates exploring international programs", "Anyone comparing study destinations"]
+                },
+                {
+                  "slug": "blood-donation-drive",
+                  "eventType": "campus activity",
+                  "venue": "Campus Health Center, Edusity Campus",
+                  "overview": "Take part in a campus donation drive and learn how community participation can support local health services.",
+                  "quote": "A small act of care can make a meaningful difference to someone else.",
+                  "highlights": ["On-campus donation station", "Health team guidance", "Donor eligibility information", "Community participation", "Volunteer support"],
+                  "attendees": ["Eligible students and staff", "Campus volunteers", "Community members interested in donating", "Anyone seeking donation information"]
+                },
+                {
+                  "slug": "personality-development-session",
+                  "eventType": "seminar",
+                  "venue": "Seminar Hall, Edusity Campus",
+                  "overview": "Practice communication and self-presentation techniques that support confidence in academic and professional settings.",
+                  "quote": "Confidence grows through preparation, practice, and reflection.",
+                  "highlights": ["Clear communication practice", "Confident self-presentation", "Listening techniques", "Guided activities", "Questions and feedback"],
+                  "attendees": ["Students preparing for interviews", "Graduates developing workplace confidence", "Professionals strengthening communication", "Anyone interested in personal growth"]
+                },
+                {
+                  "slug": "placement-readiness-fair",
+                  "eventType": "campus activity",
+                  "venue": "Campus Ground, Edusity Campus",
+                  "overview": "Meet recruiters, learn about open roles, and get practical guidance on preparing for placement opportunities.",
+                  "quote": "Preparation helps you make the most of every conversation with a recruiter.",
+                  "highlights": ["Recruiter conversations", "Role and employer information", "Resume preparation advice", "Career support desk", "Placement resources"],
+                  "attendees": ["Final-year students seeking placements", "Recent graduates exploring roles", "Students planning internship applications", "Anyone preparing to meet recruiters"]
+                },
+                {
+                  "slug": "ai-and-machine-learning-summit",
+                  "eventType": "seminar",
+                  "venue": "Tech Auditorium, Edusity Campus",
+                  "overview": "Explore current advances in artificial intelligence and machine learning through expert talks and practical discussion.",
+                  "quote": "Understand the ideas behind intelligent systems and the choices that shape them.",
+                  "highlights": ["AI research perspectives", "Machine learning applications", "Deep learning topics", "Responsible development", "Expert Q&A"],
+                  "attendees": ["Students studying computing or data", "Professionals following AI developments", "Researchers and educators", "Anyone curious about artificial intelligence"]
+                },
+                {
+                  "slug": "ui-ux-masterclass",
+                  "eventType": "workshop",
+                  "venue": "Design Studio B, Edusity Campus",
+                  "overview": "Practice turning user needs into clear wireframes and interactive prototypes using modern design methods.",
+                  "quote": "Good design begins with understanding the person using it.",
+                  "highlights": ["User-centered design steps", "Wireframing practice", "Prototype walkthrough", "Design feedback", "Portfolio guidance"],
+                  "attendees": ["Students learning product design", "Early-career designers", "Developers collaborating with design teams", "Anyone interested in better digital experiences"]
+                },
+                {
+                  "slug": "cloud-architecture-webinar",
+                  "eventType": "webinar",
+                  "venue": "Online (Teams)",
+                  "overview": "Review architecture patterns for reliable cloud services, scalable deployments, and modern DevOps workflows.",
+                  "quote": "Reliable systems are built through deliberate design and continuous improvement.",
+                  "highlights": ["Scalable architecture patterns", "Deployment automation", "Container orchestration", "Reliability practices", "Live technical Q&A"],
+                  "attendees": ["Cloud and DevOps learners", "Software engineers", "Technology students", "Professionals planning cloud deployments"]
+                },
+                {
+                  "slug": "cyber-security-guest-lecture",
+                  "eventType": "guest lecture",
+                  "venue": "Auditorium 2, Edusity Campus",
+                  "overview": "Learn how security teams identify common threats and build proactive defenses for modern systems.",
+                  "quote": "Security improves when teams understand risk before an incident occurs.",
+                  "highlights": ["Common threat vectors", "Proactive defense methods", "Security case studies", "Responsible practices", "Guest speaker Q&A"],
+                  "attendees": ["Cybersecurity students", "Developers interested in secure design", "IT and systems professionals", "Anyone learning digital safety"]
+                },
+                {
+                  "slug": "annual-sports-meet",
+                  "eventType": "campus activity",
+                  "venue": "Sports Complex, Edusity Campus",
+                  "overview": "Support inter-college competition across track and field events and celebrate participation, teamwork, and sportsmanship.",
+                  "quote": "Play with commitment, support your team, and celebrate every effort.",
+                  "highlights": ["Track and field events", "Inter-college competition", "Team spirit", "Athlete recognition", "Campus supporters"],
+                  "attendees": ["Registered student athletes", "College teams and coaches", "Friends and campus supporters", "Anyone interested in live sport"]
+                },
+                {
+                  "slug": "classical-dance-night",
+                  "eventType": "cultural event",
+                  "venue": "Main Amphitheatre, Edusity Campus",
+                  "overview": "Experience an evening of classical and folk performances celebrating movement, music, and cultural heritage.",
+                  "quote": "Tradition comes alive when each generation brings its own energy to the stage.",
+                  "highlights": ["Classical dance performances", "Folk traditions", "Student artists", "Live cultural program", "Evening showcase"],
+                  "attendees": ["Students interested in dance", "Performers and arts groups", "Families and campus guests", "Anyone who enjoys cultural performance"]
+                },
+                {
+                  "slug": "financial-literacy-workshop",
+                  "eventType": "workshop",
+                  "venue": "Management Block, Edusity Campus",
+                  "overview": "Build practical foundations in budgeting, saving, and evaluating personal financial choices.",
+                  "quote": "A clear plan can make everyday financial decisions easier to navigate.",
+                  "highlights": ["Personal budgeting", "Saving strategies", "Investment fundamentals", "Financial planning exercises", "Questions for facilitators"],
+                  "attendees": ["Students managing personal finances", "Young professionals building money habits", "Learners new to financial planning", "Anyone seeking practical budgeting tools"]
+                },
+                {
+                  "slug": "blockchain-tech-seminar",
+                  "eventType": "seminar",
+                  "venue": "Seminar Hall A, Edusity Campus",
+                  "overview": "Unpack the foundations of blockchain, decentralized applications, smart contracts, and Web3 economics.",
+                  "quote": "Separate the underlying technology from the claims made around it.",
+                  "highlights": ["Blockchain fundamentals", "Smart contract concepts", "Decentralized applications", "Web3 economics", "Open discussion"],
+                  "attendees": ["Computing and technology students", "Developers exploring decentralized systems", "Entrepreneurs evaluating Web3 ideas", "Anyone seeking a grounded introduction"]
+                },
+                {
+                  "slug": "global-alumni-meetup",
+                  "eventType": "campus activity",
+                  "venue": "Grand Banquet Hall, Edusity Campus",
+                  "overview": "Reconnect with Edusity graduates and make space for mentorship and conversations across industries.",
+                  "quote": "The most valuable connections often begin with a shared story.",
+                  "highlights": ["Alumni networking", "Cross-industry conversations", "Mentorship connections", "Graduate community updates", "Informal meet-and-greet"],
+                  "attendees": ["Edusity alumni", "Current students seeking guidance", "Faculty and community partners", "Guests interested in alumni stories"]
+                },
+                {
+                  "slug": "python-for-data-science",
+                  "eventType": "workshop",
+                  "venue": "Computer Lab 3, Edusity Campus",
+                  "overview": "Use Python, Pandas, and NumPy to clean, explore, and visualize data through guided exercises.",
+                  "quote": "Working with real data makes the tools easier to understand.",
+                  "highlights": ["Python data workflows", "Pandas practice", "NumPy fundamentals", "Data visualization", "Hands-on lab exercises"],
+                  "attendees": ["Students learning data science", "Python beginners with basic computer skills", "Analysts exploring data tools", "Anyone interested in practical data work"]
+                },
+                {
+                  "slug": "startup-pitch-day",
+                  "eventType": "campus activity",
+                  "venue": "Incubation Center, Edusity Campus",
+                  "overview": "Student teams will present startup ideas and receive questions and feedback from experienced reviewers.",
+                  "quote": "A strong pitch explains the problem, the people affected, and the next test.",
+                  "highlights": ["Student startup pitches", "Investor feedback", "Idea validation", "Founder networking", "Venture support information"],
+                  "attendees": ["Student founders and teams", "Learners interested in startups", "Mentors and industry guests", "Anyone curious about new ventures"]
+                },
+                {
+                  "slug": "digital-marketing-webinar",
+                  "eventType": "webinar",
+                  "venue": "Online (Zoom)",
+                  "overview": "Explore search, social media, and performance marketing techniques for reaching and learning from an audience.",
+                  "quote": "Good growth starts with understanding the audience, not chasing every new tactic.",
+                  "highlights": ["Search strategy", "Social media trends", "Performance marketing", "Campaign measurement", "Live online Q&A"],
+                  "attendees": ["Marketing students", "Small business owners", "Content and social media teams", "Professionals building digital campaigns"]
+                },
+                {
+                  "slug": "expert-talk-quantum-computing",
+                  "eventType": "guest lecture",
+                  "venue": "Science Auditorium, Edusity Campus",
+                  "overview": "Get an accessible introduction to quantum computing, including qubits, algorithms, and current research questions.",
+                  "quote": "New computing models begin with new ways to represent information.",
+                  "highlights": ["Qubit fundamentals", "Quantum algorithms", "Research applications", "Guest physicist perspective", "Audience questions"],
+                  "attendees": ["Science and computing students", "Educators and researchers", "Technology professionals", "Anyone curious about quantum systems"]
+                },
+                {
+                  "slug": "photography-and-film-fest",
+                  "eventType": "cultural event",
+                  "venue": "Media Arts Block, Edusity Campus",
+                  "overview": "View student photography and short films, meet their creators, and celebrate visual storytelling across campus.",
+                  "quote": "A thoughtful image can make a familiar place feel new again.",
+                  "highlights": ["Student photography exhibit", "Short film screenings", "Creator conversations", "Visual storytelling", "Campus media showcase"],
+                  "attendees": ["Student photographers and filmmakers", "Media arts learners", "Creative clubs and collaborators", "Anyone interested in visual storytelling"]
+                },
+                {
+                  "slug": "iot-and-embedded-systems",
+                  "eventType": "workshop",
+                  "venue": "Electronics Lab, Edusity Campus",
+                  "overview": "Build a connected-device prototype using microcontrollers and sensors, then explore how embedded systems respond to real inputs.",
+                  "quote": "A small prototype can reveal a lot about how a connected system works.",
+                  "highlights": ["Arduino and Raspberry Pi", "Sensor integration", "Connected-device basics", "Guided prototyping", "Electronics lab practice"],
+                  "attendees": ["Electronics and computing students", "Makers and robotics club members", "Beginners curious about IoT", "Anyone interested in connected devices"]
+                },
+                {
+                  "slug": "environmental-sustainability-summit",
+                  "eventType": "seminar",
+                  "venue": "Conference Hall, Edusity Campus",
+                  "overview": "Discuss practical campus sustainability initiatives and ways educational communities can contribute to climate action.",
+                  "quote": "Sustainability becomes tangible through decisions made close to home.",
+                  "highlights": ["Green campus initiatives", "Climate action discussion", "Resource-conscious practices", "Community proposals", "Expert and student voices"],
+                  "attendees": ["Students interested in sustainability", "Campus operations and faculty teams", "Community environmental groups", "Anyone exploring climate solutions"]
+                },
+                {
+                  "slug": "literature-and-poetry-slam",
+                  "eventType": "cultural event",
+                  "venue": "Open Lawn, Edusity Campus",
+                  "overview": "Share spoken-word poetry, storytelling, and literary debate in an open evening of student expression.",
+                  "quote": "A story shared aloud can start a conversation that lasts beyond the stage.",
+                  "highlights": ["Spoken-word performances", "Student storytelling", "Literary debate", "Open-mic moments", "Creative community"],
+                  "attendees": ["Writers and performers", "Literature and arts students", "Readers and listeners", "Anyone who enjoys live storytelling"]
+                },
+                {
+                  "slug": "career-counseling-masterclass",
+                  "eventType": "webinar",
+                  "venue": "Online (Teams)",
+                  "overview": "Bring career questions to professional coaches and hear practical perspectives on job-market trends and career planning.",
+                  "quote": "The right question can help turn career uncertainty into a practical next step.",
+                  "highlights": ["Job-market trends", "Career planning guidance", "Coach-led Q&A", "Role exploration", "Actionable next steps"],
+                  "attendees": ["Students choosing a career direction", "Recent graduates entering the job market", "Professionals considering a transition", "Anyone with career-planning questions"]
+                }
+              ]
             }
           }
         }
@@ -3519,7 +3820,16 @@
             "form": {
               "title": "Send Us a Message",
               "requiredText": "*Fields marked with * are required",
-              "buttonText": "Send Message"
+              "buttonText": "Send Message",
+              "subjectSelect": {
+                "placeholder": "Select Subject",
+                "options": [
+                  { "value": "admission", "label": "Admission Inquiry" },
+                  { "value": "courses", "label": "Courses & Programs" },
+                  { "value": "facilities", "label": "Campus Facilities" },
+                  { "value": "other", "label": "Other Inquiry" }
+                ]
+              }
             },
             "location": {
               "badge": "OUR LOCATION",
@@ -3531,7 +3841,7 @@
               "image": "/education/8.jpg",
               "mapInfo": {
                 "name": "Edusity",
-                "address": "123 Education Lane, New Delhi 110001",
+                "address": "25/B Milford Road, New York",
                 "rating": "4.8",
                 "reviews": "123 reviews",
                 "iframeUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.996160161474!2d77.2090212754999!3d28.6280155756667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f1!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
@@ -3589,6 +3899,33 @@
                 "course": "Course / Program of Interest",
                 "location": "Preferred Location",
                 "message": "Your Message *"
+              },
+              "selects": {
+                "enquiryFor": {
+                  "placeholder": "Select Option",
+                  "options": [
+                    { "value": "admission", "label": "Admission" },
+                    { "value": "courses", "label": "Courses" },
+                    { "value": "facilities", "label": "Campus Facilities" },
+                    { "value": "other", "label": "Other" }
+                  ]
+                },
+                "course": {
+                  "placeholder": "Select Course",
+                  "options": [
+                    { "value": "ug", "label": "Undergraduate Programs" },
+                    { "value": "pg", "label": "Postgraduate Programs" },
+                    { "value": "diploma", "label": "Diploma Courses" }
+                  ]
+                },
+                "location": {
+                  "placeholder": "Select Location",
+                  "options": [
+                    { "value": "delhi", "label": "New Delhi Campus" },
+                    { "value": "noida", "label": "Noida Campus" },
+                    { "value": "mumbai", "label": "Mumbai Campus" }
+                  ]
+                }
               },
               "checkboxText": "I agree to be contacted by Edusity for further information.",
               "buttonText": "Submit Enquiry"
@@ -3693,6 +4030,61 @@
                 "personal": "Personal Information",
                 "academic": "Academic Information",
                 "additional": "Additional Information"
+              },
+              "selects": {
+                "gender": {
+                  "placeholder": "Select Gender",
+                  "options": [
+                    { "value": "male", "label": "Male" },
+                    { "value": "female", "label": "Female" },
+                    { "value": "other", "label": "Other" }
+                  ]
+                },
+                "nationality": {
+                  "placeholder": "Select Nationality",
+                  "options": [
+                    { "value": "indian", "label": "Indian" },
+                    { "value": "other", "label": "Other" }
+                  ]
+                },
+                "course": {
+                  "placeholder": "Select Course",
+                  "options": [
+                    { "value": "btech", "label": "B.Tech Computer Science" },
+                    { "value": "mba", "label": "MBA Business Analytics" },
+                    { "value": "bca", "label": "BCA Information Technology" }
+                  ]
+                },
+                "program": {
+                  "placeholder": "Select Program",
+                  "options": [
+                    { "value": "undergraduate", "label": "Undergraduate" },
+                    { "value": "postgraduate", "label": "Postgraduate" }
+                  ]
+                },
+                "year": {
+                  "placeholder": "Select Year",
+                  "options": [
+                    { "value": "2026", "label": "2026" },
+                    { "value": "2027", "label": "2027" }
+                  ]
+                },
+                "qualification": {
+                  "placeholder": "Select Qualification",
+                  "options": [
+                    { "value": "12th", "label": "12th Grade" },
+                    { "value": "bachelor", "label": "Bachelor's Degree" }
+                  ]
+                },
+                "hearAbout": {
+                  "placeholder": "Select Option",
+                  "options": [
+                    { "value": "social", "label": "Social Media" },
+                    { "value": "friend", "label": "Friend / Family" },
+                    { "value": "google", "label": "Google Search" },
+                    { "value": "other", "label": "Other" }
+                  ]
+                }
               },
               "buttonText": "Submit Application"
             }

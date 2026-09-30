@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import {
   ArrowRight,
   BriefcaseBusiness,
@@ -20,11 +19,18 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import BannerPage from "@/app/components/shared/BannerPage";
+import ScrollReveal from "@/app/components/shared/ScrollReveal";
 import { FaFilePdf } from "react-icons/fa6";
-import type { EducationEventContactData, EducationEventItem } from "@/data";
+import type {
+  EducationEventArticle,
+  EducationEventContactData,
+  EducationEventDetailContent,
+  EducationEventItem,
+} from "@/data";
 
 type EventDetailProps = {
   event: EducationEventItem;
+  article: EducationEventArticle;
   banner: {
     title: string;
     home: string;
@@ -32,110 +38,60 @@ type EventDetailProps = {
     bgImage: string;
   };
   contact: EducationEventContactData;
+  content: EducationEventDetailContent;
 };
 
-const categoryHighlights: Record<
-  string,
-  { label: string; Icon: LucideIcon }[]
-> = {
-  Seminars: [
-    { label: "Expert Panel Discussion", Icon: UsersRound },
-    { label: "Insights and Future Skills", Icon: Lightbulb },
-    { label: "Career Guidance", Icon: BriefcaseBusiness },
-    { label: "Live Q&A Session", Icon: MessageCircle },
-    { label: "Industry Networking", Icon: UsersRound },
-  ],
-  Workshops: [
-    { label: "Guided Practice", Icon: BriefcaseBusiness },
-    { label: "Hands-on Learning", Icon: Lightbulb },
-    { label: "Expert Instruction", Icon: UsersRound },
-    { label: "Live Q&A Session", Icon: MessageCircle },
-    { label: "Take-home Skills", Icon: CheckCircle2 },
-  ],
-  Webinars: [
-    { label: "Expert Presentation", Icon: UsersRound },
-    { label: "Flexible Online Access", Icon: Lightbulb },
-    { label: "Practical Guidance", Icon: BriefcaseBusiness },
-    { label: "Live Q&A Session", Icon: MessageCircle },
-    { label: "Digital Resources", Icon: CheckCircle2 },
-  ],
-  "Guest Lectures": [
-    { label: "Guest Speaker", Icon: UsersRound },
-    { label: "Industry Insights", Icon: Lightbulb },
-    { label: "Career Perspectives", Icon: BriefcaseBusiness },
-    { label: "Live Q&A Session", Icon: MessageCircle },
-    { label: "Meet the Speaker", Icon: UsersRound },
-  ],
-  "Campus Activities": [
-    { label: "Campus Community", Icon: UsersRound },
-    { label: "Get Involved", Icon: Lightbulb },
-    { label: "Student-led Activities", Icon: BriefcaseBusiness },
-    { label: "Meet Other Students", Icon: MessageCircle },
-    { label: "Make a Difference", Icon: CheckCircle2 },
-  ],
-  "Cultural Events": [
-    { label: "Student Performances", Icon: UsersRound },
-    { label: "Celebrate Creativity", Icon: Lightbulb },
-    { label: "Campus Community", Icon: BriefcaseBusiness },
-    { label: "Shared Experiences", Icon: MessageCircle },
-    { label: "All Are Welcome", Icon: CheckCircle2 },
-  ],
-};
+const HIGHLIGHT_ICONS: LucideIcon[] = [
+  UsersRound,
+  Lightbulb,
+  BriefcaseBusiness,
+  MessageCircle,
+  CheckCircle2,
+];
 
-const monthNames: Record<string, string> = {
-  JAN: "January",
-  FEB: "February",
-  MAR: "March",
-  APR: "April",
-  MAI: "May",
-  JUN: "June",
-  JUL: "July",
-  AUG: "August",
-  SEP: "September",
-  OCT: "October",
-  NOV: "November",
-  DEC: "December",
-};
-
-const categoryDescriptions: Record<string, string> = {
-  Seminars: "seminar",
-  Workshops: "workshop",
-  Webinars: "webinar",
-  "Guest Lectures": "guest lecture",
-  "Campus Activities": "campus activity",
-  "Cultural Events": "cultural event",
-};
-
-function formatEventDate(event: EducationEventItem) {
+function formatEventDate(
+  event: EducationEventItem,
+  monthNames: EducationEventDetailContent["monthNames"],
+) {
+  const monthKey = event.date.month.toUpperCase() as keyof typeof monthNames;
   const month =
-    monthNames[event.date.month.toUpperCase()] ??
+    monthNames[monthKey] ??
     `${event.date.month.charAt(0)}${event.date.month.slice(1).toLowerCase()}`;
   return `${event.date.day} ${month} ${event.date.year}`;
 }
 
 export default function EventDetail({
   event,
+  article,
   banner,
   contact,
+  content,
 }: EventDetailProps) {
-  const highlights =
-    categoryHighlights[event.category] ?? categoryHighlights.Seminars;
-  const date = formatEventDate(event);
-  const eventType = categoryDescriptions[event.category] ?? "event";
+  const date = formatEventDate(event, content.monthNames);
+  const eventType = `${article.eventType.charAt(0).toUpperCase()}${article.eventType.slice(1)}`;
 
   return (
     <main className="bg-[#f7fafc]">
       <BannerPage
         title={banner.title}
         home={banner.home}
-        crumbs={[{ label: "Events", href: "/events" }]}
+        crumbs={[
+          { label: content.breadcrumbLabel, href: content.breadcrumbHref },
+        ]}
         current={event.title}
         bgImage={banner.bgImage}
       />
 
       <section className="mx-auto grid max-w-325 grid-cols-1 items-start gap-6 px-4 py-8 sm:px-6 md:gap-8 md:py-10 lg:grid-cols-[minmax(0,1fr)_340px] lg:px-7">
         <div className="min-w-0">
-          <div className="relative sm:aspect-[2.2/1] min-h-48 overflow-hidden rounded-md bg-[#e5edf3]">
+          <ScrollReveal
+            as="div"
+            className="relative sm:aspect-[2.2/1] min-h-48 overflow-hidden rounded-md bg-[#e5edf3]"
+            direction="left"
+            mobileDirection="up"
+            distance={50}
+            duration={0.75}
+          >
             <Image
               src={event.image}
               alt={event.title}
@@ -144,31 +100,49 @@ export default function EventDetail({
               sizes="(max-width: 1024px) 100vw, 850px"
               className="object-cover"
             />
-          </div>
+          </ScrollReveal>
 
-          <section className="pt-5">
-            <SectionHeading>About This Event</SectionHeading>
+          <ScrollReveal
+            as="section"
+            className="pt-5"
+            direction="up"
+            distance={40}
+            duration={0.7}
+          >
+            <SectionHeading>{content.aboutHeading}</SectionHeading>
             <p className="mt-2 text-sm leading-6 text-slate-600 md:text-base">
-              {event.desc} Join us at {event.location} on {date} for this{" "}
-              {eventType}. Hear fresh perspectives, connect with the Edusity
-              community, and leave with ideas you can put into practice.
+              {event.desc} {article.overview}
             </p>
             <blockquote className="mt-4 rounded-md border-l-[3px] border-[#19c2a1] bg-[#eef6fc] px-4 py-3 text-sm leading-6 text-[#254565] sm:px-5 md:text-base">
               <span className="mr-1 text-2xl font-extrabold leading-none text-[#19c2a1]">
                 “
               </span>
-              Make time to learn, meet new people, and take your next step
-              forward.
+              {article.quote}
             </blockquote>
-          </section>
+          </ScrollReveal>
 
-          <section className="pt-5">
-            <SectionHeading>Event Highlights</SectionHeading>
+          <ScrollReveal
+            as="section"
+            className="pt-5"
+            direction="up"
+            distance={40}
+            duration={0.7}
+          >
+            <SectionHeading>{content.highlightsHeading}</SectionHeading>
             <div className="mt-3 grid grid-cols-2 divide-x divide-y divide-slate-200 border-y border-slate-200 sm:grid-cols-3 lg:grid-cols-5 lg:divide-y-0">
-              {highlights.map(({ label, Icon }) => (
-                <div
+              {article.highlights.map((label, highlightIndex) => {
+                const Icon = HIGHLIGHT_ICONS[highlightIndex % HIGHLIGHT_ICONS.length];
+                return (
+                <ScrollReveal
                   key={label}
+                  as="div"
                   className="flex min-h-28 flex-col items-center justify-center gap-2 px-2 py-3 text-center"
+                  direction="up"
+                  distance={26}
+                  duration={0.55}
+                  delay={0.04}
+                  staggerChildren={0.05}
+                  index={highlightIndex}
                 >
                   <span className="flex h-12 md:w-16 md:h-16 w-12 items-center justify-center rounded-full bg-[#eaf3fb] text-[#0b5e8e]">
                     <Icon className="h-6 md:w-8 md:h-8 w-6" />
@@ -176,20 +150,22 @@ export default function EventDetail({
                   <span className="text-sm min-h-10 font-semibold leading-5 text-[#17395d]">
                     {label}
                   </span>
-                </div>
-              ))}
+                </ScrollReveal>
+                );
+              })}
             </div>
-          </section>
+          </ScrollReveal>
 
-          <section className="pt-5">
-            <SectionHeading>Who Should Attend?</SectionHeading>
+          <ScrollReveal
+            as="section"
+            className="pt-5"
+            direction="up"
+            distance={40}
+            duration={0.7}
+          >
+            <SectionHeading>{content.attendeesHeading}</SectionHeading>
             <ul className="mt-2 grid gap-2 sm:grid-cols-2">
-              {[
-                `Anyone interested in ${event.title.toLowerCase()}`,
-                "Students looking to learn and connect",
-                "Recent graduates exploring new opportunities",
-                "Members of the community ready to take part",
-              ].map((attendee) => (
+              {article.attendees.map((attendee) => (
                 <li
                   key={attendee}
                   className="flex items-start gap-2 text-sm leading-5 text-slate-600 md:text-base"
@@ -199,79 +175,96 @@ export default function EventDetail({
                 </li>
               ))}
             </ul>
-          </section>
+          </ScrollReveal>
         </div>
 
-        <aside className="min-w-0 space-y-3 lg:sticky lg:top-6">
-          <section className="rounded-md border border-[#e1eaf1] bg-white p-4 shadow-[0_5px_18px_rgba(14,49,82,0.06)] sm:p-5">
+        <ScrollReveal
+          as="aside"
+          className="min-w-0 space-y-3 lg:sticky lg:top-6"
+          direction="right"
+          mobileDirection="up"
+          distance={60}
+          duration={0.8}
+          delay={0.1}
+        >
+          <ScrollReveal
+            as="section"
+            className="rounded-md border border-[#e1eaf1] bg-white p-4 shadow-[0_5px_18px_rgba(14,49,82,0.06)] sm:p-5"
+            direction="up"
+            distance={36}
+            duration={0.65}
+          >
             <h2 className="text-lg md:text-xl font-bold text-[#0b3158]">
-              Event Details
+              {content.detailsHeading}
             </h2>
             <dl className="mt-3 space-y-3">
-              <EventInfo Icon={CalendarDays} label="Date" value={date} />
-              <EventInfo Icon={Clock3} label="Time" value={event.time} />
+              <EventInfo Icon={CalendarDays} label={content.detailLabels.date} value={date} />
+              <EventInfo Icon={Clock3} label={content.detailLabels.time} value={event.time} />
               <EventInfo
                 Icon={MapPin}
-                label="Venue"
-                value={`${event.location}, Edusity Campus`}
+                label={content.detailLabels.venue}
+                value={article.venue}
               />
               <EventInfo
                 Icon={UsersRound}
-                label="Event Type"
-                value={event.category}
+                label={content.detailLabels.type}
+                value={eventType}
               />
               <EventInfo
                 Icon={Tag}
-                label="Seats"
-                value="Limited seats available"
+                label={content.detailLabels.seats}
+                value={content.seatAvailability}
               />
             </dl>
-          </section>
+          </ScrollReveal>
 
-          <section className="overflow-hidden rounded-md border border-[#e1eaf1] bg-white shadow-[0_5px_18px_rgba(14,49,82,0.06)]">
+          <ScrollReveal
+            as="section"
+            className="overflow-hidden rounded-md border border-[#e1eaf1] bg-white shadow-[0_5px_18px_rgba(14,49,82,0.06)]"
+            direction="up"
+            distance={36}
+            duration={0.65}
+            delay={0.06}
+          >
             <div className="bg-[#075b91] px-4 py-3 text-white">
-              <h2 className="text-lg font-bold">Enquire About This Event</h2>
+              <h2 className="text-lg font-bold">{content.enquiry.title}</h2>
               <p className="text-sm leading-5 text-white/90">
-                Send us your details and our team will be in touch.
+                {content.enquiry.description}
               </p>
             </div>
-            <form action="/enquiry" method="get" className="space-y-3 p-4">
+            <form action={content.enquiry.action} method="get" className="space-y-3 p-4">
               <input type="hidden" name="event" value={event.title} />
-              <FormField
-                label="Full Name"
-                name="name"
-                placeholder="Enter your full name"
-              />
-              <FormField
-                label="Email Address"
-                name="email"
-                type="email"
-                placeholder="Enter your email address"
-              />
-              <FormField
-                label="Phone Number"
-                name="phone"
-                type="tel"
-                placeholder="Enter your phone number"
-              />
+              {content.enquiry.fields.map((field) => (
+                <FormField
+                  key={field.name}
+                  label={field.label}
+                  name={field.name}
+                  type={field.type}
+                  placeholder={field.placeholder}
+                />
+              ))}
               <label className="block text-sm font-semibold text-[#17395d]">
-                Select Your Interest
+                {content.enquiry.interestLabel}
                 <select
                   name="interest"
                   defaultValue={event.category}
                   className="mt-1 min-h-10 w-full rounded border border-slate-300 bg-white px-3 text-sm font-normal text-slate-600 outline-none focus:border-[#0a8d9d] focus:ring-2 focus:ring-[#19c2a1]/20"
                 >
                   <option value={event.category}>{event.category}</option>
-                  <option value="Other Events">Other Events</option>
+                  <option value={content.enquiry.otherInterest.value}>
+                    {content.enquiry.otherInterest.label}
+                  </option>
                 </select>
               </label>
               <label className="block text-sm font-semibold text-[#17395d]">
-                Message{" "}
-                <span className="font-normal text-slate-500">(Optional)</span>
+                {content.enquiry.messageLabel}{" "}
+                <span className="font-normal text-slate-500">
+                  {content.enquiry.optionalLabel}
+                </span>
                 <textarea
                   name="message"
                   rows={3}
-                  placeholder="Write your message here..."
+                  placeholder={content.enquiry.messagePlaceholder}
                   className="mt-1 w-full rounded border border-slate-300 px-3 py-2 text-sm font-normal text-slate-700 outline-none focus:border-[#0a8d9d] focus:ring-2 focus:ring-[#19c2a1]/20"
                 />
               </label>
@@ -279,14 +272,14 @@ export default function EventDetail({
                 type="submit"
                 className="flex min-h-11 w-full items-center justify-center gap-2 rounded-md bg-[#11a99b] px-4 text-sm font-bold text-white transition-colors hover:bg-[#078c83]"
               >
-                Submit Enquiry <ArrowRight className="h-4 w-4" />
+                {content.enquiry.submitLabel} <ArrowRight className="h-4 w-4" />
               </button>
             </form>
-          </section>
+          </ScrollReveal>
 
           <a
-            href="/downloads/edusity-event-brochure.pdf"
-            download="edusity-event-brochure.pdf"
+            href={content.brochure.href}
+            download={content.brochure.filename}
             className="flex min-h-16 items-center justify-between gap-3 rounded-md bg-[#edf5fb] px-4 py-3 text-[#0b3158] transition-colors hover:bg-[#e1eef8]"
           >
             <span className="flex items-center gap-3">
@@ -295,26 +288,33 @@ export default function EventDetail({
               </span>
               <span>
                 <span className="block text-base font-bold">
-                  Download Event Brochure
+                  {content.brochure.title}
                 </span>
                 <span className="block text-sm text-slate-600">
-                  See the full events calendar
+                  {content.brochure.description}
                 </span>
               </span>
             </span>
             <Download className="h-5 w-5 shrink-0" />
           </a>
-          <div classsName="rounded-md bg-blue-50 p-4">
+          <ScrollReveal
+            as="div"
+            className="rounded-md bg-blue-50 p-4"
+            direction="up"
+            distance={36}
+            duration={0.65}
+            delay={0.06}
+          >
             <div className="flex items-start gap-3 mb-2">
               <span className="flex h-11 sm:w-14 sm:h-14 w-11 shrink-0 items-center justify-center  text-[#0b5e8e]">
                 <Headphones className="h-6 sm:w-9 sm:h-9 w-6" />
               </span>
               <div className="min-w-0">
                 <h2 className="text-base font-bold text-[#0b3158]">
-                  Need Help?
+                  {content.help.title}
                 </h2>
                 <p className="mt-1 text-sm leading-5 text-slate-600">
-                  Our team can help with event questions and registration.
+                  {content.help.description}
                 </p>
               </div>
             </div>
@@ -350,8 +350,8 @@ export default function EventDetail({
                 </p>
               </div>
             </div>
-          </div>
-        </aside>
+          </ScrollReveal>
+        </ScrollReveal>
       </section>
     </main>
   );

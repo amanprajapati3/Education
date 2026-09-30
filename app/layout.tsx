@@ -31,6 +31,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={`${allura.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <SmoothScroll />
+        {/* ScrollReveal renders its hidden state as inline styles, so without JS
+            nothing would ever run the reveal. Undo that when scripting is off. */}
+        <noscript>
+          <style>{`[data-reveal]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
         <Header />
         {children}
         <Footer />

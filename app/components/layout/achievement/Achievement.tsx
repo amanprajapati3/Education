@@ -11,6 +11,7 @@ import {
   Globe, 
   Trophy 
 } from "lucide-react";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 const AQUA = "#19C2A1";
 const GOLD = "#E5A93B"; // Exact yellow/gold color for the laurel wreaths
@@ -90,13 +91,13 @@ const LaurelWreathIcon = ({ icon }: { icon: React.ReactNode }) => {
   return (
     <div className="relative inline-flex items-center justify-center w-24 h-24 mx-auto">
       {/* LEFT LAUREL */}
-      <img src="/leftleaf.png" alt="" className="w-8" />
+      <Image src="/leftleaf.png" alt="" width={320} height={795} sizes="32px" className="h-auto w-8" />
       {/* CENTER ICON */}
       <div className="relative z-10 flex items-center justify-center">
         {icon}
       </div>
       {/* RIGHT LAUREL */}
-      <img src="rightleaf.png" alt="" className="w-8" />
+      <Image src="/rightleaf.png" alt="" width={320} height={760} sizes="32px" className="h-auto w-8" />
     </div>
   );
 };
@@ -119,7 +120,17 @@ export default function Achievement() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 relative z-20 ">
         <div className="bg-blue-50/30 rounded-3xl  p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-slate-300">
           {stats.map((stat, idx) => (
-            <div key={stat.id} className={`flex flex-col justify-center items-center gap-5 ${idx !== 0 ? 'sm:pl-6' : ''}`}>
+            <ScrollReveal
+              key={stat.id}
+              as="div"
+              className={`flex flex-col justify-center items-center gap-5 ${idx !== 0 ? 'sm:pl-6' : ''}`}
+              direction="up"
+              distance={32}
+              duration={0.6}
+              delay={0.05}
+              staggerChildren={0.09}
+              index={idx}
+            >
               <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0 shadow-sm">
                 {statIconMap[stat.icon as EducationAchievementStatIcon] || <GraduationCap className="w-8 h-8 text-blue-950"  />}
               </div>
@@ -131,14 +142,20 @@ export default function Achievement() {
                   {stat.label}
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
 
       {/* Awards & Recognitions Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-        <div className="text-center max-w-3xl mx-auto mb-8 space-y-0">
+        <ScrollReveal
+          as="div"
+          className="text-center max-w-3xl mx-auto mb-8 space-y-0"
+          direction="up"
+          distance={40}
+          duration={0.7}
+        >
           <div className="inline-flex items-center justify-center gap-3">
             <span className="w-8 h-0.5 bg-blue-950 inline-block"></span>
             <span className="text-blue-950 font-bold text-sm tracking-widest uppercase">
@@ -155,14 +172,21 @@ export default function Achievement() {
           <p className="text-slate-600 text-base leading-relaxed">
             {awardsSection.desc}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* 4 Award Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {awardsSection.awards.map((award) => (
-            <article
+          {awardsSection.awards.map((award, awardIndex) => (
+            <ScrollReveal
               key={award.id}
+              as="article"
               className="bg-white rounded-3xl p-3 shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 flex flex-col items-center text-center space-y-5"
+              direction="up"
+              distance={40}
+              duration={0.65}
+              delay={0.05}
+              staggerChildren={0.09}
+              index={awardIndex}
             >
               {/* Laurel Wreath Icon */}
               <LaurelWreathIcon icon={awardIconMap[award.icon as EducationAchievementAwardIcon] || <Trophy className="w-8 h-8" style={{ color: GOLD }} />} />
@@ -179,14 +203,20 @@ export default function Achievement() {
               <p className="text-slate-800 text-sm sm:text-base  leading-relaxed">
                 {award.desc}
               </p>
-            </article>
+            </ScrollReveal>
           ))}
         </div>
       </section>
 
       {/* Our Journey (Key Milestones) Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-        <div className="text-center max-w-3xl mx-auto mb-5 space-y-0">
+        <ScrollReveal
+          as="div"
+          className="text-center max-w-3xl mx-auto mb-5 space-y-0"
+          direction="up"
+          distance={40}
+          duration={0.7}
+        >
           <div className="inline-flex items-center justify-center gap-3">
             <span className="w-8 h-0.5 bg-emerald-500 inline-block"></span>
             <span className="text-blue-950 font-bold text-sm tracking-widest uppercase">
@@ -203,7 +233,7 @@ export default function Achievement() {
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
             {journeySection.desc}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Horizontal Timeline Component (Responsive: scrolls or wraps nicely on mobile/tablet) */}
         <div className="relative pt-8 pb-4">
@@ -211,8 +241,18 @@ export default function Achievement() {
           <div className="hidden md:block absolute top-[28px] left-[8%] right-[10%] h-[1px] bg-gray-300 z-0"></div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 relative z-10">
-            {journeySection.milestones.map((milestone) => (
-              <div key={milestone.year} className="flex -mt-4 flex-col items-center text-center space-y-2">
+            {journeySection.milestones.map((milestone, milestoneIndex) => (
+              <ScrollReveal
+                key={milestone.year}
+                as="div"
+                className="flex -mt-4 flex-col items-center text-center space-y-2"
+                direction="up"
+                distance={30}
+                duration={0.6}
+                delay={0.05}
+                staggerChildren={0.08}
+                index={milestoneIndex}
+              >
                 {/* Milestone Node Dot */}
                 <div className="w-7 h-7 rounded-full bg-[#0A2540]  shadow-md flex items-center justify-center">
                   <div className="w-4 h-4 rounded-full bg-sky-500"></div>
@@ -227,7 +267,7 @@ export default function Achievement() {
                 <p className="text-slate-900 text-base max-w-[140px]  leading-relaxed ">
                   {milestone.desc}
                 </p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -238,11 +278,19 @@ export default function Achievement() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12  bg-white rounded-3xl pb-16 ">
           
           {/* Left Image & Quote Box */}
-          <div className="relative h-[320px] m:h-[400px] rounded-2xl overflow-hidden shadow-md">
+          <ScrollReveal
+            as="div"
+            className="relative h-[320px] m:h-[400px] rounded-2xl overflow-hidden shadow-md"
+            direction="left"
+            mobileDirection="up"
+            distance={60}
+            duration={0.8}
+          >
             <Image
               src={differenceSection.image}
               alt={`${differenceSection.title.normal} ${differenceSection.title.highlighted}`}
               fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-black/60 via-transparent to-transparent"></div>
@@ -253,10 +301,18 @@ export default function Achievement() {
                 &ldquo;{differenceSection.quote}&rdquo;
               </p>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Content */}
-          <div className="space-y-2 md:max-w-[400px]">
+          <ScrollReveal
+            as="div"
+            className="space-y-2 md:max-w-[400px]"
+            direction="right"
+            mobileDirection="up"
+            distance={60}
+            duration={0.8}
+            delay={0.1}
+          >
             <div className="inline-flex items-center gap-3">
               <span className="w-8 h-0.5 bg-blue-950 inline-block"></span>
               <span className="text-blue-950 font-bold text-sm tracking-widest uppercase">
@@ -272,7 +328,7 @@ export default function Achievement() {
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
               {differenceSection.desc}
             </p>
-          </div>
+          </ScrollReveal>
 
         </div>
       </section>

@@ -99,6 +99,8 @@ export type EducationEventBannerData = EducationEventData["banner"];
 export type EducationEventCategory = EducationEventData["categories"][number];
 export type EducationEventDetailPageData = EducationEventData["detailPage"];
 export type EducationEventContactData = EducationEventDetailPageData["contact"];
+export type EducationEventDetailContent = EducationEventDetailPageData["content"];
+export type EducationEventArticle = EducationEventDetailPageData["articles"][number];
 
 export type EducationNewsData =
   typeof educationData.EducationIndustries.sections.News.variants.EducationNews1;
@@ -374,6 +376,8 @@ export function getFacultyMemberSlugs(): EducationFacultyItem[] {
 
 const eventItems = sec.Event.variants.EducationEvent1
   .eventItems as EducationEventItem[];
+const eventArticles = sec.Event.variants.EducationEvent1.detailPage
+  .articles as EducationEventArticle[];
 
 const eventCategories = sec.Event.variants.EducationEvent1
   .categories as EducationEventCategory[];
@@ -446,6 +450,11 @@ export function getEventBySlug(slug: string): EducationEventItem | null {
       (item) => item.slug === cleanSlug || item.slug.endsWith(cleanSlug),
     ) || null
   );
+}
+
+export function getEventArticleBySlug(slug: string): EducationEventArticle | null {
+  const cleanSlug = slug.replace(/^events\//, "");
+  return eventArticles.find((article) => article.slug === cleanSlug) || null;
 }
 
 export function getEventItemSlugs(): EducationEventItem[] {

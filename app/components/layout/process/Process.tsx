@@ -14,6 +14,7 @@ import {
   CreditCard,
   ArrowRight,
 } from "lucide-react";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 const AQUA = "#19C2A1";
 const DARK_BLUE = "#0A2540";
@@ -150,7 +151,13 @@ export default function Process() {
 
       <section className="py-8 md:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 space-y-0">
+        <ScrollReveal
+          as="div"
+          className="text-center max-w-3xl mx-auto mb-8 space-y-0"
+          direction="up"
+          distance={40}
+          duration={0.7}
+        >
           <div className="inline-flex items-center justify-center gap-3">
             <span className="w-10 h-0.5 bg-emerald-500 inline-block" />
             <span className="text-emerald-600 font-bold text-sm tracking-widest uppercase">
@@ -169,7 +176,7 @@ export default function Process() {
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
             {desc}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Rows: odd = card left / image right, even = image left / card right */}
         <div className="flex flex-col gap-y-12">
@@ -188,12 +195,27 @@ export default function Process() {
                 <Bullet />
 
                 {/* On mobile: card first, then image. On desktop the order flips per row. */}
-                <div className={cardOnRight ? "lg:order-2" : "lg:order-1"}>
+                <ScrollReveal
+                  as="div"
+                  className={cardOnRight ? "lg:order-2" : "lg:order-1"}
+                  direction={cardOnRight ? "right" : "left"}
+                  mobileDirection="up"
+                  distance={60}
+                  duration={0.75}
+                >
                   <StepCard step={step} accent={accent} />
-                </div>
-                <div className={cardOnRight ? "lg:order-1" : "lg:order-2"}>
+                </ScrollReveal>
+                <ScrollReveal
+                  as="div"
+                  className={cardOnRight ? "lg:order-1" : "lg:order-2"}
+                  direction={cardOnRight ? "left" : "right"}
+                  mobileDirection="up"
+                  distance={60}
+                  duration={0.75}
+                  delay={0.12}
+                >
                   <StepImage step={step} />
-                </div>
+                </ScrollReveal>
               </div>
             );
           })}

@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { site, SectionProps, EducationStatsData, EducationStatItem } from "@/data";
 import { Users, GraduationCap, BookOpen, Trophy } from "lucide-react";
+import ScrollReveal from "../shared/ScrollReveal";
 
 // Helper to map icon string from JSON to Lucide icons
 const getStatIcon = (iconName: string) => {
@@ -97,7 +98,13 @@ export default function Stats({
       {/* Gradient Overlay: Deep blue/navy starting strong from left and fading to transparent towards center/right */}
       <div className="absolute inset-0 lg:to-transparent bg-gradient-to-r from-[#001f3f] via-tr to-transparent -z-10" />
 
-      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 ${contentClassName}`}>
+      <ScrollReveal
+        as="div"
+        className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 ${contentClassName}`}
+        direction="up"
+        distance={50}
+        duration={0.8}
+      >
         <div className="max-w-3xl space-y-0">
           
           {/* Badge */}
@@ -124,9 +131,16 @@ export default function Stats({
           {/* Stats Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-3">
             {statsList.map((stat, index) => (
-              <div 
-                key={stat.id || index} 
+              <ScrollReveal
+                key={stat.id || index}
+                as="div"
                 className="relative flex flex-col items-start p-6  md:border-r-white md:border-r-1 group hover:border-emerald-500/50 transition-all duration-300"
+                direction="up"
+                distance={34}
+                duration={0.65}
+                delay={0.15}
+                staggerChildren={0.09}
+                index={index}
               >
                 {/* Icon with glowing circular ring */}
                 <div className="w-14 md:w-16 md:h-16 h-14 rounded-full border-4 border-b-transparent border-b-white/20 border-r-emerald-700 border-l-emerald-700 border-t-emerald-400 flex items-center justify-center mb-2 shadow-inner group-hover:scale-110 transition-transform duration-300">
@@ -142,12 +156,12 @@ export default function Stats({
                 <p className="text-white text-sm font-medium">
                   {stat.label}
                 </p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

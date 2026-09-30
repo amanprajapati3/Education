@@ -17,9 +17,8 @@ import {
 import { site } from "@/data/index";
 import type { EducationFooterColumn } from "@/data/index";
 
-/* -------------------------------------------------------------------- */
+/*  */
 /*  Brand tokens — sampled directly from the reference design            */
-/* -------------------------------------------------------------------- */
 const AQUA = "#19C2A1";
 const NAVY = "#01213A";
 const ICON_CIRCLE = "#1B3C5B";
@@ -53,7 +52,7 @@ export default function Footer() {
         style={{ backgroundColor: "#0A6CA7", opacity: 0.85 }}
       />
 
-      <div className="relative mx-auto max-w-[1340px] px-4 sm:px-6 pt-14 pb-8">
+      <div className="relative mx-auto max-w-[1340px] px-4 sm:px-6 sm:pt-14 pt-8 pb-8">
         {/* Top grid */}
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1.1fr]">
           {/* Brand column */}
@@ -64,7 +63,8 @@ export default function Footer() {
                 alt={f.siteName}
                 width={170}
                 height={50}
-                className="h-14 sm:h-24 -ml-5 sm:-ml-10 md:h-24 w-auto"
+                sizes="(min-width: 640px) 320px, 187px"
+                className="h-16 sm:h-24 md:h-24 w-auto"
               />
             </Link>
             <p className="mt-4 max-w-[280px] text-[15px] leading-relaxed text-white/70">

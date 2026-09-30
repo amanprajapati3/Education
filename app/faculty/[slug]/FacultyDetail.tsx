@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import BannerPage from "@/app/components/shared/BannerPage";
 import SocialLinks from "@/app/components/shared/SocialLinks";
+import ScrollReveal from "@/app/components/shared/ScrollReveal";
 import type {
   EducationFacultyDetailPageData,
   EducationFacultyItem,
@@ -50,7 +51,13 @@ export default function FacultyDetail({ member, profile, pageData }: FacultyDeta
       />
 
       <section className="mx-auto max-w-310 px-4 py-8 sm:px-6 md:py-12 lg:px-7">
-        <header className="mb-6">
+        <ScrollReveal
+          as="header"
+          className="mb-6"
+          direction="up"
+          distance={40}
+          duration={0.7}
+        >
           <p className="flex items-center gap-2 text-sm font-bold uppercase text-[#0b3158]">
             <span className="h-0.5 w-7 bg-[#19c2a1]" /> Our Faculty
           </p>
@@ -58,10 +65,17 @@ export default function FacultyDetail({ member, profile, pageData }: FacultyDeta
             {firstName}{" "}<span className="text-[#19c2a1]">{highlightedName}</span>
           </h2>
           <p className="mt-1 text-base md:text-lg font-semibold text-[#0b3158]">{member.designation}</p>
-        </header>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[340px_minmax(0,1fr)] lg:gap-7">
-          <aside className="overflow-hidden rounded-lg border border-[#e4edf4] bg-white shadow-[0_5px_18px_rgba(14,49,82,0.07)]">
+          <ScrollReveal
+            as="aside"
+            className="overflow-hidden rounded-lg border border-[#e4edf4] bg-white shadow-[0_5px_18px_rgba(14,49,82,0.07)]"
+            direction="left"
+            mobileDirection="up"
+            distance={60}
+            duration={0.8}
+          >
             <div className="relative aspect-[4/4.6] bg-[#e9f0f5] ">
               <Image
                 src={member.image}
@@ -88,10 +102,16 @@ export default function FacultyDetail({ member, profile, pageData }: FacultyDeta
               links={profile.socials}
               ariaPrefix={member.name}
             />
-          </aside>
+          </ScrollReveal>
 
           <div className="min-w-0">
-            <section>
+            <ScrollReveal
+              as="section"
+              direction="right"
+              mobileDirection="up"
+              distance={50}
+              duration={0.75}
+            >
               <h3 className="text-2xl md:text-4xl font-bold text-[#0b3158] sm:text-[27px]">
                 About <span className="text-[#19c2a1]">{member.name}</span>
               </h3>
@@ -102,24 +122,53 @@ export default function FacultyDetail({ member, profile, pageData }: FacultyDeta
                 <span className="text-sm md:text-base">{profile.quote}</span>
                 <cite className="mt-2 block text-right text-base font-semibold not-italic text-[#0b3158]">— {member.name}</cite>
               </blockquote>
-            </section>
+            </ScrollReveal>
 
-            <section aria-label="Teaching values" className="mt-5 grid grid-cols-2 divide-x divide-y divide-slate-200 border-y border-slate-200 sm:grid-cols-4 sm:divide-y-0">
+            <ScrollReveal
+              as="section"
+              className="mt-5 grid grid-cols-2 divide-x divide-y divide-slate-200 border-y border-slate-200 sm:grid-cols-4 sm:divide-y-0"
+              direction="up"
+              distance={40}
+              duration={0.7}
+            >
               {profile.values.map((value, index) => {
                 const Icon = VALUE_ICONS[value.icon] || BookOpen;
                 return (
-                  <div key={value.label} className="flex min-h-28 flex-col items-center justify-center gap-2 px-2 py-3 text-center">
+                  <ScrollReveal
+                    key={value.label}
+                    as="div"
+                    className="flex min-h-28 flex-col items-center justify-center gap-2 px-2 py-3 text-center"
+                    direction="up"
+                    distance={26}
+                    duration={0.55}
+                    delay={0.04}
+                    staggerChildren={0.05}
+                    index={index}
+                  >
                     <span className={`flex h-14 w-14 md:w-20 md:h-20 items-center justify-center rounded-full text-white ${index === 1 || index === 3 ? "bg-[#19c2a1]" : "bg-[#073566]"}`}>
                       <Icon className="h-7 w-7 md:w-10 sm:h-10" />
                     </span>
                     <span className="text-sm md:text-base font-semibold leading-5 text-[#17395d]">{value.label}</span>
-                  </div>
+                  </ScrollReveal>
                 );
               })}
-            </section>
+            </ScrollReveal>
 
-            <section className="mt-5 grid gap-4 md:grid-cols-2">
-              <article className="rounded-md bg-[#f5f8fc] p-4 sm:p-5">
+            <ScrollReveal
+              as="section"
+              className="mt-5 grid gap-4 md:grid-cols-2"
+              direction="up"
+              distance={40}
+              duration={0.7}
+            >
+              <ScrollReveal
+                as="article"
+                className="rounded-md bg-[#f5f8fc] p-4 sm:p-5"
+                direction="left"
+                mobileDirection="up"
+                distance={34}
+                duration={0.6}
+              >
                 <div className="flex items-start gap-3">
                   <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#d9f7f0] text-[#0aa98e]"><GraduationCap className="h-5 w-5" /></span>
                   <div>
@@ -127,8 +176,16 @@ export default function FacultyDetail({ member, profile, pageData }: FacultyDeta
                     <p className="mt-1 text-sm md:text-base leading-6 text-slate-600">{profile.philosophy}</p>
                   </div>
                 </div>
-              </article>
-              <article className="rounded-md bg-[#f1f7fc] p-4 sm:p-5">
+              </ScrollReveal>
+              <ScrollReveal
+                as="article"
+                className="rounded-md bg-[#f1f7fc] p-4 sm:p-5"
+                direction="right"
+                mobileDirection="up"
+                distance={34}
+                duration={0.6}
+                delay={0.1}
+              >
                 <div className="flex items-start gap-3">
                   <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#dceeff] text-[#0a6ca7]"><BookOpen className="h-5 w-5" /></span>
                   <div className="min-w-0">
@@ -142,14 +199,20 @@ export default function FacultyDetail({ member, profile, pageData }: FacultyDeta
                     </ul>
                   </div>
                 </div>
-              </article>
-            </section>
+              </ScrollReveal>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-310 px-4 pb-8 sm:px-6 sm:pb-10 lg:px-7">
-        <div className="relative isolate overflow-hidden rounded-lg bg-[#052746]">
+        <ScrollReveal
+          as="div"
+          className="relative isolate overflow-hidden rounded-lg bg-[#052746]"
+          direction="up"
+          distance={50}
+          duration={0.8}
+        >
           <Image
             src={pageData.cta.image}
             alt="Students learning together"
@@ -168,7 +231,7 @@ export default function FacultyDetail({ member, profile, pageData }: FacultyDeta
               {pageData.cta.button}<ArrowRight className="h-6 w-6" />
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
     </main>
   );

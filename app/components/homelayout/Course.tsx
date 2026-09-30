@@ -1,5 +1,6 @@
 "use client"
 import React, { useState, useRef } from "react";
+import Image from "next/image";
 import { site, SectionProps, EducationCoursesData, EducationCourseItem } from "@/data";
 import { 
   Code, 
@@ -17,6 +18,7 @@ import {
   ArrowLeft, 
   ArrowRight 
 } from "lucide-react";
+import ScrollReveal from "../shared/ScrollReveal";
 
 const getCategoryIcon = (iconName: string) => {
   switch (iconName) {
@@ -113,7 +115,13 @@ export default function Course({
         
         {/* Header Section */}
         {showHeader && (
-          <div className="text-center max-w-2xl mx-auto mb-8">
+          <ScrollReveal
+            as="div"
+            className="text-center max-w-2xl mx-auto mb-8"
+            direction="up"
+            distance={40}
+            duration={0.7}
+          >
             <div className="inline-flex items-center gap-3 mb-2">
               <span className="w-8 h-0.5 bg-emerald-500 inline-block"></span>
               <span className="text-emerald-600 font-bold text-sm tracking-widest uppercase">
@@ -128,7 +136,7 @@ export default function Course({
             <p className="text-slate-600 text-base  mt-1">
               {data?.desc}
             </p>
-          </div>
+          </ScrollReveal>
         )}
 
         {/* Carousel Wrapper */}
@@ -167,21 +175,30 @@ export default function Course({
             }
             style={isGrid ? undefined : { scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
-            {pagedCourses?.map((course) => (
-              <div
+            {pagedCourses?.map((course, cardIndex) => (
+              <ScrollReveal
                 key={course.id}
+                as="div"
                 className={`bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col overflow-hidden group ${
                   isGrid
                     ? "w-full"
                     : "flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] snap-start"
                 }`}
+                direction="up"
+                distance={40}
+                duration={0.65}
+                delay={0.05}
+                staggerChildren={0.08}
+                index={cardIndex}
               >
                 {/* Course Image & Top Tags */}
                 <div className="relative h-48 overflow-hidden bg-slate-100">
-                  <img
+                  <Image
                     src={course.image}
                     alt={course.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(min-width: 1280px) 296px, (min-width: 1024px) calc(25vw - 18px), (min-width: 640px) calc(50vw - 24px), calc(100vw - 32px)"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-blue-900 backdrop-blur-md text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-sm">
                     {getCategoryIcon(course.categoryIcon)}
@@ -227,7 +244,7 @@ export default function Course({
                     </a>
                   </div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 

@@ -5,6 +5,7 @@ import Link from "next/link";
 import BannerPage from "../../shared/BannerPage";
 import { site } from "@/data";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 const AQUA = "#19C2A1";
 
@@ -34,7 +35,13 @@ export default function News() {
 
       <section className="py-8 md:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-8 space-y-0">
+        <ScrollReveal
+          as="div"
+          className="text-center max-w-3xl mx-auto mb-8 space-y-0"
+          direction="up"
+          distance={40}
+          duration={0.7}
+        >
           <div className="inline-flex items-center justify-center gap-3">
             <span className="w-8 h-0.5 bg-emerald-500 inline-block"></span>
             <span className="text-emerald-600 font-bold text-sm tracking-widest uppercase">
@@ -51,14 +58,21 @@ export default function News() {
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
             {desc}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* News Items List / Cards */}
         <div className="space-y-6 mb-10">
-          {paginatedNews.map((item) => (
-            <article
+          {paginatedNews.map((item, itemIndex) => (
+            <ScrollReveal
               key={item.id}
+              as="article"
               className="bg-white rounded-3xl p-4 shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 flex flex-col lg:flex-row items-center justify-between gap-6"
+              direction="up"
+              distance={40}
+              duration={0.65}
+              delay={0.04}
+              staggerChildren={0.06}
+              index={itemIndex}
             >
               {/* Left: Date Badge / Numbering (Left-aligned on mobile/tablet and desktop) */}
               <div className="flex items-center gap-4 w-full lg:w-auto shrink-0">
@@ -100,7 +114,7 @@ export default function News() {
                   <ArrowRight className="w-6 h-6" />
                 </Link>
               </div>
-            </article>
+            </ScrollReveal>
           ))}
         </div>
 

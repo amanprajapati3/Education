@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import BannerPage from "@/app/components/shared/BannerPage";
 import SocialLinks from "@/app/components/shared/SocialLinks";
+import ScrollReveal from "@/app/components/shared/ScrollReveal";
 import type {
   EducationBlogArticle,
   EducationBlogDetailPageData,
@@ -65,7 +66,12 @@ export default function BlogArticleDetail({
 
       <section className="mx-auto grid max-w-325 grid-cols-1 items-start gap-6 px-4 py-8 sm:px-6 md:gap-8 md:py-12 lg:grid-cols-[minmax(0,1fr)_340px] lg:px-7">
         <article className="min-w-0">
-          <header>
+          <ScrollReveal
+            as="header"
+            direction="up"
+            distance={40}
+            duration={0.7}
+          >
             <h1 className="text-2xl font-bold leading-tight text-[#0b3158] sm:text-3xl md:text-4xl max-w-xl">{post.title}</h1>
             <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-3 text-sm text-[#17395d]">
               <span className="flex items-center gap-2">
@@ -77,9 +83,16 @@ export default function BlogArticleDetail({
               <span className="inline-flex items-center gap-2 border-l border-slate-200 pl-4"><CalendarDays className="h-4 w-4 text-[#0b5e8e]" />{post.date}</span>
               <span className="inline-flex items-center gap-2 border-l border-slate-200 pl-4"><BookOpen className="h-4 w-4 text-[#0b5e8e]" />{article.readTime}</span>
             </div>
-          </header>
+          </ScrollReveal>
 
-          <div className="relative mt-3 sm:aspect-[2.2/1] min-h-48 overflow-hidden rounded-md bg-[#e8eff4]">
+          <ScrollReveal
+            as="div"
+            className="relative mt-3 sm:aspect-[2.2/1] min-h-48 overflow-hidden rounded-md bg-[#e8eff4]"
+            direction="left"
+            mobileDirection="up"
+            distance={50}
+            duration={0.75}
+          >
             <Image
               src={post.image}
               alt={post.title}
@@ -88,7 +101,7 @@ export default function BlogArticleDetail({
               sizes="(max-width: 1024px) 100vw, 850px"
               className="object-cover"
             />
-          </div>
+          </ScrollReveal>
 
           <blockquote className="mt-3 flex items-center gap-3 rounded-md border-l-[3px] border-[#19c2a1] bg-[#edf6fb] px-4 py-3 text-sm italic leading-6 text-[#0452a0] md:text-base">
             <span className="shrink-0 text-3xl font-extrabold leading-none text-[#19c2a1]">“</span>
@@ -99,19 +112,34 @@ export default function BlogArticleDetail({
 
           <div className="mt-4 space-y-3">
             {article.sections.map((section, index) => (
-              <section key={section.title}>
+              <ScrollReveal
+                key={section.title}
+                as="section"
+                direction="up"
+                distance={32}
+                duration={0.6}
+                delay={0.04}
+                staggerChildren={0.06}
+                index={index}
+              >
                 <h2 className="text-lg md:text-2xl font-bold leading-6 text-[#0b3158]">
                   <span>{index + 1}. </span><span className="text-[#13a995]">{section.title}</span>
                 </h2>
                 <p className="mt-1 sm:text-base text-sm leading-5 text-slate-700 md:text-base md:leading-6">{section.text}</p>
                 {index === 1 && <Highlights labels={article.highlights} />}
-              </section>
+              </ScrollReveal>
             ))}
           </div>
 
           <p className="mt-4 text-sm leading-6 text-slate-600 md:text-base">{article.closing}</p>
 
-          <footer className="mt-5 flex flex-wrap items-center justify-between  gap-3 border-t border-slate-200 pt-4">
+          <ScrollReveal
+            as="footer"
+            className="mt-5 flex flex-wrap items-center justify-between  gap-3 border-t border-slate-200 pt-4"
+            direction="up"
+            distance={30}
+            duration={0.6}
+          >
             <div className="flex sm:gap-2">
             <p className="text-blue-700 font-semibold mt-2">Share this Article</p>
             
@@ -126,11 +154,25 @@ export default function BlogArticleDetail({
               <span className="h-5 w-px bg-slate-200" />
               {nextPost ? <Link href={`/blog/${nextPost.slug}`} className="inline-flex items-center gap-1 hover:text-[#078c88]">Next Post<ArrowRight className="h-4 w-4" /></Link> : <span className="text-slate-400">Next Post</span>}
             </nav>
-          </footer>
+          </ScrollReveal>
         </article>
 
-        <aside className="min-w-0 space-y-3 lg:sticky lg:top-6">
-          <section className="rounded-md border border-[#e0eaf2] bg-white p-3">
+        <ScrollReveal
+          as="aside"
+          className="min-w-0 space-y-3 lg:sticky lg:top-6"
+          direction="right"
+          mobileDirection="up"
+          distance={60}
+          duration={0.8}
+          delay={0.1}
+        >
+          <ScrollReveal
+            as="section"
+            className="rounded-md border border-[#e0eaf2] bg-white p-3"
+            direction="up"
+            distance={36}
+            duration={0.65}
+          >
             <h2 className="text-base md:text-lg lg:text-xl font-bold text-[#0066cc]">{sidebar.searchTitle}</h2>
             <form role="search" onSubmit={(event) => event.preventDefault()} className="mt-2 flex min-h-10 overflow-hidden rounded border border-slate-200 focus-within:border-[#0b9b9a]">
               <input
@@ -143,9 +185,16 @@ export default function BlogArticleDetail({
               />
               <button type="submit" aria-label="Search blog posts" className="flex w-10 shrink-0 items-center justify-center bg-[#119f9e] text-white transition-colors hover:bg-[#087f80]"><Search className="h-5 w-5" /></button>
             </form>
-          </section>
+          </ScrollReveal>
 
-          <section className="rounded-md border border-[#e0eaf2] bg-white p-3">
+          <ScrollReveal
+            as="section"
+            className="rounded-md border border-[#e0eaf2] bg-white p-3"
+            direction="up"
+            distance={36}
+            duration={0.65}
+            delay={0.06}
+          >
             <h2 className="text-base md:text-lg lg:text-xl font-bold text-[#0066cc]">{sidebar.categoriesTitle}</h2>
             <div className="mt-2 space-y-1">
               {categories.map((category) => {
@@ -159,9 +208,16 @@ export default function BlogArticleDetail({
                 );
               })}
             </div>
-          </section>
+          </ScrollReveal>
 
-          <section className="rounded-md border border-[#e0eaf2] bg-white p-3">
+          <ScrollReveal
+            as="section"
+            className="rounded-md border border-[#e0eaf2] bg-white p-3"
+            direction="up"
+            distance={36}
+            duration={0.65}
+            delay={0.12}
+          >
             <h2 className="border-b border-[#e6edf3] pb-2 text-base md:text-lg lg:text-xl font-bold text-[#0066cc]">{sidebar.recentTitle}</h2>
             <div className="divide-y divide-[#e6edf3]">
               {recentPosts.length ? recentPosts.map((recentPost) => (
@@ -176,9 +232,16 @@ export default function BlogArticleDetail({
                 </Link>
               )) : <p className="py-3 text-sm text-slate-600">No matching posts found.</p>}
             </div>
-          </section>
+          </ScrollReveal>
 
-          <section className="relative isolate md:min-h-56 overflow-hidden rounded-md bg-[#063b67] text-white">
+          <ScrollReveal
+            as="section"
+            className="relative isolate md:min-h-56 overflow-hidden rounded-md bg-[#063b67] text-white"
+            direction="up"
+            distance={36}
+            duration={0.65}
+            delay={0.18}
+          >
             <Image src={sidebar.promoImage} alt="Edusity student" fill sizes="340px" className="-z-20 object-cover object-center" />
             <div className="absolute inset-0 -z-10 bg-linear-to-r from-[#063b67] via-[#063b67]/90 to-[#063b67]/20" />
             <div className="relative md:max-w-57.5 px-4 py-5">
@@ -189,8 +252,8 @@ export default function BlogArticleDetail({
                 {sidebar.promoButton}<ArrowRight className="h-4 w-4" />
               </Link>
             </div>
-          </section>
-        </aside>
+          </ScrollReveal>
+        </ScrollReveal>
       </section>
     </main>
   );

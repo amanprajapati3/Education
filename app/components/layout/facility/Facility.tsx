@@ -14,6 +14,7 @@ import {
   Home as HomeIcon, 
   Bus 
 } from "lucide-react";
+import ScrollReveal from "../../shared/ScrollReveal";
 
 const AQUA = "#19C2A1";
 
@@ -46,7 +47,13 @@ export default function Facility() {
 
       <section className="py-8 md:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-8 space-y-0">
+        <ScrollReveal
+          as="div"
+          className="text-center max-w-3xl mx-auto mb-8 space-y-0"
+          direction="up"
+          distance={40}
+          duration={0.7}
+        >
           <div className="inline-flex items-center justify-center gap-3">
             <span className="w-8 h-0.5 bg-emerald-500 inline-block"></span>
             <span className="text-emerald-600 font-bold text-sm tracking-widest uppercase">
@@ -63,14 +70,21 @@ export default function Facility() {
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
             {desc}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Facilities Grid (3x3 on desktop, 2x2 on tablet, 1 col on mobile) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {facilityItems.map((item) => (
-            <article
+          {facilityItems.map((item, itemIndex) => (
+            <ScrollReveal
               key={item.id}
+              as="article"
               className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 flex flex-col justify-between group"
+              direction="up"
+              distance={40}
+              duration={0.65}
+              delay={0.05}
+              staggerChildren={0.08}
+              index={itemIndex}
             >
               <div>
                 {/* Image Container */}
@@ -79,6 +93,7 @@ export default function Facility() {
                     src={item.image}
                     alt={item.title}
                     fill
+                    sizes="(min-width: 1280px) 392px, (min-width: 1024px) calc((100vw - 104px) / 3), (min-width: 640px) calc((100vw - 68px) / 2), calc(100vw - 32px)"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -105,7 +120,7 @@ export default function Facility() {
                   </div>
                 </div>
               </div>
-            </article>
+            </ScrollReveal>
           ))}
         </div>
       </section>

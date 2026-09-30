@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/data";
+import ScrollReveal from "./components/shared/ScrollReveal";
 
 const AQUA = "#087ff5";
 
@@ -23,13 +24,20 @@ export default function NotFound() {
             alt="Page Not Found Background"
             fill
             priority
+            sizes="100vw"
             className=" "
           />
         </div>
       )}
 
       {/* Center Content Container */}
-      <div className="relative z-10 max-w-3xl mx-auto px-4 py-16 text-center flex flex-col items-center">
+      <ScrollReveal
+        as="div"
+        className="relative z-10 max-w-3xl mx-auto px-4 py-16 text-center flex flex-col items-center"
+        direction="up"
+        distance={50}
+        duration={0.8}
+      >
         
         {/* Badge / OOPS */}
         <span className="text-sm sm:text-base font-bold tracking-[0.3em] uppercase text-slate-800 mb-2">
@@ -87,7 +95,7 @@ export default function NotFound() {
           </Link>
         </div>
 
-      </div>
+      </ScrollReveal>
     </main>
   );
 }
