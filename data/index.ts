@@ -68,6 +68,8 @@ export type EducationCtaButton = EducationCtaBannerData["buttons"][number];
 
 export type EducationBlogPost = EducationBlogData["posts"][number];
 export type EducationBlogBannerData = EducationBlogData["banner"];
+export type EducationBlogDetailPageData = EducationBlogData["detailPage"];
+export type EducationBlogArticle = EducationBlogDetailPageData["articles"][number];
 
 export type EducationThankYouData =
   typeof educationData.EducationIndustries.sections.ThankYou.variants.EducationThankYou1;
@@ -95,12 +97,16 @@ export type EducationEventItem = EducationEventData["eventItems"][number];
 export type EducationEventDate = EducationEventItem["date"];
 export type EducationEventBannerData = EducationEventData["banner"];
 export type EducationEventCategory = EducationEventData["categories"][number];
+export type EducationEventDetailPageData = EducationEventData["detailPage"];
+export type EducationEventContactData = EducationEventDetailPageData["contact"];
 
 export type EducationNewsData =
   typeof educationData.EducationIndustries.sections.News.variants.EducationNews1;
 export type EducationNewsItem = EducationNewsData["newsItems"][number];
 export type EducationNewsDate = EducationNewsItem["date"];
 export type EducationNewsBannerData = EducationNewsData["banner"];
+export type EducationNewsDetailPageData = EducationNewsData["detailPage"];
+export type EducationNewsArticleDetail = EducationNewsDetailPageData["articles"][number];
 
 export type EducationFacilityData =
   typeof educationData.EducationIndustries.sections.Facility.variants.EducationFacility1;
@@ -270,6 +276,8 @@ const courseDetails = sec.Courses.variants.EducationCourses1
   .detailPage.courses as EducationCourseDetail[];
 
 const blogPosts = sec.Blog.variants.EducationBlog1.posts as EducationBlogPost[];
+const blogArticles = sec.Blog.variants.EducationBlog1.detailPage
+  .articles as EducationBlogArticle[];
 
 export function getCourseBySlug(slug: string): EducationCourseItem | null {
   const cleanSlug = slug.replace(/^courses\//, "");
@@ -296,6 +304,11 @@ export function getBlogPostBySlug(slug: string): EducationBlogPost | null {
       (post) => post.slug === cleanSlug || post.slug.endsWith(cleanSlug),
     ) || null
   );
+}
+
+export function getBlogArticleBySlug(slug: string): EducationBlogArticle | null {
+  const cleanSlug = slug.replace(/^blog\//, "");
+  return blogArticles.find((article) => article.slug === cleanSlug) || null;
 }
 
 export function getBlogPostSlugs(): EducationBlogPost[] {
@@ -457,9 +470,18 @@ export function getEventItemsSorted(
 }
 
 const newsItems = sec.News.variants.EducationNews1.newsItems as EducationNewsItem[];
+const newsArticleDetails = sec.News.variants.EducationNews1.detailPage
+  .articles as EducationNewsArticleDetail[];
 
 export function getNewsItems(): EducationNewsItem[] {
   return newsItems;
+}
+
+export function getNewsArticleDetailBySlug(
+  slug: string,
+): EducationNewsArticleDetail | null {
+  const cleanSlug = slug.replace(/^news\//, "");
+  return newsArticleDetails.find((article) => article.slug === cleanSlug) || null;
 }
 
 export function getNewsBySlug(slug: string): EducationNewsItem | null {

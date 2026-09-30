@@ -14,6 +14,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import BannerPage from "@/app/components/shared/BannerPage";
+import SocialLinks from "@/app/components/shared/SocialLinks";
 import type {
   EducationFacultyDetailPageData,
   EducationFacultyItem,
@@ -48,53 +49,58 @@ export default function FacultyDetail({ member, profile, pageData }: FacultyDeta
         bgImage={pageData.banner.bgImage}
       />
 
-      <section className="mx-auto max-w-310 px-4 py-8 sm:px-6 sm:py-10 lg:px-7">
+      <section className="mx-auto max-w-310 px-4 py-8 sm:px-6 md:py-12 lg:px-7">
         <header className="mb-6">
           <p className="flex items-center gap-2 text-sm font-bold uppercase text-[#0b3158]">
             <span className="h-0.5 w-7 bg-[#19c2a1]" /> Our Faculty
           </p>
-          <h2 className="mt-2 text-3xl font-extrabold leading-tight text-[#0b3158] sm:text-4xl">
+          <h2 className="mt-2 text-3xl md:text-5xl font-bold leading-tight text-[#0b3158] sm:text-4xl">
             {firstName}{" "}<span className="text-[#19c2a1]">{highlightedName}</span>
           </h2>
-          <p className="mt-1 text-base font-semibold text-[#0b3158]">{member.designation}</p>
+          <p className="mt-1 text-base md:text-lg font-semibold text-[#0b3158]">{member.designation}</p>
         </header>
 
-        <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[290px_minmax(0,1fr)] lg:gap-7">
+        <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[340px_minmax(0,1fr)] lg:gap-7">
           <aside className="overflow-hidden rounded-lg border border-[#e4edf4] bg-white shadow-[0_5px_18px_rgba(14,49,82,0.07)]">
-            <div className="relative aspect-[4/4.6] bg-[#e9f0f5]">
+            <div className="relative aspect-[4/4.6] bg-[#e9f0f5] ">
               <Image
                 src={member.image}
                 alt={member.name}
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 290px"
-                className="object-cover"
+                className="object-cover rounded-xl"
               />
-              <div className="absolute inset-x-0 bottom-0 flex items-center gap-3 bg-[#073566]/95 px-4 py-3 text-white">
-                <span className="text-2xl font-extrabold">{profile.yearsExperience}</span>
-                <span className="text-sm leading-5">Years of<br />Teaching Experience</span>
+              <div className="absolute inset-x-0 bottom-0 rounded-xl flex items-center gap-3 bg-[#073566]/95 px-4 py-3 text-white">
+                <span className="text-2xl md:text-4xl font-bold">{profile.yearsExperience}</span>
+                <span className="text-base leading-5">Years of<br />Teaching Experience</span>
               </div>
             </div>
-            <dl className="space-y-3 p-4 text-sm text-slate-600">
+            <dl className="space-y-3 p-4 text-base text-slate-700">
               <ProfileInfo Icon={Mail} value={profile.email} href={`mailto:${profile.email}`} />
               <ProfileInfo Icon={Phone} value={profile.phone} href={`tel:${profile.phone.replace(/[^+\d]/g, "")}`} />
               <ProfileInfo Icon={MapPin} value={profile.location} />
               <ProfileInfo Icon={GraduationCap} value={profile.qualification} />
               <ProfileInfo Icon={UsersRound} value={profile.department} />
             </dl>
+            <SocialLinks
+              heading="Follow Me"
+              links={profile.socials}
+              ariaPrefix={member.name}
+            />
           </aside>
 
           <div className="min-w-0">
             <section>
-              <h3 className="text-2xl font-extrabold text-[#0b3158] sm:text-[27px]">
+              <h3 className="text-2xl md:text-4xl font-bold text-[#0b3158] sm:text-[27px]">
                 About <span className="text-[#19c2a1]">{member.name}</span>
               </h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">{profile.about[0]}</p>
-              <p className="mt-3 text-sm leading-6 text-slate-600">{profile.about[1]}</p>
+              <p className="mt-2 text-sm md:text-base leading-6 text-slate-600">{profile.about[0]}</p>
+              <p className="mt-3 text-sm md:text-base leading-6 text-slate-600">{profile.about[1]}</p>
               <blockquote className="mt-4 rounded-md border-l-[3px] border-[#19c2a1] bg-[#f1f7fc] px-4 py-4 text-sm italic leading-6 text-[#254565] sm:px-5">
-                <span className="mb-1 block text-3xl font-extrabold leading-none text-[#19c2a1]">“</span>
-                {profile.quote}
-                <cite className="mt-2 block text-right text-sm font-semibold not-italic text-[#0b3158]">— {member.name}</cite>
+                <span className="mb-1 block text-3xl md:text-5xl font-extrabold leading-none text-[#19c2a1]">“</span>
+                <span className="text-sm md:text-base">{profile.quote}</span>
+                <cite className="mt-2 block text-right text-base font-semibold not-italic text-[#0b3158]">— {member.name}</cite>
               </blockquote>
             </section>
 
@@ -103,10 +109,10 @@ export default function FacultyDetail({ member, profile, pageData }: FacultyDeta
                 const Icon = VALUE_ICONS[value.icon] || BookOpen;
                 return (
                   <div key={value.label} className="flex min-h-28 flex-col items-center justify-center gap-2 px-2 py-3 text-center">
-                    <span className={`flex h-11 w-11 items-center justify-center rounded-full text-white ${index === 1 || index === 3 ? "bg-[#19c2a1]" : "bg-[#073566]"}`}>
-                      <Icon className="h-5 w-5" />
+                    <span className={`flex h-14 w-14 md:w-20 md:h-20 items-center justify-center rounded-full text-white ${index === 1 || index === 3 ? "bg-[#19c2a1]" : "bg-[#073566]"}`}>
+                      <Icon className="h-7 w-7 md:w-10 sm:h-10" />
                     </span>
-                    <span className="text-sm font-semibold leading-5 text-[#17395d]">{value.label}</span>
+                    <span className="text-sm md:text-base font-semibold leading-5 text-[#17395d]">{value.label}</span>
                   </div>
                 );
               })}
@@ -115,22 +121,22 @@ export default function FacultyDetail({ member, profile, pageData }: FacultyDeta
             <section className="mt-5 grid gap-4 md:grid-cols-2">
               <article className="rounded-md bg-[#f5f8fc] p-4 sm:p-5">
                 <div className="flex items-start gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#d9f7f0] text-[#0aa98e]"><GraduationCap className="h-5 w-5" /></span>
+                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#d9f7f0] text-[#0aa98e]"><GraduationCap className="h-5 w-5" /></span>
                   <div>
-                    <h3 className="text-base font-bold text-[#0b3158]">Teaching Philosophy</h3>
-                    <p className="mt-1 text-sm leading-6 text-slate-600">{profile.philosophy}</p>
+                    <h3 className="text-base md:text-lg font-bold text-[#0b3158]">Teaching Philosophy</h3>
+                    <p className="mt-1 text-sm md:text-base leading-6 text-slate-600">{profile.philosophy}</p>
                   </div>
                 </div>
               </article>
               <article className="rounded-md bg-[#f1f7fc] p-4 sm:p-5">
                 <div className="flex items-start gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#dceeff] text-[#0a6ca7]"><BookOpen className="h-5 w-5" /></span>
+                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#dceeff] text-[#0a6ca7]"><BookOpen className="h-5 w-5" /></span>
                   <div className="min-w-0">
-                    <h3 className="text-base font-bold text-[#0b3158]">Areas of Interest</h3>
+                    <h3 className="text-base md:text-lg font-bold text-[#0b3158]">Areas of Interest</h3>
                     <ul className="mt-2 space-y-1.5">
                       {profile.interests.map((interest) => (
-                        <li key={interest} className="flex items-start gap-2 text-sm leading-5 text-slate-600">
-                          <Check className="mt-0.5 h-4 w-4 shrink-0 stroke-3 text-[#0a6ca7]" />{interest}
+                        <li key={interest} className="flex items-start gap-2 text-sm md:text-base leading-5 text-slate-600">
+                          <Check className="mt-0.5 h-6 w-6 shrink-0 stroke-3 text-[#0a6ca7]" />{interest}
                         </li>
                       ))}
                     </ul>
@@ -153,13 +159,13 @@ export default function FacultyDetail({ member, profile, pageData }: FacultyDeta
           />
           <div className="absolute inset-0 -z-10 bg-linear-to-r from-[#052746] via-[#052746]/95 to-[#052746]/30" />
           <div className="relative max-w-2xl px-5 py-8 text-white sm:px-8 sm:py-10">
-            <p className="text-sm font-bold uppercase tracking-wide text-[#19c2a1]">{pageData.cta.eyebrow}</p>
-            <h2 className="mt-2 text-2xl font-extrabold leading-tight sm:text-3xl">
+            <p className="text-base font-bold uppercase tracking-wide text-[#19c2a1]">{pageData.cta.eyebrow}</p>
+            <h2 className="mt-2 text-2xl font-bold leading-tight sm:text-3xl md:text-4xl">
               {pageData.cta.title}<br /><span className="text-[#19c2a1]">{pageData.cta.highlight}</span>
             </h2>
-            <p className="mt-2 max-w-lg text-sm leading-6 text-white/85">{pageData.cta.description}</p>
-            <Link href={pageData.cta.href} className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-md bg-[#19c2a1] px-5 text-sm font-bold text-[#062a45] transition-colors hover:bg-white">
-              {pageData.cta.button}<ArrowRight className="h-4 w-4" />
+            <p className="mt-2 max-w-lg text-sm md:text-base leading-6 text-white/85">{pageData.cta.description}</p>
+            <Link href={pageData.cta.href} className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-md bg-[#19c2a1] px-5 text-base font-bold text-[#062a45] transition-colors hover:bg-white">
+              {pageData.cta.button}<ArrowRight className="h-6 w-6" />
             </Link>
           </div>
         </div>
@@ -179,7 +185,7 @@ function ProfileInfo({
 }) {
   return (
     <div className="flex items-start gap-3">
-      <Icon className="mt-0.5 h-4 w-4 shrink-0 text-[#0b3158]" />
+      <Icon className="mt-0.5 h-6 w-6 shrink-0 text-[#0b3158]" />
       <dd className="min-w-0 wrap-break-word leading-5">
         {href ? <a href={href} className="transition-colors hover:text-[#079b82]">{value}</a> : value}
       </dd>

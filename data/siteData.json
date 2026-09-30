@@ -1342,6 +1342,130 @@
               "home": "Home",
               "current": "Blog",
               "bgImage": "/education/3.png"
+            },
+            "detailPage": {
+              "banner": {
+                "title": "Blog Detail",
+                "home": "Home",
+                "current": "Blog Detail",
+                "bgImage": "/education/3.png"
+              },
+              "sidebar": {
+                "searchTitle": "Search Blog",
+                "searchPlaceholder": "Search articles, tips, or topics...",
+                "categoriesTitle": "Categories",
+                "recentTitle": "Recent Posts",
+                "promoEyebrow": "Explore Your Future",
+                "promoTitle": "Ready to Start Your Learning Journey?",
+                "promoDescription": "Explore our courses and take the next step towards a brighter future.",
+                "promoButton": "Browse Courses",
+                "promoImage": "/people/man1.png",
+                "promoHref": "/courses"
+              },
+              "articles": [
+                {
+                  "slug": "creating-classrooms-where-everyone-belongs",
+                  "author": "Anjali Verma",
+                  "authorRole": "Education Consultant",
+                  "authorImage": "/people/women1.png",
+                  "readTime": "7 Min Read",
+                  "quote": "Every student deserves a place where they feel seen, supported, and ready to learn.",
+                  "intro": "An inclusive classroom is built through everyday choices: the way a lesson is presented, how students collaborate, and whether every learner can participate. Small, thoughtful changes can create a stronger sense of belonging and help students engage with confidence.",
+                  "sections": [
+                    {"title":"Design for different ways of learning","text":"Offer key ideas in more than one format, such as a short explanation, a visual example, and a hands-on activity. Clear instructions and predictable lesson structure help students understand what to do and where to begin."},
+                    {"title":"Make participation feel safe","text":"Set shared expectations for respectful discussion and give students time to think before responding. Pair work, written reflections, and small-group conversations create more than one route into a class discussion."},
+                    {"title":"Notice who is being heard","text":"Regularly reflect on whose ideas receive attention and who may need another invitation to contribute. Ask students for feedback and use it to adjust classroom routines, examples, and support."},
+                    {"title":"Build belonging into the routine","text":"Use names, celebrate different perspectives, and make classroom resources easy to access. Belonging is not a one-time activity; it grows through consistent interactions and fair opportunities to take part."}
+                  ],
+                  "highlights": ["Accessible learning", "Respectful discussion", "Student voice", "Belonging every day"],
+                  "closing": "Inclusive classrooms benefit the whole learning community. Start with one routine you can improve this week, then keep listening and building from there."
+                },
+                {
+                  "slug": "learning-together-growing-stronger",
+                  "author": "Rahul Mehta",
+                  "authorRole": "Learning Design Lead",
+                  "authorImage": "/people/man1.png",
+                  "readTime": "6 Min Read",
+                  "quote": "When learners explain ideas to each other, everyone gets a chance to think more deeply.",
+                  "intro": "Learning with peers turns a classroom into a place to compare perspectives, ask better questions, and practice explaining what you know. With a little structure, collaboration can build confidence as well as stronger understanding.",
+                  "sections": [
+                    {"title":"Start with a shared goal","text":"Give every group a clear outcome and a manageable task. When students know what they are working toward, it is easier to divide responsibilities and keep the conversation focused."},
+                    {"title":"Make room for every voice","text":"Rotate roles such as note-taker, explainer, and question-asker. Simple roles help quieter students contribute and prevent one person from carrying the whole activity."},
+                    {"title":"Explain, question, and reflect","text":"Ask students to describe their reasoning instead of sharing only an answer. Follow with a question from a peer, then close with a short reflection on what changed in their understanding."},
+                    {"title":"Keep the feedback constructive","text":"Agree on feedback that is specific, kind, and useful. Point to the idea or step that could be clearer, and invite the group to test a different approach together."}
+                  ],
+                  "highlights": ["Shared goals", "Rotating roles", "Peer explanation", "Useful feedback"],
+                  "closing": "Strong collaboration is a skill students can practice. Begin with one short group task, make the roles clear, and give the class time to reflect on how they worked together."
+                },
+                {
+                  "slug": "where-curiosity-becomes-confidence-every-day",
+                  "author": "Meera Kapoor",
+                  "authorRole": "Career Development Adviser",
+                  "authorImage": "/people/women2.png",
+                  "readTime": "8 Min Read",
+                  "quote": "Curiosity opens the door; consistent practice helps you walk through it.",
+                  "intro": "A growth mindset is not about having every answer. It is the habit of staying curious, learning from feedback, and treating unfamiliar challenges as opportunities to build a new skill.",
+                  "sections": [
+                    {"title":"Ask questions that move you forward","text":"When you meet a difficult topic, write down what you understand and what remains unclear. Focused questions make it easier to find a resource, ask for help, and turn uncertainty into a next step."},
+                    {"title":"Set a small learning target","text":"Choose one skill to practice and break it into a weekly goal. A clear, achievable target creates momentum and makes progress easier to notice."},
+                    {"title":"Use feedback as information","text":"Feedback can show where to focus next. Look for one specific suggestion you can act on, try it, and compare the result with your previous attempt."},
+                    {"title":"Keep track of what you learn","text":"Save examples of work, notes, and reflections as you go. Looking back at your progress can reveal strengths you have developed and help you choose your next opportunity."}
+                  ],
+                  "highlights": ["Ask better questions", "Practice consistently", "Learn from feedback", "Track your progress"],
+                  "closing": "Confidence often follows action rather than preceding it. Stay curious, practice in small steps, and let each new experience inform the next one."
+                },
+                {
+                  "slug": "building-a-portfolio-that-gets-you-hired",
+                  "author": "Arjun Malhotra",
+                  "authorRole": "Portfolio and Careers Coach",
+                  "authorImage": "/people/man2.png",
+                  "readTime": "9 Min Read",
+                  "quote": "A strong portfolio makes your process visible, not just the finished result.",
+                  "intro": "A useful portfolio gives a recruiter quick, concrete evidence of how you approach work. Choose a few relevant examples, explain the decisions behind them, and make it easy for someone to see what you contributed.",
+                  "sections": [
+                    {"title":"Choose work for the role you want","text":"Select projects that demonstrate the skills named in your target roles. A focused collection is easier to review than a long archive of unrelated work."},
+                    {"title":"Show the problem and your process","text":"For each project, describe the goal, your role, the constraints, and the steps you took. Include iterations or decisions that show how you responded to evidence and feedback."},
+                    {"title":"Make your contribution specific","text":"If you worked with a team, distinguish your responsibilities from the group outcome. Clear attribution helps reviewers understand your strengths without overstating your part."},
+                    {"title":"Keep it clear and current","text":"Use concise writing, working links, and a simple layout that works on phones and computers. Revisit the portfolio as your experience grows and remove examples that no longer support your direction."}
+                  ],
+                  "highlights": ["Role-relevant projects", "Clear process notes", "Specific contributions", "Easy-to-scan layout"],
+                  "closing": "A portfolio is most effective when it helps someone understand how you think and what you can contribute. Review it from a hiring manager’s perspective and make the strongest evidence easy to find."
+                },
+                {
+                  "slug": "practical-projects-beat-long-lectures",
+                  "author": "Sana Iqbal",
+                  "authorRole": "Project-Based Learning Specialist",
+                  "authorImage": "/people/women3.png",
+                  "readTime": "6 Min Read",
+                  "quote": "Ideas become easier to remember when you have used them to solve a real problem.",
+                  "intro": "Projects help learners connect concepts with decisions they need to make. Building, testing, and revising something creates useful practice that a long stretch of passive listening cannot provide on its own.",
+                  "sections": [
+                    {"title":"Give the concept a real purpose","text":"Start with a question or brief that gives students a reason to use the concept. A concrete goal helps them connect new information to a problem they can understand."},
+                    {"title":"Break the work into milestones","text":"Divide a large project into small checkpoints for planning, first attempts, feedback, and revision. Milestones make progress visible and create natural moments for support."},
+                    {"title":"Let students test their ideas","text":"Encourage learners to try an approach, observe what happens, and explain what they would change. Reflection turns a result, including an imperfect one, into useful evidence."},
+                    {"title":"Connect the outcome to the lesson","text":"After the project, identify which ideas were most useful and where they appeared in the work. This final connection helps students carry the learning into a new context."}
+                  ],
+                  "highlights": ["Real-world briefs", "Small milestones", "Experiment and revise", "Reflection that sticks"],
+                  "closing": "Practical work does not replace clear teaching; it gives learners a place to use and strengthen what they have learned. Begin with a focused brief and build the challenge from there."
+                },
+                {
+                  "slug": "the-mentor-effect-learning-with-guidance",
+                  "author": "Dev Sharma",
+                  "authorRole": "Faculty Mentor",
+                  "authorImage": "/people/man3.png",
+                  "readTime": "7 Min Read",
+                  "quote": "Good guidance helps you see the next step while keeping the work in your hands.",
+                  "intro": "A mentor can help turn a broad ambition into practical next steps. The most useful mentoring relationships combine honest questions, timely feedback, and space for learners to make their own decisions.",
+                  "sections": [
+                    {"title":"Bring a goal to the conversation","text":"You do not need a complete plan before meeting a mentor. A question, challenge, or skill you want to develop gives the conversation a useful starting point."},
+                    {"title":"Ask for feedback you can use","text":"Share a specific piece of work or a decision you are considering. Focused feedback is easier to apply than broad advice, and it gives both people something concrete to discuss."},
+                    {"title":"Turn advice into an experiment","text":"Choose one action to try before the next conversation. Treat it as an experiment: notice what worked, what felt difficult, and what you would adjust."},
+                    {"title":"Build a two-way relationship","text":"Respect each other’s time, follow through on agreed actions, and share progress honestly. Mentoring works best when both people communicate clearly and keep expectations realistic."}
+                  ],
+                  "highlights": ["Clear learning goals", "Actionable feedback", "Small experiments", "Consistent follow-through"],
+                  "closing": "Mentorship can make a learning journey feel more manageable, but progress still comes from your own practice. Use guidance to find a direction, then keep taking the next step."
+                }
+              ]
             }
           }
         }
@@ -1855,9 +1979,9 @@
                     "label": "Digital Marketing",
                     "href": "/courses/digital-marketing-essentials"
                   },
-                  { "label": "Graphic Design", "href": "/courses" },
-                  { "label": "Business Management", "href": "/courses" },
-                  { "label": "Personal Development", "href": "/courses" },
+                  { "label": "Cloude Computing Architecture", "href": "/courses/cloud-computing-architecture" },
+                  { "label": "UI UX ", "href": "/courses/ui-ux-design-masterclass" },
+                  { "label": "Dev OOPs & CI CD Pipeline", "href": "/courses/devops-and-ci-cd-pipeline" },
                   { "label": "View All Courses", "href": "/courses" }
                 ]
               },
@@ -1869,7 +1993,6 @@
                   { "label": "Privacy Policy", "href": "/privacy" },
                   { "label": "Refund Policy", "href": "/refund-policy" },
                   { "label": "Thank You", "href": "/thank" },
-                  { "label": "Careers", "href": "/career" },
                   { "label": "Contact Support", "href": "/contact" }
                 ]
               }
@@ -1879,11 +2002,11 @@
               "addressLabel": "Our Office",
               "address": "123 Learning Street, New Delhi, India 110001",
               "callLabel": "Call Us",
-              "phone": "+91 98765 43210",
-              "phoneHref": "tel:+919876543210",
+              "phone": "+91 00000 00000",
+              "phoneHref": "tel:+91 00000 00000",
               "emailLabel": "Email Us",
-              "email": "info@edusity.com",
-              "emailHref": "mailto:info@edusity.com",
+              "email": "info@example.com",
+              "emailHref": "mailto:info@example.com",
               "hoursLabel": "Working Hours",
               "hours": ["Mon - Fri: 9:00 AM - 6:00 PM", "(Closed on Weekends)"]
             },
@@ -2068,7 +2191,7 @@
                   "slug": "angela-t-vigil",
                   "yearsExperience": "12+",
                   "email": "angela.vigil@edusity.com",
-                  "phone": "+1 123 456 7890",
+                  "phone": "+91 00000 00000",
                   "location": "New York, United States",
                   "qualification": "Ph.D. in Education",
                   "department": "Department of Education",
@@ -2077,7 +2200,8 @@
                   "quote": "Great teaching begins when every learner feels encouraged to ask a better question.",
                   "values": [{"icon":"users","label":"Student Focused"},{"icon":"lightbulb","label":"Innovative Teaching"},{"icon":"book","label":"Practical Learning"},{"icon":"target","label":"Academic Excellence"}],
                   "philosophy": "I believe learning is strongest when students feel supported, take an active role, and can connect new ideas to the world around them.",
-                  "interests": ["Inclusive learning design", "Student mentorship", "Curriculum development", "Applied education research"]
+                  "interests": ["Inclusive learning design", "Student mentorship", "Curriculum development", "Applied education research"],
+                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/angela.vigil"}, {"label": "Instagram", "href": "https://www.instagram.com/angela.vigil"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/angela-vigil"}, {"label": "YouTube", "href": "https://www.youtube.com/@angelavigil"}, {"label": "X", "href": "https://x.com/angela_vigil"}, {"label": "WhatsApp", "href": "https://wa.me/11234567890"}, {"label": "Share", "href": "/faculty/angela-t-vigil"}]
                 },
                 {
                   "slug": "frank-a-mitchell",
@@ -2092,7 +2216,8 @@
                   "quote": "Knowledge becomes powerful when you can put it to work on a real problem.",
                   "values": [{"icon":"users","label":"Career Focused"},{"icon":"lightbulb","label":"Hands-on Teaching"},{"icon":"book","label":"Real-world Projects"},{"icon":"target","label":"Lifelong Growth"}],
                   "philosophy": "My classroom is a place to try, reflect, and improve. Practical work helps students see how each concept can make a difference.",
-                  "interests": ["Work-based learning", "Career readiness", "Project-based teaching", "Professional mentorship"]
+                  "interests": ["Work-based learning", "Career readiness", "Project-based teaching", "Professional mentorship"],
+                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/frank.mitchell"}, {"label": "Instagram", "href": "https://www.instagram.com/frank.mitchell"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/frank-a-mitchell"}, {"label": "YouTube", "href": "https://www.youtube.com/@frankamitchell"}, {"label": "X", "href": "https://x.com/frank_mitchell"}, {"label": "WhatsApp", "href": "https://wa.me/11234567891"}, {"label": "Share", "href": "/faculty/frank-a-mitchell"}]
                 },
                 {
                   "slug": "susan-d-lunsford",
@@ -2107,7 +2232,8 @@
                   "quote": "Education changes lives when opportunity is open to everyone.",
                   "values": [{"icon":"users","label":"Learner First"},{"icon":"lightbulb","label":"Bold Ideas"},{"icon":"book","label":"Accessible Learning"},{"icon":"target","label":"Shared Progress"}],
                   "philosophy": "I believe education should open doors. We build better learning experiences by listening closely to students and making room for every voice.",
-                  "interests": ["Education access", "Learning innovation", "Community partnerships", "Leadership development"]
+                  "interests": ["Education access", "Learning innovation", "Community partnerships", "Leadership development"],
+                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/susan.lunsford"}, {"label": "Instagram", "href": "https://www.instagram.com/susan.lunsford"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/susan-d-lunsford"}, {"label": "YouTube", "href": "https://www.youtube.com/@susandlunsford"}, {"label": "X", "href": "https://x.com/susan_lunsford"}, {"label": "WhatsApp", "href": "https://wa.me/11234567892"}, {"label": "Share", "href": "/faculty/susan-d-lunsford"}]
                 },
                 {
                   "slug": "dennis-a-pruitt",
@@ -2122,7 +2248,8 @@
                   "quote": "Curiosity is the first step toward discoveries that matter.",
                   "values": [{"icon":"users","label":"Mentor Mindset"},{"icon":"lightbulb","label":"Curious Thinking"},{"icon":"book","label":"Research Led"},{"icon":"target","label":"Meaningful Impact"}],
                   "philosophy": "I encourage students to stay curious, work carefully, and treat each challenge as an opportunity to learn something new.",
-                  "interests": ["Applied research", "Innovation methods", "Student research projects", "Scientific communication"]
+                  "interests": ["Applied research", "Innovation methods", "Student research projects", "Scientific communication"],
+                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/dennis.pruitt"}, {"label": "Instagram", "href": "https://www.instagram.com/dennis.pruitt"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/dennis-a-pruitt"}, {"label": "YouTube", "href": "https://www.youtube.com/@dennispruitt"}, {"label": "X", "href": "https://x.com/dennis_pruitt"}, {"label": "WhatsApp", "href": "https://wa.me/11234567893"}, {"label": "Share", "href": "/faculty/dennis-a-pruitt"}]
                 },
                 {
                   "slug": "angela-t-vigil-2",
@@ -2137,7 +2264,8 @@
                   "quote": "A welcoming classroom gives every student room to find their voice.",
                   "values": [{"icon":"users","label":"Student Belonging"},{"icon":"lightbulb","label":"Creative Methods"},{"icon":"book","label":"Active Learning"},{"icon":"target","label":"Personal Growth"}],
                   "philosophy": "I want every learner to feel seen and supported. When lessons invite participation, students become partners in their own progress.",
-                  "interests": ["Learning experience design", "Classroom engagement", "Student development", "Accessible instruction"]
+                  "interests": ["Learning experience design", "Classroom engagement", "Student development", "Accessible instruction"],
+                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/angela.vigil.learning"}, {"label": "Instagram", "href": "https://www.instagram.com/angela.vigil.learning"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/angela-vigil-learning-design"}, {"label": "YouTube", "href": "https://www.youtube.com/@angelavigillearning"}, {"label": "X", "href": "https://x.com/angela_vigil_edu"}, {"label": "WhatsApp", "href": "https://wa.me/11234567890"}, {"label": "Share", "href": "/faculty/angela-t-vigil-2"}]
                 },
                 {
                   "slug": "frank-a-mitchell-2",
@@ -2152,7 +2280,8 @@
                   "quote": "Progress comes from practice that is purposeful, supported, and repeated.",
                   "values": [{"icon":"users","label":"Learner Support"},{"icon":"lightbulb","label":"Useful Practice"},{"icon":"book","label":"Applied Skills"},{"icon":"target","label":"Career Growth"}],
                   "philosophy": "I teach through doing. Students should leave each lesson with a clearer understanding and a useful next step to try.",
-                  "interests": ["Practical instruction", "Skills assessment", "Career development", "Collaborative learning"]
+                  "interests": ["Practical instruction", "Skills assessment", "Career development", "Collaborative learning"],
+                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/frank.mitchell.pd"}, {"label": "Instagram", "href": "https://www.instagram.com/frank.mitchell.pd"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/frank-mitchell-professional-education"}, {"label": "YouTube", "href": "https://www.youtube.com/@frankamitchellpd"}, {"label": "X", "href": "https://x.com/frank_mitchell_pd"}, {"label": "WhatsApp", "href": "https://wa.me/11234567891"}, {"label": "Share", "href": "/faculty/frank-a-mitchell-2"}]
                 },
                 {
                   "slug": "susan-d-lunsford-2",
@@ -2167,7 +2296,8 @@
                   "quote": "When learners thrive, the whole community moves forward.",
                   "values": [{"icon":"users","label":"Community Led"},{"icon":"lightbulb","label":"Future Thinking"},{"icon":"book","label":"Open Opportunity"},{"icon":"target","label":"Lasting Change"}],
                   "philosophy": "Education works best when it reflects the needs of real people. We keep improving by learning from students and working together.",
-                  "interests": ["Education strategy", "Community impact", "Learning partnerships", "Equitable opportunity"]
+                  "interests": ["Education strategy", "Community impact", "Learning partnerships", "Equitable opportunity"],
+                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/susan.lunsford.edusity"}, {"label": "Instagram", "href": "https://www.instagram.com/susan.lunsford.edusity"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/susan-lunsford-edusity"}, {"label": "YouTube", "href": "https://www.youtube.com/@susandlunsfordedusity"}, {"label": "X", "href": "https://x.com/susan_lunsford_edu"}, {"label": "WhatsApp", "href": "https://wa.me/11234567892"}, {"label": "Share", "href": "/faculty/susan-d-lunsford-2"}]
                 },
                 {
                   "slug": "dennis-a-pruitt-2",
@@ -2182,7 +2312,8 @@
                   "quote": "The best questions keep opening new paths to learn.",
                   "values": [{"icon":"users","label":"Personal Mentoring"},{"icon":"lightbulb","label":"Open Inquiry"},{"icon":"book","label":"Evidence Based"},{"icon":"target","label":"Student Discovery"}],
                   "philosophy": "I help students find the confidence to investigate ideas carefully and the clarity to explain what they discover.",
-                  "interests": ["Research mentorship", "Critical thinking", "Academic writing", "Collaborative inquiry"]
+                  "interests": ["Research mentorship", "Critical thinking", "Academic writing", "Collaborative inquiry"],
+                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/dennis.pruitt.research"}, {"label": "Instagram", "href": "https://www.instagram.com/dennis.pruitt.research"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/dennis-pruitt-research"}, {"label": "YouTube", "href": "https://www.youtube.com/@dennispruittresearch"}, {"label": "X", "href": "https://x.com/dennis_pruitt_r"}, {"label": "WhatsApp", "href": "https://wa.me/11234567893"}, {"label": "Share", "href": "/faculty/dennis-a-pruitt-2"}]
                 }
               ]
             },
@@ -2517,7 +2648,13 @@
                 "image": "/education/7.jpg",
                 "desc": "Direct Q&A session with professional career coaches on job market trends."
               }
-            ]
+            ],
+            "detailPage": {
+              "contact": {
+                "phone": { "value": "+91 00000 00000", "href": "tel:+910000000000", "note": "Mon - Fri, 9:00 AM - 6:00 PM" },
+                "email": { "value": "info@example@gmail.com", "href": "mailto:info@example@gmail.com", "note": "We reply within 24 hours" }
+              }
+            }
           }
         }
       },
@@ -2681,7 +2818,219 @@
                 "title": "Freshers Orientation Program Schedule",
                 "desc": "Welcome ceremony and campus tours for newly enrolled students entering undergraduate and graduate tracks."
               }
-            ]
+            ],
+            "detailPage": {
+              "sidebar": {
+                "quickInfoTitle": "Quick Information",
+                "shareTitle": "Share This News",
+                "contactTitle": "Need More Information?",
+                "contactText": "Have questions? Get in touch with our team for assistance.",
+                "contactButton": "Enquire Now",
+                "contactHref": "/enquiry",
+                "latestTitle": "Latest News / Notices",
+                "viewAllLabel": "View All News"
+              },
+              "articles": [
+                {
+                  "slug": "admission-open-2026-2027",
+                  "image": "/education/3.png",
+                  "intro": "Applications are open for the 2026–2027 academic session. Explore programs, get to know our campus community, and begin preparing your application to Edusity.",
+                  "sectionTitle": "Why Choose Edusity?",
+                  "sectionText": "At Edusity, students learn in a supportive environment with experienced faculty, modern facilities, and programs shaped around the skills employers value.",
+                  "features": ["Industry-relevant curriculum", "Experienced faculty", "Modern learning spaces", "Career guidance and support"],
+                  "actionTitle": "How to Apply",
+                  "steps": ["Explore programs and entry requirements.", "Complete the online application form.", "Upload the required documents.", "Follow your application updates by email."],
+                  "importantDates": [{"label":"Applications open","value":"15 March 2026"},{"label":"Application deadline","value":"30 April 2026"},{"label":"Entrance test, if applicable","value":"10 May 2026"},{"label":"Result announcement","value":"20 May 2026"},{"label":"Classes commence","value":"01 June 2026"}]
+                },
+                {
+                  "slug": "mid-term-examination-schedule",
+                  "image": "/education/5.jpg",
+                  "intro": "The mid-term examination period for undergraduate and postgraduate programs is approaching. Review the published timetable carefully and allow time to prepare for each paper.",
+                  "sectionTitle": "Plan Your Examination Period",
+                  "sectionText": "A clear plan helps you balance revision across subjects and arrive ready for each examination. Check your department notice for room assignments and any program-specific instructions.",
+                  "features": ["Program-wise timetable", "Exam room information", "Preparation guidance", "Department support"],
+                  "actionTitle": "Before Your Exams",
+                  "steps": ["Open the detailed timetable from the student portal.", "Confirm your paper dates, times, and room.", "Contact your department about any timetable conflict."],
+                  "importantDates": [{"label":"Schedule notice","value":"10 March 2026"},{"label":"Examinations begin","value":"20 March 2026"},{"label":"Timetable updates","value":"Check the student portal"}]
+                },
+                {
+                  "slug": "library-timings-updated",
+                  "image": "/education/9.jpg",
+                  "intro": "The campus library has updated its opening hours to give students more time to study, work on assignments, and use its academic resources throughout the week.",
+                  "sectionTitle": "A Longer Window to Learn",
+                  "sectionText": "The revised schedule makes it easier to plan quiet study time around classes. Library staff can help you find print and digital resources or answer questions about borrowing.",
+                  "features": ["Open 8:00 AM–8:00 PM", "Monday through Saturday", "Quiet study areas", "Print and digital collections"],
+                  "actionTitle": "Make the Most of the Library",
+                  "steps": ["Check the catalogue before your visit.", "Bring your campus ID to borrow materials.", "Ask library staff for research support."],
+                  "importantDates": [{"label":"Updated hours begin","value":"05 March 2026"},{"label":"Opening hours","value":"8:00 AM–8:00 PM, Monday–Saturday"},{"label":"Holiday notices","value":"See the library notice board"}]
+                },
+                {
+                  "slug": "annual-cultural-fest-2026",
+                  "image": "/education/7.jpg",
+                  "intro": "Edusity’s Annual Cultural Fest brings students together to share music, dance, performance, and creative work from across the campus community.",
+                  "sectionTitle": "Celebrate Campus Creativity",
+                  "sectionText": "The fest is a chance to perform, collaborate behind the scenes, or enjoy the work of fellow students. Participants can contact the student activity team for registration and event guidance.",
+                  "features": ["Student performances", "Music and dance", "Creative showcases", "A campus-wide celebration"],
+                  "actionTitle": "Get Involved",
+                  "steps": ["Choose an activity or performance category.", "Register with the student activity team.", "Follow campus notices for the final program."],
+                  "importantDates": [{"label":"Fest announcement","value":"28 February 2026"},{"label":"Participant registration","value":"Contact the student activity team"},{"label":"Program updates","value":"Watch campus notices"}]
+                },
+                {
+                  "slug": "scholarship-applications-now-open",
+                  "image": "/education/1.png",
+                  "intro": "Applications are open for merit-based scholarships. Eligible students can review the criteria and submit the required information for consideration.",
+                  "sectionTitle": "Support for Academic Achievement",
+                  "sectionText": "Scholarships recognize student achievement and help eligible learners continue their studies. Review the current requirements carefully, as awards are subject to the published criteria and verification.",
+                  "features": ["Merit-based consideration", "Online application process", "Published eligibility criteria", "Award updates by email"],
+                  "actionTitle": "Submit an Application",
+                  "steps": ["Review the eligibility requirements.", "Prepare supporting academic documents.", "Submit the online scholarship form.", "Keep a copy of your application reference."],
+                  "importantDates": [{"label":"Applications announced","value":"20 February 2026"},{"label":"Submission deadline","value":"Check the scholarship portal"},{"label":"Application updates","value":"Sent to your registered email"}]
+                },
+                {
+                  "slug": "campus-placement-drive",
+                  "image": "/education/8.jpg",
+                  "intro": "A campus placement drive is planned for April 2026. Final-year students can register to hear about participating employers and prepare for the recruitment process.",
+                  "sectionTitle": "Prepare for Your Next Step",
+                  "sectionText": "The placement team will share employer details and candidate instructions as they are confirmed. Use the lead time to update your resume and practice describing your skills and projects.",
+                  "features": ["Employer introductions", "Resume preparation", "Interview practice", "Placement team guidance"],
+                  "actionTitle": "Get Ready for the Drive",
+                  "steps": ["Register with the campus placement office.", "Update your resume and student profile.", "Review employer and interview instructions.", "Bring the requested documents on the day."],
+                  "importantDates": [{"label":"Drive announcement","value":"12 February 2026"},{"label":"Placement drive","value":"April 2026"},{"label":"Registration details","value":"Contact the placement office"}]
+                },
+                {
+                  "slug": "sports-meet-registrations",
+                  "image": "/education/7.jpg",
+                  "intro": "Registration is open for the inter-college sports meet. Students can sign up for track, field, and team events through the sports complex office.",
+                  "sectionTitle": "Take Part and Represent Edusity",
+                  "sectionText": "The meet welcomes students ready to compete, support their teammates, and take part in campus sport. Ask the sports office about event categories, eligibility, and practice arrangements.",
+                  "features": ["Track and field events", "Team sport categories", "Campus representation", "Sports office support"],
+                  "actionTitle": "Register for the Meet",
+                  "steps": ["Choose an event or team category.", "Register at the sports complex office.", "Confirm practice and participation requirements."],
+                  "importantDates": [{"label":"Registration notice","value":"04 February 2026"},{"label":"Sign-up location","value":"Sports complex office"},{"label":"Meet schedule","value":"Follow campus sports notices"}]
+                },
+                {
+                  "slug": "semester-fee-submission-deadline",
+                  "image": "/education/10.png",
+                  "intro": "Students are reminded to clear outstanding semester fees by 15 February 2026. Submitting payment by the deadline helps avoid late charges and keeps course registration on track.",
+                  "sectionTitle": "Keep Your Registration on Track",
+                  "sectionText": "Review your account statement and use the approved payment options listed by the finance office. If your payment is already complete, retain the receipt for your records.",
+                  "features": ["Clear outstanding balances", "Avoid late charges", "Support course registration", "Keep payment confirmation"],
+                  "actionTitle": "Complete Your Fee Submission",
+                  "steps": ["Check your balance in the student portal.", "Pay through an approved method.", "Save the payment receipt.", "Contact the finance office if a payment is not reflected."],
+                  "importantDates": [{"label":"Notice published","value":"28 January 2026"},{"label":"Payment deadline","value":"15 February 2026"},{"label":"Account questions","value":"Contact the finance office"}]
+                },
+                {
+                  "slug": "guest-lecture-ai-ethics",
+                  "image": "/education/4.png",
+                  "intro": "Join a weekend guest lecture with AI researchers exploring the ethical frameworks shaping modern computing, from responsible development to the impact of automated systems.",
+                  "sectionTitle": "Explore Responsible AI",
+                  "sectionText": "The session brings research perspectives into conversation with practical questions about how AI is built and used. Students from all disciplines are welcome to attend and take part in the discussion.",
+                  "features": ["Guest AI researchers", "Ethical frameworks", "Current computing topics", "Audience discussion"],
+                  "actionTitle": "Attend the Lecture",
+                  "steps": ["Check the seminar notice for venue and time.", "Register if the session requires a seat reservation.", "Bring questions for the speaker discussion."],
+                  "importantDates": [{"label":"Lecture notice","value":"20 January 2026"},{"label":"Session schedule","value":"See the seminar notice"},{"label":"Venue updates","value":"Check campus announcements"}]
+                },
+                {
+                  "slug": "winter-break-conclusion",
+                  "image": "/education/2.png",
+                  "intro": "Regular classes will resume on the Monday following the winter recess. Students should check their usual timetable and prepare to return to classes across all departments.",
+                  "sectionTitle": "Get Ready to Return to Class",
+                  "sectionText": "Departments will continue with their existing timetables unless a separate notice is issued. Check the student portal and department announcements for any room or schedule updates.",
+                  "features": ["Regular classes resume", "Existing timetables remain", "All departments included", "Updates via student channels"],
+                  "actionTitle": "Before Classes Resume",
+                  "steps": ["Confirm your first class in the timetable.", "Check department notices for changes.", "Prepare course materials for the new term."],
+                  "importantDates": [{"label":"Resumption notice","value":"10 January 2026"},{"label":"Classes resume","value":"Monday after the winter recess"},{"label":"Timetable changes","value":"Check department announcements"}]
+                },
+                {
+                  "slug": "annual-science-exhibition-2026",
+                  "image": "/education/4.png",
+                  "intro": "The Annual Science and Tech Exhibition will showcase student projects and working models across robotics, the Internet of Things, and clean energy.",
+                  "sectionTitle": "Ideas Made Visible",
+                  "sectionText": "The exhibition gives student teams a place to demonstrate their work, explain their process, and exchange ideas with visitors and peers. Project teams should follow their department’s display and safety guidance.",
+                  "features": ["Robotics demonstrations", "IoT project displays", "Clean energy concepts", "Student-led presentations"],
+                  "actionTitle": "Prepare a Project Display",
+                  "steps": ["Confirm your project team with your department.", "Prepare a short explanation and demonstration.", "Follow the exhibition setup and safety instructions."],
+                  "importantDates": [{"label":"Exhibition announcement","value":"15 December 2025"},{"label":"Project registration","value":"Check with your department"},{"label":"Event schedule","value":"Follow campus notices"}]
+                },
+                {
+                  "slug": "national-debate-championship",
+                  "image": "/education/9.jpg",
+                  "intro": "Edusity will host an inter-varsity debate championship, welcoming top debaters for three days of structured argument, research, and exchange of ideas.",
+                  "sectionTitle": "Make the Case for Your Ideas",
+                  "sectionText": "The championship creates space for rigorous discussion across a range of topics. Participants and attendees can follow the official event brief for debate formats, schedules, and registration details.",
+                  "features": ["Inter-varsity competition", "Three days of debate", "Research-led arguments", "A national student audience"],
+                  "actionTitle": "Follow the Championship Updates",
+                  "steps": ["Review the official competition brief.", "Register through the debate coordination team.", "Check the event schedule before travelling."],
+                  "importantDates": [{"label":"Championship announcement","value":"05 December 2025"},{"label":"Competition duration","value":"Three days"},{"label":"Participant details","value":"Contact the debate coordination team"}]
+                },
+                {
+                  "slug": "alumni-donation-drive-success",
+                  "image": "/education/3.png",
+                  "intro": "Alumni contributions to the 2025 endowment fund are helping support scholarships for more than 50 students. Edusity thanks every graduate who contributed.",
+                  "sectionTitle": "A Community Investment in Students",
+                  "sectionText": "The endowment reflects the lasting connection between graduates and the next generation of learners. Contributions help extend scholarship support to students as they pursue their education.",
+                  "features": ["More than 50 students supported", "Alumni-funded endowment", "Scholarship access", "A growing graduate community"],
+                  "actionTitle": "Learn About Alumni Support",
+                  "steps": ["Read the endowment fund update.", "Contact the alumni office with questions.", "Share the update with fellow graduates."],
+                  "importantDates": [{"label":"Fund update published","value":"18 November 2025"},{"label":"Students supported","value":"50+"},{"label":"Alumni enquiries","value":"Contact the alumni office"}]
+                },
+                {
+                  "slug": "campus-health-and-wellness-camp",
+                  "image": "/education/5.jpg",
+                  "intro": "Students and faculty can attend a free health screening at the campus health center. The wellness camp is intended to make routine checkups easier to access on campus.",
+                  "sectionTitle": "Make Time for Your Wellbeing",
+                  "sectionText": "The campus health team will provide screening information and guide visitors through the available checkup stations. Follow the health center’s notice for service details and any preparation required.",
+                  "features": ["Free campus screening", "Open to students and faculty", "Convenient health center location", "Wellness team guidance"],
+                  "actionTitle": "Plan Your Visit",
+                  "steps": ["Check the health center notice for hours.", "Bring your campus ID.", "Ask the health team about screening availability."],
+                  "importantDates": [{"label":"Camp announcement","value":"30 October 2025"},{"label":"Screening timing","value":"Next week; confirm with the health center"},{"label":"Location","value":"Campus health center"}]
+                },
+                {
+                  "slug": "international-research-symposium",
+                  "image": "/education/10.png",
+                  "intro": "Researchers and keynote speakers from around the world will meet to discuss new directions in sustainable technology and environmental engineering.",
+                  "sectionTitle": "Research for a Sustainable Future",
+                  "sectionText": "The symposium connects research findings with the challenges of building more sustainable systems. Students and faculty can follow the program announcement for session topics and opportunities to participate.",
+                  "features": ["International researchers", "Keynote presentations", "Environmental engineering", "Sustainable technology"],
+                  "actionTitle": "Explore the Symposium Program",
+                  "steps": ["Review the published session topics.", "Register through the symposium information page.", "Note any presentation or attendance requirements."],
+                  "importantDates": [{"label":"Symposium announcement","value":"14 October 2025"},{"label":"Program details","value":"Follow research office announcements"},{"label":"Registration","value":"See the symposium notice"}]
+                },
+                {
+                  "slug": "odd-semester-exam-results",
+                  "image": "/education/2.png",
+                  "intro": "Odd semester examination results are now available. Students can sign in to the student portal to review grade sheets and semester performance summaries.",
+                  "sectionTitle": "Review Your Semester Results",
+                  "sectionText": "Check each course result and save a copy of your grade sheet for reference. If you notice an issue or need clarification, contact your department through the published results process.",
+                  "features": ["Online grade sheets", "Course-level results", "Semester performance summary", "Department support"],
+                  "actionTitle": "Access Your Results",
+                  "steps": ["Sign in to the student portal.", "Open the odd semester results section.", "Download or save your grade sheet.", "Contact your department about result queries."],
+                  "importantDates": [{"label":"Results announced","value":"25 September 2025"},{"label":"Results access","value":"Student portal"},{"label":"Result queries","value":"Follow your department process"}]
+                },
+                {
+                  "slug": "cultural-club-auditions",
+                  "image": "/education/7.jpg",
+                  "intro": "Freshers can audition for Edusity’s music, dance, dramatics, and fine arts clubs at the student activity center. Bring your interest and share what you enjoy creating.",
+                  "sectionTitle": "Find Your Creative Community",
+                  "sectionText": "Campus clubs offer a place to practice, collaborate, and perform alongside other students. Auditions are open across several creative disciplines; contact the activity team if you need category or preparation guidance.",
+                  "features": ["Music and performance", "Dance groups", "Dramatics club", "Fine arts community"],
+                  "actionTitle": "Take Part in Auditions",
+                  "steps": ["Choose the club or discipline that interests you.", "Check the audition notice for time and requirements.", "Attend at the student activity center."],
+                  "importantDates": [{"label":"Auditions announced","value":"10 September 2025"},{"label":"Audition venue","value":"Student activity center"},{"label":"Audition schedule","value":"Check campus notices"}]
+                },
+                {
+                  "slug": "orientation-program-2025",
+                  "image": "/education/3.png",
+                  "intro": "New undergraduate and graduate students are invited to the Freshers Orientation Program, with a welcome ceremony and guided tours to help you get to know campus.",
+                  "sectionTitle": "Start Your Edusity Journey",
+                  "sectionText": "Orientation introduces new students to campus spaces, academic support, and the people who can help during their first term. Families can review the schedule notice for arrival and guest information.",
+                  "features": ["Welcome ceremony", "Guided campus tours", "Student support introductions", "Information for new learners"],
+                  "actionTitle": "Prepare for Orientation",
+                  "steps": ["Review the schedule for your program.", "Bring your admission confirmation and campus ID if issued.", "Arrive at the time listed in the orientation notice."],
+                  "importantDates": [{"label":"Schedule published","value":"01 September 2025"},{"label":"Program details","value":"Check your admission email"},{"label":"Campus tour","value":"Included in the orientation schedule"}]
+                }
+              ]
+            }
           }
         }
       },
