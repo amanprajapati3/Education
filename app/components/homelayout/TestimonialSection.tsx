@@ -192,8 +192,13 @@ export default function TestimonialSection({
           className={`transition-all duration-300 rounded-full ${
             activeDot === index
               ? "w-8 h-2.5 bg-emerald-600"
-              : "w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400"
+              : "swp-out w-2.5 h-2.5"
           }`}
+          style={
+            activeDot === index
+              ? undefined
+              : ({ "--swp-color": "#0d9488", "--swp-rest": "#cbd5e1" } as React.CSSProperties)
+          }
         />
       ))}
     </div>
@@ -262,7 +267,7 @@ export default function TestimonialSection({
               {showButton && (
                 <a
                   href={button.href}
-                  className="inline-flex items-center justify-center bg-teal-700 hover:bg-teal-800 text-white px-6 py-3.5 rounded-xl font-semibold shadow-lg shadow-teal-700/20 transition-all transform hover:-translate-y-0.5"
+                  className="swp swp-teal-700 inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold shadow-lg shadow-teal-700/20"
                 >
                   <span>{button.label}</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -275,14 +280,14 @@ export default function TestimonialSection({
                   <button
                     onClick={() => scrollByCard("left")}
                     aria-label="Previous slide"
-                    className="w-11 h-11 rounded-full bg-white text-slate-800 shadow-md flex items-center justify-center hover:bg-teal-700 hover:text-white transition-all border border-slate-100"
+                    className="swp-out swp-teal-700 w-11 h-11 rounded-full text-slate-800 shadow-md flex items-center justify-center border border-slate-100"
                   >
                     <ArrowLeft className="w-5 h-5" />
                   </button>
                   <button
                     onClick={() => scrollByCard("right")}
                     aria-label="Next slide"
-                    className="w-11 h-11 rounded-full bg-teal-700 text-white shadow-md flex items-center justify-center hover:bg-teal-800 transition-all"
+                    className="swp swp-teal-700 w-11 h-11 rounded-full shadow-md flex items-center justify-center"
                   >
                     <ArrowRight className="w-5 h-5" />
                   </button>

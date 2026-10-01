@@ -70,7 +70,8 @@ function Topbar() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={s.label}
-                  className="flex h-8 w-8 items-center justify-center rounded-full bg-white hover:bg-white transition-colors"
+                  className="swp-out flex h-8 w-8 items-center justify-center rounded-full bg-white"
+                  style={{ "--swp-color": AQUA } as React.CSSProperties}
                 >
                   <Icon className="h-5 w-5 text-[#119797]" />
                 </a>
@@ -214,8 +215,13 @@ export default function Header() {
                         onClick={() =>
                           setOpenNav(expanded ? null : item.label)
                         }
-                        className="flex items-center py-2 transition-colors"
-                        style={{ color: active ? AQUA : NAV_TEXT }}
+                        className="swp-out swp-out-clear flex items-center py-2"
+                        style={
+                          {
+                            color: active ? AQUA : NAV_TEXT,
+                            "--swp-color": active ? AQUA : BLUE,
+                          } as React.CSSProperties
+                        }
                       >
                         <ChevronDown
                           className={`h-4 w-4 transition-transform duration-200 ${
@@ -264,8 +270,8 @@ export default function Header() {
                 <Link
                   key={btn.label}
                   href={btn.href}
-                  className="flex items-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                  style={{ backgroundColor: primary ? AQUA : BLUE }}
+                  className="swp flex items-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold"
+                  style={{ "--swp-color": primary ? AQUA : BLUE } as React.CSSProperties}
                 >
                   <Icon className="h-4 w-4" />
                   {btn.label}
@@ -279,8 +285,8 @@ export default function Header() {
             type="button"
             aria-label="Open menu"
             onClick={() => setOpen(true)}
-            className="flex xl:hidden h-10 w-10 items-center justify-center rounded-md"
-            style={{ color: BLUE }}
+            className="swp-out swp-out-clear flex xl:hidden h-10 w-10 items-center justify-center rounded-md"
+            style={{ color: BLUE, "--swp-color": BLUE } as React.CSSProperties}
           >
             <Menu className="h-7 w-7" />
           </button>
@@ -318,7 +324,7 @@ export default function Header() {
               type="button"
               aria-label="Close menu"
               onClick={() => setOpen(false)}
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 text-gray-600"
+              className="swp-gray-100 swp-out flex h-9 w-9 items-center justify-center rounded-full"
             >
               <X className="h-5 w-5" />
             </button>
@@ -356,14 +362,14 @@ export default function Header() {
                           onClick={() =>
                             setOpenMobileNav(expanded ? null : item.label)
                           }
-                          className="flex h-10 w-10 items-center justify-center rounded-md"
-                          style={{ color: active ? AQUA : NAV_TEXT }}
-                        >
-                          <ChevronDown
-                            className={`h-4 w-4 transition-transform duration-200 ${
-                              expanded ? "rotate-180" : "-rotate-90"
-                            }`}
-                          />
+                           className="swp-out swp-out-clear flex h-10 w-10 items-center justify-center rounded-md"
+                           style={{ color: active ? AQUA : NAV_TEXT, "--swp-color": active ? AQUA : BLUE } as React.CSSProperties}
+                         >
+                           <ChevronDown
+                             className={`h-4 w-4 transition-transform duration-200 ${
+                               expanded ? "rotate-180" : "-rotate-90"
+                             }`}
+                           />
                         </button>
                       )}
                     </div>
@@ -405,8 +411,8 @@ export default function Header() {
                   key={btn.label}
                   href={btn.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold text-white"
-                  style={{ backgroundColor: primary ? AQUA : BLUE }}
+                  className="swp flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold"
+                  style={{ "--swp-color": primary ? AQUA : BLUE } as React.CSSProperties}
                 >
                   <Icon className="h-4 w-4" />
                   {btn.label}

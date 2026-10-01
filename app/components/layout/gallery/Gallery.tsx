@@ -127,8 +127,13 @@ function SnapDots({
           className={`transition-all duration-300 rounded-full ${
             activeDot === index
               ? "w-8 h-2.5 bg-emerald-600"
-              : "w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400"
+              : "swp-out w-2.5 h-2.5"
           }`}
+          style={
+            activeDot === index
+              ? undefined
+              : ({ "--swp-color": "#10b981", "--swp-rest": "#cbd5e1" } as React.CSSProperties)
+          }
         />
       ))}
     </div>
@@ -148,7 +153,7 @@ function LoadMoreButton({
     <div className="hidden lg:flex justify-center mt-8 md:mt-10">
       <button
         onClick={onClick}
-        className="inline-flex items-center cursor-pointer justify-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-7 py-3.5 rounded-xl font-semibold shadow-lg shadow-teal-700/20 transition-all transform hover:-translate-y-0.5"
+        className="swp swp-blue-800 inline-flex items-center cursor-pointer justify-center gap-2 px-7 py-3.5 rounded-xl font-semibold shadow-lg shadow-teal-700/20"
       >
         <span>{label}</span>
         {icon}
@@ -333,13 +338,13 @@ export default function Gallery({
           <button
             key={filter.id}
             onClick={() => handleFilterChange(filter.id)}
-            className={`px-4 py-2.5 cursor-pointer rounded-xl text-sm font-semibold transition-all duration-300 border ${
+            className={`px-4 py-2.5 cursor-pointer rounded-xl text-sm font-semibold duration-300 border ${
               isActive
-                ? "bg-blue-800 text-white border-blue-700 shadow-md shadow-teal-700/20"
-                : "bg-white text-slate-600 border-slate-200 hover:border-blue-600 hover:text-blue-700"
+                ? "swp swp-blue-800 border-blue-700 shadow-md shadow-teal-700/20"
+                : "swp-out swp-blue-800 text-slate-600 border-slate-200"
             }`}
           >
-            {filter.label}
+            <span>{filter.label}</span>
           </button>
         );
       })}
@@ -374,13 +379,13 @@ export default function Gallery({
           <button
             key={option.id}
             onClick={() => handleSortChange(option.id)}
-            className={`px-4 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border ${
+            className={`px-4 py-2.5 rounded-full text-sm font-semibold duration-300 border ${
               isActive
-                ? "bg-teal-700 text-white border-teal-700 shadow-md shadow-teal-700/20"
-                : "bg-white text-slate-600 border-slate-200 hover:border-teal-600 hover:text-teal-700"
+                ? "swp swp-teal-700 border-teal-700 shadow-md shadow-teal-700/20"
+                : "swp-out swp-teal-700 text-slate-600 border-slate-200"
             }`}
           >
-            {option.label}
+            <span>{option.label}</span>
           </button>
         );
       })}
@@ -655,7 +660,7 @@ export default function Gallery({
           <button
             onClick={() => setLightboxIndex(null)}
             aria-label={controls?.closeLabel || "Close"}
-            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all border border-white/20"
+            className="swp-out swp-glass swp-abs top-4 right-4 sm:top-6 sm:right-6 w-11 h-11 rounded-full text-white flex items-center justify-center border border-white/20"
           >
             <X className="w-5 h-5" />
           </button>
@@ -667,7 +672,7 @@ export default function Gallery({
               stepImage("prev");
             }}
             aria-label={controls?.prevLabel || "Previous"}
-            className="absolute left-2 sm:left-6 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-white/10 hover:bg-teal-700 text-white flex items-center justify-center transition-all border border-white/20 z-10"
+            className="swp-out swp-glass swp-teal-700 swp-abs left-2 sm:left-6 w-11 h-11 sm:w-14 sm:h-14 rounded-full text-white flex items-center justify-center border border-white/20 z-10"
           >
             <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
@@ -678,7 +683,7 @@ export default function Gallery({
               stepImage("next");
             }}
             aria-label={controls?.nextLabel || "Next"}
-            className="absolute right-2 sm:right-6 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-white/10 hover:bg-teal-700 text-white flex items-center justify-center transition-all border border-white/20 z-10"
+            className="swp-out swp-glass swp-teal-700 swp-abs right-2 sm:right-6 w-11 h-11 sm:w-14 sm:h-14 rounded-full text-white flex items-center justify-center border border-white/20 z-10"
           >
             <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
@@ -725,7 +730,7 @@ export default function Gallery({
           <button
             onClick={() => setVideoIndex(null)}
             aria-label={controls?.closeLabel || "Close"}
-            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all border border-white/20"
+            className="swp-out swp-glass swp-abs top-4 right-4 sm:top-6 sm:right-6 w-11 h-11 rounded-full text-white flex items-center justify-center border border-white/20"
           >
             <X className="w-5 h-5" />
           </button>

@@ -70,14 +70,14 @@ export default function NotFound() {
               <Link
                 key={index}
                 href={btn.href}
-                className={`px-8 py-3.5 rounded-xl text-sm font-semibold transition-all duration-300 shadow-sm cursor-pointer ${
+                className={`px-8 py-3.5 rounded-xl text-sm font-semibold duration-300 shadow-sm cursor-pointer ${
                   isPrimary
-                    ? "text-white hover:opacity-90"
-                    : "bg-white text-slate-800 border border-slate-300 hover:bg-slate-50 hover:border-slate-400"
+                    ? "swp"
+                    : "swp-out swp-emerald-600 text-slate-800 border border-slate-300"
                 }`}
-                style={isPrimary ? { backgroundColor: AQUA } : {}}
+                style={isPrimary ? ({ "--swp-color": AQUA } as React.CSSProperties) : undefined}
               >
-                {btn.label}
+                <span>{btn.label}</span>
               </Link>
             );
           })}

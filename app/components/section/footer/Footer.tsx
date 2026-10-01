@@ -80,8 +80,8 @@ export default function Footer() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={s.label}
-                    className="flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors hover:bg-[#19C2A1]"
-                    style={{ backgroundColor: ICON_CIRCLE }}
+                    className="swp flex h-10 w-10 items-center justify-center rounded-full text-white"
+                    style={{ "--swp-color": AQUA } as React.CSSProperties}
                   >
                     <Icon className="h-4 w-4" />
                   </a>

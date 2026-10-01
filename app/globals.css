@@ -9,3 +9,248 @@
 @theme inline {
   --font-handwritten: var(--font-allura);
 }
+
+/* ==========================================================================
+   Sweep interaction
+   --------------------------------------------------------------------------
+   Filled variant (.swp)
+     rest : solid --swp-color fill, white label
+     hover: fill slides out to the LEFT, label re-enters from the RIGHT in
+            --swp-color over a white surface
+
+   Outline / white variant (.swp-out)
+     rest : surface (white) or transparent, label in its own colour
+     hover: fill slides in FROM the LEFT, label turns white
+
+   Only `transform`/`translate`/`color` change, so the whole effect runs on the
+   compositor. Pressing uses scale .95 over 100ms.
+   ========================================================================== */
+
+.swp,
+.swp-out {
+  --swp-color: #19c2a1;
+  --swp-duration: 520ms;
+  --swp-enter: 2.5rem;
+  --swp-ease: cubic-bezier(0.65, 0, 0.35, 1);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: color 260ms ease, scale 100ms ease;
+}
+
+/* Keep existing Tailwind positioning on floating controls. */
+.swp-abs {
+  position: absolute;
+}
+
+.swp::before,
+.swp-out::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--swp-bg, var(--swp-color));
+  transform: translate3d(0, 0, 0);
+  transition: transform var(--swp-duration) var(--swp-ease);
+}
+
+/* Filled variant --------------------------------------------------------- */
+.swp {
+  background: #fff;
+  color: #fff;
+}
+
+@keyframes swp-in {
+  from {
+    translate: var(--swp-enter) 0;
+    opacity: 0;
+  }
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+/* Outline variant ------------------------------------------------------- */
+.swp-out {
+  --swp-rest: #fff;
+  background: var(--swp-rest);
+}
+
+.swp-out::before {
+  transform: translate3d(-101%, 0, 0);
+}
+
+.swp-out-clear {
+  --swp-rest: transparent;
+}
+
+@media (hover: hover) {
+  .swp:hover::before {
+    transform: translate3d(-101%, 0, 0);
+  }
+
+  .swp:hover,
+  .swp:hover > * {
+    color: var(--swp-color);
+  }
+
+  .swp:hover > * {
+    animation: swp-in var(--swp-duration) var(--swp-ease) both;
+  }
+
+  .swp-out:hover::before {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .swp-out:hover,
+  .swp-out:hover > * {
+    color: #fff;
+  }
+
+  /* Children that keep their own colour while the button fills. */
+  .swp:hover > .swp-fixed,
+  .swp-out:hover > .swp-fixed {
+    color: var(--swp-fixed, currentColor);
+  }
+}
+
+/* Keyboard focus mirrors hover, including on devices without hover. */
+.swp:focus-visible::before {
+  transform: translate3d(-101%, 0, 0);
+}
+
+.swp:focus-visible,
+.swp:focus-visible > * {
+  color: var(--swp-color);
+}
+
+.swp:focus-visible > * {
+  animation: swp-in var(--swp-duration) var(--swp-ease) both;
+}
+
+.swp-out:focus-visible::before {
+  transform: translate3d(0, 0, 0);
+}
+
+.swp-out:focus-visible,
+.swp-out:focus-visible > * {
+  color: #fff;
+}
+
+.swp:focus-visible > .swp-fixed,
+.swp-out:focus-visible > .swp-fixed {
+  color: var(--swp-fixed, currentColor);
+}
+
+.swp:active,
+.swp-out:active {
+  scale: 0.95;
+}
+
+/* Disabled controls keep their resting fill. */
+.swp-out:disabled::before {
+  transform: translate3d(-101%, 0, 0);
+}
+
+.swp:disabled:hover::before,
+.swp:disabled:focus-visible::before {
+  transform: translate3d(0, 0, 0);
+}
+
+.swp:focus-visible,
+.swp-out:focus-visible {
+  outline: 2px solid var(--swp-color);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swp,
+  .swp::before,
+  .swp-out,
+  .swp-out::before {
+    transition-duration: 1ms;
+  }
+
+  .swp:hover > *,
+  .swp:focus-visible > * {
+    animation-duration: 1ms;
+  }
+}
+
+/*
+ * Resting surfaces for the outline variant. Declared first so a `swp-<colour>`
+ * class used alongside still wins the `--swp-color` cascade.
+ */
+.swp-glass {
+  --swp-color: #0f172a;
+  --swp-rest: rgba(255, 255, 255, 0.2);
+}
+.swp-gray-100 {
+  --swp-color: #4b5563;
+  --swp-rest: #f3f4f6;
+}
+.swp-slate-50-rest {
+  --swp-color: #334155;
+  --swp-rest: #f8fafc;
+}
+
+/* Palette ---------------------------------------------------------------- */
+.swp-aqua {
+  --swp-color: #19c2a1;
+}
+.swp-emerald-400 {
+  --swp-color: #34d399;
+}
+.swp-emerald-500 {
+  --swp-color: #10b981;
+}
+.swp-emerald-600 {
+  --swp-color: #059669;
+}
+.swp-emerald-700 {
+  --swp-color: #047857;
+}
+.swp-teal-600 {
+  --swp-color: #0d9488;
+}
+.swp-teal-700 {
+  --swp-color: #0f766e;
+}
+.swp-teal-800 {
+  --swp-color: #115e59;
+}
+.swp-sky-600 {
+  --swp-color: #0284c7;
+}
+.swp-blue-800 {
+  --swp-color: #1e40af;
+}
+.swp-blue-900 {
+  --swp-color: #1e3a8a;
+}
+.swp-blue-950 {
+  --swp-color: #172554;
+}
+.swp-slate-200 {
+  --swp-color: #e2e8f0;
+}
+.swp-slate-500 {
+  --swp-color: #64748b;
+}
+.swp-slate-800 {
+  --swp-color: #1e293b;
+}
+.swp-ink {
+  --swp-color: #0f172a;
+}
+.swp-white {
+  --swp-color: #ffffff;
+}
+
+/* Gradient fill (keeps the resting gradient, sweeps it out the same way). */
+.swp-grad {
+  --swp-color: #10b981;
+  --swp-bg: linear-gradient(to right, #3b82f6, #34d399, #059669);
+}

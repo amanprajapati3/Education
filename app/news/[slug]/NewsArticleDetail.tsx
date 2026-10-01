@@ -225,8 +225,8 @@ export default function NewsArticleDetail({
           >
             <h2 className="text-lg md:text-xl font-bold">{sidebar.contactTitle}</h2>
             <p className="mt-2 text-base leading-5 text-white">{sidebar.contactText}</p>
-            <Link href={sidebar.contactHref} className="mt-3 inline-flex min-h-10 items-center gap-2 rounded-md bg-white px-4 text-sm font-bold text-[#07518e] transition-colors hover:bg-[#e7f5f6]">
-              {sidebar.contactButton}<ArrowRight className="h-4 w-4" />
+            <Link href={sidebar.contactHref} className="swp-out swp-emerald-600 mt-3 inline-flex min-h-10 items-center gap-2 rounded-md px-4 text-sm font-bold text-[#07518e]">
+              <span>{sidebar.contactButton}</span><ArrowRight className="h-4 w-4" />
             </Link>
           </ScrollReveal>
 
@@ -252,8 +252,8 @@ export default function NewsArticleDetail({
                 </Link>
               ))}
             </div>
-            <Link href="/news" className="mx-3 mb-3 flex min-h-10 items-center justify-center gap-2 rounded bg-[#edf5fb] px-3 text-sm font-bold text-[#17395d] transition-colors hover:bg-[#dceefa]">
-              {sidebar.viewAllLabel}<ArrowRight className="h-4 w-4" />
+            <Link href="/news" className="swp-out swp-emerald-600 mx-3 mb-3 flex min-h-10 items-center justify-center gap-2 rounded px-3 text-sm font-bold text-[#17395d]" style={{ "--swp-rest": "#edf5fb" } as React.CSSProperties}>
+              <span>{sidebar.viewAllLabel}</span><ArrowRight className="h-4 w-4" />
             </Link>
           </ScrollReveal>
         </ScrollReveal>

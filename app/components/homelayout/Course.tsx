@@ -147,7 +147,7 @@ export default function Course({
             <button
               onClick={() => scrollByCard("left")}
               aria-label="Previous slide"
-              className="hidden lg:flex absolute -left-10 top-1/2 -translate-y-1/2 -translate-x-2 w-12 h-12 rounded-full bg-white text-slate-800 shadow-xl items-center justify-center hover:bg-emerald-500 hover:text-white transition-all duration-300 z-20 border border-slate-100"
+              className="swp-out swp-emerald-500 swp-abs hidden lg:flex -left-10 top-1/2 -translate-y-1/2 -translate-x-2 w-12 h-12 rounded-full text-slate-800 shadow-xl items-center justify-center z-20 border border-slate-100"
             >
               <ArrowLeft className="w-6 h-6" />
             </button>
@@ -158,7 +158,7 @@ export default function Course({
             <button
               onClick={() => scrollByCard("right")}
               aria-label="Next slide"
-              className="hidden lg:flex absolute -right-9 top-1/2 -translate-y-1/2 translate-x-2 w-12 h-12 rounded-full bg-white text-slate-800 shadow-xl items-center justify-center hover:bg-emerald-500 hover:text-white transition-all duration-300 z-20 border border-slate-100"
+              className="swp-out swp-emerald-500 swp-abs hidden lg:flex -right-9 top-1/2 -translate-y-1/2 translate-x-2 w-12 h-12 rounded-full text-slate-800 shadow-xl items-center justify-center z-20 border border-slate-100"
             >
               <ArrowRight className="w-6 h-6" />
             </button>
@@ -237,7 +237,7 @@ export default function Course({
                     </div> */}
                     <a
                       href={course.button.href}
-                      className="inline-flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2.5 rounded-full text-sm font-semibold shadow-md shadow-emerald-500/20 transition-all transform hover:-translate-y-0.5"
+                      className="swp swp-emerald-500 inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-semibold shadow-md shadow-emerald-500/20"
                     >
                       <span>{course.button.label}</span>
                       <ArrowRight className="w-4 h-4" />
@@ -259,8 +259,13 @@ export default function Course({
                   className={`transition-all duration-300 rounded-full ${
                     activeDot === index
                       ? "w-8 h-2.5 bg-emerald-600"
-                      : "w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400"
+                      : "swp-out w-2.5 h-2.5"
                   }`}
+                  style={
+                    activeDot === index
+                      ? undefined
+                      : ({ "--swp-color": "#10b981", "--swp-rest": "#cbd5e1" } as React.CSSProperties)
+                  }
                 />
               ))}
             </div>
@@ -274,7 +279,7 @@ export default function Course({
                 onClick={() => goToPage(activePage - 1)}
                 disabled={activePage === 1}
                 aria-label="Previous page"
-                className="w-11 h-11 rounded-xl bg-white text-slate-700 shadow-md border border-slate-100 flex items-center justify-center transition-all hover:bg-emerald-500 hover:text-white hover:border-emerald-500 disabled:opacity-40 disabled:hover:bg-white disabled:hover:text-slate-700 disabled:cursor-not-allowed"
+                className="swp-out swp-emerald-500 w-11 h-11 rounded-xl text-slate-700 shadow-md border border-slate-100 flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 <ArrowLeft className="w-5 h-5" />
               </button>
@@ -288,13 +293,13 @@ export default function Course({
                     type="button"
                     onClick={() => goToPage(page)}
                     aria-current={isActive ? "page" : undefined}
-                    className={`w-11 h-11 rounded-xl text-sm font-bold transition-all ${
+                    className={`w-11 h-11 rounded-xl text-sm font-bold ${
                       isActive
-                        ? "bg-emerald-500 text-white shadow-md shadow-emerald-500/25 scale-105"
-                        : "bg-white text-slate-700 shadow-sm border border-slate-100 hover:bg-emerald-50 hover:text-emerald-700"
+                        ? "swp swp-emerald-500 shadow-md shadow-emerald-500/25 scale-105"
+                        : "swp-out swp-emerald-600 text-slate-700 shadow-sm border border-slate-100"
                     }`}
                   >
-                    {page}
+                    <span>{page}</span>
                   </button>
                 );
               })}
@@ -304,7 +309,7 @@ export default function Course({
                 onClick={() => goToPage(activePage + 1)}
                 disabled={activePage === totalPages}
                 aria-label="Next page"
-                className="w-11 h-11 rounded-xl bg-white text-slate-700 shadow-md border border-slate-100 flex items-center justify-center transition-all hover:bg-emerald-500 hover:text-white hover:border-emerald-500 disabled:opacity-40 disabled:hover:bg-white disabled:hover:text-slate-700 disabled:cursor-not-allowed"
+                className="swp-out swp-emerald-500 w-11 h-11 rounded-xl text-slate-700 shadow-md border border-slate-100 flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 <ArrowRight className="w-5 h-5" />
               </button>

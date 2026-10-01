@@ -104,7 +104,7 @@ export default function JourneySection({
                       <a
                         key={idx}
                         href={btn.href}
-                        className="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-7 py-4 rounded-xl font-semibold shadow-lg shadow-emerald-600/20 transition-all transform hover:-translate-y-0.5"
+                        className="swp swp-emerald-600 inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-semibold shadow-lg shadow-emerald-600/20"
                       >
                         <span>{btn.label}</span>
                         <ArrowRight className="w-4 h-4" />
@@ -118,9 +118,12 @@ export default function JourneySection({
                           e.preventDefault();
                           setIsVideoOpen(true);
                         }}
-                        className="inline-flex items-center gap-3 bg-slate-50 hover:bg-slate-100 text-slate-900 px-6 py-4 rounded-xl font-semibold transition-all border border-slate-200 group cursor-pointer"
+                        className="swp-out swp-slate-50-rest swp-emerald-600 inline-flex items-center gap-3 px-6 py-4 rounded-xl font-semibold border border-slate-200 group cursor-pointer"
                       >
-                        <div className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-emerald-600 group-hover:scale-105 transition-transform">
+                        <div
+                          className="swp-fixed w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-emerald-600 group-hover:scale-105 transition-transform"
+                          style={{ "--swp-fixed": "#059669" } as React.CSSProperties}
+                        >
                           <Play className="w-4 h-4 fill-current ml-0.5" />
                         </div>
                         <span>{btn.label}</span>
@@ -216,7 +219,7 @@ export default function JourneySection({
             <button
               onClick={() => setIsVideoOpen(false)}
               aria-label="Close video modal"
-              className="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 text-white flex items-center justify-center transition-colors cursor-pointer"
+              className="swp-out swp-glass swp-abs top-4 right-4 z-50 w-10 h-10 rounded-full text-white flex items-center justify-center cursor-pointer"
             >
               <X className="w-6 h-6" />
             </button>

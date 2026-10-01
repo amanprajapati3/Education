@@ -170,12 +170,13 @@ export default function Banner() {
                         e.preventDefault();
                         setIsVideoOpen(true);
                       }}
-                      className="flex items-center gap-3 rounded-full border border-white/60 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10 cursor-pointer"
+                      className="swp-out swp-out-clear flex items-center gap-3 rounded-full border border-white/60 px-5 py-3 text-sm font-semibold text-white cursor-pointer"
+                      style={{ "--swp-color": AQUA } as React.CSSProperties}
                     >
                       {btn.label}
                       <span
-                        className="flex h-7 w-7 items-center justify-center rounded-full text-[#0A6CA7]"
-                        style={{ backgroundColor: "#fff" }}
+                        className="swp-fixed flex h-7 w-7 items-center justify-center rounded-full"
+                        style={{ backgroundColor: "#fff", "--swp-fixed": "#0A6CA7" } as React.CSSProperties}
                       >
                         <Play className="h-3.5 w-3.5 fill-current" />
                       </span>
@@ -187,8 +188,8 @@ export default function Banner() {
                   <Link
                     key={btn.label}
                     href={btn.href}
-                    className="flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                    style={{ backgroundColor: AQUA }}
+                    className="swp flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
+                    style={{ "--swp-color": AQUA } as React.CSSProperties}
                   >
                     {btn.label}
                     <ArrowRight className="h-4 w-4" />
@@ -233,7 +234,7 @@ export default function Banner() {
             <button
               onClick={() => setIsVideoOpen(false)}
               aria-label="Close video modal"
-              className="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 text-white flex items-center justify-center transition-colors cursor-pointer"
+              className="swp-out swp-glass swp-abs top-4 right-4 z-50 w-10 h-10 rounded-full text-white flex items-center justify-center cursor-pointer"
             >
               <X className="w-6 h-6" />
             </button>

@@ -183,7 +183,7 @@ export default function BlogArticleDetail({
                 aria-label={sidebar.searchTitle}
                 className="min-w-0 flex-1 px-3 text-sm text-slate-700 outline-none placeholder:text-slate-500"
               />
-              <button type="submit" aria-label="Search blog posts" className="flex w-10 shrink-0 items-center justify-center bg-[#119f9e] text-white transition-colors hover:bg-[#087f80]"><Search className="h-5 w-5" /></button>
+              <button type="submit" aria-label="Search blog posts" className="swp swp-teal-700 flex w-10 shrink-0 items-center justify-center"><Search className="h-5 w-5" /></button>
             </form>
           </ScrollReveal>
 
@@ -201,8 +201,8 @@ export default function BlogArticleDetail({
                 const count = posts.filter((item) => item.category === category).length;
                 const selected = activeCategory === category;
                 return (
-                  <button key={category} type="button" aria-pressed={selected} onClick={() => setActiveCategory(selected ? null : category)} className={`flex min-h-8 w-full items-center justify-between gap-2 rounded px-2 text-left text-sm transition-colors ${selected ? "bg-[#dff5f2] text-[#087f80]" : "text-slate-600 hover:bg-[#f0f6fb]"}`}>
-                    <span className="inline-flex min-w-0 items-center gap-2"><ChevronRight className="h-4 w-4 shrink-0 text-[#0b5e8e]" />{category}</span>
+                  <button key={category} type="button" aria-pressed={selected} onClick={() => setActiveCategory(selected ? null : category)} className={`swp-out flex min-h-8 w-full items-center justify-between gap-2 rounded px-2 text-left text-sm ${selected ? "text-[#087f80]" : "text-slate-600"}`} style={{ "--swp-rest": selected ? "#dff5f2" : "transparent", "--swp-color": "#087f80", "--swp-fixed": "#ffffff" } as React.CSSProperties}>
+                    <span className="inline-flex min-w-0 items-center gap-2"><ChevronRight className="swp-fixed h-4 w-4 shrink-0 text-[#0b5e8e]" />{category}</span>
                     <span>{count}</span>
                   </button>
                 );
@@ -248,7 +248,7 @@ export default function BlogArticleDetail({
               <p className="text-sm font-bold uppercase text-[#19c2a1]">{sidebar.promoEyebrow}</p>
               <h2 className="mt-2 text-xl font-bold leading-tight">{sidebar.promoTitle}</h2>
               <p className="mt-2 text-sm leading-5 text-white/90">{sidebar.promoDescription}</p>
-              <Link href={sidebar.promoHref} className="mt-3 inline-flex min-h-10 items-center gap-2 rounded-full bg-white px-4 text-sm font-bold text-[#0b3158] transition-colors hover:bg-[#dff5f2]">
+              <Link href={sidebar.promoHref} className="swp-out swp-teal-700 mt-3 inline-flex min-h-10 items-center gap-2 rounded-full px-4 text-sm font-bold text-[#0b3158]">
                 {sidebar.promoButton}<ArrowRight className="h-4 w-4" />
               </Link>
             </div>

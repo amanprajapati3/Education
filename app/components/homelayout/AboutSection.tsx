@@ -184,7 +184,7 @@ export default function AboutSection({
                 {showButton && (
                   <a
                     href={data?.button?.href || "/about"}
-                    className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-7 py-3 rounded-full shadow-lg shadow-emerald-500/25 transition-all duration-300 transform hover:-translate-y-0.5"
+                    className="swp swp-emerald-500 inline-flex items-center gap-2 font-semibold px-7 py-3 rounded-full shadow-lg shadow-emerald-500/25"
                   >
                     <span>{data?.button?.label || "Learn More"}</span>
                     <ArrowRight className="w-5 h-5" />

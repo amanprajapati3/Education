@@ -270,9 +270,9 @@ export default function EventDetail({
               </label>
               <button
                 type="submit"
-                className="flex min-h-11 w-full items-center justify-center gap-2 rounded-md bg-[#11a99b] px-4 text-sm font-bold text-white transition-colors hover:bg-[#078c83]"
+                className="swp swp-emerald-600 flex min-h-11 w-full items-center justify-center gap-2 rounded-md px-4 text-sm font-bold"
               >
-                {content.enquiry.submitLabel} <ArrowRight className="h-4 w-4" />
+                <span>{content.enquiry.submitLabel}</span> <ArrowRight className="h-4 w-4" />
               </button>
             </form>
           </ScrollReveal>
@@ -280,7 +280,8 @@ export default function EventDetail({
           <a
             href={content.brochure.href}
             download={content.brochure.filename}
-            className="flex min-h-16 items-center justify-between gap-3 rounded-md bg-[#edf5fb] px-4 py-3 text-[#0b3158] transition-colors hover:bg-[#e1eef8]"
+            className="swp-out swp-emerald-600 flex min-h-16 items-center justify-between gap-3 rounded-md px-4 py-3 text-[#0b3158]"
+            style={{ "--swp-rest": "#edf5fb" } as React.CSSProperties}
           >
             <span className="flex items-center gap-3">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-white text-[#D32F2F]">

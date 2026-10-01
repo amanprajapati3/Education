@@ -88,7 +88,7 @@ export default function Stats({
   const statsList = (data?.stats as EducationStatItem[]) || [];
 
   return (
-    <section className={`relative py-8 md:py-12 overflow-hidden  ${className}`}>
+    <section className={`relative py-8 my-8 md:py-12 overflow-hidden  ${className}`}>
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-20"
@@ -129,7 +129,7 @@ export default function Stats({
           </p>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 sm:gap-8 gap-4 sm:pt-3">
             {statsList.map((stat, index) => (
               <ScrollReveal
                 key={stat.id || index}

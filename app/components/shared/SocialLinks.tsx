@@ -146,8 +146,8 @@ export default function SocialLinks({
               rel="noreferrer noopener"
               aria-label={`${ariaPrefix} on ${label}`}
               title={label}
-              className="flex h-9 w-9 items-center justify-center rounded-full text-white transition-transform duration-200 hover:-translate-y-0.5 hover:opacity-90 focus-visible:-translate-y-0.5 focus-visible:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#19c2a1]"
-              style={{ backgroundColor: color }}
+              className="swp flex h-9 w-9 items-center justify-center rounded-full text-white"
+              style={{ "--swp-color": color } as React.CSSProperties}
             >
               <Icon className="h-4 w-4" />
             </a>

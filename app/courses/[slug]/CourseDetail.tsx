@@ -261,8 +261,19 @@ export default function CourseDetail({
             >
               <div className="group relative aspect-[16/9] overflow-hidden bg-[#e6eef4]">
                 <Image src={course.image} alt={`${course.title} course preview`} fill sizes="(max-width: 1024px) 100vw, 340px" className="object-cover rounded-xl transition-transform duration-500 group-hover:scale-[1.03]" />
-                <button type="button" onClick={() => setIsPreviewOpen(true)} className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-2 text-sm md:text-base font-semibold text-white transition-colors hover:bg-[#0a6ca7]">
-                  <CirclePlay className="h-4 w-4" /> Watch Preview
+                <button
+                  type="button"
+                  onClick={() => setIsPreviewOpen(true)}
+                  className="swp swp-abs bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-sm md:text-base font-semibold"
+                  style={
+                    {
+                      "--swp-color": "#0a6ca7",
+                      "--swp-bg": "rgba(0, 0, 0, 0.6)",
+                    } as React.CSSProperties
+                  }
+                >
+                  <CirclePlay className="h-4 w-4" />
+                  <span>Watch Preview</span>
                 </button>
               </div>
               <div className="p-4">
@@ -273,12 +284,21 @@ export default function CourseDetail({
                   </div>
                   {discount > 0 && <span className="rounded bg-[#dcf7f1] px-2 py-1 text-[11px] font-bold text-[#079b82]">{discount}% Off</span>}
                 </div> */}
-                <Link href={`/apply?course=${course.slug}`} className="mt-3 flex min-h-11 items-center justify-center gap-2 rounded-md bg-[#073566] px-4 text-sm font-bold text-white transition-colors hover:bg-[#0a6ca7]">
-                  Enroll Now <ArrowRight className="h-4 w-4" />
+                <Link href={`/apply?course=${course.slug}`} className="swp swp-blue-900 mt-3 flex min-h-11 items-center justify-center gap-2 rounded-md px-4 text-sm font-bold">
+                  <span>Enroll Now</span> <ArrowRight className="h-4 w-4" />
                 </Link>
-                <button type="button" aria-pressed={isWishlisted} onClick={() => setIsWishlisted(!isWishlisted)} className="mt-2 flex min-h-10 w-full items-center justify-center gap-2 rounded-md border border-slate-300 px-4 text-sm font-semibold text-[#26415e] transition-colors hover:border-[#12b99a] hover:text-[#079b82]">
-                  <Heart className={`h-4 w-4 ${isWishlisted ? "fill-[#12b99a] text-[#12b99a]" : ""}`} />
-                  {isWishlisted ? "Added to Wishlist" : "Add to Wishlist"}
+                <button
+                  type="button"
+                  aria-pressed={isWishlisted}
+                  onClick={() => setIsWishlisted(!isWishlisted)}
+                  className="swp-out swp-emerald-500 mt-2 flex min-h-10 w-full items-center justify-center gap-2 rounded-md border border-slate-300 px-4 text-sm font-semibold text-[#26415e]"
+                >
+                  <Heart
+                    className={`h-4 w-4 ${
+                      isWishlisted ? "fill-[#12b99a] text-[#12b99a]" : ""
+                    }`}
+                  />
+                  <span>{isWishlisted ? "Added to Wishlist" : "Add to Wishlist"}</span>
                 </button>
                 <dl className="mt-4 space-y-2.5 border-t border-slate-100 pt-4 text-sm md:text-base">
                   <DetailRow Icon={Clock3} label="Duration" value={course.duration} />
@@ -318,7 +338,7 @@ export default function CourseDetail({
               <div className="min-w-0">
                 <h3 className="text-base md:text-lg font-bold text-[#15375b]">{help.title}</h3>
                 <p className="mt-1 text-sm leading-5 text-slate-600">{help.description}</p>
-                <Link href={help.href} className="mt-2 inline-flex min-h-9 items-center gap-2 rounded-md bg-[#073566] px-3 text-sm md:text-base font-bold text-white transition-colors hover:bg-[#0a6ca7]">{help.button}<ArrowRight className="h-3.5 w-3.5" /></Link>
+                <Link href={help.href} className="swp swp-blue-900 mt-2 inline-flex min-h-9 items-center gap-2 rounded-md px-3 text-sm md:text-base font-bold"><span>{help.button}</span><ArrowRight className="h-3.5 w-3.5" /></Link>
               </div>
             </ScrollReveal>
 
@@ -341,7 +361,7 @@ export default function CourseDetail({
       {isPreviewOpen && (
         <div className="fixed inset-0 z-[70] flex items-center justify-center bg-[#041827]/80 p-4" role="dialog" aria-modal="true" aria-label={`${course.title} preview`} onClick={() => setIsPreviewOpen(false)}>
           <div className="relative w-full max-w-2xl overflow-hidden rounded-lg bg-white shadow-2xl" onClick={(event) => event.stopPropagation()}>
-            <button type="button" onClick={() => setIsPreviewOpen(false)} aria-label="Close preview" className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-[#15375b] shadow hover:bg-white"><X className="h-5 w-5" /></button>
+            <button type="button" onClick={() => setIsPreviewOpen(false)} aria-label="Close preview" className="swp-out swp-ink swp-abs right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full text-[#15375b] shadow"><X className="h-5 w-5" /></button>
             <div className="relative aspect-video bg-[#e6eef4]">
               <Image src={course.image} alt="" fill sizes="(max-width: 672px) 100vw, 672px" className="object-cover" />
               <div className="absolute inset-0 flex items-center justify-center bg-[#071e31]/25"><CirclePlay className="h-16 w-16 text-white drop-shadow-lg" /></div>

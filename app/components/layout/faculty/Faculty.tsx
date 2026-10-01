@@ -90,26 +90,26 @@ export default function Faculty() {
         {
           name: "WhatsApp",
           icon: <FaWhatsapp className="w-6 h-6" />,
-          bg: "bg-[#25D366]",
+          color: "#25D366",
           href: `https://wa.me/?text=${encodeURIComponent(`${shareText} ${shareUrl}`)}`,
         },
         {
           name: "Facebook",
           icon: <FaFacebookF className="w-6 h-6" />,
-          bg: "bg-[#1877F2]",
+          color: "#1877F2",
           href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
         },
         {
           name: "Instagram",
           icon: <FaInstagram className="w-6 h-6" />,
-          bg: "bg-[#E4405F]",
+          color: "#E4405F",
           // Instagram has no public web share intent, so it opens the network.
           href: "https://www.instagram.com/",
         },
         {
           name: "Twitter",
           icon: <FaXTwitter className="w-6 h-6" />,
-          bg: "bg-[#0A2540]",
+          color: "#0A2540",
           href: `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`,
         },
       ]
@@ -189,7 +189,7 @@ export default function Faculty() {
                   <button
                     aria-label={`Share ${member.name}`}
                     onClick={() => openShare(member)}
-                    className="absolute -bottom-6 right-2 border-4 border-white w-11 h-11 rounded-full bg-[#0A2540] text-white flex items-center justify-center shadow-lg hover:opacity-90 transition-opacity cursor-pointer"
+                    className="swp swp-blue-950 swp-abs -bottom-6 right-2 border-4 border-white w-11 h-11 rounded-full text-white flex items-center justify-center shadow-lg cursor-pointer"
                   >
                     <Share2 className="w-6 h-6" />
                   </button>
@@ -230,8 +230,13 @@ export default function Faculty() {
                 className={`transition-all duration-300 rounded-full cursor-pointer ${
                   activeDot === index
                     ? "w-8 h-2.5 bg-emerald-600"
-                    : "w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400"
+                    : "swp-out w-2.5 h-2.5"
                 }`}
+                style={
+                  activeDot === index
+                    ? undefined
+                    : ({ "--swp-color": "#10b981", "--swp-rest": "#cbd5e1" } as React.CSSProperties)
+                }
               />
             ))}
           </div>
@@ -258,7 +263,7 @@ export default function Faculty() {
             <button
               onClick={closeShare}
               aria-label="Close share dialog"
-              className="absolute top-5 right-5 w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors cursor-pointer"
+              className="swp-gray-100 swp-out swp-abs top-5 right-5 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -279,7 +284,8 @@ export default function Faculty() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${link.bg} text-white rounded-2xl py-5 flex flex-col items-center justify-center gap-2 shadow-sm hover:opacity-90 transition-opacity cursor-pointer`}
+                  className="swp text-white rounded-2xl py-5 flex flex-col items-center justify-center gap-2 shadow-sm cursor-pointer"
+                  style={{ "--swp-color": link.color } as React.CSSProperties}
                 >
                   {link.icon}
                   <span className="text-xs font-bold">{link.name}</span>

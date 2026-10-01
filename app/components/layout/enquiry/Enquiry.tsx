@@ -286,8 +286,7 @@ export default function Enquiry() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full py-4 rounded-xl text-white font-bold text-base shadow-lg transition-all hover:opacity-95 flex items-center justify-center gap-2"
-                style={{ backgroundColor: AQUA }}
+                className="swp swp-aqua w-full py-4 rounded-xl font-bold text-base shadow-lg flex items-center justify-center gap-2"
               >
                 <span>{form.buttonText}</span>
                 <ArrowRight className="w-5 h-5" />

@@ -236,8 +236,7 @@ export default function Contact() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 via-emerald-400 hover:bg-emerald-500 to-emerald-600 md:w-[60%] cursor-pointer  py-4 rounded-xl text-white font-bold text-base shadow-lg transition-all hover:opacity-95 flex items-center justify-center gap-2"
-                
+                className="swp swp-grad w-full md:w-[60%] cursor-pointer  py-4 rounded-xl font-bold text-base shadow-lg flex items-center justify-center gap-2"
               >
                 <span>{form.buttonText}</span>
                 <ArrowRight className="w-5 h-5" />

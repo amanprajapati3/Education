@@ -227,8 +227,8 @@ export default function FacultyDetail({ member, profile, pageData }: FacultyDeta
               {pageData.cta.title}<br /><span className="text-[#19c2a1]">{pageData.cta.highlight}</span>
             </h2>
             <p className="mt-2 max-w-lg text-sm md:text-base leading-6 text-white/85">{pageData.cta.description}</p>
-            <Link href={pageData.cta.href} className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-md bg-[#19c2a1] px-5 text-base font-bold text-[#062a45] transition-colors hover:bg-white">
-              {pageData.cta.button}<ArrowRight className="h-6 w-6" />
+            <Link href={pageData.cta.href} className="swp swp-aqua mt-4 inline-flex min-h-11 items-center gap-2 rounded-md px-5 text-base font-bold text-[#062a45]">
+              <span>{pageData.cta.button}</span><ArrowRight className="h-6 w-6" />
             </Link>
           </div>
         </ScrollReveal>

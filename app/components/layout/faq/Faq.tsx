@@ -117,11 +117,15 @@ export default function Faq() {
 
                     {/* Toggle Icon */}
                     <div
-                      className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${
-                        isOpen
-                          ? "bg-[#0A2540] text-white"
-                          : "bg-slate-100 text-slate-600"
+                      className={`swp-out w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
+                        isOpen ? "text-white" : "text-slate-600"
                       }`}
+                      style={
+                        {
+                          "--swp-rest": isOpen ? "#0A2540" : "#f1f5f9",
+                          "--swp-color": isOpen ? "#0A2540" : "#475569",
+                        } as React.CSSProperties
+                      }
                     >
                       {isOpen ? (
                         <Minus className="w-4 h-4" />
@@ -172,8 +176,7 @@ export default function Faq() {
                 </p>
                 <Link
                   href={sidebar.promoCard.buttonLink}
-                  className="inline-flex items-center justify-center gap-2 w-full py-3 px-6 rounded-xl text-white font-bold text-sm shadow-md transition-all hover:opacity-90"
-                  style={{ backgroundColor: AQUA }}
+                  className="swp swp-aqua inline-flex items-center justify-center gap-2 w-full py-3 px-6 rounded-xl font-bold text-sm shadow-md"
                 >
                   <span>{sidebar.promoCard.buttonText}</span>
                   <ArrowRight className="w-4 h-4" />

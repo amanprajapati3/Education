@@ -125,7 +125,7 @@ export default function News() {
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
               aria-label="Previous page"
-              className="w-10 h-10 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-700 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-all disabled:opacity-40 disabled:pointer-events-none cursor-pointer shadow-sm"
+              className="swp-out swp-emerald-600 w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-700 disabled:opacity-40 disabled:pointer-events-none cursor-pointer shadow-sm"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -138,14 +138,13 @@ export default function News() {
                   key={pageNumber}
                   onClick={() => setCurrentPage(pageNumber)}
                   aria-label={`Page ${pageNumber}`}
-                  className={`w-10 h-10 rounded-full font-bold text-sm transition-all duration-300 cursor-pointer shadow-sm ${
+                  className={`w-10 h-10 rounded-full font-bold text-sm duration-300 cursor-pointer shadow-sm ${
                     isActive
-                      ? "text-white shadow-md"
-                      : "bg-white text-slate-700 border border-slate-200 hover:bg-slate-100"
+                      ? "swp swp-aqua shadow-md"
+                      : "swp-out swp-emerald-600 text-slate-700 border border-slate-200"
                   }`}
-                  style={isActive ? { backgroundColor: AQUA } : {}}
                 >
-                  {pageNumber}
+                  <span>{pageNumber}</span>
                 </button>
               );
             })}
@@ -154,7 +153,7 @@ export default function News() {
               onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
               disabled={currentPage === totalPages}
               aria-label="Next page"
-              className="w-10 h-10 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-700 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-all disabled:opacity-40 disabled:pointer-events-none cursor-pointer shadow-sm"
+              className="swp-out swp-emerald-600 w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-700 disabled:opacity-40 disabled:pointer-events-none cursor-pointer shadow-sm"
             >
               <ChevronRight className="w-4 h-4" />
             </button>

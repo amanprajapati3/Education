@@ -203,8 +203,13 @@ export default function BlogSection({
               className={`transition-all duration-300 rounded-full ${
                 activeDot === index
                   ? "w-8 h-2.5 bg-emerald-600"
-                  : "w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400"
+                  : "swp-out w-2.5 h-2.5"
               }`}
+              style={
+                activeDot === index
+                  ? undefined
+                  : ({ "--swp-color": "#10b981", "--swp-rest": "#cbd5e1" } as React.CSSProperties)
+              }
             />
           ))}
         </div>
