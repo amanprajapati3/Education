@@ -10,9 +10,9 @@
   --font-handwritten: var(--font-allura);
 }
 
-/* ==========================================================================
+/* 
    Sweep interaction
-   --------------------------------------------------------------------------
+   
    Filled variant (.swp)
      rest : solid --swp-color fill, white label
      hover: fill slides out to the LEFT, label re-enters from the RIGHT in
@@ -24,7 +24,7 @@
 
    Only `transform`/`translate`/`color` change, so the whole effect runs on the
    compositor. Pressing uses scale .95 over 100ms.
-   ========================================================================== */
+    */
 
 .swp,
 .swp-out {
@@ -55,7 +55,7 @@
   transition: transform var(--swp-duration) var(--swp-ease);
 }
 
-/* Filled variant --------------------------------------------------------- */
+/* Filled variant  */
 .swp {
   background: #fff;
   color: #fff;
@@ -72,7 +72,7 @@
   }
 }
 
-/* Outline variant ------------------------------------------------------- */
+/* Outline variant  */
 .swp-out {
   --swp-rest: #fff;
   background: var(--swp-rest);
@@ -196,7 +196,7 @@
   --swp-rest: #f8fafc;
 }
 
-/* Palette ---------------------------------------------------------------- */
+/* Palette  */
 .swp-aqua {
   --swp-color: #19c2a1;
 }

@@ -166,7 +166,7 @@ export default function BlogArticleDetail({
           duration={0.8}
           delay={0.1}
         >
-          <ScrollReveal
+          {/* <ScrollReveal
             as="section"
             className="rounded-md border border-[#e0eaf2] bg-white p-3"
             direction="up"
@@ -185,7 +185,7 @@ export default function BlogArticleDetail({
               />
               <button type="submit" aria-label="Search blog posts" className="swp swp-teal-700 flex w-10 shrink-0 items-center justify-center"><Search className="h-5 w-5" /></button>
             </form>
-          </ScrollReveal>
+          </ScrollReveal> */}
 
           <ScrollReveal
             as="section"
@@ -201,7 +201,7 @@ export default function BlogArticleDetail({
                 const count = posts.filter((item) => item.category === category).length;
                 const selected = activeCategory === category;
                 return (
-                  <button key={category} type="button" aria-pressed={selected} onClick={() => setActiveCategory(selected ? null : category)} className={`swp-out flex min-h-8 w-full items-center justify-between gap-2 rounded px-2 text-left text-sm ${selected ? "text-[#087f80]" : "text-slate-600"}`} style={{ "--swp-rest": selected ? "#dff5f2" : "transparent", "--swp-color": "#087f80", "--swp-fixed": "#ffffff" } as React.CSSProperties}>
+                  <button key={category} type="button" aria-pressed={selected} onClick={() => setActiveCategory(selected ? null : category)} className={`hover:bg-blue-50 transition-200 flex min-h-8 cursor-pointer w-full items-center justify-between gap-2 rounded px-2 text-left text-sm ${selected ? "text-[#087f80]" : "text-slate-600"}`} >
                     <span className="inline-flex min-w-0 items-center gap-2"><ChevronRight className="swp-fixed h-4 w-4 shrink-0 text-[#0b5e8e]" />{category}</span>
                     <span>{count}</span>
                   </button>

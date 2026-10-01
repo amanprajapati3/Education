@@ -1418,7 +1418,7 @@
                   "slug": "building-a-portfolio-that-gets-you-hired",
                   "author": "Arjun Malhotra",
                   "authorRole": "Portfolio and Careers Coach",
-                  "authorImage": "/people/man2.png",
+                  "authorImage": "/people/men2.png",
                   "readTime": "9 Min Read",
                   "quote": "A strong portfolio makes your process visible, not just the finished result.",
                   "intro": "A useful portfolio gives a recruiter quick, concrete evidence of how you approach work. Choose a few relevant examples, explain the decisions behind them, and make it easy for someone to see what you contributed.",
@@ -1452,7 +1452,7 @@
                   "slug": "the-mentor-effect-learning-with-guidance",
                   "author": "Dev Sharma",
                   "authorRole": "Faculty Mentor",
-                  "authorImage": "/people/man3.png",
+                  "authorImage": "/people/men3.png",
                   "readTime": "7 Min Read",
                   "quote": "Good guidance helps you see the next step while keeping the work in your hands.",
                   "intro": "A mentor can help turn a broad ambition into practical next steps. The most useful mentoring relationships combine honest questions, timely feedback, and space for learners to make their own decisions.",
@@ -2036,7 +2036,7 @@
               "highlighted": "Found"
             },
             "desc": "The page you are looking for might have been removed, renamed, or is temporarily unavailable.",
-            "bgImage": "/education/error.png",
+            "bgImage": "/education/error.webp",
             "buttons": [
               {
                 "label": "Back to Home",

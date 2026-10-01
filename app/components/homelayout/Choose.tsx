@@ -169,7 +169,7 @@ export default function Choose({
               {/* Main Side Image */}
               <div className="relative h-[320px] sm:h-[420px] rounded-[50px] overflow-hidden shadow-2xl md:right-20 sm:right-[20%] border-4 border-white sm:max-w-[420px] ml-auto">
                 <Image
-                  src={data?.sideImage?.src || "/education/3.jpg"}
+                  src={data?.sideImage?.src || "/education/3.png"}
                   alt={
                     data?.sideImage?.alt ||
                     "Student smiling while sitting with a laptop and books"
@@ -184,7 +184,7 @@ export default function Choose({
               <div className="absolute right-0 -bottom-20 h-[360px] w-[200px] rounded-3xl overflow-hidden border-4 border-white max-w-[200px] ml-auto [clip-path:polygon(20%_0,100%_0,100%_100%,0_100%)]">
                 {" "}
                 <Image
-                  src={data?.sideImage2?.src || "/education/3.jpg"}
+                  src={data?.sideImage2?.src || "/education/3.png"}
                   alt={
                     data?.sideImage2?.alt ||
                     "Student smiling while sitting with a laptop and books"
