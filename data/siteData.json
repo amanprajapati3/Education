@@ -5619,14 +5619,13 @@
                   "id": 3,
                   "title": "Visit Our Campus",
                   "info": "123 Education Lane,",
-                  "subInfo": "New Delhi - 110001",
+                  "subInfo": "New York",
                   "icon": "MapPin"
                 },
                 {
                   "id": 4,
                   "title": "Office Hours",
                   "info": "Monday - Saturday",
-                  "subInfo": "9:00 AM - 6:00 PM",
                   "icon": "Clock"
                 }
               ]

@@ -103,10 +103,10 @@ export default function Contact() {
                     {iconMap[card.icon as EducationContactIcon]}
                   </div>
                   <div>
-                    <h4 className="text-base font-bold  text-blue-800 mb-0">
+                    <h4 className="text-base sm:text-lg font-bold  text-blue-800 mb-0">
                       {card.title}
                     </h4>
-                    <p className="font-bold text-blue-900 text-base sm:text-lg">
+                    <p className="font-bold text-blue-900 text-base ">
                       {card.info}
                     </p>
                     <p className="text-sm text-slate-500 mt-0.5">
