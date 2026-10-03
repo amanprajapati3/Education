@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   Award,
@@ -50,6 +50,65 @@ const benefitItems = [
   { label: "Job-ready Skills", Icon: GraduationCap },
 ];
 
+/** Used when a course has no `previewVideo.url` in the data file. */
+const FALLBACK_PREVIEW_VIDEO = "https://www.youtube.com/embed/h4Ue98USW2U";
+
+/** Hosts that need an iframe instead of a `<video>` tag. */
+const embedHosts = ["youtube.com", "youtu.be", "vimeo.com", "embed"];
+
+function isEmbedUrl(url: string) {
+  return embedHosts.some((host) => url.includes(host));
+}
+
+/** Adds autoplay params to an embed URL without clobbering existing query params. */
+function withAutoplay(url: string) {
+  const separator = url.includes("?") ? "&" : "?";
+  return `${url}${separator}autoplay=1&rel=0`;
+}
+
+/**
+ * Plays YouTube/Vimeo/iframe embeds through an iframe and every other source
+ * (local `.mp4`/`.webm`, CDN files, etc.) through a `<video>` tag.
+ */
+function VideoPlayer({
+  url,
+  title,
+  poster,
+}: {
+  url: string;
+  title: string;
+  poster?: string;
+}) {
+  if (isEmbedUrl(url)) {
+    return (
+      <iframe
+        key={url}
+        src={withAutoplay(url)}
+        title={title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="h-full w-full border-0"
+      />
+    );
+  }
+
+  return (
+    <video
+      key={url}
+      src={url}
+      poster={poster}
+      controls
+      autoPlay
+      muted
+      playsInline
+      preload="metadata"
+      className="h-full w-full bg-black object-contain"
+    >
+      Your browser does not support the video tag.
+    </video>
+  );
+}
+
 export default function CourseDetail({
   course,
   detail,
@@ -62,6 +121,7 @@ export default function CourseDetail({
   const [expandedModule, setExpandedModule] = useState<number | null>(0);
   const [isWishlisted, setIsWishlisted] = useState(false);
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
+  const previewVideoUrl = course.previewVideo?.url || FALLBACK_PREVIEW_VIDEO;
   const discount = Math.max(
     0,
     Math.round(
@@ -71,6 +131,24 @@ export default function CourseDetail({
         100,
     ),
   );
+
+  // Close on Escape and stop the page behind the modal from scrolling.
+  useEffect(() => {
+    if (!isPreviewOpen) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsPreviewOpen(false);
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isPreviewOpen]);
 
   return (
     <>
@@ -261,6 +339,14 @@ export default function CourseDetail({
             >
               <div className="group relative aspect-[16/9] overflow-hidden bg-[#e6eef4]">
                 <Image src={course.image} alt={`${course.title} course preview`} fill sizes="(max-width: 1024px) 100vw, 340px" className="object-cover rounded-xl transition-transform duration-500 group-hover:scale-[1.03]" />
+                <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                  <CirclePlay className="h-14 w-14 text-white drop-shadow-lg transition-transform duration-500 group-hover:scale-110" />
+                </span>
+                {course.previewVideo?.duration && (
+                  <span className="pointer-events-none absolute left-3 top-3 rounded-md bg-black/70 px-2 py-1 text-xs font-bold text-white backdrop-blur-sm">
+                    {course.previewVideo.duration}
+                  </span>
+                )}
                 <button
                   type="button"
                   onClick={() => setIsPreviewOpen(true)}
@@ -359,15 +445,42 @@ export default function CourseDetail({
       </section>
 
       {isPreviewOpen && (
-        <div className="fixed inset-0 z-[70] flex items-center justify-center bg-[#041827]/80 p-4" role="dialog" aria-modal="true" aria-label={`${course.title} preview`} onClick={() => setIsPreviewOpen(false)}>
-          <div className="relative w-full max-w-2xl overflow-hidden rounded-lg bg-white shadow-2xl" onClick={(event) => event.stopPropagation()}>
-            <button type="button" onClick={() => setIsPreviewOpen(false)} aria-label="Close preview" className="swp-out swp-ink swp-abs right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full text-[#15375b] shadow"><X className="h-5 w-5" /></button>
-            <div className="relative aspect-video bg-[#e6eef4]">
-              <Image src={course.image} alt="" fill sizes="(max-width: 672px) 100vw, 672px" className="object-cover" />
-              <div className="absolute inset-0 flex items-center justify-center bg-[#071e31]/25"><CirclePlay className="h-16 w-16 text-white drop-shadow-lg" /></div>
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${course.title} preview video`}
+          onClick={() => setIsPreviewOpen(false)}
+          className="fixed inset-0 z-[70] flex items-center justify-center bg-[#041827]/85 p-4 backdrop-blur-sm"
+        >
+          <div
+            onClick={(event) => event.stopPropagation()}
+            className="w-full max-w-4xl overflow-hidden rounded-lg bg-white shadow-2xl"
+          >
+            <div className="relative aspect-video w-full bg-black">
+              <VideoPlayer
+                url={previewVideoUrl}
+                title={`${course.title} preview`}
+                poster={course.image}
+              />
+              <button
+                type="button"
+                autoFocus
+                onClick={() => setIsPreviewOpen(false)}
+                aria-label="Close preview video"
+                className="swp-out swp-glass swp-abs right-3 top-3 z-10 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-white lg:right-5 lg:top-1/2 lg:-translate-y-1/2"
+              >
+                <X className="h-5 w-5" />
+              </button>
             </div>
             <div className="p-5 sm:p-6">
-              <p className="text-xs font-bold uppercase text-[#079b82]">Course Preview</p>
+              <div className="flex flex-wrap items-center gap-2">
+                <p className="text-xs font-bold uppercase text-[#079b82]">Course Preview</p>
+                {course.previewVideo?.duration && (
+                  <span className="rounded-md bg-[#e1f2ff] px-2 py-0.5 text-[13px] font-bold text-[#1380bc]">
+                    {course.previewVideo.duration}
+                  </span>
+                )}
+              </div>
               <h2 className="mt-1 text-xl font-extrabold text-[#0b3158]">{course.title}</h2>
               <p className="mt-2 text-sm leading-6 text-slate-600">{detail.about}</p>
             </div>

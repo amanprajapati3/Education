@@ -293,6 +293,10 @@
               {
                 "id": 1,
                 "slug": "complete-web-development-bootcamp",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/h4Ue98USW2U",
+                  "duration": "2:18"
+                },
                 "category": "Web Development",
                 "categoryIcon": "code",
                 "duration": "8 Weeks",
@@ -311,6 +315,10 @@
               {
                 "id": 2,
                 "slug": "data-science-for-beginners",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/8aGhZQkoFbQ",
+                  "duration": "3:42"
+                },
                 "category": "Data Science",
                 "categoryIcon": "bar-chart",
                 "duration": "10 Weeks",
@@ -329,6 +337,10 @@
               {
                 "id": 3,
                 "slug": "ui-ux-design-masterclass",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/LXb3EKWsInQ",
+                  "duration": "4:05"
+                },
                 "category": "UI/UX Design",
                 "categoryIcon": "pen-tool",
                 "duration": "6 Weeks",
@@ -347,6 +359,10 @@
               {
                 "id": 4,
                 "slug": "digital-marketing-essentials",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/M7lc1UVf-VE",
+                  "duration": "1:56"
+                },
                 "category": "Digital Marketing",
                 "categoryIcon": "megaphone",
                 "duration": "4 Weeks",
@@ -365,6 +381,10 @@
               {
                 "id": 5,
                 "slug": "artificial-intelligence-fundamentals",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/1La4QzGeaaQ",
+                  "duration": "5:21"
+                },
                 "category": "AI & Machine Learning",
                 "categoryIcon": "cpu",
                 "duration": "12 Weeks",
@@ -383,6 +403,10 @@
               {
                 "id": 6,
                 "slug": "cybersecurity-expert-program",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/R6MlUcmOul8",
+                  "duration": "2:47"
+                },
                 "category": "Cybersecurity",
                 "categoryIcon": "shield",
                 "duration": "10 Weeks",
@@ -401,6 +425,10 @@
               {
                 "id": 7,
                 "slug": "cloud-computing-architecture",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/eRsGyueVLvQ",
+                  "duration": "2:18"
+                },
                 "category": "Cloud Computing",
                 "categoryIcon": "globe",
                 "duration": "8 Weeks",
@@ -419,6 +447,10 @@
               {
                 "id": 8,
                 "slug": "advanced-database-management",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/aqz-KE-bpKQ",
+                  "duration": "3:42"
+                },
                 "category": "Database",
                 "categoryIcon": "database",
                 "duration": "6 Weeks",
@@ -437,6 +469,10 @@
               {
                 "id": 9,
                 "slug": "mobile-app-development",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/y6120QOlsfU",
+                  "duration": "4:05"
+                },
                 "category": "Mobile Dev",
                 "categoryIcon": "smartphone",
                 "duration": "10 Weeks",
@@ -455,6 +491,10 @@
               {
                 "id": 10,
                 "slug": "financial-modeling-analysis",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/Z4C82eyhwgU",
+                  "duration": "1:56"
+                },
                 "category": "Finance",
                 "categoryIcon": "bar-chart",
                 "duration": "6 Weeks",
@@ -473,6 +513,10 @@
               {
                 "id": 11,
                 "slug": "product-management-essentials",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                  "duration": "5:21"
+                },
                 "category": "Management",
                 "categoryIcon": "code",
                 "duration": "5 Weeks",
@@ -491,6 +535,10 @@
               {
                 "id": 12,
                 "slug": "business-analytics-strategy",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/_cMxraX_5RE",
+                  "duration": "2:47"
+                },
                 "category": "Business",
                 "categoryIcon": "bar-chart",
                 "duration": "7 Weeks",
@@ -509,6 +557,10 @@
               {
                 "id": 13,
                 "slug": "frontend-development-with-react",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/h4Ue98USW2U",
+                  "duration": "2:18"
+                },
                 "category": "Web Development",
                 "categoryIcon": "code",
                 "duration": "6 Weeks",
@@ -527,6 +579,10 @@
               {
                 "id": 14,
                 "slug": "python-programming-from-scratch",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/8aGhZQkoFbQ",
+                  "duration": "3:42"
+                },
                 "category": "Data Science",
                 "categoryIcon": "code",
                 "duration": "6 Weeks",
@@ -545,6 +601,10 @@
               {
                 "id": 15,
                 "slug": "graphic-design-professional",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/LXb3EKWsInQ",
+                  "duration": "4:05"
+                },
                 "category": "UI/UX Design",
                 "categoryIcon": "pen-tool",
                 "duration": "5 Weeks",
@@ -563,6 +623,10 @@
               {
                 "id": 16,
                 "slug": "social-media-marketing",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/M7lc1UVf-VE",
+                  "duration": "1:56"
+                },
                 "category": "Digital Marketing",
                 "categoryIcon": "megaphone",
                 "duration": "4 Weeks",
@@ -581,6 +645,10 @@
               {
                 "id": 17,
                 "slug": "generative-ai-prompt-engineering",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/1La4QzGeaaQ",
+                  "duration": "5:21"
+                },
                 "category": "AI & Machine Learning",
                 "categoryIcon": "cpu",
                 "duration": "5 Weeks",
@@ -599,6 +667,10 @@
               {
                 "id": 18,
                 "slug": "ethical-hacking-penetration-testing",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/R6MlUcmOul8",
+                  "duration": "2:47"
+                },
                 "category": "Cybersecurity",
                 "categoryIcon": "shield",
                 "duration": "8 Weeks",
@@ -617,6 +689,10 @@
               {
                 "id": 19,
                 "slug": "devops-and-ci-cd-pipeline",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/eRsGyueVLvQ",
+                  "duration": "2:18"
+                },
                 "category": "Cloud Computing",
                 "categoryIcon": "globe",
                 "duration": "7 Weeks",
@@ -635,6 +711,10 @@
               {
                 "id": 20,
                 "slug": "sql-and-data-warehousing",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/aqz-KE-bpKQ",
+                  "duration": "3:42"
+                },
                 "category": "Database",
                 "categoryIcon": "database",
                 "duration": "5 Weeks",
@@ -653,6 +733,10 @@
               {
                 "id": 21,
                 "slug": "react-native-mobile-mastery",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/y6120QOlsfU",
+                  "duration": "4:05"
+                },
                 "category": "Mobile Dev",
                 "categoryIcon": "smartphone",
                 "duration": "6 Weeks",
@@ -671,6 +755,10 @@
               {
                 "id": 22,
                 "slug": "stock-market-and-trading-basics",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/Z4C82eyhwgU",
+                  "duration": "1:56"
+                },
                 "category": "Finance",
                 "categoryIcon": "bar-chart",
                 "duration": "4 Weeks",
@@ -689,6 +777,10 @@
               {
                 "id": 23,
                 "slug": "human-resource-management",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                  "duration": "5:21"
+                },
                 "category": "Management",
                 "categoryIcon": "code",
                 "duration": "6 Weeks",
@@ -707,6 +799,10 @@
               {
                 "id": 24,
                 "slug": "entrepreneurship-startup-essentials",
+                "previewVideo": {
+                  "url": "https://www.youtube.com/embed/_cMxraX_5RE",
+                  "duration": "2:47"
+                },
                 "category": "Business",
                 "categoryIcon": "globe",
                 "duration": "6 Weeks",
