@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useInView } from "framer-motion";
 import {
   ArrowRight,
   Award,
@@ -312,9 +313,9 @@ export default function CourseDetail({
                   />
                 </div>
                 <div className="flex gap-5 border-t border-slate-200 pt-3 text-center sm:block sm:border-l sm:border-t-0 sm:pl-4 sm:pt-0">
-                  <p className="text-base md:text-3xl font-bold text-[#0b3158]">{instructor.experience}</p>
+                  <CountUpValue value={instructor.experience} className="text-base md:text-3xl font-bold text-[#0b3158]" />
                   <p className="text-[14px] text-slate-500">Years Experience</p>
-                  <p className="mt-2 text-base md:text-3xl font-bold text-[#0b3158]">{instructor.students}</p>
+                  <CountUpValue value={instructor.students} className="mt-2 text-base md:text-3xl font-bold text-[#0b3158]" />
                   <p className="text-[14px] text-slate-500">Students Trained</p>
                 </div>
               </div>
@@ -371,9 +372,9 @@ export default function CourseDetail({
                   {discount > 0 && <span className="rounded bg-[#dcf7f1] px-2 py-1 text-[11px] font-bold text-[#079b82]">{discount}% Off</span>}
                 </div> */}
                 <Link href={`/apply?course=${course.slug}`} className="swp swp-blue-900 mt-3 flex min-h-11 items-center justify-center gap-2 rounded-md px-4 text-sm font-bold">
-                  <span>Enroll Now</span> <ArrowRight className="h-4 w-4" />
+                  <span>Apply Now</span> <ArrowRight className="h-4 w-4" />
                 </Link>
-                <button
+                {/* <button
                   type="button"
                   aria-pressed={isWishlisted}
                   onClick={() => setIsWishlisted(!isWishlisted)}
@@ -385,15 +386,15 @@ export default function CourseDetail({
                     }`}
                   />
                   <span>{isWishlisted ? "Added to Wishlist" : "Add to Wishlist"}</span>
-                </button>
+                </button> */}
                 <dl className="mt-4 space-y-2.5 border-t border-slate-100 pt-4 text-sm md:text-base">
                   <DetailRow Icon={Clock3} label="Duration" value={course.duration} />
                   <DetailRow Icon={FileText} label="Lectures" value={`${detail.lessons} Lessons`} />
                   <DetailRow Icon={ChartNoAxesColumn} label="Level" value={detail.level} />
                   <DetailRow Icon={Languages} label="Language" value={detail.language} />
                   <DetailRow Icon={ShieldCheck} label="Certificate" value="Yes" />
-                  <DetailRow Icon={MonitorPlay} label="Access" value="Lifetime" />
-                  <DetailRow Icon={Clock3} label="Last Updated" value={detail.updated} />
+                  {/* <DetailRow Icon={MonitorPlay} label="Access" value="Lifetime" />
+                  <DetailRow Icon={Clock3} label="Last Updated" value={detail.updated} /> */}
                 </dl>
               </div>
             </ScrollReveal>
@@ -408,7 +409,7 @@ export default function CourseDetail({
             >
               <h3 className="text-base font-bold text-[#15375b]">This Course Includes:</h3>
               <ul className="mt-2 space-y-1.5">
-                {includes.map((item) => <li key={item} className="flex items-start gap-2 text-sm md:text-base leading-5 text-slate-600"><Check className="mt-0.5 h-3.5 w-3.5 shrink-0 stroke-[3] text-[#12b99a]" />{item}</li>)}
+                {includes.slice(0, 4).map((item) => <li key={item} className="flex items-start gap-2 text-sm md:text-base leading-5 text-slate-600"><Check className="mt-0.5 h-3.5 w-3.5 shrink-0 stroke-[3] text-[#12b99a]" />{item}</li>)}
               </ul>
             </ScrollReveal>
 
@@ -454,40 +455,63 @@ export default function CourseDetail({
         >
           <div
             onClick={(event) => event.stopPropagation()}
-            className="w-full max-w-4xl overflow-hidden rounded-lg bg-white shadow-2xl"
+            className="relative aspect-video w-full max-w-4xl overflow-hidden rounded-lg bg-black shadow-2xl"
           >
-            <div className="relative aspect-video w-full bg-black">
-              <VideoPlayer
-                url={previewVideoUrl}
-                title={`${course.title} preview`}
-                poster={course.image}
-              />
-              <button
-                type="button"
-                autoFocus
-                onClick={() => setIsPreviewOpen(false)}
-                aria-label="Close preview video"
-                className="swp-out swp-glass swp-abs right-3 top-3 z-10 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-white lg:right-5 lg:top-1/2 lg:-translate-y-1/2"
-              >
-                <X className="h-5 w-5" />
-              </button>
-            </div>
-            <div className="p-5 sm:p-6">
-              <div className="flex flex-wrap items-center gap-2">
-                <p className="text-xs font-bold uppercase text-[#079b82]">Course Preview</p>
-                {course.previewVideo?.duration && (
-                  <span className="rounded-md bg-[#e1f2ff] px-2 py-0.5 text-[13px] font-bold text-[#1380bc]">
-                    {course.previewVideo.duration}
-                  </span>
-                )}
-              </div>
-              <h2 className="mt-1 text-xl font-extrabold text-[#0b3158]">{course.title}</h2>
-              <p className="mt-2 text-sm leading-6 text-slate-600">{detail.about}</p>
-            </div>
+            <VideoPlayer
+              url={previewVideoUrl}
+              title={`${course.title} preview`}
+              poster={course.image}
+            />
+            <button
+              type="button"
+              autoFocus
+              onClick={() => setIsPreviewOpen(false)}
+              aria-label="Close preview video"
+              className="swp-out swp-glass swp-abs right-3 top-3 z-10 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-white"
+            >
+              <X className="h-5 w-5" />
+            </button>
           </div>
         </div>
       )}
     </>
+  );
+}
+
+/**
+ * Counts a stat up from zero the first time it scrolls into view, keeping the
+ * non-numeric part of the value (`+`, `K+`, ...) as a static suffix.
+ */
+function CountUpValue({ value, className }: { value: string; className?: string }) {
+  const ref = useRef<HTMLParagraphElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const target = Number(value.replace(/[^\d.]/g, "")) || 0;
+  const suffix = value.replace(/[\d.,\s]/g, "");
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    let frame = 0;
+    let startedAt: number | null = null;
+    const duration = 1600;
+
+    const step = (timestamp: number) => {
+      if (startedAt === null) startedAt = timestamp;
+      const progress = Math.min((timestamp - startedAt) / duration, 1);
+      setCount(Math.round(progress * target));
+      if (progress < 1) frame = requestAnimationFrame(step);
+    };
+
+    frame = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(frame);
+  }, [isInView, target]);
+
+  return (
+    <p ref={ref} className={className}>
+      {count}
+      {suffix}
+    </p>
   );
 }
 

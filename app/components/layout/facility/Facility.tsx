@@ -62,7 +62,7 @@ export default function Facility() {
             <span className="w-8 h-0.5 bg-emerald-500 inline-block"></span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl pt-2 pb-3 lg:text-6xl font-bold text-blue-950 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl pb-2 lg:text-6xl font-bold text-blue-950 tracking-tight">
             {title.normal}{" "}
             <span style={{ color: AQUA }}>{title.highlighted}</span>
           </h2>

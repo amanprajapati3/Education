@@ -94,8 +94,8 @@ export default function NewsArticleDetail({
           </ScrollReveal>
 
           <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-slate-600">
-            <span className="inline-flex items-center gap-2"><CalendarDays className="h-4 w-4 text-[#0b5e8e]" />{date}</span>
-            <span className="inline-flex items-center gap-2"><Folder className="h-4 w-4 text-[#0b5e8e]" />{news.category}</span>
+            <span className="inline-flex items-center gap-2"><CalendarDays className="h-4 md:h-6 md:w-6 w-4 text-[#0b5e8e]" />{date}</span>
+            <span className="inline-flex items-center gap-2"><Folder className="h-4 w-4 md:h-6 md:w-6  text-[#0b5e8e]" />{news.category}</span>
           </div>
 
           <p className="mt-4 text-sm leading-6 text-slate-600 md:text-base">{article.intro}</p>

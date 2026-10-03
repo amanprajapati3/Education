@@ -50,11 +50,8 @@ const SOCIAL_ICONS: Record<
   facebook: FaFacebookF,
   instagram: FaInstagram,
   linkedin: FaLinkedinIn,
-  youtube: FaYoutube,
   x: FaXTwitter,
   whatsapp: FaWhatsapp,
-  telegram: FaTelegram,
-  share: FaShareNodes,
 };
 
 /* Used when no explicit links are supplied — each builds a platform share URL. */
@@ -65,17 +62,17 @@ const SHARE_NETWORKS: {
   {
     label: "Facebook",
     build: (url) =>
-      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+      `https://www.facebook.com`,
   },
   {
     label: "X",
     build: (url, text) =>
-      `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
+      `https://twitter.com`,
   },
   {
     label: "LinkedIn",
     build: (url) =>
-      `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+      `https://www.linkedin.com`,
   },
   {
     label: "WhatsApp",
@@ -87,6 +84,25 @@ const SHARE_NETWORKS: {
 const subscribe = () => () => {};
 const getSnapshot = () => window.location.href;
 const getServerSnapshot = () => "";
+
+/**
+ * Reduces any social URL to its bare site root, so a link never carries a user
+ * or page name — `https://www.facebook.com/angela.vigil?ref=1#bio` becomes
+ * `https://www.facebook.com`. Relative paths are returned untouched.
+ */
+function toSiteRoot(url: string) {
+  const trimmed = url.trim();
+  if (!trimmed || trimmed.startsWith("/") || trimmed.startsWith("#")) return trimmed;
+
+  try {
+    const { protocol, hostname } = new URL(
+      /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`,
+    );
+    return `${protocol}//${hostname}`;
+  } catch {
+    return "";
+  }
+}
 
 export default function SocialLinks({
   heading,
@@ -105,24 +121,28 @@ export default function SocialLinks({
           const key = social.label.toLowerCase();
           const Icon = SOCIAL_ICONS[key];
           if (!Icon) return null;
+          // A "share" entry always points at the page the visitor is on.
+          const href =
+            key === "share" ? currentUrl || social.href : toSiteRoot(social.href);
+          if (!href) return null;
           return {
             key,
             label: social.label,
             Icon,
             color: BRAND_COLORS[key],
-            // A "share" entry always points at the page the visitor is on.
-            href: key === "share" ? currentUrl || social.href : social.href,
+            href,
             opensNewTab: key !== "share",
           };
         })
       : SHARE_NETWORKS.map((network) => {
           const key = network.label.toLowerCase();
+          const href = toSiteRoot(network.build(pageUrl, shareText));
           return {
             key,
             label: network.label,
             Icon: SOCIAL_ICONS[key],
             color: BRAND_COLORS[key],
-            href: network.build(pageUrl, shareText),
+            href,
             opensNewTab: true,
           };
         })

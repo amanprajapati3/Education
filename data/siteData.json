@@ -83,7 +83,7 @@
           "EducationTopbar1": {
             "address": "25/B Milford Road, New York",
             "email": "info@example.com",
-            "phone": "+91 00000 00000",
+            "phone": "+1 (123) 456 7891",
             "socialLinks": [
               { "label": "facebook", "href": "https://www.facebook.com/" },
               { "label": "instagram", "href": "https://www.instagram.com/" },
@@ -274,8 +274,8 @@
             },
             "phoneBlock": {
               "label": "Have Questions?",
-              "phone": "+91 00000 00000",
-              "phoneHref": "tel:+91 00000 00000"
+              "phone": "+1 (123) 456 7891",
+              "phoneHref": "tel:+1 (123) 456 7891"
             }
           }
         }
@@ -862,8 +862,34 @@
                   "language": "English",
                   "updated": "Mar 2025",
                   "about": "Build a strong web development foundation, then bring it together in responsive projects that mirror the work of a modern development team.",
-                  "outcomes": ["HTML, CSS, and JavaScript fundamentals", "Responsive layouts for every screen", "Build and deploy complete websites", "Git workflows and portfolio projects"],
-                  "modules": [{"title":"Web Development Foundations","lessons":10,"duration":"1 hr 20 min"},{"title":"HTML & CSS Essentials","lessons":12,"duration":"1 hr 45 min"},{"title":"JavaScript in the Browser","lessons":12,"duration":"2 hr 10 min"},{"title":"Build and Deploy a Portfolio","lessons":11,"duration":"2 hr 15 min"}]
+                  "outcomes": [
+                    "HTML, CSS, and JavaScript fundamentals",
+                    "Responsive layouts for every screen",
+                    "Build and deploy complete websites",
+                    "Git workflows and portfolio projects"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Web Development Foundations",
+                      "lessons": 10,
+                      "duration": "1 hr 20 min"
+                    },
+                    {
+                      "title": "HTML & CSS Essentials",
+                      "lessons": 12,
+                      "duration": "1 hr 45 min"
+                    },
+                    {
+                      "title": "JavaScript in the Browser",
+                      "lessons": 12,
+                      "duration": "2 hr 10 min"
+                    },
+                    {
+                      "title": "Build and Deploy a Portfolio",
+                      "lessons": 11,
+                      "duration": "2 hr 15 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "data-science-for-beginners",
@@ -872,8 +898,34 @@
                   "language": "English",
                   "updated": "Feb 2025",
                   "about": "Turn raw data into useful answers with a guided introduction to Python, exploratory analysis, statistics, and practical machine learning.",
-                  "outcomes": ["Prepare datasets with Python and pandas", "Explore patterns with statistics", "Create clear charts and reports", "Train and evaluate a first ML model"],
-                  "modules": [{"title":"Python for Data Work","lessons":12,"duration":"1 hr 35 min"},{"title":"Data Cleaning & Exploration","lessons":13,"duration":"2 hr 05 min"},{"title":"Statistics and Visualization","lessons":13,"duration":"2 hr 10 min"},{"title":"Your First Machine Learning Model","lessons":14,"duration":"2 hr 30 min"}]
+                  "outcomes": [
+                    "Prepare datasets with Python and pandas",
+                    "Explore patterns with statistics",
+                    "Create clear charts and reports",
+                    "Train and evaluate a first ML model"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Python for Data Work",
+                      "lessons": 12,
+                      "duration": "1 hr 35 min"
+                    },
+                    {
+                      "title": "Data Cleaning & Exploration",
+                      "lessons": 13,
+                      "duration": "2 hr 05 min"
+                    },
+                    {
+                      "title": "Statistics and Visualization",
+                      "lessons": 13,
+                      "duration": "2 hr 10 min"
+                    },
+                    {
+                      "title": "Your First Machine Learning Model",
+                      "lessons": 14,
+                      "duration": "2 hr 30 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "ui-ux-design-masterclass",
@@ -882,8 +934,34 @@
                   "language": "English",
                   "updated": "Jan 2025",
                   "about": "Learn a complete user-centered design process, from understanding people and mapping flows to polished, testable interface prototypes.",
-                  "outcomes": ["Plan useful user research", "Map journeys and interface flows", "Create wireframes and visual systems", "Prototype and test a product concept"],
-                  "modules": [{"title":"Principles of User-Centered Design","lessons":9,"duration":"1 hr 10 min"},{"title":"Research, Personas & User Flows","lessons":10,"duration":"1 hr 35 min"},{"title":"Wireframes and Visual Systems","lessons":10,"duration":"1 hr 45 min"},{"title":"Interactive Prototyping & Testing","lessons":9,"duration":"1 hr 30 min"}]
+                  "outcomes": [
+                    "Plan useful user research",
+                    "Map journeys and interface flows",
+                    "Create wireframes and visual systems",
+                    "Prototype and test a product concept"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Principles of User-Centered Design",
+                      "lessons": 9,
+                      "duration": "1 hr 10 min"
+                    },
+                    {
+                      "title": "Research, Personas & User Flows",
+                      "lessons": 10,
+                      "duration": "1 hr 35 min"
+                    },
+                    {
+                      "title": "Wireframes and Visual Systems",
+                      "lessons": 10,
+                      "duration": "1 hr 45 min"
+                    },
+                    {
+                      "title": "Interactive Prototyping & Testing",
+                      "lessons": 9,
+                      "duration": "1 hr 30 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "digital-marketing-essentials",
@@ -892,8 +970,34 @@
                   "language": "English",
                   "updated": "Mar 2025",
                   "about": "Plan measurable digital campaigns by connecting audience research, search, content, social channels, and performance reporting.",
-                  "outcomes": ["Build a practical channel strategy", "Improve content for search", "Plan social and paid campaigns", "Measure results with useful metrics"],
-                  "modules": [{"title":"Digital Strategy & Audience Research","lessons":7,"duration":"55 min"},{"title":"SEO and Content Marketing","lessons":8,"duration":"1 hr 10 min"},{"title":"Social and Paid Campaigns","lessons":8,"duration":"1 hr 15 min"},{"title":"Analytics and Optimization","lessons":7,"duration":"1 hr 05 min"}]
+                  "outcomes": [
+                    "Build a practical channel strategy",
+                    "Improve content for search",
+                    "Plan social and paid campaigns",
+                    "Measure results with useful metrics"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Digital Strategy & Audience Research",
+                      "lessons": 7,
+                      "duration": "55 min"
+                    },
+                    {
+                      "title": "SEO and Content Marketing",
+                      "lessons": 8,
+                      "duration": "1 hr 10 min"
+                    },
+                    {
+                      "title": "Social and Paid Campaigns",
+                      "lessons": 8,
+                      "duration": "1 hr 15 min"
+                    },
+                    {
+                      "title": "Analytics and Optimization",
+                      "lessons": 7,
+                      "duration": "1 hr 05 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "artificial-intelligence-fundamentals",
@@ -902,8 +1006,34 @@
                   "language": "English",
                   "updated": "Apr 2025",
                   "about": "Understand the ideas behind modern AI and build a practical foundation in machine learning, neural networks, and responsible deployment.",
-                  "outcomes": ["Explain core machine-learning concepts", "Prepare data for model training", "Build neural-network experiments", "Evaluate model quality and limitations"],
-                  "modules": [{"title":"AI and Machine Learning Foundations","lessons":14,"duration":"1 hr 50 min"},{"title":"Data Preparation & Model Training","lessons":15,"duration":"2 hr 20 min"},{"title":"Neural Networks and Deep Learning","lessons":16,"duration":"2 hr 35 min"},{"title":"Responsible AI Project","lessons":15,"duration":"2 hr 30 min"}]
+                  "outcomes": [
+                    "Explain core machine-learning concepts",
+                    "Prepare data for model training",
+                    "Build neural-network experiments",
+                    "Evaluate model quality and limitations"
+                  ],
+                  "modules": [
+                    {
+                      "title": "AI and Machine Learning Foundations",
+                      "lessons": 14,
+                      "duration": "1 hr 50 min"
+                    },
+                    {
+                      "title": "Data Preparation & Model Training",
+                      "lessons": 15,
+                      "duration": "2 hr 20 min"
+                    },
+                    {
+                      "title": "Neural Networks and Deep Learning",
+                      "lessons": 16,
+                      "duration": "2 hr 35 min"
+                    },
+                    {
+                      "title": "Responsible AI Project",
+                      "lessons": 15,
+                      "duration": "2 hr 30 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "cybersecurity-expert-program",
@@ -912,8 +1042,34 @@
                   "language": "English",
                   "updated": "Feb 2025",
                   "about": "Build defensive security skills through network fundamentals, threat analysis, secure configuration, and authorized assessment labs.",
-                  "outcomes": ["Identify common security risks", "Harden systems and networks", "Assess vulnerabilities in lab environments", "Document findings responsibly"],
-                  "modules": [{"title":"Security Principles & Threats","lessons":12,"duration":"1 hr 35 min"},{"title":"Network and System Defense","lessons":13,"duration":"2 hr 00 min"},{"title":"Vulnerability Assessment Labs","lessons":13,"duration":"2 hr 20 min"},{"title":"Incident Response & Reporting","lessons":12,"duration":"1 hr 55 min"}]
+                  "outcomes": [
+                    "Identify common security risks",
+                    "Harden systems and networks",
+                    "Assess vulnerabilities in lab environments",
+                    "Document findings responsibly"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Security Principles & Threats",
+                      "lessons": 12,
+                      "duration": "1 hr 35 min"
+                    },
+                    {
+                      "title": "Network and System Defense",
+                      "lessons": 13,
+                      "duration": "2 hr 00 min"
+                    },
+                    {
+                      "title": "Vulnerability Assessment Labs",
+                      "lessons": 13,
+                      "duration": "2 hr 20 min"
+                    },
+                    {
+                      "title": "Incident Response & Reporting",
+                      "lessons": 12,
+                      "duration": "1 hr 55 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "cloud-computing-architecture",
@@ -922,8 +1078,34 @@
                   "language": "English",
                   "updated": "Mar 2025",
                   "about": "Design reliable cloud systems by learning core infrastructure concepts, deployment patterns, security controls, and cost-aware operations.",
-                  "outcomes": ["Choose appropriate cloud services", "Design resilient system architectures", "Apply identity and security controls", "Estimate and optimize cloud costs"],
-                  "modules": [{"title":"Cloud Foundations & Core Services","lessons":10,"duration":"1 hr 25 min"},{"title":"Networking and Architecture","lessons":11,"duration":"1 hr 50 min"},{"title":"Security, Reliability & Scaling","lessons":11,"duration":"2 hr 00 min"},{"title":"Deploy a Cloud Solution","lessons":10,"duration":"1 hr 45 min"}]
+                  "outcomes": [
+                    "Choose appropriate cloud services",
+                    "Design resilient system architectures",
+                    "Apply identity and security controls",
+                    "Estimate and optimize cloud costs"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Cloud Foundations & Core Services",
+                      "lessons": 10,
+                      "duration": "1 hr 25 min"
+                    },
+                    {
+                      "title": "Networking and Architecture",
+                      "lessons": 11,
+                      "duration": "1 hr 50 min"
+                    },
+                    {
+                      "title": "Security, Reliability & Scaling",
+                      "lessons": 11,
+                      "duration": "2 hr 00 min"
+                    },
+                    {
+                      "title": "Deploy a Cloud Solution",
+                      "lessons": 10,
+                      "duration": "1 hr 45 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "advanced-database-management",
@@ -932,8 +1114,34 @@
                   "language": "English",
                   "updated": "Jan 2025",
                   "about": "Move beyond basic queries to design, tune, and operate dependable relational and document databases for growing applications.",
-                  "outcomes": ["Design normalized data models", "Write efficient SQL queries", "Compare relational and NoSQL systems", "Diagnose performance bottlenecks"],
-                  "modules": [{"title":"Data Modeling & Database Design","lessons":9,"duration":"1 hr 15 min"},{"title":"Advanced SQL and Indexing","lessons":9,"duration":"1 hr 35 min"},{"title":"NoSQL and Distributed Data","lessons":9,"duration":"1 hr 30 min"},{"title":"Performance and Reliability","lessons":9,"duration":"1 hr 40 min"}]
+                  "outcomes": [
+                    "Design normalized data models",
+                    "Write efficient SQL queries",
+                    "Compare relational and NoSQL systems",
+                    "Diagnose performance bottlenecks"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Data Modeling & Database Design",
+                      "lessons": 9,
+                      "duration": "1 hr 15 min"
+                    },
+                    {
+                      "title": "Advanced SQL and Indexing",
+                      "lessons": 9,
+                      "duration": "1 hr 35 min"
+                    },
+                    {
+                      "title": "NoSQL and Distributed Data",
+                      "lessons": 9,
+                      "duration": "1 hr 30 min"
+                    },
+                    {
+                      "title": "Performance and Reliability",
+                      "lessons": 9,
+                      "duration": "1 hr 40 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "mobile-app-development",
@@ -942,8 +1150,34 @@
                   "language": "English",
                   "updated": "Apr 2025",
                   "about": "Create a polished cross-platform mobile app with Flutter, covering layouts, navigation, state, data, and release preparation.",
-                  "outcomes": ["Build reusable Flutter interfaces", "Manage app navigation and state", "Connect to remote data", "Prepare an app for release"],
-                  "modules": [{"title":"Dart and Flutter Foundations","lessons":12,"duration":"1 hr 40 min"},{"title":"Layouts, Navigation & State","lessons":12,"duration":"2 hr 00 min"},{"title":"APIs and Persistent Data","lessons":12,"duration":"2 hr 05 min"},{"title":"Build and Release a Mobile App","lessons":12,"duration":"2 hr 15 min"}]
+                  "outcomes": [
+                    "Build reusable Flutter interfaces",
+                    "Manage app navigation and state",
+                    "Connect to remote data",
+                    "Prepare an app for release"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Dart and Flutter Foundations",
+                      "lessons": 12,
+                      "duration": "1 hr 40 min"
+                    },
+                    {
+                      "title": "Layouts, Navigation & State",
+                      "lessons": 12,
+                      "duration": "2 hr 00 min"
+                    },
+                    {
+                      "title": "APIs and Persistent Data",
+                      "lessons": 12,
+                      "duration": "2 hr 05 min"
+                    },
+                    {
+                      "title": "Build and Release a Mobile App",
+                      "lessons": 12,
+                      "duration": "2 hr 15 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "financial-modeling-analysis",
@@ -952,8 +1186,34 @@
                   "language": "English",
                   "updated": "Feb 2025",
                   "about": "Build transparent financial models that connect business assumptions to forecasts, valuation, and clear decision-making.",
-                  "outcomes": ["Structure clean spreadsheet models", "Forecast financial statements", "Apply valuation methods", "Present assumptions and sensitivities"],
-                  "modules": [{"title":"Modeling Standards & Excel","lessons":8,"duration":"1 hr 10 min"},{"title":"Forecasting Financial Statements","lessons":9,"duration":"1 hr 35 min"},{"title":"Valuation and Scenario Analysis","lessons":9,"duration":"1 hr 40 min"},{"title":"Investment Case Study","lessons":8,"duration":"1 hr 25 min"}]
+                  "outcomes": [
+                    "Structure clean spreadsheet models",
+                    "Forecast financial statements",
+                    "Apply valuation methods",
+                    "Present assumptions and sensitivities"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Modeling Standards & Excel",
+                      "lessons": 8,
+                      "duration": "1 hr 10 min"
+                    },
+                    {
+                      "title": "Forecasting Financial Statements",
+                      "lessons": 9,
+                      "duration": "1 hr 35 min"
+                    },
+                    {
+                      "title": "Valuation and Scenario Analysis",
+                      "lessons": 9,
+                      "duration": "1 hr 40 min"
+                    },
+                    {
+                      "title": "Investment Case Study",
+                      "lessons": 8,
+                      "duration": "1 hr 25 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "product-management-essentials",
@@ -962,8 +1222,34 @@
                   "language": "English",
                   "updated": "Mar 2025",
                   "about": "Learn to connect customer needs and business goals while guiding a product from discovery through delivery and iteration.",
-                  "outcomes": ["Frame customer problems clearly", "Prioritize opportunities and roadmaps", "Work effectively with delivery teams", "Define outcomes and product metrics"],
-                  "modules": [{"title":"Product Thinking & Discovery","lessons":8,"duration":"1 hr 05 min"},{"title":"Research, Prioritization & Roadmaps","lessons":8,"duration":"1 hr 20 min"},{"title":"Agile Delivery & Collaboration","lessons":8,"duration":"1 hr 25 min"},{"title":"Launch, Measure & Improve","lessons":8,"duration":"1 hr 20 min"}]
+                  "outcomes": [
+                    "Frame customer problems clearly",
+                    "Prioritize opportunities and roadmaps",
+                    "Work effectively with delivery teams",
+                    "Define outcomes and product metrics"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Product Thinking & Discovery",
+                      "lessons": 8,
+                      "duration": "1 hr 05 min"
+                    },
+                    {
+                      "title": "Research, Prioritization & Roadmaps",
+                      "lessons": 8,
+                      "duration": "1 hr 20 min"
+                    },
+                    {
+                      "title": "Agile Delivery & Collaboration",
+                      "lessons": 8,
+                      "duration": "1 hr 25 min"
+                    },
+                    {
+                      "title": "Launch, Measure & Improve",
+                      "lessons": 8,
+                      "duration": "1 hr 20 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "business-analytics-strategy",
@@ -972,8 +1258,34 @@
                   "language": "English",
                   "updated": "Jan 2025",
                   "about": "Use structured analysis and thoughtful visualization to answer business questions and communicate recommendations with confidence.",
-                  "outcomes": ["Translate goals into analytical questions", "Prepare and explore business data", "Build clear dashboards and reports", "Present evidence-based recommendations"],
-                  "modules": [{"title":"Business Questions & Data Basics","lessons":10,"duration":"1 hr 20 min"},{"title":"Analysis with Spreadsheets and SQL","lessons":10,"duration":"1 hr 40 min"},{"title":"Dashboards with Tableau and Power BI","lessons":10,"duration":"1 hr 50 min"},{"title":"Insight Presentation Project","lessons":10,"duration":"1 hr 35 min"}]
+                  "outcomes": [
+                    "Translate goals into analytical questions",
+                    "Prepare and explore business data",
+                    "Build clear dashboards and reports",
+                    "Present evidence-based recommendations"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Business Questions & Data Basics",
+                      "lessons": 10,
+                      "duration": "1 hr 20 min"
+                    },
+                    {
+                      "title": "Analysis with Spreadsheets and SQL",
+                      "lessons": 10,
+                      "duration": "1 hr 40 min"
+                    },
+                    {
+                      "title": "Dashboards with Tableau and Power BI",
+                      "lessons": 10,
+                      "duration": "1 hr 50 min"
+                    },
+                    {
+                      "title": "Insight Presentation Project",
+                      "lessons": 10,
+                      "duration": "1 hr 35 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "frontend-development-with-react",
@@ -982,8 +1294,34 @@
                   "language": "English",
                   "updated": "Apr 2025",
                   "about": "Build maintainable React interfaces with component architecture, modern state patterns, accessible interactions, and focused testing.",
-                  "outcomes": ["Compose reusable React components", "Manage state and data flows", "Build accessible responsive interfaces", "Test and ship a frontend project"],
-                  "modules": [{"title":"React and Component Thinking","lessons":9,"duration":"1 hr 20 min"},{"title":"State, Events & Data Fetching","lessons":10,"duration":"1 hr 45 min"},{"title":"Routing, Forms & Accessibility","lessons":10,"duration":"1 hr 50 min"},{"title":"Testing and Capstone Interface","lessons":10,"duration":"1 hr 55 min"}]
+                  "outcomes": [
+                    "Compose reusable React components",
+                    "Manage state and data flows",
+                    "Build accessible responsive interfaces",
+                    "Test and ship a frontend project"
+                  ],
+                  "modules": [
+                    {
+                      "title": "React and Component Thinking",
+                      "lessons": 9,
+                      "duration": "1 hr 20 min"
+                    },
+                    {
+                      "title": "State, Events & Data Fetching",
+                      "lessons": 10,
+                      "duration": "1 hr 45 min"
+                    },
+                    {
+                      "title": "Routing, Forms & Accessibility",
+                      "lessons": 10,
+                      "duration": "1 hr 50 min"
+                    },
+                    {
+                      "title": "Testing and Capstone Interface",
+                      "lessons": 10,
+                      "duration": "1 hr 55 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "python-programming-from-scratch",
@@ -992,8 +1330,34 @@
                   "language": "English",
                   "updated": "Feb 2025",
                   "about": "Start writing Python with confidence, then use functions, files, and libraries to solve everyday programming problems.",
-                  "outcomes": ["Use Python variables and collections", "Write functions and control flow", "Work with files and useful libraries", "Create tested automation scripts"],
-                  "modules": [{"title":"Python Setup and Fundamentals","lessons":9,"duration":"1 hr 15 min"},{"title":"Control Flow, Functions & Collections","lessons":9,"duration":"1 hr 30 min"},{"title":"Files, Modules & Error Handling","lessons":9,"duration":"1 hr 25 min"},{"title":"Automation Project and Testing","lessons":9,"duration":"1 hr 35 min"}]
+                  "outcomes": [
+                    "Use Python variables and collections",
+                    "Write functions and control flow",
+                    "Work with files and useful libraries",
+                    "Create tested automation scripts"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Python Setup and Fundamentals",
+                      "lessons": 9,
+                      "duration": "1 hr 15 min"
+                    },
+                    {
+                      "title": "Control Flow, Functions & Collections",
+                      "lessons": 9,
+                      "duration": "1 hr 30 min"
+                    },
+                    {
+                      "title": "Files, Modules & Error Handling",
+                      "lessons": 9,
+                      "duration": "1 hr 25 min"
+                    },
+                    {
+                      "title": "Automation Project and Testing",
+                      "lessons": 9,
+                      "duration": "1 hr 35 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "graphic-design-professional",
@@ -1002,8 +1366,34 @@
                   "language": "English",
                   "updated": "Mar 2025",
                   "about": "Develop a confident visual-design practice through composition, type, color, and a portfolio-ready identity project.",
-                  "outcomes": ["Use hierarchy and composition effectively", "Pair type and color with intent", "Create consistent visual assets", "Present a polished brand identity"],
-                  "modules": [{"title":"Visual Principles & Composition","lessons":7,"duration":"55 min"},{"title":"Typography, Color & Image","lessons":8,"duration":"1 hr 15 min"},{"title":"Design Systems and Brand Assets","lessons":8,"duration":"1 hr 20 min"},{"title":"Portfolio Identity Project","lessons":7,"duration":"1 hr 15 min"}]
+                  "outcomes": [
+                    "Use hierarchy and composition effectively",
+                    "Pair type and color with intent",
+                    "Create consistent visual assets",
+                    "Present a polished brand identity"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Visual Principles & Composition",
+                      "lessons": 7,
+                      "duration": "55 min"
+                    },
+                    {
+                      "title": "Typography, Color & Image",
+                      "lessons": 8,
+                      "duration": "1 hr 15 min"
+                    },
+                    {
+                      "title": "Design Systems and Brand Assets",
+                      "lessons": 8,
+                      "duration": "1 hr 20 min"
+                    },
+                    {
+                      "title": "Portfolio Identity Project",
+                      "lessons": 7,
+                      "duration": "1 hr 15 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "social-media-marketing",
@@ -1012,8 +1402,34 @@
                   "language": "English",
                   "updated": "Jan 2025",
                   "about": "Create a sustainable social media plan that earns attention, builds community, and uses campaign data to improve results.",
-                  "outcomes": ["Choose channels for an audience", "Plan a useful content calendar", "Set up and measure paid campaigns", "Turn community insights into action"],
-                  "modules": [{"title":"Audience, Channels & Goals","lessons":7,"duration":"55 min"},{"title":"Content Planning and Creation","lessons":7,"duration":"1 hr 10 min"},{"title":"Community and Paid Campaigns","lessons":7,"duration":"1 hr 15 min"},{"title":"Reporting and Campaign Improvement","lessons":7,"duration":"1 hr 05 min"}]
+                  "outcomes": [
+                    "Choose channels for an audience",
+                    "Plan a useful content calendar",
+                    "Set up and measure paid campaigns",
+                    "Turn community insights into action"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Audience, Channels & Goals",
+                      "lessons": 7,
+                      "duration": "55 min"
+                    },
+                    {
+                      "title": "Content Planning and Creation",
+                      "lessons": 7,
+                      "duration": "1 hr 10 min"
+                    },
+                    {
+                      "title": "Community and Paid Campaigns",
+                      "lessons": 7,
+                      "duration": "1 hr 15 min"
+                    },
+                    {
+                      "title": "Reporting and Campaign Improvement",
+                      "lessons": 7,
+                      "duration": "1 hr 05 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "generative-ai-prompt-engineering",
@@ -1022,8 +1438,34 @@
                   "language": "English",
                   "updated": "Apr 2025",
                   "about": "Use generative AI thoughtfully by designing better prompts, evaluating outputs, and combining model APIs into reliable workflows.",
-                  "outcomes": ["Write clear task-focused prompts", "Evaluate and refine AI outputs", "Design repeatable AI workflows", "Connect an LLM API to a small app"],
-                  "modules": [{"title":"How Generative AI Works","lessons":8,"duration":"1 hr 00 min"},{"title":"Prompt Patterns and Evaluation","lessons":9,"duration":"1 hr 20 min"},{"title":"Structured Outputs & AI Workflows","lessons":9,"duration":"1 hr 30 min"},{"title":"Build with an LLM API","lessons":8,"duration":"1 hr 25 min"}]
+                  "outcomes": [
+                    "Write clear task-focused prompts",
+                    "Evaluate and refine AI outputs",
+                    "Design repeatable AI workflows",
+                    "Connect an LLM API to a small app"
+                  ],
+                  "modules": [
+                    {
+                      "title": "How Generative AI Works",
+                      "lessons": 8,
+                      "duration": "1 hr 00 min"
+                    },
+                    {
+                      "title": "Prompt Patterns and Evaluation",
+                      "lessons": 9,
+                      "duration": "1 hr 20 min"
+                    },
+                    {
+                      "title": "Structured Outputs & AI Workflows",
+                      "lessons": 9,
+                      "duration": "1 hr 30 min"
+                    },
+                    {
+                      "title": "Build with an LLM API",
+                      "lessons": 8,
+                      "duration": "1 hr 25 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "ethical-hacking-penetration-testing",
@@ -1032,8 +1474,34 @@
                   "language": "English",
                   "updated": "Mar 2025",
                   "about": "Practice the authorized penetration-testing workflow in controlled labs, from scoping and discovery through verification and clear reporting.",
-                  "outcomes": ["Set scope and rules of engagement", "Recognize common web and network weaknesses", "Validate findings in safe lab targets", "Write remediation-focused reports"],
-                  "modules": [{"title":"Ethics, Scope & Assessment Process","lessons":10,"duration":"1 hr 20 min"},{"title":"Reconnaissance and Enumeration","lessons":11,"duration":"1 hr 45 min"},{"title":"Web Security Testing Labs","lessons":12,"duration":"2 hr 10 min"},{"title":"Validation, Reporting & Remediation","lessons":11,"duration":"1 hr 55 min"}]
+                  "outcomes": [
+                    "Set scope and rules of engagement",
+                    "Recognize common web and network weaknesses",
+                    "Validate findings in safe lab targets",
+                    "Write remediation-focused reports"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Ethics, Scope & Assessment Process",
+                      "lessons": 10,
+                      "duration": "1 hr 20 min"
+                    },
+                    {
+                      "title": "Reconnaissance and Enumeration",
+                      "lessons": 11,
+                      "duration": "1 hr 45 min"
+                    },
+                    {
+                      "title": "Web Security Testing Labs",
+                      "lessons": 12,
+                      "duration": "2 hr 10 min"
+                    },
+                    {
+                      "title": "Validation, Reporting & Remediation",
+                      "lessons": 11,
+                      "duration": "1 hr 55 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "devops-and-ci-cd-pipeline",
@@ -1042,8 +1510,34 @@
                   "language": "English",
                   "updated": "Feb 2025",
                   "about": "Automate the path from code change to dependable release with containers, continuous integration, deployment workflows, and observability.",
-                  "outcomes": ["Package services with Docker", "Automate tests and builds", "Deploy with repeatable pipelines", "Monitor releases and recover safely"],
-                  "modules": [{"title":"DevOps Principles and Git Workflows","lessons":10,"duration":"1 hr 20 min"},{"title":"Containers with Docker","lessons":10,"duration":"1 hr 40 min"},{"title":"CI/CD with GitHub Actions","lessons":11,"duration":"1 hr 55 min"},{"title":"Kubernetes, Monitoring & Release","lessons":11,"duration":"2 hr 00 min"}]
+                  "outcomes": [
+                    "Package services with Docker",
+                    "Automate tests and builds",
+                    "Deploy with repeatable pipelines",
+                    "Monitor releases and recover safely"
+                  ],
+                  "modules": [
+                    {
+                      "title": "DevOps Principles and Git Workflows",
+                      "lessons": 10,
+                      "duration": "1 hr 20 min"
+                    },
+                    {
+                      "title": "Containers with Docker",
+                      "lessons": 10,
+                      "duration": "1 hr 40 min"
+                    },
+                    {
+                      "title": "CI/CD with GitHub Actions",
+                      "lessons": 11,
+                      "duration": "1 hr 55 min"
+                    },
+                    {
+                      "title": "Kubernetes, Monitoring & Release",
+                      "lessons": 11,
+                      "duration": "2 hr 00 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "sql-and-data-warehousing",
@@ -1052,8 +1546,34 @@
                   "language": "English",
                   "updated": "Jan 2025",
                   "about": "Write reliable SQL and learn how modern warehouses organize, transform, and serve data for consistent reporting.",
-                  "outcomes": ["Query and join relational data", "Model clean reporting datasets", "Understand warehouse architecture", "Validate a reusable analytics dataset"],
-                  "modules": [{"title":"SQL Querying Essentials","lessons":8,"duration":"1 hr 05 min"},{"title":"Joins, Aggregations & Window Functions","lessons":8,"duration":"1 hr 20 min"},{"title":"Warehouse Modeling and ELT","lessons":7,"duration":"1 hr 15 min"},{"title":"Build a Reporting Dataset","lessons":7,"duration":"1 hr 10 min"}]
+                  "outcomes": [
+                    "Query and join relational data",
+                    "Model clean reporting datasets",
+                    "Understand warehouse architecture",
+                    "Validate a reusable analytics dataset"
+                  ],
+                  "modules": [
+                    {
+                      "title": "SQL Querying Essentials",
+                      "lessons": 8,
+                      "duration": "1 hr 05 min"
+                    },
+                    {
+                      "title": "Joins, Aggregations & Window Functions",
+                      "lessons": 8,
+                      "duration": "1 hr 20 min"
+                    },
+                    {
+                      "title": "Warehouse Modeling and ELT",
+                      "lessons": 7,
+                      "duration": "1 hr 15 min"
+                    },
+                    {
+                      "title": "Build a Reporting Dataset",
+                      "lessons": 7,
+                      "duration": "1 hr 10 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "react-native-mobile-mastery",
@@ -1062,8 +1582,34 @@
                   "language": "English",
                   "updated": "Apr 2025",
                   "about": "Ship a cross-platform app with React Native by combining native-friendly components, navigation, data, and release-ready quality practices.",
-                  "outcomes": ["Build shared Android and iOS screens", "Structure navigation and app state", "Connect mobile apps to APIs", "Test and prepare store builds"],
-                  "modules": [{"title":"React Native Foundations","lessons":9,"duration":"1 hr 15 min"},{"title":"Navigation, Layout & Platform Patterns","lessons":9,"duration":"1 hr 30 min"},{"title":"APIs, State & Device Features","lessons":9,"duration":"1 hr 35 min"},{"title":"Testing and Release Preparation","lessons":9,"duration":"1 hr 40 min"}]
+                  "outcomes": [
+                    "Build shared Android and iOS screens",
+                    "Structure navigation and app state",
+                    "Connect mobile apps to APIs",
+                    "Test and prepare store builds"
+                  ],
+                  "modules": [
+                    {
+                      "title": "React Native Foundations",
+                      "lessons": 9,
+                      "duration": "1 hr 15 min"
+                    },
+                    {
+                      "title": "Navigation, Layout & Platform Patterns",
+                      "lessons": 9,
+                      "duration": "1 hr 30 min"
+                    },
+                    {
+                      "title": "APIs, State & Device Features",
+                      "lessons": 9,
+                      "duration": "1 hr 35 min"
+                    },
+                    {
+                      "title": "Testing and Release Preparation",
+                      "lessons": 9,
+                      "duration": "1 hr 40 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "stock-market-and-trading-basics",
@@ -1072,8 +1618,34 @@
                   "language": "English",
                   "updated": "Mar 2025",
                   "about": "Understand how markets work, read foundational chart information, and develop a disciplined approach to risk and long-term decisions.",
-                  "outcomes": ["Explain core market terminology", "Read basic price and volume charts", "Compare investing and trading approaches", "Build a personal risk checklist"],
-                  "modules": [{"title":"Markets, Exchanges & Key Terms","lessons":6,"duration":"45 min"},{"title":"Orders, Charts & Market Data","lessons":6,"duration":"1 hr 00 min"},{"title":"Risk, Diversification & Behavior","lessons":6,"duration":"1 hr 05 min"},{"title":"Build a Disciplined Plan","lessons":6,"duration":"55 min"}]
+                  "outcomes": [
+                    "Explain core market terminology",
+                    "Read basic price and volume charts",
+                    "Compare investing and trading approaches",
+                    "Build a personal risk checklist"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Markets, Exchanges & Key Terms",
+                      "lessons": 6,
+                      "duration": "45 min"
+                    },
+                    {
+                      "title": "Orders, Charts & Market Data",
+                      "lessons": 6,
+                      "duration": "1 hr 00 min"
+                    },
+                    {
+                      "title": "Risk, Diversification & Behavior",
+                      "lessons": 6,
+                      "duration": "1 hr 05 min"
+                    },
+                    {
+                      "title": "Build a Disciplined Plan",
+                      "lessons": 6,
+                      "duration": "55 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "human-resource-management",
@@ -1082,8 +1654,34 @@
                   "language": "English",
                   "updated": "Feb 2025",
                   "about": "Explore practical people-management frameworks for hiring, onboarding, performance, and building a fair, supportive employee experience.",
-                  "outcomes": ["Plan structured hiring processes", "Create thoughtful onboarding", "Support performance and feedback", "Understand people operations basics"],
-                  "modules": [{"title":"People Operations Foundations","lessons":8,"duration":"1 hr 05 min"},{"title":"Hiring, Selection & Onboarding","lessons":8,"duration":"1 hr 20 min"},{"title":"Performance, Learning & Engagement","lessons":8,"duration":"1 hr 25 min"},{"title":"Policies, Culture & People Planning","lessons":8,"duration":"1 hr 20 min"}]
+                  "outcomes": [
+                    "Plan structured hiring processes",
+                    "Create thoughtful onboarding",
+                    "Support performance and feedback",
+                    "Understand people operations basics"
+                  ],
+                  "modules": [
+                    {
+                      "title": "People Operations Foundations",
+                      "lessons": 8,
+                      "duration": "1 hr 05 min"
+                    },
+                    {
+                      "title": "Hiring, Selection & Onboarding",
+                      "lessons": 8,
+                      "duration": "1 hr 20 min"
+                    },
+                    {
+                      "title": "Performance, Learning & Engagement",
+                      "lessons": 8,
+                      "duration": "1 hr 25 min"
+                    },
+                    {
+                      "title": "Policies, Culture & People Planning",
+                      "lessons": 8,
+                      "duration": "1 hr 20 min"
+                    }
+                  ]
                 },
                 {
                   "slug": "entrepreneurship-startup-essentials",
@@ -1092,8 +1690,34 @@
                   "language": "English",
                   "updated": "Apr 2025",
                   "about": "Move an early idea toward a validated business by understanding customers, shaping a business model, and planning a focused launch.",
-                  "outcomes": ["Test customer problems and assumptions", "Shape a practical business model", "Estimate costs and early revenue", "Plan a focused launch and funding story"],
-                  "modules": [{"title":"Opportunity and Customer Discovery","lessons":8,"duration":"1 hr 05 min"},{"title":"Business Models and Validation","lessons":9,"duration":"1 hr 25 min"},{"title":"Startup Finance and Go-to-Market","lessons":9,"duration":"1 hr 35 min"},{"title":"Pitch and Launch Roadmap","lessons":8,"duration":"1 hr 20 min"}]
+                  "outcomes": [
+                    "Test customer problems and assumptions",
+                    "Shape a practical business model",
+                    "Estimate costs and early revenue",
+                    "Plan a focused launch and funding story"
+                  ],
+                  "modules": [
+                    {
+                      "title": "Opportunity and Customer Discovery",
+                      "lessons": 8,
+                      "duration": "1 hr 05 min"
+                    },
+                    {
+                      "title": "Business Models and Validation",
+                      "lessons": 9,
+                      "duration": "1 hr 25 min"
+                    },
+                    {
+                      "title": "Startup Finance and Go-to-Market",
+                      "lessons": 9,
+                      "duration": "1 hr 35 min"
+                    },
+                    {
+                      "title": "Pitch and Launch Roadmap",
+                      "lessons": 8,
+                      "duration": "1 hr 20 min"
+                    }
+                  ]
                 }
               ]
             },
@@ -1468,12 +2092,29 @@
                   "quote": "Every student deserves a place where they feel seen, supported, and ready to learn.",
                   "intro": "An inclusive classroom is built through everyday choices: the way a lesson is presented, how students collaborate, and whether every learner can participate. Small, thoughtful changes can create a stronger sense of belonging and help students engage with confidence.",
                   "sections": [
-                    {"title":"Design for different ways of learning","text":"Offer key ideas in more than one format, such as a short explanation, a visual example, and a hands-on activity. Clear instructions and predictable lesson structure help students understand what to do and where to begin."},
-                    {"title":"Make participation feel safe","text":"Set shared expectations for respectful discussion and give students time to think before responding. Pair work, written reflections, and small-group conversations create more than one route into a class discussion."},
-                    {"title":"Notice who is being heard","text":"Regularly reflect on whose ideas receive attention and who may need another invitation to contribute. Ask students for feedback and use it to adjust classroom routines, examples, and support."},
-                    {"title":"Build belonging into the routine","text":"Use names, celebrate different perspectives, and make classroom resources easy to access. Belonging is not a one-time activity; it grows through consistent interactions and fair opportunities to take part."}
+                    {
+                      "title": "Design for different ways of learning",
+                      "text": "Offer key ideas in more than one format, such as a short explanation, a visual example, and a hands-on activity. Clear instructions and predictable lesson structure help students understand what to do and where to begin."
+                    },
+                    {
+                      "title": "Make participation feel safe",
+                      "text": "Set shared expectations for respectful discussion and give students time to think before responding. Pair work, written reflections, and small-group conversations create more than one route into a class discussion."
+                    },
+                    {
+                      "title": "Notice who is being heard",
+                      "text": "Regularly reflect on whose ideas receive attention and who may need another invitation to contribute. Ask students for feedback and use it to adjust classroom routines, examples, and support."
+                    },
+                    {
+                      "title": "Build belonging into the routine",
+                      "text": "Use names, celebrate different perspectives, and make classroom resources easy to access. Belonging is not a one-time activity; it grows through consistent interactions and fair opportunities to take part."
+                    }
                   ],
-                  "highlights": ["Accessible learning", "Respectful discussion", "Student voice", "Belonging every day"],
+                  "highlights": [
+                    "Accessible learning",
+                    "Respectful discussion",
+                    "Student voice",
+                    "Belonging every day"
+                  ],
                   "closing": "Inclusive classrooms benefit the whole learning community. Start with one routine you can improve this week, then keep listening and building from there."
                 },
                 {
@@ -1485,12 +2126,29 @@
                   "quote": "When learners explain ideas to each other, everyone gets a chance to think more deeply.",
                   "intro": "Learning with peers turns a classroom into a place to compare perspectives, ask better questions, and practice explaining what you know. With a little structure, collaboration can build confidence as well as stronger understanding.",
                   "sections": [
-                    {"title":"Start with a shared goal","text":"Give every group a clear outcome and a manageable task. When students know what they are working toward, it is easier to divide responsibilities and keep the conversation focused."},
-                    {"title":"Make room for every voice","text":"Rotate roles such as note-taker, explainer, and question-asker. Simple roles help quieter students contribute and prevent one person from carrying the whole activity."},
-                    {"title":"Explain, question, and reflect","text":"Ask students to describe their reasoning instead of sharing only an answer. Follow with a question from a peer, then close with a short reflection on what changed in their understanding."},
-                    {"title":"Keep the feedback constructive","text":"Agree on feedback that is specific, kind, and useful. Point to the idea or step that could be clearer, and invite the group to test a different approach together."}
+                    {
+                      "title": "Start with a shared goal",
+                      "text": "Give every group a clear outcome and a manageable task. When students know what they are working toward, it is easier to divide responsibilities and keep the conversation focused."
+                    },
+                    {
+                      "title": "Make room for every voice",
+                      "text": "Rotate roles such as note-taker, explainer, and question-asker. Simple roles help quieter students contribute and prevent one person from carrying the whole activity."
+                    },
+                    {
+                      "title": "Explain, question, and reflect",
+                      "text": "Ask students to describe their reasoning instead of sharing only an answer. Follow with a question from a peer, then close with a short reflection on what changed in their understanding."
+                    },
+                    {
+                      "title": "Keep the feedback constructive",
+                      "text": "Agree on feedback that is specific, kind, and useful. Point to the idea or step that could be clearer, and invite the group to test a different approach together."
+                    }
                   ],
-                  "highlights": ["Shared goals", "Rotating roles", "Peer explanation", "Useful feedback"],
+                  "highlights": [
+                    "Shared goals",
+                    "Rotating roles",
+                    "Peer explanation",
+                    "Useful feedback"
+                  ],
                   "closing": "Strong collaboration is a skill students can practice. Begin with one short group task, make the roles clear, and give the class time to reflect on how they worked together."
                 },
                 {
@@ -1502,12 +2160,29 @@
                   "quote": "Curiosity opens the door; consistent practice helps you walk through it.",
                   "intro": "A growth mindset is not about having every answer. It is the habit of staying curious, learning from feedback, and treating unfamiliar challenges as opportunities to build a new skill.",
                   "sections": [
-                    {"title":"Ask questions that move you forward","text":"When you meet a difficult topic, write down what you understand and what remains unclear. Focused questions make it easier to find a resource, ask for help, and turn uncertainty into a next step."},
-                    {"title":"Set a small learning target","text":"Choose one skill to practice and break it into a weekly goal. A clear, achievable target creates momentum and makes progress easier to notice."},
-                    {"title":"Use feedback as information","text":"Feedback can show where to focus next. Look for one specific suggestion you can act on, try it, and compare the result with your previous attempt."},
-                    {"title":"Keep track of what you learn","text":"Save examples of work, notes, and reflections as you go. Looking back at your progress can reveal strengths you have developed and help you choose your next opportunity."}
+                    {
+                      "title": "Ask questions that move you forward",
+                      "text": "When you meet a difficult topic, write down what you understand and what remains unclear. Focused questions make it easier to find a resource, ask for help, and turn uncertainty into a next step."
+                    },
+                    {
+                      "title": "Set a small learning target",
+                      "text": "Choose one skill to practice and break it into a weekly goal. A clear, achievable target creates momentum and makes progress easier to notice."
+                    },
+                    {
+                      "title": "Use feedback as information",
+                      "text": "Feedback can show where to focus next. Look for one specific suggestion you can act on, try it, and compare the result with your previous attempt."
+                    },
+                    {
+                      "title": "Keep track of what you learn",
+                      "text": "Save examples of work, notes, and reflections as you go. Looking back at your progress can reveal strengths you have developed and help you choose your next opportunity."
+                    }
                   ],
-                  "highlights": ["Ask better questions", "Practice consistently", "Learn from feedback", "Track your progress"],
+                  "highlights": [
+                    "Ask better questions",
+                    "Practice consistently",
+                    "Learn from feedback",
+                    "Track your progress"
+                  ],
                   "closing": "Confidence often follows action rather than preceding it. Stay curious, practice in small steps, and let each new experience inform the next one."
                 },
                 {
@@ -1519,12 +2194,29 @@
                   "quote": "A strong portfolio makes your process visible, not just the finished result.",
                   "intro": "A useful portfolio gives a recruiter quick, concrete evidence of how you approach work. Choose a few relevant examples, explain the decisions behind them, and make it easy for someone to see what you contributed.",
                   "sections": [
-                    {"title":"Choose work for the role you want","text":"Select projects that demonstrate the skills named in your target roles. A focused collection is easier to review than a long archive of unrelated work."},
-                    {"title":"Show the problem and your process","text":"For each project, describe the goal, your role, the constraints, and the steps you took. Include iterations or decisions that show how you responded to evidence and feedback."},
-                    {"title":"Make your contribution specific","text":"If you worked with a team, distinguish your responsibilities from the group outcome. Clear attribution helps reviewers understand your strengths without overstating your part."},
-                    {"title":"Keep it clear and current","text":"Use concise writing, working links, and a simple layout that works on phones and computers. Revisit the portfolio as your experience grows and remove examples that no longer support your direction."}
+                    {
+                      "title": "Choose work for the role you want",
+                      "text": "Select projects that demonstrate the skills named in your target roles. A focused collection is easier to review than a long archive of unrelated work."
+                    },
+                    {
+                      "title": "Show the problem and your process",
+                      "text": "For each project, describe the goal, your role, the constraints, and the steps you took. Include iterations or decisions that show how you responded to evidence and feedback."
+                    },
+                    {
+                      "title": "Make your contribution specific",
+                      "text": "If you worked with a team, distinguish your responsibilities from the group outcome. Clear attribution helps reviewers understand your strengths without overstating your part."
+                    },
+                    {
+                      "title": "Keep it clear and current",
+                      "text": "Use concise writing, working links, and a simple layout that works on phones and computers. Revisit the portfolio as your experience grows and remove examples that no longer support your direction."
+                    }
                   ],
-                  "highlights": ["Role-relevant projects", "Clear process notes", "Specific contributions", "Easy-to-scan layout"],
+                  "highlights": [
+                    "Role-relevant projects",
+                    "Clear process notes",
+                    "Specific contributions",
+                    "Easy-to-scan layout"
+                  ],
                   "closing": "A portfolio is most effective when it helps someone understand how you think and what you can contribute. Review it from a hiring manager’s perspective and make the strongest evidence easy to find."
                 },
                 {
@@ -1536,12 +2228,29 @@
                   "quote": "Ideas become easier to remember when you have used them to solve a real problem.",
                   "intro": "Projects help learners connect concepts with decisions they need to make. Building, testing, and revising something creates useful practice that a long stretch of passive listening cannot provide on its own.",
                   "sections": [
-                    {"title":"Give the concept a real purpose","text":"Start with a question or brief that gives students a reason to use the concept. A concrete goal helps them connect new information to a problem they can understand."},
-                    {"title":"Break the work into milestones","text":"Divide a large project into small checkpoints for planning, first attempts, feedback, and revision. Milestones make progress visible and create natural moments for support."},
-                    {"title":"Let students test their ideas","text":"Encourage learners to try an approach, observe what happens, and explain what they would change. Reflection turns a result, including an imperfect one, into useful evidence."},
-                    {"title":"Connect the outcome to the lesson","text":"After the project, identify which ideas were most useful and where they appeared in the work. This final connection helps students carry the learning into a new context."}
+                    {
+                      "title": "Give the concept a real purpose",
+                      "text": "Start with a question or brief that gives students a reason to use the concept. A concrete goal helps them connect new information to a problem they can understand."
+                    },
+                    {
+                      "title": "Break the work into milestones",
+                      "text": "Divide a large project into small checkpoints for planning, first attempts, feedback, and revision. Milestones make progress visible and create natural moments for support."
+                    },
+                    {
+                      "title": "Let students test their ideas",
+                      "text": "Encourage learners to try an approach, observe what happens, and explain what they would change. Reflection turns a result, including an imperfect one, into useful evidence."
+                    },
+                    {
+                      "title": "Connect the outcome to the lesson",
+                      "text": "After the project, identify which ideas were most useful and where they appeared in the work. This final connection helps students carry the learning into a new context."
+                    }
                   ],
-                  "highlights": ["Real-world briefs", "Small milestones", "Experiment and revise", "Reflection that sticks"],
+                  "highlights": [
+                    "Real-world briefs",
+                    "Small milestones",
+                    "Experiment and revise",
+                    "Reflection that sticks"
+                  ],
                   "closing": "Practical work does not replace clear teaching; it gives learners a place to use and strengthen what they have learned. Begin with a focused brief and build the challenge from there."
                 },
                 {
@@ -1553,12 +2262,29 @@
                   "quote": "Good guidance helps you see the next step while keeping the work in your hands.",
                   "intro": "A mentor can help turn a broad ambition into practical next steps. The most useful mentoring relationships combine honest questions, timely feedback, and space for learners to make their own decisions.",
                   "sections": [
-                    {"title":"Bring a goal to the conversation","text":"You do not need a complete plan before meeting a mentor. A question, challenge, or skill you want to develop gives the conversation a useful starting point."},
-                    {"title":"Ask for feedback you can use","text":"Share a specific piece of work or a decision you are considering. Focused feedback is easier to apply than broad advice, and it gives both people something concrete to discuss."},
-                    {"title":"Turn advice into an experiment","text":"Choose one action to try before the next conversation. Treat it as an experiment: notice what worked, what felt difficult, and what you would adjust."},
-                    {"title":"Build a two-way relationship","text":"Respect each other’s time, follow through on agreed actions, and share progress honestly. Mentoring works best when both people communicate clearly and keep expectations realistic."}
+                    {
+                      "title": "Bring a goal to the conversation",
+                      "text": "You do not need a complete plan before meeting a mentor. A question, challenge, or skill you want to develop gives the conversation a useful starting point."
+                    },
+                    {
+                      "title": "Ask for feedback you can use",
+                      "text": "Share a specific piece of work or a decision you are considering. Focused feedback is easier to apply than broad advice, and it gives both people something concrete to discuss."
+                    },
+                    {
+                      "title": "Turn advice into an experiment",
+                      "text": "Choose one action to try before the next conversation. Treat it as an experiment: notice what worked, what felt difficult, and what you would adjust."
+                    },
+                    {
+                      "title": "Build a two-way relationship",
+                      "text": "Respect each other’s time, follow through on agreed actions, and share progress honestly. Mentoring works best when both people communicate clearly and keep expectations realistic."
+                    }
                   ],
-                  "highlights": ["Clear learning goals", "Actionable feedback", "Small experiments", "Consistent follow-through"],
+                  "highlights": [
+                    "Clear learning goals",
+                    "Actionable feedback",
+                    "Small experiments",
+                    "Consistent follow-through"
+                  ],
                   "closing": "Mentorship can make a learning journey feel more manageable, but progress still comes from your own practice. Use guidance to find a direction, then keep taking the next step."
                 }
               ]
@@ -1900,7 +2626,7 @@
               "title": "Contact Us",
               "description": "Questions about a program, these terms or an existing enrollment? Write to our admissions team and we will get back to you within one business day.",
               "email": "info@example.com",
-              "phone": "+91 00000 00000"
+              "phone": "+1 (123) 456 7891"
             }
           },
           "EducationPrivacy1": {
@@ -1967,7 +2693,7 @@
               "title": "Contact Us",
               "description": "To access, correct or delete your personal data, or to raise a privacy concern, reach our privacy team and we will respond within one business day.",
               "email": "info@example.com",
-              "phone": "+91 00000 00000"
+              "phone": "+1 (123) 456 7891"
             }
           },
           "EducationRefund1": {
@@ -2034,7 +2760,7 @@
               "title": "Contact Us",
               "description": "To raise a refund request or ask about an existing one, write to our support team with your registration number and we will respond within one business day.",
               "email": "info@example.com",
-              "phone": "+91 00000 00000"
+              "phone": "+1 (123) 456 7891"
             }
           }
         }
@@ -2075,10 +2801,18 @@
                     "label": "Digital Marketing",
                     "href": "/courses/digital-marketing-essentials"
                   },
-                  { "label": "Cloude Computing Architecture", "href": "/courses/cloud-computing-architecture" },
-                  { "label": "UI UX ", "href": "/courses/ui-ux-design-masterclass" },
-                  { "label": "Dev OOPs & CI CD Pipeline", "href": "/courses/devops-and-ci-cd-pipeline" },
-                  { "label": "View All Courses", "href": "/courses" }
+                  {
+                    "label": "Cloude Computing Architecture",
+                    "href": "/courses/cloud-computing-architecture"
+                  },
+                  {
+                    "label": "UI UX ",
+                    "href": "/courses/ui-ux-design-masterclass"
+                  },
+                  {
+                    "label": "Dev OOPs & CI CD Pipeline",
+                    "href": "/courses/devops-and-ci-cd-pipeline"
+                  }
                 ]
               },
               {
@@ -2088,8 +2822,7 @@
                   { "label": "Terms & Conditions", "href": "/terms" },
                   { "label": "Privacy Policy", "href": "/privacy" },
                   { "label": "Refund Policy", "href": "/refund-policy" },
-                  { "label": "Thank You", "href": "/thank" },
-                  { "label": "Contact Support", "href": "/contact" }
+                  { "label": "Thank You", "href": "/thank" }
                 ]
               }
             ],
@@ -2098,8 +2831,8 @@
               "addressLabel": "Our Office",
               "address": "25/B Milford Road, New York",
               "callLabel": "Call Us",
-              "phone": "+91 00000 00000",
-              "phoneHref": "tel:+91 00000 00000",
+              "phone": "+1 (123) 456 7891",
+              "phoneHref": "tel:+1 (123) 456 7891",
               "emailLabel": "Email Us",
               "email": "info@example.com",
               "emailHref": "mailto:info@example.com",
@@ -2112,7 +2845,7 @@
               { "label": "linkedin", "href": "https://www.linkedin.com/" },
               { "label": "youtube", "href": "https://www.youtube.com/" }
             ],
-            "copyright": "© 2026 Edusity. All rights reserved.",
+            "copyright": "Copyright © 2026. All rights reserved. Powered by Lestow.",
             "legalLinks": [
               { "label": "Privacy Policy", "href": "/privacy" },
               { "label": "Terms & Conditions", "href": "/terms" },
@@ -2287,17 +3020,53 @@
                   "slug": "angela-t-vigil",
                   "yearsExperience": "12+",
                   "email": "angela.vigil@edusity.com",
-                  "phone": "+91 00000 00000",
+                  "phone": "+1 (123) 456 7891",
                   "location": "New York, United States",
                   "qualification": "Ph.D. in Education",
                   "department": "Department of Education",
                   "specialty": "Teaching & Student Development",
-                  "about": ["Angela T. Vigil is an associate professor who brings a thoughtful, student-first approach to every classroom. She makes complex ideas approachable through clear explanations, active discussion, and relevant examples.", "Her work focuses on helping learners build confidence, curiosity, and the habits they need to keep growing beyond the classroom."],
+                  "about": [
+                    "Angela T. Vigil is an associate professor who brings a thoughtful, student-first approach to every classroom. She makes complex ideas approachable through clear explanations, active discussion, and relevant examples.",
+                    "Her work focuses on helping learners build confidence, curiosity, and the habits they need to keep growing beyond the classroom."
+                  ],
                   "quote": "Great teaching begins when every learner feels encouraged to ask a better question.",
-                  "values": [{"icon":"users","label":"Student Focused"},{"icon":"lightbulb","label":"Innovative Teaching"},{"icon":"book","label":"Practical Learning"},{"icon":"target","label":"Academic Excellence"}],
+                  "values": [
+                    { "icon": "users", "label": "Student Focused" },
+                    { "icon": "lightbulb", "label": "Innovative Teaching" },
+                    { "icon": "book", "label": "Practical Learning" },
+                    { "icon": "target", "label": "Academic Excellence" }
+                  ],
                   "philosophy": "I believe learning is strongest when students feel supported, take an active role, and can connect new ideas to the world around them.",
-                  "interests": ["Inclusive learning design", "Student mentorship", "Curriculum development", "Applied education research"],
-                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/angela.vigil"}, {"label": "Instagram", "href": "https://www.instagram.com/angela.vigil"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/angela-vigil"}, {"label": "YouTube", "href": "https://www.youtube.com/@angelavigil"}, {"label": "X", "href": "https://x.com/angela_vigil"}, {"label": "WhatsApp", "href": "https://wa.me/11234567890"}, {"label": "Share", "href": "/faculty/angela-t-vigil"}]
+                  "interests": [
+                    "Inclusive learning design",
+                    "Student mentorship",
+                    "Curriculum development",
+                    "Applied education research"
+                  ],
+                  "socials": [
+                    {
+                      "label": "Facebook",
+                      "href": "https://www.facebook.com/angela.vigil"
+                    },
+                    {
+                      "label": "Instagram",
+                      "href": "https://www.instagram.com/angela.vigil"
+                    },
+                    {
+                      "label": "LinkedIn",
+                      "href": "https://www.linkedin.com/in/angela-vigil"
+                    },
+                    {
+                      "label": "YouTube",
+                      "href": "https://www.youtube.com/@angelavigil"
+                    },
+                    { "label": "X", "href": "https://x.com/angela_vigil" },
+                    {
+                      "label": "WhatsApp",
+                      "href": "https://wa.me/11234567890"
+                    },
+                    { "label": "Share", "href": "/faculty/angela-t-vigil" }
+                  ]
                 },
                 {
                   "slug": "frank-a-mitchell",
@@ -2308,12 +3077,48 @@
                   "qualification": "M.S. in Applied Technology",
                   "department": "Department of Professional Studies",
                   "specialty": "Applied Learning & Career Skills",
-                  "about": ["Frank A. Mitchell is an associate professor dedicated to connecting classroom learning with the work students hope to do. His lessons use practical exercises, collaborative problem-solving, and clear feedback.", "He mentors learners as they turn foundational knowledge into durable skills and prepares them to approach new professional challenges with confidence."],
+                  "about": [
+                    "Frank A. Mitchell is an associate professor dedicated to connecting classroom learning with the work students hope to do. His lessons use practical exercises, collaborative problem-solving, and clear feedback.",
+                    "He mentors learners as they turn foundational knowledge into durable skills and prepares them to approach new professional challenges with confidence."
+                  ],
                   "quote": "Knowledge becomes powerful when you can put it to work on a real problem.",
-                  "values": [{"icon":"users","label":"Career Focused"},{"icon":"lightbulb","label":"Hands-on Teaching"},{"icon":"book","label":"Real-world Projects"},{"icon":"target","label":"Lifelong Growth"}],
+                  "values": [
+                    { "icon": "users", "label": "Career Focused" },
+                    { "icon": "lightbulb", "label": "Hands-on Teaching" },
+                    { "icon": "book", "label": "Real-world Projects" },
+                    { "icon": "target", "label": "Lifelong Growth" }
+                  ],
                   "philosophy": "My classroom is a place to try, reflect, and improve. Practical work helps students see how each concept can make a difference.",
-                  "interests": ["Work-based learning", "Career readiness", "Project-based teaching", "Professional mentorship"],
-                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/frank.mitchell"}, {"label": "Instagram", "href": "https://www.instagram.com/frank.mitchell"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/frank-a-mitchell"}, {"label": "YouTube", "href": "https://www.youtube.com/@frankamitchell"}, {"label": "X", "href": "https://x.com/frank_mitchell"}, {"label": "WhatsApp", "href": "https://wa.me/11234567891"}, {"label": "Share", "href": "/faculty/frank-a-mitchell"}]
+                  "interests": [
+                    "Work-based learning",
+                    "Career readiness",
+                    "Project-based teaching",
+                    "Professional mentorship"
+                  ],
+                  "socials": [
+                    {
+                      "label": "Facebook",
+                      "href": "https://www.facebook.com/frank.mitchell"
+                    },
+                    {
+                      "label": "Instagram",
+                      "href": "https://www.instagram.com/frank.mitchell"
+                    },
+                    {
+                      "label": "LinkedIn",
+                      "href": "https://www.linkedin.com/in/frank-a-mitchell"
+                    },
+                    {
+                      "label": "YouTube",
+                      "href": "https://www.youtube.com/@frankamitchell"
+                    },
+                    { "label": "X", "href": "https://x.com/frank_mitchell" },
+                    {
+                      "label": "WhatsApp",
+                      "href": "https://wa.me/11234567891"
+                    },
+                    { "label": "Share", "href": "/faculty/frank-a-mitchell" }
+                  ]
                 },
                 {
                   "slug": "susan-d-lunsford",
@@ -2324,12 +3129,48 @@
                   "qualification": "M.B.A. in Education Leadership",
                   "department": "Executive Leadership",
                   "specialty": "Education Leadership & Access",
-                  "about": ["Susan D. Lunsford is the CEO and founder of Edusity. She leads the organization with a clear purpose: make high-quality learning accessible, useful, and supportive for people at every stage of their journey.", "Her work brings educators, learners, and industry partners together to shape programs that respond to real goals and changing opportunities."],
+                  "about": [
+                    "Susan D. Lunsford is the CEO and founder of Edusity. She leads the organization with a clear purpose: make high-quality learning accessible, useful, and supportive for people at every stage of their journey.",
+                    "Her work brings educators, learners, and industry partners together to shape programs that respond to real goals and changing opportunities."
+                  ],
                   "quote": "Education changes lives when opportunity is open to everyone.",
-                  "values": [{"icon":"users","label":"Learner First"},{"icon":"lightbulb","label":"Bold Ideas"},{"icon":"book","label":"Accessible Learning"},{"icon":"target","label":"Shared Progress"}],
+                  "values": [
+                    { "icon": "users", "label": "Learner First" },
+                    { "icon": "lightbulb", "label": "Bold Ideas" },
+                    { "icon": "book", "label": "Accessible Learning" },
+                    { "icon": "target", "label": "Shared Progress" }
+                  ],
                   "philosophy": "I believe education should open doors. We build better learning experiences by listening closely to students and making room for every voice.",
-                  "interests": ["Education access", "Learning innovation", "Community partnerships", "Leadership development"],
-                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/susan.lunsford"}, {"label": "Instagram", "href": "https://www.instagram.com/susan.lunsford"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/susan-d-lunsford"}, {"label": "YouTube", "href": "https://www.youtube.com/@susandlunsford"}, {"label": "X", "href": "https://x.com/susan_lunsford"}, {"label": "WhatsApp", "href": "https://wa.me/11234567892"}, {"label": "Share", "href": "/faculty/susan-d-lunsford"}]
+                  "interests": [
+                    "Education access",
+                    "Learning innovation",
+                    "Community partnerships",
+                    "Leadership development"
+                  ],
+                  "socials": [
+                    {
+                      "label": "Facebook",
+                      "href": "https://www.facebook.com/susan.lunsford"
+                    },
+                    {
+                      "label": "Instagram",
+                      "href": "https://www.instagram.com/susan.lunsford"
+                    },
+                    {
+                      "label": "LinkedIn",
+                      "href": "https://www.linkedin.com/in/susan-d-lunsford"
+                    },
+                    {
+                      "label": "YouTube",
+                      "href": "https://www.youtube.com/@susandlunsford"
+                    },
+                    { "label": "X", "href": "https://x.com/susan_lunsford" },
+                    {
+                      "label": "WhatsApp",
+                      "href": "https://wa.me/11234567892"
+                    },
+                    { "label": "Share", "href": "/faculty/susan-d-lunsford" }
+                  ]
                 },
                 {
                   "slug": "dennis-a-pruitt",
@@ -2340,12 +3181,48 @@
                   "qualification": "Ph.D. in Research & Innovation",
                   "department": "Department of Research",
                   "specialty": "Research, Innovation & Mentoring",
-                  "about": ["Dennis A. Pruitt is an associate professor whose teaching encourages students to investigate, question, and test ideas. He brings research methods into the classroom through guided inquiry and collaborative projects.", "As a mentor, he helps emerging scholars develop sound questions, communicate findings, and see how careful research can contribute to their communities."],
+                  "about": [
+                    "Dennis A. Pruitt is an associate professor whose teaching encourages students to investigate, question, and test ideas. He brings research methods into the classroom through guided inquiry and collaborative projects.",
+                    "As a mentor, he helps emerging scholars develop sound questions, communicate findings, and see how careful research can contribute to their communities."
+                  ],
                   "quote": "Curiosity is the first step toward discoveries that matter.",
-                  "values": [{"icon":"users","label":"Mentor Mindset"},{"icon":"lightbulb","label":"Curious Thinking"},{"icon":"book","label":"Research Led"},{"icon":"target","label":"Meaningful Impact"}],
+                  "values": [
+                    { "icon": "users", "label": "Mentor Mindset" },
+                    { "icon": "lightbulb", "label": "Curious Thinking" },
+                    { "icon": "book", "label": "Research Led" },
+                    { "icon": "target", "label": "Meaningful Impact" }
+                  ],
                   "philosophy": "I encourage students to stay curious, work carefully, and treat each challenge as an opportunity to learn something new.",
-                  "interests": ["Applied research", "Innovation methods", "Student research projects", "Scientific communication"],
-                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/dennis.pruitt"}, {"label": "Instagram", "href": "https://www.instagram.com/dennis.pruitt"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/dennis-a-pruitt"}, {"label": "YouTube", "href": "https://www.youtube.com/@dennispruitt"}, {"label": "X", "href": "https://x.com/dennis_pruitt"}, {"label": "WhatsApp", "href": "https://wa.me/11234567893"}, {"label": "Share", "href": "/faculty/dennis-a-pruitt"}]
+                  "interests": [
+                    "Applied research",
+                    "Innovation methods",
+                    "Student research projects",
+                    "Scientific communication"
+                  ],
+                  "socials": [
+                    {
+                      "label": "Facebook",
+                      "href": "https://www.facebook.com/dennis.pruitt"
+                    },
+                    {
+                      "label": "Instagram",
+                      "href": "https://www.instagram.com/dennis.pruitt"
+                    },
+                    {
+                      "label": "LinkedIn",
+                      "href": "https://www.linkedin.com/in/dennis-a-pruitt"
+                    },
+                    {
+                      "label": "YouTube",
+                      "href": "https://www.youtube.com/@dennispruitt"
+                    },
+                    { "label": "X", "href": "https://x.com/dennis_pruitt" },
+                    {
+                      "label": "WhatsApp",
+                      "href": "https://wa.me/11234567893"
+                    },
+                    { "label": "Share", "href": "/faculty/dennis-a-pruitt" }
+                  ]
                 },
                 {
                   "slug": "angela-t-vigil-2",
@@ -2356,12 +3233,48 @@
                   "qualification": "M.Ed. in Learning Design",
                   "department": "Department of Education",
                   "specialty": "Modern Teaching & Learning Design",
-                  "about": ["Angela T. Vigil designs engaging learning experiences that help students connect new concepts with their own goals. Her teaching blends discussion, guided practice, and supportive feedback.", "She is especially interested in the small changes to a learning environment that help more students participate and make steady progress."],
+                  "about": [
+                    "Angela T. Vigil designs engaging learning experiences that help students connect new concepts with their own goals. Her teaching blends discussion, guided practice, and supportive feedback.",
+                    "She is especially interested in the small changes to a learning environment that help more students participate and make steady progress."
+                  ],
                   "quote": "A welcoming classroom gives every student room to find their voice.",
-                  "values": [{"icon":"users","label":"Student Belonging"},{"icon":"lightbulb","label":"Creative Methods"},{"icon":"book","label":"Active Learning"},{"icon":"target","label":"Personal Growth"}],
+                  "values": [
+                    { "icon": "users", "label": "Student Belonging" },
+                    { "icon": "lightbulb", "label": "Creative Methods" },
+                    { "icon": "book", "label": "Active Learning" },
+                    { "icon": "target", "label": "Personal Growth" }
+                  ],
                   "philosophy": "I want every learner to feel seen and supported. When lessons invite participation, students become partners in their own progress.",
-                  "interests": ["Learning experience design", "Classroom engagement", "Student development", "Accessible instruction"],
-                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/angela.vigil.learning"}, {"label": "Instagram", "href": "https://www.instagram.com/angela.vigil.learning"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/angela-vigil-learning-design"}, {"label": "YouTube", "href": "https://www.youtube.com/@angelavigillearning"}, {"label": "X", "href": "https://x.com/angela_vigil_edu"}, {"label": "WhatsApp", "href": "https://wa.me/11234567890"}, {"label": "Share", "href": "/faculty/angela-t-vigil-2"}]
+                  "interests": [
+                    "Learning experience design",
+                    "Classroom engagement",
+                    "Student development",
+                    "Accessible instruction"
+                  ],
+                  "socials": [
+                    {
+                      "label": "Facebook",
+                      "href": "https://www.facebook.com/angela.vigil.learning"
+                    },
+                    {
+                      "label": "Instagram",
+                      "href": "https://www.instagram.com/angela.vigil.learning"
+                    },
+                    {
+                      "label": "LinkedIn",
+                      "href": "https://www.linkedin.com/in/angela-vigil-learning-design"
+                    },
+                    {
+                      "label": "YouTube",
+                      "href": "https://www.youtube.com/@angelavigillearning"
+                    },
+                    { "label": "X", "href": "https://x.com/angela_vigil_edu" },
+                    {
+                      "label": "WhatsApp",
+                      "href": "https://wa.me/11234567890"
+                    },
+                    { "label": "Share", "href": "/faculty/angela-t-vigil-2" }
+                  ]
                 },
                 {
                   "slug": "frank-a-mitchell-2",
@@ -2372,12 +3285,48 @@
                   "qualification": "M.S. in Professional Education",
                   "department": "Department of Professional Studies",
                   "specialty": "Practical Skills & Professional Growth",
-                  "about": ["Frank A. Mitchell helps students move from understanding a concept to using it with confidence. His courses are grounded in realistic scenarios, structured practice, and feedback students can act on.", "He works with learners to identify their strengths, set clear goals, and build a portfolio of skills they can carry into their careers."],
+                  "about": [
+                    "Frank A. Mitchell helps students move from understanding a concept to using it with confidence. His courses are grounded in realistic scenarios, structured practice, and feedback students can act on.",
+                    "He works with learners to identify their strengths, set clear goals, and build a portfolio of skills they can carry into their careers."
+                  ],
                   "quote": "Progress comes from practice that is purposeful, supported, and repeated.",
-                  "values": [{"icon":"users","label":"Learner Support"},{"icon":"lightbulb","label":"Useful Practice"},{"icon":"book","label":"Applied Skills"},{"icon":"target","label":"Career Growth"}],
+                  "values": [
+                    { "icon": "users", "label": "Learner Support" },
+                    { "icon": "lightbulb", "label": "Useful Practice" },
+                    { "icon": "book", "label": "Applied Skills" },
+                    { "icon": "target", "label": "Career Growth" }
+                  ],
                   "philosophy": "I teach through doing. Students should leave each lesson with a clearer understanding and a useful next step to try.",
-                  "interests": ["Practical instruction", "Skills assessment", "Career development", "Collaborative learning"],
-                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/frank.mitchell.pd"}, {"label": "Instagram", "href": "https://www.instagram.com/frank.mitchell.pd"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/frank-mitchell-professional-education"}, {"label": "YouTube", "href": "https://www.youtube.com/@frankamitchellpd"}, {"label": "X", "href": "https://x.com/frank_mitchell_pd"}, {"label": "WhatsApp", "href": "https://wa.me/11234567891"}, {"label": "Share", "href": "/faculty/frank-a-mitchell-2"}]
+                  "interests": [
+                    "Practical instruction",
+                    "Skills assessment",
+                    "Career development",
+                    "Collaborative learning"
+                  ],
+                  "socials": [
+                    {
+                      "label": "Facebook",
+                      "href": "https://www.facebook.com/frank.mitchell.pd"
+                    },
+                    {
+                      "label": "Instagram",
+                      "href": "https://www.instagram.com/frank.mitchell.pd"
+                    },
+                    {
+                      "label": "LinkedIn",
+                      "href": "https://www.linkedin.com/in/frank-mitchell-professional-education"
+                    },
+                    {
+                      "label": "YouTube",
+                      "href": "https://www.youtube.com/@frankamitchellpd"
+                    },
+                    { "label": "X", "href": "https://x.com/frank_mitchell_pd" },
+                    {
+                      "label": "WhatsApp",
+                      "href": "https://wa.me/11234567891"
+                    },
+                    { "label": "Share", "href": "/faculty/frank-a-mitchell-2" }
+                  ]
                 },
                 {
                   "slug": "susan-d-lunsford-2",
@@ -2388,12 +3337,51 @@
                   "qualification": "M.A. in Education Policy",
                   "department": "Executive Leadership",
                   "specialty": "Education Strategy & Community",
-                  "about": ["As CEO and founder, Susan D. Lunsford works to make learning more responsive to students and their communities. She guides Edusity's strategy and supports partnerships that expand access to meaningful education.", "Her leadership centers on listening, continuous improvement, and creating pathways that help learners translate ambition into opportunity."],
+                  "about": [
+                    "As CEO and founder, Susan D. Lunsford works to make learning more responsive to students and their communities. She guides Edusity's strategy and supports partnerships that expand access to meaningful education.",
+                    "Her leadership centers on listening, continuous improvement, and creating pathways that help learners translate ambition into opportunity."
+                  ],
                   "quote": "When learners thrive, the whole community moves forward.",
-                  "values": [{"icon":"users","label":"Community Led"},{"icon":"lightbulb","label":"Future Thinking"},{"icon":"book","label":"Open Opportunity"},{"icon":"target","label":"Lasting Change"}],
+                  "values": [
+                    { "icon": "users", "label": "Community Led" },
+                    { "icon": "lightbulb", "label": "Future Thinking" },
+                    { "icon": "book", "label": "Open Opportunity" },
+                    { "icon": "target", "label": "Lasting Change" }
+                  ],
                   "philosophy": "Education works best when it reflects the needs of real people. We keep improving by learning from students and working together.",
-                  "interests": ["Education strategy", "Community impact", "Learning partnerships", "Equitable opportunity"],
-                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/susan.lunsford.edusity"}, {"label": "Instagram", "href": "https://www.instagram.com/susan.lunsford.edusity"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/susan-lunsford-edusity"}, {"label": "YouTube", "href": "https://www.youtube.com/@susandlunsfordedusity"}, {"label": "X", "href": "https://x.com/susan_lunsford_edu"}, {"label": "WhatsApp", "href": "https://wa.me/11234567892"}, {"label": "Share", "href": "/faculty/susan-d-lunsford-2"}]
+                  "interests": [
+                    "Education strategy",
+                    "Community impact",
+                    "Learning partnerships",
+                    "Equitable opportunity"
+                  ],
+                  "socials": [
+                    {
+                      "label": "Facebook",
+                      "href": "https://www.facebook.com/susan.lunsford.edusity"
+                    },
+                    {
+                      "label": "Instagram",
+                      "href": "https://www.instagram.com/susan.lunsford.edusity"
+                    },
+                    {
+                      "label": "LinkedIn",
+                      "href": "https://www.linkedin.com/in/susan-lunsford-edusity"
+                    },
+                    {
+                      "label": "YouTube",
+                      "href": "https://www.youtube.com/@susandlunsfordedusity"
+                    },
+                    {
+                      "label": "X",
+                      "href": "https://x.com/susan_lunsford_edu"
+                    },
+                    {
+                      "label": "WhatsApp",
+                      "href": "https://wa.me/11234567892"
+                    },
+                    { "label": "Share", "href": "/faculty/susan-d-lunsford-2" }
+                  ]
                 },
                 {
                   "slug": "dennis-a-pruitt-2",
@@ -2404,12 +3392,48 @@
                   "qualification": "M.S. in Research Methods",
                   "department": "Department of Research",
                   "specialty": "Student Research & Academic Mentoring",
-                  "about": ["Dennis A. Pruitt supports students as they develop the confidence and methods to explore challenging questions. His classes emphasize thoughtful discussion, reliable evidence, and clear communication.", "He takes particular joy in mentoring students through early research projects and helping them share their ideas with wider audiences."],
+                  "about": [
+                    "Dennis A. Pruitt supports students as they develop the confidence and methods to explore challenging questions. His classes emphasize thoughtful discussion, reliable evidence, and clear communication.",
+                    "He takes particular joy in mentoring students through early research projects and helping them share their ideas with wider audiences."
+                  ],
                   "quote": "The best questions keep opening new paths to learn.",
-                  "values": [{"icon":"users","label":"Personal Mentoring"},{"icon":"lightbulb","label":"Open Inquiry"},{"icon":"book","label":"Evidence Based"},{"icon":"target","label":"Student Discovery"}],
+                  "values": [
+                    { "icon": "users", "label": "Personal Mentoring" },
+                    { "icon": "lightbulb", "label": "Open Inquiry" },
+                    { "icon": "book", "label": "Evidence Based" },
+                    { "icon": "target", "label": "Student Discovery" }
+                  ],
                   "philosophy": "I help students find the confidence to investigate ideas carefully and the clarity to explain what they discover.",
-                  "interests": ["Research mentorship", "Critical thinking", "Academic writing", "Collaborative inquiry"],
-                  "socials": [{"label": "Facebook", "href": "https://www.facebook.com/dennis.pruitt.research"}, {"label": "Instagram", "href": "https://www.instagram.com/dennis.pruitt.research"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/in/dennis-pruitt-research"}, {"label": "YouTube", "href": "https://www.youtube.com/@dennispruittresearch"}, {"label": "X", "href": "https://x.com/dennis_pruitt_r"}, {"label": "WhatsApp", "href": "https://wa.me/11234567893"}, {"label": "Share", "href": "/faculty/dennis-a-pruitt-2"}]
+                  "interests": [
+                    "Research mentorship",
+                    "Critical thinking",
+                    "Academic writing",
+                    "Collaborative inquiry"
+                  ],
+                  "socials": [
+                    {
+                      "label": "Facebook",
+                      "href": "https://www.facebook.com/dennis.pruitt.research"
+                    },
+                    {
+                      "label": "Instagram",
+                      "href": "https://www.instagram.com/dennis.pruitt.research"
+                    },
+                    {
+                      "label": "LinkedIn",
+                      "href": "https://www.linkedin.com/in/dennis-pruitt-research"
+                    },
+                    {
+                      "label": "YouTube",
+                      "href": "https://www.youtube.com/@dennispruittresearch"
+                    },
+                    { "label": "X", "href": "https://x.com/dennis_pruitt_r" },
+                    {
+                      "label": "WhatsApp",
+                      "href": "https://wa.me/11234567893"
+                    },
+                    { "label": "Share", "href": "/faculty/dennis-a-pruitt-2" }
+                  ]
                 }
               ]
             },
@@ -2747,8 +3771,16 @@
             ],
             "detailPage": {
               "contact": {
-                "phone": { "value": "+91 00000 00000", "href": "tel:+910000000000", "note": "Mon - Fri, 9:00 AM - 6:00 PM" },
-                "email": { "value": "info@example@gmail.com", "href": "mailto:info@example@gmail.com", "note": "We reply within 24 hours" }
+                "phone": {
+                  "value": "+1 (123) 456 7891",
+                  "href": "tel:+1 (123) 456 7891",
+                  "note": "Mon - Fri, 9:00 AM - 6:00 PM"
+                },
+                "email": {
+                  "value": "info@example@gmail.com",
+                  "href": "mailto:info@example@gmail.com",
+                  "note": "We reply within 24 hours"
+                }
               },
               "content": {
                 "breadcrumbLabel": "Events",
@@ -2784,12 +3816,30 @@
                   "description": "Send us your details and our team will be in touch.",
                   "action": "/enquiry",
                   "fields": [
-                    { "name": "name", "label": "Full Name", "placeholder": "Enter your full name", "type": "text" },
-                    { "name": "email", "label": "Email Address", "placeholder": "Enter your email address", "type": "email" },
-                    { "name": "phone", "label": "Phone Number", "placeholder": "Enter your phone number", "type": "tel" }
+                    {
+                      "name": "name",
+                      "label": "Full Name",
+                      "placeholder": "Enter your full name",
+                      "type": "text"
+                    },
+                    {
+                      "name": "email",
+                      "label": "Email Address",
+                      "placeholder": "Enter your email address",
+                      "type": "email"
+                    },
+                    {
+                      "name": "phone",
+                      "label": "Phone Number",
+                      "placeholder": "Enter your phone number",
+                      "type": "tel"
+                    }
                   ],
                   "interestLabel": "Select Your Interest",
-                  "otherInterest": { "value": "other", "label": "Other Events" },
+                  "otherInterest": {
+                    "value": "other",
+                    "label": "Other Events"
+                  },
                   "messageLabel": "Message",
                   "optionalLabel": "(Optional)",
                   "messagePlaceholder": "Write your message here...",
@@ -2813,8 +3863,19 @@
                   "venue": "Main Auditorium, Edusity Campus",
                   "overview": "Explore practical ways to build adaptable skills and prepare for the opportunities ahead.",
                   "quote": "Learn from experts. Gain real-world insights. Prepare for tomorrow.",
-                  "highlights": ["Expert panel discussion", "Future skills insights", "Career guidance", "Live Q&A", "Industry networking"],
-                  "attendees": ["Students exploring future careers", "Recent graduates planning their next step", "Professionals building new skills", "Anyone interested in the changing workplace"]
+                  "highlights": [
+                    "Expert panel discussion",
+                    "Future skills insights",
+                    "Career guidance",
+                    "Live Q&A",
+                    "Industry networking"
+                  ],
+                  "attendees": [
+                    "Students exploring future careers",
+                    "Recent graduates planning their next step",
+                    "Professionals building new skills",
+                    "Anyone interested in the changing workplace"
+                  ]
                 },
                 {
                   "slug": "resume-building-workshop",
@@ -2822,8 +3883,19 @@
                   "venue": "Computer Lab 1, Edusity Campus",
                   "overview": "Work through practical resume exercises and leave with a clearer way to present your experience to employers.",
                   "quote": "Make your experience easy to see, understand, and remember.",
-                  "highlights": ["Resume structure walkthrough", "Achievement-focused writing", "Formatting and review tips", "Guided editing practice", "Questions for career advisers"],
-                  "attendees": ["Students preparing for internships", "Graduates entering the job market", "Job seekers refreshing their resume", "Anyone wanting clearer application materials"]
+                  "highlights": [
+                    "Resume structure walkthrough",
+                    "Achievement-focused writing",
+                    "Formatting and review tips",
+                    "Guided editing practice",
+                    "Questions for career advisers"
+                  ],
+                  "attendees": [
+                    "Students preparing for internships",
+                    "Graduates entering the job market",
+                    "Job seekers refreshing their resume",
+                    "Anyone wanting clearer application materials"
+                  ]
                 },
                 {
                   "slug": "career-opportunities-in-tech",
@@ -2831,8 +3903,19 @@
                   "venue": "Main Auditorium, Edusity Campus",
                   "overview": "Hear how technology roles are changing and what skills can help learners prepare for emerging opportunities.",
                   "quote": "A clearer view of the industry can help you choose your next learning step.",
-                  "highlights": ["Industry leader perspectives", "Emerging role overview", "Skills employers value", "Career path discussion", "Audience Q&A"],
-                  "attendees": ["Students considering technology careers", "Recent graduates exploring specializations", "Professionals planning a career change", "Anyone curious about the technology sector"]
+                  "highlights": [
+                    "Industry leader perspectives",
+                    "Emerging role overview",
+                    "Skills employers value",
+                    "Career path discussion",
+                    "Audience Q&A"
+                  ],
+                  "attendees": [
+                    "Students considering technology careers",
+                    "Recent graduates exploring specializations",
+                    "Professionals planning a career change",
+                    "Anyone curious about the technology sector"
+                  ]
                 },
                 {
                   "slug": "entrepreneurship-bootcamp",
@@ -2840,8 +3923,19 @@
                   "venue": "Innovation Hub, Edusity Campus",
                   "overview": "Develop an early idea through guided exercises in customer discovery, business planning, and pitching.",
                   "quote": "Strong ventures begin by understanding the people they hope to serve.",
-                  "highlights": ["Idea validation exercises", "Customer discovery", "Business model basics", "Founder guidance", "Pitch practice"],
-                  "attendees": ["Students with an early venture idea", "Aspiring founders exploring entrepreneurship", "Teams developing a student project", "Learners interested in innovation"]
+                  "highlights": [
+                    "Idea validation exercises",
+                    "Customer discovery",
+                    "Business model basics",
+                    "Founder guidance",
+                    "Pitch practice"
+                  ],
+                  "attendees": [
+                    "Students with an early venture idea",
+                    "Aspiring founders exploring entrepreneurship",
+                    "Teams developing a student project",
+                    "Learners interested in innovation"
+                  ]
                 },
                 {
                   "slug": "annual-cultural-fest-2026",
@@ -2849,8 +3943,19 @@
                   "venue": "Open Air Theatre, Edusity Campus",
                   "overview": "Celebrate student creativity through performances, showcases, and shared campus experiences.",
                   "quote": "Every performance adds a new voice to our campus story.",
-                  "highlights": ["Student performances", "Music and dance", "Creative showcases", "Campus celebration", "Community gathering"],
-                  "attendees": ["Students interested in performing", "Friends and families supporting participants", "Campus community members", "Anyone who enjoys arts and culture"]
+                  "highlights": [
+                    "Student performances",
+                    "Music and dance",
+                    "Creative showcases",
+                    "Campus celebration",
+                    "Community gathering"
+                  ],
+                  "attendees": [
+                    "Students interested in performing",
+                    "Friends and families supporting participants",
+                    "Campus community members",
+                    "Anyone who enjoys arts and culture"
+                  ]
                 },
                 {
                   "slug": "study-abroad-guidance-session",
@@ -2858,8 +3963,19 @@
                   "venue": "Online (Zoom)",
                   "overview": "Get a practical introduction to researching international study options and preparing an application.",
                   "quote": "A well-planned application starts with informed questions.",
-                  "highlights": ["Study destination research", "Application planning", "Document preparation", "Expert guidance", "Live online Q&A"],
-                  "attendees": ["Students considering overseas study", "Families supporting an applicant", "Graduates exploring international programs", "Anyone comparing study destinations"]
+                  "highlights": [
+                    "Study destination research",
+                    "Application planning",
+                    "Document preparation",
+                    "Expert guidance",
+                    "Live online Q&A"
+                  ],
+                  "attendees": [
+                    "Students considering overseas study",
+                    "Families supporting an applicant",
+                    "Graduates exploring international programs",
+                    "Anyone comparing study destinations"
+                  ]
                 },
                 {
                   "slug": "blood-donation-drive",
@@ -2867,8 +3983,19 @@
                   "venue": "Campus Health Center, Edusity Campus",
                   "overview": "Take part in a campus donation drive and learn how community participation can support local health services.",
                   "quote": "A small act of care can make a meaningful difference to someone else.",
-                  "highlights": ["On-campus donation station", "Health team guidance", "Donor eligibility information", "Community participation", "Volunteer support"],
-                  "attendees": ["Eligible students and staff", "Campus volunteers", "Community members interested in donating", "Anyone seeking donation information"]
+                  "highlights": [
+                    "On-campus donation station",
+                    "Health team guidance",
+                    "Donor eligibility information",
+                    "Community participation",
+                    "Volunteer support"
+                  ],
+                  "attendees": [
+                    "Eligible students and staff",
+                    "Campus volunteers",
+                    "Community members interested in donating",
+                    "Anyone seeking donation information"
+                  ]
                 },
                 {
                   "slug": "personality-development-session",
@@ -2876,8 +4003,19 @@
                   "venue": "Seminar Hall, Edusity Campus",
                   "overview": "Practice communication and self-presentation techniques that support confidence in academic and professional settings.",
                   "quote": "Confidence grows through preparation, practice, and reflection.",
-                  "highlights": ["Clear communication practice", "Confident self-presentation", "Listening techniques", "Guided activities", "Questions and feedback"],
-                  "attendees": ["Students preparing for interviews", "Graduates developing workplace confidence", "Professionals strengthening communication", "Anyone interested in personal growth"]
+                  "highlights": [
+                    "Clear communication practice",
+                    "Confident self-presentation",
+                    "Listening techniques",
+                    "Guided activities",
+                    "Questions and feedback"
+                  ],
+                  "attendees": [
+                    "Students preparing for interviews",
+                    "Graduates developing workplace confidence",
+                    "Professionals strengthening communication",
+                    "Anyone interested in personal growth"
+                  ]
                 },
                 {
                   "slug": "placement-readiness-fair",
@@ -2885,8 +4023,19 @@
                   "venue": "Campus Ground, Edusity Campus",
                   "overview": "Meet recruiters, learn about open roles, and get practical guidance on preparing for placement opportunities.",
                   "quote": "Preparation helps you make the most of every conversation with a recruiter.",
-                  "highlights": ["Recruiter conversations", "Role and employer information", "Resume preparation advice", "Career support desk", "Placement resources"],
-                  "attendees": ["Final-year students seeking placements", "Recent graduates exploring roles", "Students planning internship applications", "Anyone preparing to meet recruiters"]
+                  "highlights": [
+                    "Recruiter conversations",
+                    "Role and employer information",
+                    "Resume preparation advice",
+                    "Career support desk",
+                    "Placement resources"
+                  ],
+                  "attendees": [
+                    "Final-year students seeking placements",
+                    "Recent graduates exploring roles",
+                    "Students planning internship applications",
+                    "Anyone preparing to meet recruiters"
+                  ]
                 },
                 {
                   "slug": "ai-and-machine-learning-summit",
@@ -2894,8 +4043,19 @@
                   "venue": "Tech Auditorium, Edusity Campus",
                   "overview": "Explore current advances in artificial intelligence and machine learning through expert talks and practical discussion.",
                   "quote": "Understand the ideas behind intelligent systems and the choices that shape them.",
-                  "highlights": ["AI research perspectives", "Machine learning applications", "Deep learning topics", "Responsible development", "Expert Q&A"],
-                  "attendees": ["Students studying computing or data", "Professionals following AI developments", "Researchers and educators", "Anyone curious about artificial intelligence"]
+                  "highlights": [
+                    "AI research perspectives",
+                    "Machine learning applications",
+                    "Deep learning topics",
+                    "Responsible development",
+                    "Expert Q&A"
+                  ],
+                  "attendees": [
+                    "Students studying computing or data",
+                    "Professionals following AI developments",
+                    "Researchers and educators",
+                    "Anyone curious about artificial intelligence"
+                  ]
                 },
                 {
                   "slug": "ui-ux-masterclass",
@@ -2903,8 +4063,19 @@
                   "venue": "Design Studio B, Edusity Campus",
                   "overview": "Practice turning user needs into clear wireframes and interactive prototypes using modern design methods.",
                   "quote": "Good design begins with understanding the person using it.",
-                  "highlights": ["User-centered design steps", "Wireframing practice", "Prototype walkthrough", "Design feedback", "Portfolio guidance"],
-                  "attendees": ["Students learning product design", "Early-career designers", "Developers collaborating with design teams", "Anyone interested in better digital experiences"]
+                  "highlights": [
+                    "User-centered design steps",
+                    "Wireframing practice",
+                    "Prototype walkthrough",
+                    "Design feedback",
+                    "Portfolio guidance"
+                  ],
+                  "attendees": [
+                    "Students learning product design",
+                    "Early-career designers",
+                    "Developers collaborating with design teams",
+                    "Anyone interested in better digital experiences"
+                  ]
                 },
                 {
                   "slug": "cloud-architecture-webinar",
@@ -2912,8 +4083,19 @@
                   "venue": "Online (Teams)",
                   "overview": "Review architecture patterns for reliable cloud services, scalable deployments, and modern DevOps workflows.",
                   "quote": "Reliable systems are built through deliberate design and continuous improvement.",
-                  "highlights": ["Scalable architecture patterns", "Deployment automation", "Container orchestration", "Reliability practices", "Live technical Q&A"],
-                  "attendees": ["Cloud and DevOps learners", "Software engineers", "Technology students", "Professionals planning cloud deployments"]
+                  "highlights": [
+                    "Scalable architecture patterns",
+                    "Deployment automation",
+                    "Container orchestration",
+                    "Reliability practices",
+                    "Live technical Q&A"
+                  ],
+                  "attendees": [
+                    "Cloud and DevOps learners",
+                    "Software engineers",
+                    "Technology students",
+                    "Professionals planning cloud deployments"
+                  ]
                 },
                 {
                   "slug": "cyber-security-guest-lecture",
@@ -2921,8 +4103,19 @@
                   "venue": "Auditorium 2, Edusity Campus",
                   "overview": "Learn how security teams identify common threats and build proactive defenses for modern systems.",
                   "quote": "Security improves when teams understand risk before an incident occurs.",
-                  "highlights": ["Common threat vectors", "Proactive defense methods", "Security case studies", "Responsible practices", "Guest speaker Q&A"],
-                  "attendees": ["Cybersecurity students", "Developers interested in secure design", "IT and systems professionals", "Anyone learning digital safety"]
+                  "highlights": [
+                    "Common threat vectors",
+                    "Proactive defense methods",
+                    "Security case studies",
+                    "Responsible practices",
+                    "Guest speaker Q&A"
+                  ],
+                  "attendees": [
+                    "Cybersecurity students",
+                    "Developers interested in secure design",
+                    "IT and systems professionals",
+                    "Anyone learning digital safety"
+                  ]
                 },
                 {
                   "slug": "annual-sports-meet",
@@ -2930,8 +4123,19 @@
                   "venue": "Sports Complex, Edusity Campus",
                   "overview": "Support inter-college competition across track and field events and celebrate participation, teamwork, and sportsmanship.",
                   "quote": "Play with commitment, support your team, and celebrate every effort.",
-                  "highlights": ["Track and field events", "Inter-college competition", "Team spirit", "Athlete recognition", "Campus supporters"],
-                  "attendees": ["Registered student athletes", "College teams and coaches", "Friends and campus supporters", "Anyone interested in live sport"]
+                  "highlights": [
+                    "Track and field events",
+                    "Inter-college competition",
+                    "Team spirit",
+                    "Athlete recognition",
+                    "Campus supporters"
+                  ],
+                  "attendees": [
+                    "Registered student athletes",
+                    "College teams and coaches",
+                    "Friends and campus supporters",
+                    "Anyone interested in live sport"
+                  ]
                 },
                 {
                   "slug": "classical-dance-night",
@@ -2939,8 +4143,19 @@
                   "venue": "Main Amphitheatre, Edusity Campus",
                   "overview": "Experience an evening of classical and folk performances celebrating movement, music, and cultural heritage.",
                   "quote": "Tradition comes alive when each generation brings its own energy to the stage.",
-                  "highlights": ["Classical dance performances", "Folk traditions", "Student artists", "Live cultural program", "Evening showcase"],
-                  "attendees": ["Students interested in dance", "Performers and arts groups", "Families and campus guests", "Anyone who enjoys cultural performance"]
+                  "highlights": [
+                    "Classical dance performances",
+                    "Folk traditions",
+                    "Student artists",
+                    "Live cultural program",
+                    "Evening showcase"
+                  ],
+                  "attendees": [
+                    "Students interested in dance",
+                    "Performers and arts groups",
+                    "Families and campus guests",
+                    "Anyone who enjoys cultural performance"
+                  ]
                 },
                 {
                   "slug": "financial-literacy-workshop",
@@ -2948,8 +4163,19 @@
                   "venue": "Management Block, Edusity Campus",
                   "overview": "Build practical foundations in budgeting, saving, and evaluating personal financial choices.",
                   "quote": "A clear plan can make everyday financial decisions easier to navigate.",
-                  "highlights": ["Personal budgeting", "Saving strategies", "Investment fundamentals", "Financial planning exercises", "Questions for facilitators"],
-                  "attendees": ["Students managing personal finances", "Young professionals building money habits", "Learners new to financial planning", "Anyone seeking practical budgeting tools"]
+                  "highlights": [
+                    "Personal budgeting",
+                    "Saving strategies",
+                    "Investment fundamentals",
+                    "Financial planning exercises",
+                    "Questions for facilitators"
+                  ],
+                  "attendees": [
+                    "Students managing personal finances",
+                    "Young professionals building money habits",
+                    "Learners new to financial planning",
+                    "Anyone seeking practical budgeting tools"
+                  ]
                 },
                 {
                   "slug": "blockchain-tech-seminar",
@@ -2957,8 +4183,19 @@
                   "venue": "Seminar Hall A, Edusity Campus",
                   "overview": "Unpack the foundations of blockchain, decentralized applications, smart contracts, and Web3 economics.",
                   "quote": "Separate the underlying technology from the claims made around it.",
-                  "highlights": ["Blockchain fundamentals", "Smart contract concepts", "Decentralized applications", "Web3 economics", "Open discussion"],
-                  "attendees": ["Computing and technology students", "Developers exploring decentralized systems", "Entrepreneurs evaluating Web3 ideas", "Anyone seeking a grounded introduction"]
+                  "highlights": [
+                    "Blockchain fundamentals",
+                    "Smart contract concepts",
+                    "Decentralized applications",
+                    "Web3 economics",
+                    "Open discussion"
+                  ],
+                  "attendees": [
+                    "Computing and technology students",
+                    "Developers exploring decentralized systems",
+                    "Entrepreneurs evaluating Web3 ideas",
+                    "Anyone seeking a grounded introduction"
+                  ]
                 },
                 {
                   "slug": "global-alumni-meetup",
@@ -2966,8 +4203,19 @@
                   "venue": "Grand Banquet Hall, Edusity Campus",
                   "overview": "Reconnect with Edusity graduates and make space for mentorship and conversations across industries.",
                   "quote": "The most valuable connections often begin with a shared story.",
-                  "highlights": ["Alumni networking", "Cross-industry conversations", "Mentorship connections", "Graduate community updates", "Informal meet-and-greet"],
-                  "attendees": ["Edusity alumni", "Current students seeking guidance", "Faculty and community partners", "Guests interested in alumni stories"]
+                  "highlights": [
+                    "Alumni networking",
+                    "Cross-industry conversations",
+                    "Mentorship connections",
+                    "Graduate community updates",
+                    "Informal meet-and-greet"
+                  ],
+                  "attendees": [
+                    "Edusity alumni",
+                    "Current students seeking guidance",
+                    "Faculty and community partners",
+                    "Guests interested in alumni stories"
+                  ]
                 },
                 {
                   "slug": "python-for-data-science",
@@ -2975,8 +4223,19 @@
                   "venue": "Computer Lab 3, Edusity Campus",
                   "overview": "Use Python, Pandas, and NumPy to clean, explore, and visualize data through guided exercises.",
                   "quote": "Working with real data makes the tools easier to understand.",
-                  "highlights": ["Python data workflows", "Pandas practice", "NumPy fundamentals", "Data visualization", "Hands-on lab exercises"],
-                  "attendees": ["Students learning data science", "Python beginners with basic computer skills", "Analysts exploring data tools", "Anyone interested in practical data work"]
+                  "highlights": [
+                    "Python data workflows",
+                    "Pandas practice",
+                    "NumPy fundamentals",
+                    "Data visualization",
+                    "Hands-on lab exercises"
+                  ],
+                  "attendees": [
+                    "Students learning data science",
+                    "Python beginners with basic computer skills",
+                    "Analysts exploring data tools",
+                    "Anyone interested in practical data work"
+                  ]
                 },
                 {
                   "slug": "startup-pitch-day",
@@ -2984,8 +4243,19 @@
                   "venue": "Incubation Center, Edusity Campus",
                   "overview": "Student teams will present startup ideas and receive questions and feedback from experienced reviewers.",
                   "quote": "A strong pitch explains the problem, the people affected, and the next test.",
-                  "highlights": ["Student startup pitches", "Investor feedback", "Idea validation", "Founder networking", "Venture support information"],
-                  "attendees": ["Student founders and teams", "Learners interested in startups", "Mentors and industry guests", "Anyone curious about new ventures"]
+                  "highlights": [
+                    "Student startup pitches",
+                    "Investor feedback",
+                    "Idea validation",
+                    "Founder networking",
+                    "Venture support information"
+                  ],
+                  "attendees": [
+                    "Student founders and teams",
+                    "Learners interested in startups",
+                    "Mentors and industry guests",
+                    "Anyone curious about new ventures"
+                  ]
                 },
                 {
                   "slug": "digital-marketing-webinar",
@@ -2993,8 +4263,19 @@
                   "venue": "Online (Zoom)",
                   "overview": "Explore search, social media, and performance marketing techniques for reaching and learning from an audience.",
                   "quote": "Good growth starts with understanding the audience, not chasing every new tactic.",
-                  "highlights": ["Search strategy", "Social media trends", "Performance marketing", "Campaign measurement", "Live online Q&A"],
-                  "attendees": ["Marketing students", "Small business owners", "Content and social media teams", "Professionals building digital campaigns"]
+                  "highlights": [
+                    "Search strategy",
+                    "Social media trends",
+                    "Performance marketing",
+                    "Campaign measurement",
+                    "Live online Q&A"
+                  ],
+                  "attendees": [
+                    "Marketing students",
+                    "Small business owners",
+                    "Content and social media teams",
+                    "Professionals building digital campaigns"
+                  ]
                 },
                 {
                   "slug": "expert-talk-quantum-computing",
@@ -3002,8 +4283,19 @@
                   "venue": "Science Auditorium, Edusity Campus",
                   "overview": "Get an accessible introduction to quantum computing, including qubits, algorithms, and current research questions.",
                   "quote": "New computing models begin with new ways to represent information.",
-                  "highlights": ["Qubit fundamentals", "Quantum algorithms", "Research applications", "Guest physicist perspective", "Audience questions"],
-                  "attendees": ["Science and computing students", "Educators and researchers", "Technology professionals", "Anyone curious about quantum systems"]
+                  "highlights": [
+                    "Qubit fundamentals",
+                    "Quantum algorithms",
+                    "Research applications",
+                    "Guest physicist perspective",
+                    "Audience questions"
+                  ],
+                  "attendees": [
+                    "Science and computing students",
+                    "Educators and researchers",
+                    "Technology professionals",
+                    "Anyone curious about quantum systems"
+                  ]
                 },
                 {
                   "slug": "photography-and-film-fest",
@@ -3011,8 +4303,19 @@
                   "venue": "Media Arts Block, Edusity Campus",
                   "overview": "View student photography and short films, meet their creators, and celebrate visual storytelling across campus.",
                   "quote": "A thoughtful image can make a familiar place feel new again.",
-                  "highlights": ["Student photography exhibit", "Short film screenings", "Creator conversations", "Visual storytelling", "Campus media showcase"],
-                  "attendees": ["Student photographers and filmmakers", "Media arts learners", "Creative clubs and collaborators", "Anyone interested in visual storytelling"]
+                  "highlights": [
+                    "Student photography exhibit",
+                    "Short film screenings",
+                    "Creator conversations",
+                    "Visual storytelling",
+                    "Campus media showcase"
+                  ],
+                  "attendees": [
+                    "Student photographers and filmmakers",
+                    "Media arts learners",
+                    "Creative clubs and collaborators",
+                    "Anyone interested in visual storytelling"
+                  ]
                 },
                 {
                   "slug": "iot-and-embedded-systems",
@@ -3020,8 +4323,19 @@
                   "venue": "Electronics Lab, Edusity Campus",
                   "overview": "Build a connected-device prototype using microcontrollers and sensors, then explore how embedded systems respond to real inputs.",
                   "quote": "A small prototype can reveal a lot about how a connected system works.",
-                  "highlights": ["Arduino and Raspberry Pi", "Sensor integration", "Connected-device basics", "Guided prototyping", "Electronics lab practice"],
-                  "attendees": ["Electronics and computing students", "Makers and robotics club members", "Beginners curious about IoT", "Anyone interested in connected devices"]
+                  "highlights": [
+                    "Arduino and Raspberry Pi",
+                    "Sensor integration",
+                    "Connected-device basics",
+                    "Guided prototyping",
+                    "Electronics lab practice"
+                  ],
+                  "attendees": [
+                    "Electronics and computing students",
+                    "Makers and robotics club members",
+                    "Beginners curious about IoT",
+                    "Anyone interested in connected devices"
+                  ]
                 },
                 {
                   "slug": "environmental-sustainability-summit",
@@ -3029,8 +4343,19 @@
                   "venue": "Conference Hall, Edusity Campus",
                   "overview": "Discuss practical campus sustainability initiatives and ways educational communities can contribute to climate action.",
                   "quote": "Sustainability becomes tangible through decisions made close to home.",
-                  "highlights": ["Green campus initiatives", "Climate action discussion", "Resource-conscious practices", "Community proposals", "Expert and student voices"],
-                  "attendees": ["Students interested in sustainability", "Campus operations and faculty teams", "Community environmental groups", "Anyone exploring climate solutions"]
+                  "highlights": [
+                    "Green campus initiatives",
+                    "Climate action discussion",
+                    "Resource-conscious practices",
+                    "Community proposals",
+                    "Expert and student voices"
+                  ],
+                  "attendees": [
+                    "Students interested in sustainability",
+                    "Campus operations and faculty teams",
+                    "Community environmental groups",
+                    "Anyone exploring climate solutions"
+                  ]
                 },
                 {
                   "slug": "literature-and-poetry-slam",
@@ -3038,8 +4363,19 @@
                   "venue": "Open Lawn, Edusity Campus",
                   "overview": "Share spoken-word poetry, storytelling, and literary debate in an open evening of student expression.",
                   "quote": "A story shared aloud can start a conversation that lasts beyond the stage.",
-                  "highlights": ["Spoken-word performances", "Student storytelling", "Literary debate", "Open-mic moments", "Creative community"],
-                  "attendees": ["Writers and performers", "Literature and arts students", "Readers and listeners", "Anyone who enjoys live storytelling"]
+                  "highlights": [
+                    "Spoken-word performances",
+                    "Student storytelling",
+                    "Literary debate",
+                    "Open-mic moments",
+                    "Creative community"
+                  ],
+                  "attendees": [
+                    "Writers and performers",
+                    "Literature and arts students",
+                    "Readers and listeners",
+                    "Anyone who enjoys live storytelling"
+                  ]
                 },
                 {
                   "slug": "career-counseling-masterclass",
@@ -3047,8 +4383,19 @@
                   "venue": "Online (Teams)",
                   "overview": "Bring career questions to professional coaches and hear practical perspectives on job-market trends and career planning.",
                   "quote": "The right question can help turn career uncertainty into a practical next step.",
-                  "highlights": ["Job-market trends", "Career planning guidance", "Coach-led Q&A", "Role exploration", "Actionable next steps"],
-                  "attendees": ["Students choosing a career direction", "Recent graduates entering the job market", "Professionals considering a transition", "Anyone with career-planning questions"]
+                  "highlights": [
+                    "Job-market trends",
+                    "Career planning guidance",
+                    "Coach-led Q&A",
+                    "Role exploration",
+                    "Actionable next steps"
+                  ],
+                  "attendees": [
+                    "Students choosing a career direction",
+                    "Recent graduates entering the job market",
+                    "Professionals considering a transition",
+                    "Anyone with career-planning questions"
+                  ]
                 }
               ]
             }
@@ -3234,10 +4581,32 @@
                   "intro": "Applications are open for the 2026–2027 academic session. Explore programs, get to know our campus community, and begin preparing your application to Edusity.",
                   "sectionTitle": "Why Choose Edusity?",
                   "sectionText": "At Edusity, students learn in a supportive environment with experienced faculty, modern facilities, and programs shaped around the skills employers value.",
-                  "features": ["Industry-relevant curriculum", "Experienced faculty", "Modern learning spaces", "Career guidance and support"],
+                  "features": [
+                    "Industry-relevant curriculum",
+                    "Experienced faculty",
+                    "Modern learning spaces",
+                    "Career guidance and support"
+                  ],
                   "actionTitle": "How to Apply",
-                  "steps": ["Explore programs and entry requirements.", "Complete the online application form.", "Upload the required documents.", "Follow your application updates by email."],
-                  "importantDates": [{"label":"Applications open","value":"15 March 2026"},{"label":"Application deadline","value":"30 April 2026"},{"label":"Entrance test, if applicable","value":"10 May 2026"},{"label":"Result announcement","value":"20 May 2026"},{"label":"Classes commence","value":"01 June 2026"}]
+                  "steps": [
+                    "Explore programs and entry requirements.",
+                    "Complete the online application form.",
+                    "Upload the required documents.",
+                    "Follow your application updates by email."
+                  ],
+                  "importantDates": [
+                    { "label": "Applications open", "value": "15 March 2026" },
+                    {
+                      "label": "Application deadline",
+                      "value": "30 April 2026"
+                    },
+                    {
+                      "label": "Entrance test, if applicable",
+                      "value": "10 May 2026"
+                    },
+                    { "label": "Result announcement", "value": "20 May 2026" },
+                    { "label": "Classes commence", "value": "01 June 2026" }
+                  ]
                 },
                 {
                   "slug": "mid-term-examination-schedule",
@@ -3245,10 +4614,26 @@
                   "intro": "The mid-term examination period for undergraduate and postgraduate programs is approaching. Review the published timetable carefully and allow time to prepare for each paper.",
                   "sectionTitle": "Plan Your Examination Period",
                   "sectionText": "A clear plan helps you balance revision across subjects and arrive ready for each examination. Check your department notice for room assignments and any program-specific instructions.",
-                  "features": ["Program-wise timetable", "Exam room information", "Preparation guidance", "Department support"],
+                  "features": [
+                    "Program-wise timetable",
+                    "Exam room information",
+                    "Preparation guidance",
+                    "Department support"
+                  ],
                   "actionTitle": "Before Your Exams",
-                  "steps": ["Open the detailed timetable from the student portal.", "Confirm your paper dates, times, and room.", "Contact your department about any timetable conflict."],
-                  "importantDates": [{"label":"Schedule notice","value":"10 March 2026"},{"label":"Examinations begin","value":"20 March 2026"},{"label":"Timetable updates","value":"Check the student portal"}]
+                  "steps": [
+                    "Open the detailed timetable from the student portal.",
+                    "Confirm your paper dates, times, and room.",
+                    "Contact your department about any timetable conflict."
+                  ],
+                  "importantDates": [
+                    { "label": "Schedule notice", "value": "10 March 2026" },
+                    { "label": "Examinations begin", "value": "20 March 2026" },
+                    {
+                      "label": "Timetable updates",
+                      "value": "Check the student portal"
+                    }
+                  ]
                 },
                 {
                   "slug": "library-timings-updated",
@@ -3256,10 +4641,32 @@
                   "intro": "The campus library has updated its opening hours to give students more time to study, work on assignments, and use its academic resources throughout the week.",
                   "sectionTitle": "A Longer Window to Learn",
                   "sectionText": "The revised schedule makes it easier to plan quiet study time around classes. Library staff can help you find print and digital resources or answer questions about borrowing.",
-                  "features": ["Open 8:00 AM–8:00 PM", "Monday through Saturday", "Quiet study areas", "Print and digital collections"],
+                  "features": [
+                    "Open 8:00 AM–8:00 PM",
+                    "Monday through Saturday",
+                    "Quiet study areas",
+                    "Print and digital collections"
+                  ],
                   "actionTitle": "Make the Most of the Library",
-                  "steps": ["Check the catalogue before your visit.", "Bring your campus ID to borrow materials.", "Ask library staff for research support."],
-                  "importantDates": [{"label":"Updated hours begin","value":"05 March 2026"},{"label":"Opening hours","value":"8:00 AM–8:00 PM, Monday–Saturday"},{"label":"Holiday notices","value":"See the library notice board"}]
+                  "steps": [
+                    "Check the catalogue before your visit.",
+                    "Bring your campus ID to borrow materials.",
+                    "Ask library staff for research support."
+                  ],
+                  "importantDates": [
+                    {
+                      "label": "Updated hours begin",
+                      "value": "05 March 2026"
+                    },
+                    {
+                      "label": "Opening hours",
+                      "value": "8:00 AM–8:00 PM, Monday–Saturday"
+                    },
+                    {
+                      "label": "Holiday notices",
+                      "value": "See the library notice board"
+                    }
+                  ]
                 },
                 {
                   "slug": "annual-cultural-fest-2026",
@@ -3267,10 +4674,32 @@
                   "intro": "Edusity’s Annual Cultural Fest brings students together to share music, dance, performance, and creative work from across the campus community.",
                   "sectionTitle": "Celebrate Campus Creativity",
                   "sectionText": "The fest is a chance to perform, collaborate behind the scenes, or enjoy the work of fellow students. Participants can contact the student activity team for registration and event guidance.",
-                  "features": ["Student performances", "Music and dance", "Creative showcases", "A campus-wide celebration"],
+                  "features": [
+                    "Student performances",
+                    "Music and dance",
+                    "Creative showcases",
+                    "A campus-wide celebration"
+                  ],
                   "actionTitle": "Get Involved",
-                  "steps": ["Choose an activity or performance category.", "Register with the student activity team.", "Follow campus notices for the final program."],
-                  "importantDates": [{"label":"Fest announcement","value":"28 February 2026"},{"label":"Participant registration","value":"Contact the student activity team"},{"label":"Program updates","value":"Watch campus notices"}]
+                  "steps": [
+                    "Choose an activity or performance category.",
+                    "Register with the student activity team.",
+                    "Follow campus notices for the final program."
+                  ],
+                  "importantDates": [
+                    {
+                      "label": "Fest announcement",
+                      "value": "28 February 2026"
+                    },
+                    {
+                      "label": "Participant registration",
+                      "value": "Contact the student activity team"
+                    },
+                    {
+                      "label": "Program updates",
+                      "value": "Watch campus notices"
+                    }
+                  ]
                 },
                 {
                   "slug": "scholarship-applications-now-open",
@@ -3278,10 +4707,33 @@
                   "intro": "Applications are open for merit-based scholarships. Eligible students can review the criteria and submit the required information for consideration.",
                   "sectionTitle": "Support for Academic Achievement",
                   "sectionText": "Scholarships recognize student achievement and help eligible learners continue their studies. Review the current requirements carefully, as awards are subject to the published criteria and verification.",
-                  "features": ["Merit-based consideration", "Online application process", "Published eligibility criteria", "Award updates by email"],
+                  "features": [
+                    "Merit-based consideration",
+                    "Online application process",
+                    "Published eligibility criteria",
+                    "Award updates by email"
+                  ],
                   "actionTitle": "Submit an Application",
-                  "steps": ["Review the eligibility requirements.", "Prepare supporting academic documents.", "Submit the online scholarship form.", "Keep a copy of your application reference."],
-                  "importantDates": [{"label":"Applications announced","value":"20 February 2026"},{"label":"Submission deadline","value":"Check the scholarship portal"},{"label":"Application updates","value":"Sent to your registered email"}]
+                  "steps": [
+                    "Review the eligibility requirements.",
+                    "Prepare supporting academic documents.",
+                    "Submit the online scholarship form.",
+                    "Keep a copy of your application reference."
+                  ],
+                  "importantDates": [
+                    {
+                      "label": "Applications announced",
+                      "value": "20 February 2026"
+                    },
+                    {
+                      "label": "Submission deadline",
+                      "value": "Check the scholarship portal"
+                    },
+                    {
+                      "label": "Application updates",
+                      "value": "Sent to your registered email"
+                    }
+                  ]
                 },
                 {
                   "slug": "campus-placement-drive",
@@ -3289,10 +4741,30 @@
                   "intro": "A campus placement drive is planned for April 2026. Final-year students can register to hear about participating employers and prepare for the recruitment process.",
                   "sectionTitle": "Prepare for Your Next Step",
                   "sectionText": "The placement team will share employer details and candidate instructions as they are confirmed. Use the lead time to update your resume and practice describing your skills and projects.",
-                  "features": ["Employer introductions", "Resume preparation", "Interview practice", "Placement team guidance"],
+                  "features": [
+                    "Employer introductions",
+                    "Resume preparation",
+                    "Interview practice",
+                    "Placement team guidance"
+                  ],
                   "actionTitle": "Get Ready for the Drive",
-                  "steps": ["Register with the campus placement office.", "Update your resume and student profile.", "Review employer and interview instructions.", "Bring the requested documents on the day."],
-                  "importantDates": [{"label":"Drive announcement","value":"12 February 2026"},{"label":"Placement drive","value":"April 2026"},{"label":"Registration details","value":"Contact the placement office"}]
+                  "steps": [
+                    "Register with the campus placement office.",
+                    "Update your resume and student profile.",
+                    "Review employer and interview instructions.",
+                    "Bring the requested documents on the day."
+                  ],
+                  "importantDates": [
+                    {
+                      "label": "Drive announcement",
+                      "value": "12 February 2026"
+                    },
+                    { "label": "Placement drive", "value": "April 2026" },
+                    {
+                      "label": "Registration details",
+                      "value": "Contact the placement office"
+                    }
+                  ]
                 },
                 {
                   "slug": "sports-meet-registrations",
@@ -3300,10 +4772,32 @@
                   "intro": "Registration is open for the inter-college sports meet. Students can sign up for track, field, and team events through the sports complex office.",
                   "sectionTitle": "Take Part and Represent Edusity",
                   "sectionText": "The meet welcomes students ready to compete, support their teammates, and take part in campus sport. Ask the sports office about event categories, eligibility, and practice arrangements.",
-                  "features": ["Track and field events", "Team sport categories", "Campus representation", "Sports office support"],
+                  "features": [
+                    "Track and field events",
+                    "Team sport categories",
+                    "Campus representation",
+                    "Sports office support"
+                  ],
                   "actionTitle": "Register for the Meet",
-                  "steps": ["Choose an event or team category.", "Register at the sports complex office.", "Confirm practice and participation requirements."],
-                  "importantDates": [{"label":"Registration notice","value":"04 February 2026"},{"label":"Sign-up location","value":"Sports complex office"},{"label":"Meet schedule","value":"Follow campus sports notices"}]
+                  "steps": [
+                    "Choose an event or team category.",
+                    "Register at the sports complex office.",
+                    "Confirm practice and participation requirements."
+                  ],
+                  "importantDates": [
+                    {
+                      "label": "Registration notice",
+                      "value": "04 February 2026"
+                    },
+                    {
+                      "label": "Sign-up location",
+                      "value": "Sports complex office"
+                    },
+                    {
+                      "label": "Meet schedule",
+                      "value": "Follow campus sports notices"
+                    }
+                  ]
                 },
                 {
                   "slug": "semester-fee-submission-deadline",
@@ -3311,10 +4805,30 @@
                   "intro": "Students are reminded to clear outstanding semester fees by 15 February 2026. Submitting payment by the deadline helps avoid late charges and keeps course registration on track.",
                   "sectionTitle": "Keep Your Registration on Track",
                   "sectionText": "Review your account statement and use the approved payment options listed by the finance office. If your payment is already complete, retain the receipt for your records.",
-                  "features": ["Clear outstanding balances", "Avoid late charges", "Support course registration", "Keep payment confirmation"],
+                  "features": [
+                    "Clear outstanding balances",
+                    "Avoid late charges",
+                    "Support course registration",
+                    "Keep payment confirmation"
+                  ],
                   "actionTitle": "Complete Your Fee Submission",
-                  "steps": ["Check your balance in the student portal.", "Pay through an approved method.", "Save the payment receipt.", "Contact the finance office if a payment is not reflected."],
-                  "importantDates": [{"label":"Notice published","value":"28 January 2026"},{"label":"Payment deadline","value":"15 February 2026"},{"label":"Account questions","value":"Contact the finance office"}]
+                  "steps": [
+                    "Check your balance in the student portal.",
+                    "Pay through an approved method.",
+                    "Save the payment receipt.",
+                    "Contact the finance office if a payment is not reflected."
+                  ],
+                  "importantDates": [
+                    { "label": "Notice published", "value": "28 January 2026" },
+                    {
+                      "label": "Payment deadline",
+                      "value": "15 February 2026"
+                    },
+                    {
+                      "label": "Account questions",
+                      "value": "Contact the finance office"
+                    }
+                  ]
                 },
                 {
                   "slug": "guest-lecture-ai-ethics",
@@ -3322,10 +4836,29 @@
                   "intro": "Join a weekend guest lecture with AI researchers exploring the ethical frameworks shaping modern computing, from responsible development to the impact of automated systems.",
                   "sectionTitle": "Explore Responsible AI",
                   "sectionText": "The session brings research perspectives into conversation with practical questions about how AI is built and used. Students from all disciplines are welcome to attend and take part in the discussion.",
-                  "features": ["Guest AI researchers", "Ethical frameworks", "Current computing topics", "Audience discussion"],
+                  "features": [
+                    "Guest AI researchers",
+                    "Ethical frameworks",
+                    "Current computing topics",
+                    "Audience discussion"
+                  ],
                   "actionTitle": "Attend the Lecture",
-                  "steps": ["Check the seminar notice for venue and time.", "Register if the session requires a seat reservation.", "Bring questions for the speaker discussion."],
-                  "importantDates": [{"label":"Lecture notice","value":"20 January 2026"},{"label":"Session schedule","value":"See the seminar notice"},{"label":"Venue updates","value":"Check campus announcements"}]
+                  "steps": [
+                    "Check the seminar notice for venue and time.",
+                    "Register if the session requires a seat reservation.",
+                    "Bring questions for the speaker discussion."
+                  ],
+                  "importantDates": [
+                    { "label": "Lecture notice", "value": "20 January 2026" },
+                    {
+                      "label": "Session schedule",
+                      "value": "See the seminar notice"
+                    },
+                    {
+                      "label": "Venue updates",
+                      "value": "Check campus announcements"
+                    }
+                  ]
                 },
                 {
                   "slug": "winter-break-conclusion",
@@ -3333,10 +4866,32 @@
                   "intro": "Regular classes will resume on the Monday following the winter recess. Students should check their usual timetable and prepare to return to classes across all departments.",
                   "sectionTitle": "Get Ready to Return to Class",
                   "sectionText": "Departments will continue with their existing timetables unless a separate notice is issued. Check the student portal and department announcements for any room or schedule updates.",
-                  "features": ["Regular classes resume", "Existing timetables remain", "All departments included", "Updates via student channels"],
+                  "features": [
+                    "Regular classes resume",
+                    "Existing timetables remain",
+                    "All departments included",
+                    "Updates via student channels"
+                  ],
                   "actionTitle": "Before Classes Resume",
-                  "steps": ["Confirm your first class in the timetable.", "Check department notices for changes.", "Prepare course materials for the new term."],
-                  "importantDates": [{"label":"Resumption notice","value":"10 January 2026"},{"label":"Classes resume","value":"Monday after the winter recess"},{"label":"Timetable changes","value":"Check department announcements"}]
+                  "steps": [
+                    "Confirm your first class in the timetable.",
+                    "Check department notices for changes.",
+                    "Prepare course materials for the new term."
+                  ],
+                  "importantDates": [
+                    {
+                      "label": "Resumption notice",
+                      "value": "10 January 2026"
+                    },
+                    {
+                      "label": "Classes resume",
+                      "value": "Monday after the winter recess"
+                    },
+                    {
+                      "label": "Timetable changes",
+                      "value": "Check department announcements"
+                    }
+                  ]
                 },
                 {
                   "slug": "annual-science-exhibition-2026",
@@ -3344,10 +4899,32 @@
                   "intro": "The Annual Science and Tech Exhibition will showcase student projects and working models across robotics, the Internet of Things, and clean energy.",
                   "sectionTitle": "Ideas Made Visible",
                   "sectionText": "The exhibition gives student teams a place to demonstrate their work, explain their process, and exchange ideas with visitors and peers. Project teams should follow their department’s display and safety guidance.",
-                  "features": ["Robotics demonstrations", "IoT project displays", "Clean energy concepts", "Student-led presentations"],
+                  "features": [
+                    "Robotics demonstrations",
+                    "IoT project displays",
+                    "Clean energy concepts",
+                    "Student-led presentations"
+                  ],
                   "actionTitle": "Prepare a Project Display",
-                  "steps": ["Confirm your project team with your department.", "Prepare a short explanation and demonstration.", "Follow the exhibition setup and safety instructions."],
-                  "importantDates": [{"label":"Exhibition announcement","value":"15 December 2025"},{"label":"Project registration","value":"Check with your department"},{"label":"Event schedule","value":"Follow campus notices"}]
+                  "steps": [
+                    "Confirm your project team with your department.",
+                    "Prepare a short explanation and demonstration.",
+                    "Follow the exhibition setup and safety instructions."
+                  ],
+                  "importantDates": [
+                    {
+                      "label": "Exhibition announcement",
+                      "value": "15 December 2025"
+                    },
+                    {
+                      "label": "Project registration",
+                      "value": "Check with your department"
+                    },
+                    {
+                      "label": "Event schedule",
+                      "value": "Follow campus notices"
+                    }
+                  ]
                 },
                 {
                   "slug": "national-debate-championship",
@@ -3355,10 +4932,29 @@
                   "intro": "Edusity will host an inter-varsity debate championship, welcoming top debaters for three days of structured argument, research, and exchange of ideas.",
                   "sectionTitle": "Make the Case for Your Ideas",
                   "sectionText": "The championship creates space for rigorous discussion across a range of topics. Participants and attendees can follow the official event brief for debate formats, schedules, and registration details.",
-                  "features": ["Inter-varsity competition", "Three days of debate", "Research-led arguments", "A national student audience"],
+                  "features": [
+                    "Inter-varsity competition",
+                    "Three days of debate",
+                    "Research-led arguments",
+                    "A national student audience"
+                  ],
                   "actionTitle": "Follow the Championship Updates",
-                  "steps": ["Review the official competition brief.", "Register through the debate coordination team.", "Check the event schedule before travelling."],
-                  "importantDates": [{"label":"Championship announcement","value":"05 December 2025"},{"label":"Competition duration","value":"Three days"},{"label":"Participant details","value":"Contact the debate coordination team"}]
+                  "steps": [
+                    "Review the official competition brief.",
+                    "Register through the debate coordination team.",
+                    "Check the event schedule before travelling."
+                  ],
+                  "importantDates": [
+                    {
+                      "label": "Championship announcement",
+                      "value": "05 December 2025"
+                    },
+                    { "label": "Competition duration", "value": "Three days" },
+                    {
+                      "label": "Participant details",
+                      "value": "Contact the debate coordination team"
+                    }
+                  ]
                 },
                 {
                   "slug": "alumni-donation-drive-success",
@@ -3366,10 +4962,29 @@
                   "intro": "Alumni contributions to the 2025 endowment fund are helping support scholarships for more than 50 students. Edusity thanks every graduate who contributed.",
                   "sectionTitle": "A Community Investment in Students",
                   "sectionText": "The endowment reflects the lasting connection between graduates and the next generation of learners. Contributions help extend scholarship support to students as they pursue their education.",
-                  "features": ["More than 50 students supported", "Alumni-funded endowment", "Scholarship access", "A growing graduate community"],
+                  "features": [
+                    "More than 50 students supported",
+                    "Alumni-funded endowment",
+                    "Scholarship access",
+                    "A growing graduate community"
+                  ],
                   "actionTitle": "Learn About Alumni Support",
-                  "steps": ["Read the endowment fund update.", "Contact the alumni office with questions.", "Share the update with fellow graduates."],
-                  "importantDates": [{"label":"Fund update published","value":"18 November 2025"},{"label":"Students supported","value":"50+"},{"label":"Alumni enquiries","value":"Contact the alumni office"}]
+                  "steps": [
+                    "Read the endowment fund update.",
+                    "Contact the alumni office with questions.",
+                    "Share the update with fellow graduates."
+                  ],
+                  "importantDates": [
+                    {
+                      "label": "Fund update published",
+                      "value": "18 November 2025"
+                    },
+                    { "label": "Students supported", "value": "50+" },
+                    {
+                      "label": "Alumni enquiries",
+                      "value": "Contact the alumni office"
+                    }
+                  ]
                 },
                 {
                   "slug": "campus-health-and-wellness-camp",
@@ -3377,10 +4992,29 @@
                   "intro": "Students and faculty can attend a free health screening at the campus health center. The wellness camp is intended to make routine checkups easier to access on campus.",
                   "sectionTitle": "Make Time for Your Wellbeing",
                   "sectionText": "The campus health team will provide screening information and guide visitors through the available checkup stations. Follow the health center’s notice for service details and any preparation required.",
-                  "features": ["Free campus screening", "Open to students and faculty", "Convenient health center location", "Wellness team guidance"],
+                  "features": [
+                    "Free campus screening",
+                    "Open to students and faculty",
+                    "Convenient health center location",
+                    "Wellness team guidance"
+                  ],
                   "actionTitle": "Plan Your Visit",
-                  "steps": ["Check the health center notice for hours.", "Bring your campus ID.", "Ask the health team about screening availability."],
-                  "importantDates": [{"label":"Camp announcement","value":"30 October 2025"},{"label":"Screening timing","value":"Next week; confirm with the health center"},{"label":"Location","value":"Campus health center"}]
+                  "steps": [
+                    "Check the health center notice for hours.",
+                    "Bring your campus ID.",
+                    "Ask the health team about screening availability."
+                  ],
+                  "importantDates": [
+                    {
+                      "label": "Camp announcement",
+                      "value": "30 October 2025"
+                    },
+                    {
+                      "label": "Screening timing",
+                      "value": "Next week; confirm with the health center"
+                    },
+                    { "label": "Location", "value": "Campus health center" }
+                  ]
                 },
                 {
                   "slug": "international-research-symposium",
@@ -3388,10 +5022,32 @@
                   "intro": "Researchers and keynote speakers from around the world will meet to discuss new directions in sustainable technology and environmental engineering.",
                   "sectionTitle": "Research for a Sustainable Future",
                   "sectionText": "The symposium connects research findings with the challenges of building more sustainable systems. Students and faculty can follow the program announcement for session topics and opportunities to participate.",
-                  "features": ["International researchers", "Keynote presentations", "Environmental engineering", "Sustainable technology"],
+                  "features": [
+                    "International researchers",
+                    "Keynote presentations",
+                    "Environmental engineering",
+                    "Sustainable technology"
+                  ],
                   "actionTitle": "Explore the Symposium Program",
-                  "steps": ["Review the published session topics.", "Register through the symposium information page.", "Note any presentation or attendance requirements."],
-                  "importantDates": [{"label":"Symposium announcement","value":"14 October 2025"},{"label":"Program details","value":"Follow research office announcements"},{"label":"Registration","value":"See the symposium notice"}]
+                  "steps": [
+                    "Review the published session topics.",
+                    "Register through the symposium information page.",
+                    "Note any presentation or attendance requirements."
+                  ],
+                  "importantDates": [
+                    {
+                      "label": "Symposium announcement",
+                      "value": "14 October 2025"
+                    },
+                    {
+                      "label": "Program details",
+                      "value": "Follow research office announcements"
+                    },
+                    {
+                      "label": "Registration",
+                      "value": "See the symposium notice"
+                    }
+                  ]
                 },
                 {
                   "slug": "odd-semester-exam-results",
@@ -3399,10 +5055,30 @@
                   "intro": "Odd semester examination results are now available. Students can sign in to the student portal to review grade sheets and semester performance summaries.",
                   "sectionTitle": "Review Your Semester Results",
                   "sectionText": "Check each course result and save a copy of your grade sheet for reference. If you notice an issue or need clarification, contact your department through the published results process.",
-                  "features": ["Online grade sheets", "Course-level results", "Semester performance summary", "Department support"],
+                  "features": [
+                    "Online grade sheets",
+                    "Course-level results",
+                    "Semester performance summary",
+                    "Department support"
+                  ],
                   "actionTitle": "Access Your Results",
-                  "steps": ["Sign in to the student portal.", "Open the odd semester results section.", "Download or save your grade sheet.", "Contact your department about result queries."],
-                  "importantDates": [{"label":"Results announced","value":"25 September 2025"},{"label":"Results access","value":"Student portal"},{"label":"Result queries","value":"Follow your department process"}]
+                  "steps": [
+                    "Sign in to the student portal.",
+                    "Open the odd semester results section.",
+                    "Download or save your grade sheet.",
+                    "Contact your department about result queries."
+                  ],
+                  "importantDates": [
+                    {
+                      "label": "Results announced",
+                      "value": "25 September 2025"
+                    },
+                    { "label": "Results access", "value": "Student portal" },
+                    {
+                      "label": "Result queries",
+                      "value": "Follow your department process"
+                    }
+                  ]
                 },
                 {
                   "slug": "cultural-club-auditions",
@@ -3410,10 +5086,32 @@
                   "intro": "Freshers can audition for Edusity’s music, dance, dramatics, and fine arts clubs at the student activity center. Bring your interest and share what you enjoy creating.",
                   "sectionTitle": "Find Your Creative Community",
                   "sectionText": "Campus clubs offer a place to practice, collaborate, and perform alongside other students. Auditions are open across several creative disciplines; contact the activity team if you need category or preparation guidance.",
-                  "features": ["Music and performance", "Dance groups", "Dramatics club", "Fine arts community"],
+                  "features": [
+                    "Music and performance",
+                    "Dance groups",
+                    "Dramatics club",
+                    "Fine arts community"
+                  ],
                   "actionTitle": "Take Part in Auditions",
-                  "steps": ["Choose the club or discipline that interests you.", "Check the audition notice for time and requirements.", "Attend at the student activity center."],
-                  "importantDates": [{"label":"Auditions announced","value":"10 September 2025"},{"label":"Audition venue","value":"Student activity center"},{"label":"Audition schedule","value":"Check campus notices"}]
+                  "steps": [
+                    "Choose the club or discipline that interests you.",
+                    "Check the audition notice for time and requirements.",
+                    "Attend at the student activity center."
+                  ],
+                  "importantDates": [
+                    {
+                      "label": "Auditions announced",
+                      "value": "10 September 2025"
+                    },
+                    {
+                      "label": "Audition venue",
+                      "value": "Student activity center"
+                    },
+                    {
+                      "label": "Audition schedule",
+                      "value": "Check campus notices"
+                    }
+                  ]
                 },
                 {
                   "slug": "orientation-program-2025",
@@ -3421,10 +5119,32 @@
                   "intro": "New undergraduate and graduate students are invited to the Freshers Orientation Program, with a welcome ceremony and guided tours to help you get to know campus.",
                   "sectionTitle": "Start Your Edusity Journey",
                   "sectionText": "Orientation introduces new students to campus spaces, academic support, and the people who can help during their first term. Families can review the schedule notice for arrival and guest information.",
-                  "features": ["Welcome ceremony", "Guided campus tours", "Student support introductions", "Information for new learners"],
+                  "features": [
+                    "Welcome ceremony",
+                    "Guided campus tours",
+                    "Student support introductions",
+                    "Information for new learners"
+                  ],
                   "actionTitle": "Prepare for Orientation",
-                  "steps": ["Review the schedule for your program.", "Bring your admission confirmation and campus ID if issued.", "Arrive at the time listed in the orientation notice."],
-                  "importantDates": [{"label":"Schedule published","value":"01 September 2025"},{"label":"Program details","value":"Check your admission email"},{"label":"Campus tour","value":"Included in the orientation schedule"}]
+                  "steps": [
+                    "Review the schedule for your program.",
+                    "Bring your admission confirmation and campus ID if issued.",
+                    "Arrive at the time listed in the orientation notice."
+                  ],
+                  "importantDates": [
+                    {
+                      "label": "Schedule published",
+                      "value": "01 September 2025"
+                    },
+                    {
+                      "label": "Program details",
+                      "value": "Check your admission email"
+                    },
+                    {
+                      "label": "Campus tour",
+                      "value": "Included in the orientation schedule"
+                    }
+                  ]
                 }
               ]
             }
@@ -3645,7 +5365,7 @@
                   {
                     "icon": "Phone",
                     "label": "Call Us",
-                    "value": "+91 00000 00000",
+                    "value": "+1 (123) 456 7891",
                     "sub": "Mon - Sat, 9:00 AM - 6:00 PM"
                   },
                   {
@@ -3657,8 +5377,8 @@
                   {
                     "icon": "MapPin",
                     "label": "Visit Our Campus",
-                    "value": "123 Education Lane,",
-                    "sub": "New Delhi - 110001"
+                    "value": "245 Education Avenue,",
+                    "sub": "Boston, MA 02108"
                   }
                 ]
               }
@@ -3827,8 +5547,6 @@
                 "number": "03",
                 "title": "Submit Required Documents",
                 "desc": "Upload the necessary documents as per the guidelines, including academic records, ID proof, photograph, and other relevant certificates.",
-                "linkText": "View Document List",
-                "linkUrl": "/documents",
                 "icon": "FileText",
                 "image": "/education/1.png"
               },
@@ -3886,7 +5604,7 @@
                 {
                   "id": 1,
                   "title": "Call Us",
-                  "info": "+91 00000 00000",
+                  "info": "+1 (123) 456 7891",
                   "subInfo": "Mon - Sat, 9:00 AM - 6:00 PM",
                   "icon": "Phone"
                 },
@@ -4030,7 +5748,7 @@
               {
                 "id": 1,
                 "title": "Call Us",
-                "info": "+91 00000 00000",
+                "info": "+1 (123) 456-7891",
                 "subInfo": "Mon - Sat, 9:00 AM - 6:00 PM",
                 "icon": "Phone"
               },
@@ -4044,8 +5762,8 @@
               {
                 "id": 3,
                 "title": "Visit Our Campus",
-                "info": "123 Education Lane,",
-                "subInfo": "New Delhi - 110001",
+                "info": "245 Education Avenue,",
+                "subInfo": "Boston, MA 02108",
                 "icon": "MapPin"
               }
             ]
@@ -4103,7 +5821,7 @@
               "contacts": [
                 {
                   "icon": "Phone",
-                  "info": "+91 98765 43210",
+                  "info": "+1 (123) 456 7891",
                   "sub": "Mon - Sat, 9:00 AM - 6:00 PM"
                 },
                 {

@@ -25,6 +25,15 @@ import ScrollReveal from "../../shared/ScrollReveal";
 const AQUA = "#19C2A1";
 const DARK_BLUE = "#0A2540";
 
+/** Upper bound on how many documents one application can carry. */
+const MAX_FILES = 10;
+
+function formatFileSize(bytes: number) {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${Math.round(bytes / 1024)} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+}
+
 // Icon mapping helpers. Keyed by the education unions so a new icon added to
 // them has to be handled here.
 const featureIconMap: Record<EducationApplyFeatureIcon, React.ReactNode> = {
@@ -63,16 +72,32 @@ export default function Apply() {
   });
 
   // File upload state with cross button logic
-  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+  const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      setUploadedFile(e.target.files[0]);
-    }
+  const handleFilesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const selected = Array.from(e.target.files ?? []);
+    // Cleared up front so re-picking the same file still fires a change event.
+    e.target.value = "";
+
+    setUploadedFiles((current) => {
+      const next = [...current];
+
+      for (const file of selected) {
+        const alreadyAdded = next.some(
+          (existing) =>
+            existing.name === file.name &&
+            existing.size === file.size &&
+            existing.lastModified === file.lastModified,
+        );
+        if (!alreadyAdded && next.length < MAX_FILES) next.push(file);
+      }
+
+      return next;
+    });
   };
 
-  const removeFile = () => {
-    setUploadedFile(null);
+  const removeFile = (index: number) => {
+    setUploadedFiles((files) => files.filter((_, fileIndex) => fileIndex !== index));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -500,43 +525,59 @@ export default function Apply() {
                   <span className="text-sm text-slate-400">Upload required documents.</span>
                 </div>
 
-                <div className="space-y-1   ">
+<div className="space-y-1   ">
                   <label className="block text-base font-bold tracking-wider text-blue-900">
-                    Upload Documents (Resume / Certificate)
+                    Upload Documents
                   </label>
-                  
-                  <div className="flex items-center gap-4">
+                   
+                  <div className="flex flex-wrap items-center gap-4">
                     <label
-                      className="swp-out cursor-pointer border border-slate-200 rounded-xl px-4 py-2.5 text-xs font-bold text-slate-700 flex items-center gap-2"
-                      style={
-                        { "--swp-rest": "#f1f5f9", "--swp-color": "#334155" } as React.CSSProperties
-                      }
+                      className="hover:bg-gray-200 cursor-pointer border border-slate-200 rounded-xl px-4 py-2.5 text-xs font-bold text-slate-700 flex items-center gap-2"
                     >
                       <Upload className="w-4 h-4 text-slate-500" />
                       <span>Choose Files</span>
                       <input 
                         type="file" 
-                        onChange={handleFileChange} 
+                        multiple
+                        onChange={handleFilesChange} 
                         className="hidden" 
                         accept=".pdf,.jpg,.png,.doc,.docx"
                       />
                     </label>
 
-                    {uploadedFile ? (
-                      <div className="flex items-center gap-2 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-xl text-xs text-emerald-800 font-medium">
-                        <span className="truncate max-w-[180px]">{uploadedFile.name}</span>
-                        <button 
-                          type="button" 
-                          onClick={removeFile}
-                          className="swp-out swp-out-clear swp-emerald-600 p-0.5 rounded-full"
-                        >
-                          <X className="w-3.5 h-3.5" />
-                        </button>
-                      </div>
-                    ) : (
-                      <span className="text-xs text-slate-400">No file chosen</span>
-                    )}
+                    <span className="text-xs text-slate-400">
+                      {uploadedFiles.length
+                        ? `${uploadedFiles.length} of ${MAX_FILES} file${uploadedFiles.length > 1 ? "s" : ""} selected`
+                        : "No files chosen"}
+                    </span>
                   </div>
+
+                  {uploadedFiles.length > 0 && (
+                    <ul className="mt-3 space-y-2">
+                      {uploadedFiles.map((file, index) => (
+                        <li
+                          key={`${file.name}-${file.size}-${file.lastModified}`}
+                          className="flex items-center gap-2 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-xl text-xs text-emerald-800 font-medium"
+                        >
+                          <FileText className="w-3.5 h-3.5 shrink-0 text-emerald-600" />
+                          <span className="truncate max-w-[180px]">{file.name}</span>
+                          <span className="shrink-0 text-emerald-600/80">{formatFileSize(file.size)}</span>
+                          <button
+                            type="button"
+                            onClick={() => removeFile(index)}
+                            aria-label={`Remove ${file.name}`}
+                            className="swp-out swp-out-clear swp-emerald-600 ml-auto p-0.5 rounded-full"
+                          >
+                            <X className="w-3.5 h-3.5" />
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  <p className="text-xs text-slate-400">
+                    PDF, JPG, PNG or DOC — up to {MAX_FILES} documents.
+                  </p>
                 </div>
 
                 <div className="space-y-1">

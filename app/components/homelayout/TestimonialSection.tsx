@@ -280,14 +280,14 @@ export default function TestimonialSection({
                   <button
                     onClick={() => scrollByCard("left")}
                     aria-label="Previous slide"
-                    className="swp-out swp-teal-700 w-11 h-11 rounded-full text-slate-800 shadow-md flex items-center justify-center border border-slate-100"
+                    className=" w-11 h-11 cursor-pointer hover:bg-teal-600 hover:text-white rounded-full text-slate-800 shadow-md flex items-center justify-center border border-slate-100"
                   >
                     <ArrowLeft className="w-5 h-5" />
                   </button>
                   <button
                     onClick={() => scrollByCard("right")}
                     aria-label="Next slide"
-                    className="swp swp-teal-700 w-11 h-11 rounded-full shadow-md flex items-center justify-center"
+                    className=" w-11 h-11 rounded-full cursor-pointer hover:bg-teal-600 hover:text-white  shadow-md flex items-center justify-center"
                   >
                     <ArrowRight className="w-5 h-5" />
                   </button>

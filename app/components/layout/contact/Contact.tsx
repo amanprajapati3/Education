@@ -67,8 +67,8 @@ export default function Contact() {
           >
             <div className="space-y-0">
               <div className="inline-flex items-center gap-3">
-                <span className="w-8 h-0.5 bg-emerald-500 inline-block"></span>
-                <span className="text-emerald-600 font-bold text-sm tracking-widest uppercase">
+                <span className="w-8 h-0.5 bg-emerald-400 inline-block"></span>
+                <span className="text-emerald-400 font-bold text-sm tracking-widest uppercase">
                   {getInTouch.badge}
                 </span>
               </div>
@@ -259,7 +259,7 @@ export default function Contact() {
             <div className="space-y-2">
               <div className="inline-flex items-center gap-3">
                 <span className="w-8 h-0.5 bg-blue-500 inline-block"></span>
-                <span className="text-blue-600 font-bold text-sm tracking-widest uppercase">
+                <span className="text-blue-500 font-bold text-sm tracking-widest uppercase">
                   {location.badge}
                 </span>
               </div>

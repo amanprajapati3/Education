@@ -1,5 +1,6 @@
-"use client"
-import React, { useState, useRef } from "react";
+"use client";
+
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { site, SectionProps, EducationCoursesData, EducationCourseItem } from "@/data";
 import { 
@@ -57,8 +58,8 @@ export default function Course({
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
   const [activeDot, setActiveDot] = useState(0);
+  const [totalDots, setTotalDots] = useState(1);
   const [activePage, setActivePage] = useState(1);
-  const totalDots = 4;
 
   const allCourses = (data?.courses as EducationCourseItem[]) || [];
 
@@ -70,6 +71,30 @@ export default function Course({
     ? allCourses.slice(startIndex, startIndex + pageSize)
     : coursesList;
 
+  // Measure dots dynamically based on container scrollWidth vs clientWidth (just like testimonials)
+  const measureDots = useCallback(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    const pages = Math.max(1, Math.ceil(container.scrollWidth / container.clientWidth));
+    setTotalDots(pages);
+    setActiveDot((current) => Math.min(current, pages - 1));
+  }, []);
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const frame = requestAnimationFrame(measureDots);
+    const observer =
+      typeof ResizeObserver === "undefined" ? null : new ResizeObserver(measureDots);
+    observer?.observe(container);
+
+    return () => {
+      cancelAnimationFrame(frame);
+      observer?.disconnect();
+    };
+  }, [measureDots, coursesList.length]);
+
   const goToPage = (page: number) => {
     const nextPage = Math.min(Math.max(1, page), totalPages);
     setActivePage(nextPage);
@@ -77,36 +102,59 @@ export default function Course({
   };
 
   const handleScroll = () => {
-    if (scrollContainerRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-      const maxScroll = scrollWidth - clientWidth;
-      if (maxScroll > 0) {
-        const scrollFraction = scrollLeft / maxScroll;
-        const currentDot = Math.min(
-          totalDots - 1,
-          Math.floor(scrollFraction * totalDots + 0.05)
-        );
-        setActiveDot(currentDot);
-      }
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    const { scrollLeft, scrollWidth, clientWidth } = container;
+    const maxScroll = scrollWidth - clientWidth;
+    if (maxScroll <= 0) {
+      setActiveDot(0);
+      return;
     }
+    // Proportional rounding for smooth dot transitions
+    const currentDot = Math.min(
+      totalDots - 1,
+      Math.max(0, Math.round((scrollLeft / maxScroll) * (totalDots - 1)))
+    );
+    setActiveDot(currentDot);
   };
 
+  // Precise card-by-card scrolling using actual element offset measurements
   const scrollByCard = (direction: "left" | "right") => {
-    if (scrollContainerRef.current) {
-      const cardWidth = scrollContainerRef.current.querySelector("div")?.clientWidth || 300;
-      const scrollAmount = direction === "left" ? -(cardWidth + 24) : (cardWidth + 24);
-      scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const cards = container.querySelectorAll(".snap-start");
+    if (cards.length === 0) return;
+
+    let scrollAmount = (cards[0] as HTMLElement).offsetWidth + 24;
+    if (cards.length >= 2) {
+      scrollAmount = (cards[1] as HTMLElement).offsetLeft - (cards[0] as HTMLElement).offsetLeft;
     }
+
+    const targetScroll = direction === "left"
+      ? container.scrollLeft - scrollAmount
+      : container.scrollLeft + scrollAmount;
+
+    container.scrollTo({
+      left: targetScroll,
+      behavior: "smooth",
+    });
   };
 
+  // Precise dot navigation scrolling cleanly into position
   const scrollToPage = (index: number) => {
-    if (scrollContainerRef.current) {
-      const { scrollWidth, clientWidth } = scrollContainerRef.current;
-      const maxScroll = scrollWidth - clientWidth;
-      const targetScroll = (maxScroll / (totalDots - 1)) * index;
-      scrollContainerRef.current.scrollTo({ left: targetScroll, behavior: "smooth" });
-      setActiveDot(index);
-    }
+    const container = scrollContainerRef.current;
+    if (!container || totalDots <= 1) return;
+
+    const { scrollWidth, clientWidth } = container;
+    const maxScroll = scrollWidth - clientWidth;
+    const targetScroll = (maxScroll / (totalDots - 1)) * index;
+
+    container.scrollTo({
+      left: targetScroll,
+      behavior: "smooth",
+    });
+    setActiveDot(index);
   };
 
   return (
@@ -133,32 +181,32 @@ export default function Course({
               {data?.title?.normal}{" "}
               <span className="text-emerald-600">{data?.title?.highlighted}</span>
             </h2>
-            <p className="text-slate-600 text-base  mt-1">
+            <p className="text-slate-600 text-base mt-1">
               {data?.desc}
             </p>
           </ScrollReveal>
         )}
 
         {/* Carousel Wrapper */}
-        <div className="relative  px-0 ">
+        <div className="relative px-0">
           
-          {/* Left Arrow Button (Hidden on Mobile & Tablet) */}
+          {/* Left Arrow Button */}
           {!isGrid && (
             <button
               onClick={() => scrollByCard("left")}
               aria-label="Previous slide"
-              className="swp-out swp-emerald-500 swp-abs hidden lg:flex -left-10 top-1/2 -translate-y-1/2 -translate-x-2 w-12 h-12 rounded-full text-slate-800 shadow-xl items-center justify-center z-20 border border-slate-100"
+              className="swp-out swp-emerald-500 swp-abs hidden lg:flex -left-10 top-1/2 -translate-y-1/2 -translate-x-2 w-12 h-12 rounded-full text-slate-800 shadow-xl items-center justify-center z-20 border border-slate-100 transition-transform active:scale-95 cursor-pointer"
             >
               <ArrowLeft className="w-6 h-6" />
             </button>
           )}
 
-          {/* Right Arrow Button (Hidden on Mobile & Tablet) */}
+          {/* Right Arrow Button */}
           {!isGrid && (
             <button
               onClick={() => scrollByCard("right")}
               aria-label="Next slide"
-              className="swp-out swp-emerald-500 swp-abs hidden lg:flex -right-9 top-1/2 -translate-y-1/2 translate-x-2 w-12 h-12 rounded-full text-slate-800 shadow-xl items-center justify-center z-20 border border-slate-100"
+              className="swp-out swp-emerald-500 swp-abs hidden lg:flex -right-9 top-1/2 -translate-y-1/2 translate-x-2 w-12 h-12 rounded-full text-slate-800 shadow-xl items-center justify-center z-20 border border-slate-100 transition-transform active:scale-95 cursor-pointer"
             >
               <ArrowRight className="w-6 h-6" />
             </button>
@@ -171,7 +219,7 @@ export default function Course({
             className={
               isGrid
                 ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 scroll-mt-28"
-                : "flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-8 pt-2 px-1 focus:outline-none"
+                : "flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-none pb-8 pt-2 px-1 focus:outline-none [-webkit-overflow-scrolling:touch]"
             }
             style={isGrid ? undefined : { scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
@@ -212,17 +260,7 @@ export default function Course({
 
                 {/* Course Body Content */}
                 <div className="p-3 flex flex-col flex-grow">
-                  {/* <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-1 text-amber-500 font-bold text-sm">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span>{course.rating}</span>
-                    </div>
-                    <span className="text-xs text-slate-500 font-medium">
-                      {course.studentsLabel}
-                    </span>
-                  </div> */}
-
-                  <h3 className="text-lg min-h-[55px]  font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-2 mb-2">
+                  <h3 className="text-lg min-h-[55px] font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-2 mb-2">
                     {course.title}
                   </h3>
 
@@ -230,14 +268,10 @@ export default function Course({
                     {course.description}
                   </p>
 
-                  <div className=" mt-auto flex items-center justify-between">
-                    {/* <div className="flex items-baseline gap-2">
-                      <span className="text-2xl font-bold text-emerald-500">{course.price}</span>
-                      <span className="text-sm text-slate-400 line-through font-medium">{course.oldPrice}</span>
-                    </div> */}
+                  <div className="mt-auto flex items-center justify-between">
                     <a
                       href={course.button.href}
-                      className="swp swp-emerald-500 inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-semibold shadow-md shadow-emerald-500/20"
+                      className="swp swp-emerald-500 inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-semibold shadow-md shadow-emerald-500/20 transition-transform active:scale-95"
                     >
                       <span>{course.button.label}</span>
                       <ArrowRight className="w-4 h-4" />
@@ -249,14 +283,14 @@ export default function Course({
           </div>
 
           {/* Dynamic Pagination Dots (carousel layout only) */}
-          {!isGrid && (
+          {!isGrid && totalDots > 1 && (
             <div className="flex justify-center items-center gap-2 mt-4">
               {Array.from({ length: totalDots }).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => scrollToPage(index)}
                   aria-label={`Go to slide page ${index + 1}`}
-                  className={`transition-all duration-300 rounded-full ${
+                  className={`transition-all duration-300 rounded-full cursor-pointer ${
                     activeDot === index
                       ? "w-8 h-2.5 bg-emerald-600"
                       : "swp-out w-2.5 h-2.5"

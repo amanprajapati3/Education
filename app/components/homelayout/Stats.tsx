@@ -1,6 +1,11 @@
-"use client"
+"use client";
 import React, { useState, useEffect, useRef } from "react";
-import { site, SectionProps, EducationStatsData, EducationStatItem } from "@/data";
+import {
+  site,
+  SectionProps,
+  EducationStatsData,
+  EducationStatItem,
+} from "@/data";
 import { Users, GraduationCap, BookOpen, Trophy } from "lucide-react";
 import ScrollReveal from "../shared/ScrollReveal";
 
@@ -33,7 +38,7 @@ function AnimatedCounter({ end, suffix }: { end: number; suffix: string }) {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (counterRef.current) {
@@ -57,7 +62,7 @@ function AnimatedCounter({ end, suffix }: { end: number; suffix: string }) {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
       const currentVal = Math.floor(progress * end);
-      
+
       setCount(currentVal);
 
       if (progress < 1) {
@@ -69,8 +74,12 @@ function AnimatedCounter({ end, suffix }: { end: number; suffix: string }) {
   }, [isVisible, end]);
 
   return (
-    <span ref={counterRef} className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-      {count}{suffix}
+    <span
+      ref={counterRef}
+      className="text-3xl sm:text-4xl font-bold text-white tracking-tight"
+    >
+      {count}
+      {suffix}
     </span>
   );
 }
@@ -83,14 +92,20 @@ export default function Stats({
   const badge = data?.badge || "Our Impact In Numbers";
   const titleNormal = data?.title?.normal || "Creating";
   const titleHighlighted = data?.title?.highlighted || "Brighter Futures";
-  const desc = data?.desc || "Our numbers reflect the trust of students, the dedication of our faculty, and the success we build together.";
-  const bgImage = data?.bgImage || "/education_img/students-walking-together-on-campus-with-books.jpg";
+  const desc =
+    data?.desc ||
+    "Our numbers reflect the trust of students, the dedication of our faculty, and the success we build together.";
+  const bgImage =
+    data?.bgImage ||
+    "/education_img/students-walking-together-on-campus-with-books.jpg";
   const statsList = (data?.stats as EducationStatItem[]) || [];
 
   return (
-    <section className={`relative py-8 my-8 md:py-12 overflow-hidden  ${className}`}>
+    <section
+      className={`relative py-8 my-8 md:py-12 overflow-hidden  ${className}`}
+    >
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-20"
         style={{ backgroundImage: `url(${bgImage})` }}
       />
@@ -106,7 +121,6 @@ export default function Stats({
         duration={0.8}
       >
         <div className="max-w-3xl space-y-0">
-          
           {/* Badge */}
           <div className="inline-flex items-center gap-3">
             <span className="text-emerald-400 font-bold text-xs sm:text-sm tracking-widest uppercase">
@@ -134,7 +148,7 @@ export default function Stats({
               <ScrollReveal
                 key={stat.id || index}
                 as="div"
-                className="relative flex flex-col items-start p-6  md:border-r-white md:border-r-1 group hover:border-emerald-500/50 transition-all duration-300"
+                className="relative flex flex-col items-start p-6 md:after:absolute md:after:right-0 md:after:top-1/2 md:after:-translate-y-1/2 md:after:w-[1px] md:after:h-[55%] md:after:bg-white/40 md:last:after:hidden group hover:border-emerald-500/50 transition-all duration-300"
                 direction="up"
                 distance={34}
                 duration={0.65}
@@ -153,13 +167,10 @@ export default function Stats({
                 </div>
 
                 {/* Label */}
-                <p className="text-white text-sm font-medium">
-                  {stat.label}
-                </p>
+                <p className="text-white text-sm font-medium">{stat.label}</p>
               </ScrollReveal>
             ))}
           </div>
-
         </div>
       </ScrollReveal>
     </section>

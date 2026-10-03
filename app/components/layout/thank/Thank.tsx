@@ -15,12 +15,16 @@ export default function ThankYou({
   const messages = data?.messages || [];
 
   return (
-    <section className={`py-16 md:py-24 bg-white relative overflow-hidden ${className}`}>
+    <section
+      className={`py-16 md:py-24 bg-white relative overflow-hidden ${className}`}
+    >
       {/* Soft decorative glows */}
       <div className="absolute -top-10 -left-10 w-72 h-72 bg-emerald-50/80 rounded-full filter blur-2xl -z-10" />
       <div className="absolute bottom-0 -right-10 w-72 h-72 bg-sky-50/60 rounded-full filter blur-3xl -z-10" />
 
-      <div className={`max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center ${contentClassName}`}>
+      <div
+        className={`max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center ${contentClassName}`}
+      >
         {/* Animated Tick */}
         <motion.div
           initial={{ scale: 0.5, opacity: 0 }}
@@ -68,7 +72,8 @@ export default function ThankYou({
           transition={{ duration: 0.5, delay: 0.85 }}
           className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mt-3"
         >
-          {titleNormal} <span className="text-emerald-600">{titleHighlighted}</span>
+          {titleNormal}{" "}
+          <span className="text-emerald-600">{titleHighlighted}</span>
         </motion.h1>
 
         {/* Messages */}
@@ -83,6 +88,11 @@ export default function ThankYou({
               {message}
             </p>
           ))}
+          <a href="/">
+            <button className="px-5 py-2 rounded-xl bg-emerald-500 text-white hover:bg-emerald-400 cursor-pointer">
+              Home
+            </button>
+          </a>
         </motion.div>
       </div>
     </section>

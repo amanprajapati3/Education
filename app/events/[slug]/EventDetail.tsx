@@ -82,7 +82,7 @@ export default function EventDetail({
         bgImage={banner.bgImage}
       />
 
-      <section className="mx-auto grid max-w-325 grid-cols-1 items-start gap-6 px-4 py-8 sm:px-6 md:gap-8 md:py-10 lg:grid-cols-[minmax(0,1fr)_340px] lg:px-7">
+      <section className="mx-auto grid max-w-325 grid-cols-1 items-start gap-6 px-4 py-8 sm:px-6 md:gap-8 md:py-16 lg:grid-cols-[minmax(0,1fr)_340px] lg:px-7">
         <div className="min-w-0">
           <ScrollReveal
             as="div"
@@ -227,7 +227,7 @@ export default function EventDetail({
             delay={0.06}
           >
             <div className="bg-[#075b91] px-4 py-3 text-white">
-              <h2 className="text-lg font-bold">{content.enquiry.title}</h2>
+              <h2 className="text-lg md:text-xl lg:text-2xl mb-2 font-bold">{content.enquiry.title}</h2>
               <p className="text-sm leading-5 text-white/90">
                 {content.enquiry.description}
               </p>
@@ -280,8 +280,8 @@ export default function EventDetail({
           <a
             href={content.brochure.href}
             download={content.brochure.filename}
-            className="swp-out swp-emerald-600 flex min-h-16 items-center justify-between gap-3 rounded-md px-4 py-3 text-[#0b3158]"
-            style={{ "--swp-rest": "#edf5fb" } as React.CSSProperties}
+            className="bg-gray-200 hover:bg-gray-300 flex min-h-16 items-center justify-between gap-3 rounded-md px-4 py-3 text-[#0b3158]"
+
           >
             <span className="flex items-center gap-3">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-white text-[#D32F2F]">

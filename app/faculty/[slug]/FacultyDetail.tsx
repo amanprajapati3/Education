@@ -170,7 +170,7 @@ export default function FacultyDetail({ member, profile, pageData }: FacultyDeta
                 duration={0.6}
               >
                 <div className="flex items-start gap-3">
-                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#d9f7f0] text-[#0aa98e]"><GraduationCap className="h-5 w-5" /></span>
+                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#d9f7f0] text-[#0aa98e]"><GraduationCap className="h-7 w-7" /></span>
                   <div>
                     <h3 className="text-base md:text-lg font-bold text-[#0b3158]">Teaching Philosophy</h3>
                     <p className="mt-1 text-sm md:text-base leading-6 text-slate-600">{profile.philosophy}</p>
@@ -187,7 +187,7 @@ export default function FacultyDetail({ member, profile, pageData }: FacultyDeta
                 delay={0.1}
               >
                 <div className="flex items-start gap-3">
-                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#dceeff] text-[#0a6ca7]"><BookOpen className="h-5 w-5" /></span>
+                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#dceeff] text-[#0a6ca7]"><BookOpen className="h-7 w-7" /></span>
                   <div className="min-w-0">
                     <h3 className="text-base md:text-lg font-bold text-[#0b3158]">Areas of Interest</h3>
                     <ul className="mt-2 space-y-1.5">

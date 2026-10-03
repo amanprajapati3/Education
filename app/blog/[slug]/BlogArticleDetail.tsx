@@ -234,7 +234,7 @@ export default function BlogArticleDetail({
             </div>
           </ScrollReveal>
 
-          <ScrollReveal
+          {/* <ScrollReveal
             as="section"
             className="relative isolate md:min-h-56 overflow-hidden rounded-md bg-[#063b67] text-white"
             direction="up"
@@ -252,7 +252,7 @@ export default function BlogArticleDetail({
                 {sidebar.promoButton}<ArrowRight className="h-4 w-4" />
               </Link>
             </div>
-          </ScrollReveal>
+          </ScrollReveal> */}
         </ScrollReveal>
       </section>
     </main>

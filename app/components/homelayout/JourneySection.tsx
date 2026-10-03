@@ -104,7 +104,7 @@ export default function JourneySection({
                       <a
                         key={idx}
                         href={btn.href}
-                        className="swp swp-emerald-600 inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-semibold shadow-lg shadow-emerald-600/20"
+                        className="swp swp-emerald-600 cursor-pointer  inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-semibold shadow-lg shadow-emerald-600/20"
                       >
                         <span>{btn.label}</span>
                         <ArrowRight className="w-4 h-4" />
@@ -118,7 +118,7 @@ export default function JourneySection({
                           e.preventDefault();
                           setIsVideoOpen(true);
                         }}
-                        className="swp-out swp-slate-50-rest swp-emerald-600 inline-flex items-center gap-3 px-6 py-4 rounded-xl font-semibold border border-slate-200 group cursor-pointer"
+                        className="swp swp-emerald-600  cursor-pointer inline-flex items-center justify-center gap-2 px-7 py-2 rounded-xl font-semibold shadow-lg shadow-emerald-600/20"
                       >
                         <div
                           className="swp-fixed w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-emerald-600 group-hover:scale-105 transition-transform"
